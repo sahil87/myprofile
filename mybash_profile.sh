@@ -1,15 +1,14 @@
 # .bash_profile
 
 # Get the aliases and functions
-if [ -f ~/.bashrc ]; then
-   source ~/.bashrc
-fi
+#if [ -f ~/.bashrc ]; then
+#   source ~/.bashrc
+#fi
 
 export HISTSIZE=10000
 export HISTFILESIZE=100000
 export PROMPT_COMMAND="history -a; history -n; $PROMPT_COMMAND"
-
-PS1=' \[\033[01;32m\]\u\[\033[01;34m\]@\[\033[01;31m\]\h\[\033[00;34m\]{\[\033[01;34m\]\w\[\033[00;34m\]}\[\033[01;32m\]:\[\033[00m\]'
+export PS1='\[\033[01;32m\]\u\[\033[01;34m\]@\[\033[01;31m\]\h\[\033[01;32m\]:\[\033[01;34m\]\w$ \[\033[00m\]'
 
 alias cd..='cd ../' # Go back 1 directory level (for fast typers)
 alias ..='cd ..'
