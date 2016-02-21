@@ -5,10 +5,32 @@
 #   source ~/.bashrc
 #fi
 
+#BASH HISTORY
 export HISTSIZE=10000
 export HISTFILESIZE=100000
 export PROMPT_COMMAND="history -a; history -n; $PROMPT_COMMAND"
-export PS1='\[\033[01;32m\]\u\[\033[01;34m\]@\[\033[01;31m\]\h\[\033[01;32m\]:\[\033[01;34m\]\w$ \[\033[00m\]'
+shopt -s histappend
+# Combine multiline commands into one in history
+shopt -s cmdhist
+# Ignore duplicates, ls without options and builtin commands
+HISTCONTROL=ignoredups
+export HISTIGNORE="&:ls:[bf]g:exit"
+
+
+# Prompt
+BGREEN='\[\033[1;32m\]'
+GREEN='\[\033[0;32m\]'
+AGREEN='\[\033[01;32m\]'
+BRED='\[\033[1;31m\]'
+RED='\[\033[0;31m\]'
+ARED='\[\033[01;31m\]'
+BBLUE='\[\033[1;34m\]'
+BLUE='\[\033[0;34m\]'
+ABLUE='\[\033[01;34m\]'
+NORMAL='\[\033[00m\]'
+export PS1="${debian_chroot:+($debian_chroot)}${AGREEN}\u@${ARED}\h:${ABLUE}\w$ ${NORMAL}"
+# Custom bash prompt via kirsle.net/wizards/ps1.html
+#export PS1="\[$(tput setaf 2)\]\u@\[$(tput setaf 1)\]\h:\[$(tput setaf 4)\]\W$ \[$(tput sgr0)\]"
 
 alias cd..='cd ../' # Go back 1 directory level (for fast typers)
 alias ..='cd ..'
@@ -24,13 +46,21 @@ alias remove='sudo apt-get remove'
 alias update='sudo apt-get update'
 alias upgrade='sudo apt-get update && sudo apt-get upgrade'
 
+#Ls improvements
+alias ls='ls -F --color=auto'
+alias ll='ls -hl'
+alias lla='ls -ahl'
+alias sl="ls"
+alias l="ls"
+alias s="ls"
+
 # Make these commands ask before clobbering a file. Use -f to override.
 alias rm="rm -i"
 alias cp="cp -i"
 alias mv="mv -i"
 
-alias v='cd ~/code/vagrant/machines; vagrant up sc1; vagrant ssh sc1;'
-alias vh='cd ~/code/vagrant/machines; vagrant halt sc1;'
+#alias v='cd ~/code/vagrant/machines; vagrant up sc1; vagrant ssh sc1;'
+#alias vh='cd ~/code/vagrant/machines; vagrant halt sc1;'
 
 alias gl='git log --all --graph --decorate --oneline'
 alias ga='git add'
@@ -77,4 +107,12 @@ function swap()
     mv "$1" $TMPFILE
     mv "$2" "$1"
     mv $TMPFILE "$2"
+}
+
+mkcd() {
+        if [ $# != 1 ]; then
+                echo "Usage: mkcd <dir>"
+        else
+                mkdir -p $1 && cd $1
+        fi
 }
