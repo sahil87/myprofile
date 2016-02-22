@@ -20,13 +20,13 @@ export HISTIGNORE="&:ls:[bf]g:exit"
 # Prompt
 BGREEN='\[\033[1;32m\]'
 GREEN='\[\033[0;32m\]'
-AGREEN='\[\033[01;32m\]'
+AGREEN='\[\033[38;5;2m\]'
 BRED='\[\033[1;31m\]'
 RED='\[\033[0;31m\]'
-ARED='\[\033[01;31m\]'
+ARED='\[\033[38;5;1m\]'
 BBLUE='\[\033[1;34m\]'
 BLUE='\[\033[0;34m\]'
-ABLUE='\[\033[01;34m\]'
+ABLUE='\[\033[38;5;4m\]'
 NORMAL='\[\033[00m\]'
 export PS1="${debian_chroot:+($debian_chroot)}${AGREEN}\u@${ARED}\h:${ABLUE}\w$ ${NORMAL}"
 # Custom bash prompt via kirsle.net/wizards/ps1.html
