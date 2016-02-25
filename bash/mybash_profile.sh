@@ -28,7 +28,7 @@ BBLUE='\[\033[1;34m\]'
 BLUE='\[\033[0;34m\]'
 ABLUE='\[\033[38;5;4m\]'
 NORMAL='\[\033[00m\]'
-export PS1="${debian_chroot:+($debian_chroot)}${AGREEN}\u@${ARED}\h:${ABLUE}\w$ ${NORMAL}"
+export PS1="${debian_chroot:+($debian_chroot)}${AGREEN}\u@${ARED}\h:${BBLUE}\w$ ${NORMAL}"
 # Custom bash prompt via kirsle.net/wizards/ps1.html
 #export PS1="\[$(tput setaf 2)\]\u@\[$(tput setaf 1)\]\h:\[$(tput setaf 4)\]\W$ \[$(tput sgr0)\]"
 
