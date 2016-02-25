@@ -62,17 +62,26 @@ alias mv="mv -i"
 #alias v='cd ~/code/vagrant/machines; vagrant up sc1; vagrant ssh sc1;'
 #alias vh='cd ~/code/vagrant/machines; vagrant halt sc1;'
 
-alias gl='git log --all --graph --decorate --oneline'
-alias ga='git add'
+alias gs='git status '
+alias ga='git add '
 alias gaa='git add -A'
+alias gb='git branch '
+alias gbv='git branch -vv'
+alias gc='git commit'
 alias gcm='git commit -m'
+alias gd='git diff'
+alias go='git checkout '
+alias gl='git log --all --graph --decorate --oneline'
 alias p='git pull'
 alias gp='git push'
-alias gs='git status'
-alias gc='git checkout'
 alias gm='git merge'
-alias gd='git diff'
-alias gb='git branch -vv'
+
+alias gk='gitk --all&'
+alias gx='gitx --all'
+
+alias got='git '
+alias get='git '
+alias g='git '
 
 #Functions
 extract () {
