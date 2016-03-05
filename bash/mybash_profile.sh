@@ -1,9 +1,14 @@
+#!/usr/bin/env bash
 # .bash_profile
 
-# Get the aliases and functions
+#If this script is included in bash_profile
 #if [ -f ~/.bashrc ]; then
 #   source ~/.bashrc
 #fi
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+PATH=$DIR/../bin:./:$PATH
+export PATH
 
 #BASH HISTORY
 export HISTSIZE=10000
@@ -41,6 +46,8 @@ alias .4='cd ../../../../' # Go back 4 directory levels
 alias .5='cd ../../../../../'   # Go back 5 directory levels
 alias .6='cd ../../../../../../'  # Go back 6 directory levels
 
+alias p8='ping 8.8.8.8'
+
 alias install='sudo apt-get install'
 alias remove='sudo apt-get remove'
 alias update='sudo apt-get update'
@@ -52,7 +59,6 @@ alias ll='ls -hl'
 alias lla='ls -ahl'
 alias sl="ls"
 alias l="ls"
-alias s="ls"
 
 # Make these commands ask before clobbering a file. Use -f to override.
 alias rm="rm -i"
@@ -71,17 +77,18 @@ alias gc='git commit'
 alias gcm='git commit -m'
 alias gd='git diff'
 alias go='git checkout '
+alias gco='git checkout '
 alias gl='git log --all --graph --decorate --oneline'
 alias p='git pull'
 alias gp='git push'
 alias gm='git merge'
+alias gm='git remote'
 
 alias gk='gitk --all&'
 alias gx='gitx --all'
 
 alias got='git '
 alias get='git '
-alias g='git '
 
 #Functions
 extract () {
