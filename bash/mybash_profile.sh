@@ -23,6 +23,7 @@ export HISTIGNORE="&:ls:[bf]g:exit"
 
 
 # Prompt. http://misc.flogisoft.com/bash/tip_colors_and_formatting
+# Custom bash prompt via kirsle.net/wizards/ps1.html
 RED='\[\e[31m\]'
 GREEN='\[\e[32m\]'
 YELLOW='\[\e[33m\]'
@@ -41,7 +42,6 @@ GIT_PS1_DESCRIBE_STYLE=branch
 source $DIR/../scripts/git-prompt.sh
 GIT_STRING='$(__git_ps1 "(%s)")'
 export PS1="${debian_chroot:+($debian_chroot)}${DARK_GRAY}[\A] ${GREEN}\u@${RED}\h:${YELLOW}\w${NORMAL} ${CYAN}${GIT_STRING}${LIGHT_GRAY}$ ${NORMAL}"
-# Custom bash prompt via kirsle.net/wizards/ps1.html
 #export PS1="\[$(tput setaf 2)\]\u@\[$(tput setaf 1)\]\h:\[$(tput setaf 4)\]\W$ \[$(tput sgr0)\]"
 
 alias cd..='cd ../' # Go back 1 directory level (for fast typers)
