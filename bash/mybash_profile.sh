@@ -34,8 +34,13 @@ LIGHT_GRAY='\[\e[37m\]'
 DARK_GRAY='\[\e[90m\]'
 NORMAL='\[\e[0m\]'
 GIT_PS1_SHOWDIRTYSTATE=1
+GIT_PS1_SHOWUNTRACKEDFILES=1
+GIT_PS1_SHOWSTASHSTATE=1
+GIT_PS1_SHOWUPSTREAM=1
+GIT_PS1_DESCRIBE_STYLE=branch
 source $DIR/../scripts/git-prompt.sh
-export PS1="${debian_chroot:+($debian_chroot)}${DARK_GRAY}[\A] ${GREEN}\u@${RED}\h:${YELLOW}\w${CYAN}\$(__git_ps1)${LIGHT_GRAY}$ ${NORMAL}"
+GIT_STRING='$(__git_ps1 "(%s)")'
+export PS1="${debian_chroot:+($debian_chroot)}${DARK_GRAY}[\A] ${GREEN}\u@${RED}\h:${YELLOW}\w${NORMAL} ${CYAN}${GIT_STRING}${LIGHT_GRAY}$ ${NORMAL}"
 # Custom bash prompt via kirsle.net/wizards/ps1.html
 #export PS1="\[$(tput setaf 2)\]\u@\[$(tput setaf 1)\]\h:\[$(tput setaf 4)\]\W$ \[$(tput sgr0)\]"
 
