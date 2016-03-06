@@ -89,6 +89,10 @@ alias gx='gitx --all'
 
 alias got='git '
 alias get='git '
+alias g='git'
+
+# Autocomplete for 'g' as well
+complete -o default -o nospace -F _git g
 
 #Functions
 extract () {
