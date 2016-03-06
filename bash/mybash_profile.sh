@@ -22,18 +22,18 @@ HISTCONTROL=ignoredups
 export HISTIGNORE="&:ls:[bf]g:exit"
 
 
-# Prompt
-BGREEN='\[\033[1;32m\]'
-GREEN='\[\033[0;32m\]'
-AGREEN='\[\033[38;5;2m\]'
-BRED='\[\033[1;31m\]'
-RED='\[\033[0;31m\]'
-ARED='\[\033[38;5;1m\]'
-BBLUE='\[\033[1;34m\]'
-BLUE='\[\033[0;34m\]'
-ABLUE='\[\033[38;5;4m\]'
-NORMAL='\[\033[00m\]'
-export PS1="${debian_chroot:+($debian_chroot)}${AGREEN}\u@${ARED}\h:${BBLUE}\w$ ${NORMAL}"
+# Prompt. http://misc.flogisoft.com/bash/tip_colors_and_formatting
+RED='\[\e[31m\]'
+GREEN='\[\e[32m\]'
+YELLOW='\[\e[33m\]'
+BLUE='\[\e[34m\]'
+BOLD_BLUE='\[\e[1;34m\]'
+MAGENTA='\[\e[35m\]'
+CYAN='\[\e[36m\]'
+NORMAL='\[\e[0m\]'
+GIT_PS1_SHOWDIRTYSTATE=1
+source $DIR/../scripts/git-prompt.sh
+export PS1="${debian_chroot:+($debian_chroot)}${GREEN}\u@${RED}\h ${MAGENTA}\t${BOLD_BLUE}:\w${CYAN}\$(__git_ps1)${BOLD_BLUE}$ ${NORMAL}"
 # Custom bash prompt via kirsle.net/wizards/ps1.html
 #export PS1="\[$(tput setaf 2)\]\u@\[$(tput setaf 1)\]\h:\[$(tput setaf 4)\]\W$ \[$(tput sgr0)\]"
 
