@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+OLDDIR=`pwd`
+PROFILEDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+cd $PROFILEDIR
+git add -A
+git commit -m "Pushing latest myprofile changes"
+git push
+cd $OLDDIR
