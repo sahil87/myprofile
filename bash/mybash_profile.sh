@@ -30,10 +30,12 @@ BLUE='\[\e[34m\]'
 BOLD_BLUE='\[\e[1;34m\]'
 MAGENTA='\[\e[35m\]'
 CYAN='\[\e[36m\]'
+LIGHT_GRAY='\[\e[37m\]'
+DARK_GRAY='\[\e[90m\]'
 NORMAL='\[\e[0m\]'
 GIT_PS1_SHOWDIRTYSTATE=1
 source $DIR/../scripts/git-prompt.sh
-export PS1="${debian_chroot:+($debian_chroot)}${GREEN}\u@${RED}\h ${MAGENTA}\t${BOLD_BLUE}:\w${CYAN}\$(__git_ps1)${BOLD_BLUE}$ ${NORMAL}"
+export PS1="${debian_chroot:+($debian_chroot)}${DARK_GRAY}[\A] ${GREEN}\u@${RED}\h:${YELLOW}\w${CYAN}\$(__git_ps1)${LIGHT_GRAY}$ ${NORMAL}"
 # Custom bash prompt via kirsle.net/wizards/ps1.html
 #export PS1="\[$(tput setaf 2)\]\u@\[$(tput setaf 1)\]\h:\[$(tput setaf 4)\]\W$ \[$(tput sgr0)\]"
 
