@@ -1,4 +1,2 @@
 #!/usr/bin/env bash
-KEY_FILE=~/Dropbox/keys/ssh_keys/sportscafe/sportsCafeKey2.pem
-sudo chmod 0600 $KEY_FILE
-ssh-add $KEY_FILE
+cd ~/code/sportscafe/
