@@ -6,8 +6,9 @@
 #   source ~/.bashrc
 #fi
 
+PARENTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )"/../ && pwd )"
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-PATH=$DIR/../bin:./:$PATH
+PATH=$PARENTDIR/bin:./:$PATH
 export PATH
 
 #BASH HISTORY
@@ -39,7 +40,7 @@ GIT_PS1_SHOWUNTRACKEDFILES=1
 GIT_PS1_SHOWSTASHSTATE=1
 GIT_PS1_SHOWUPSTREAM=1
 GIT_PS1_DESCRIBE_STYLE=branch
-source $DIR/../scripts/git-prompt.sh
+source $DIR/mybash_git-prompt.sh
 GIT_STRING='$(__git_ps1 "(%s)")'
 export PS1="${debian_chroot:+($debian_chroot)}${DARK_GRAY}[\A] ${GREEN}\u@${RED}\h:${YELLOW}\w${NORMAL} ${CYAN}${GIT_STRING}${LIGHT_GRAY}$ ${NORMAL}"
 #export PS1="\[$(tput setaf 2)\]\u@\[$(tput setaf 1)\]\h:\[$(tput setaf 4)\]\W$ \[$(tput sgr0)\]"
@@ -99,6 +100,7 @@ alias get='git '
 alias g='git'
 
 alias sc='cd ~/code/sportscafe/'
+alias 87='cd $DIR/..'
 
 # Autocomplete for 'g' as well
 complete -o default -o nospace -F _git g
