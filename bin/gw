@@ -1,1 +1,1 @@
-ssh gw.sportscafe.in
+ssh gw.sportscafe.in -p 2222
