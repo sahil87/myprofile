@@ -1,0 +1,5 @@
+#In ~/.ssh/config
+#Host 172.31.*.*
+#  ProxyCommand ssh gw.sportscafe.in nc %h %p
+Host *.sportscafe.in !gw.sportscafe.in
+  ProxyCommand ssh gw.sportscafe.in nc %h %p
