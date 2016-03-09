@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+ssh-add $DIR/../revealed/keys/ssh_keys/sportscafe/temp_provisioning_anshu.pem
