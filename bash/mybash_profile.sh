@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 # .bash_profile
 
 #If this script is included in bash_profile
