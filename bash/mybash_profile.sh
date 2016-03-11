@@ -101,6 +101,7 @@ alias g='git'
 
 alias sc='cd ~/code/sportscafe/'
 alias 87='cd $DIR/..'
+alias add-awskey='source $DIR/../revealed/keys/aws_iam_keys/sportscafe/export.sh'
 
 # Autocomplete for 'g' as well
 complete -o default -o nospace -F _git g
