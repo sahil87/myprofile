@@ -1,5 +1,14 @@
 #In ~/.ssh/config
-#Host 172.31.*.*
-#  ProxyCommand ssh gw.sportscafe.in nc %h %p
+#Send null packet to server to keep connection alive
+ServerAliveInterval 60
+ServerAliveCountMax 60
+
+#SportsCafe AWS ip range
+Host 172.31.*.*
+  ProxyCommand ssh gw.sportscafe.in nc %h %p
+
 Host *.sportscafe.in sportscafe.in !gw.sportscafe.in
   ProxyCommand ssh -p 2222 gw.sportscafe.in nc %h %p
+
+Host gw.sportscafe.in
+  Port 2222

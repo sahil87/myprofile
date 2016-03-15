@@ -1,0 +1,8 @@
+#!/bin/bash
+#set -x
+if [ "$#" -gt 1 ]
+then
+    /usr/bin/ssh ${@}
+else
+    /usr/bin/ssh $(host -t A $1|head -n1|awk '{print $1}')
+fi
