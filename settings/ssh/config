@@ -1,6 +1,6 @@
 #In ~/.ssh/config
 #Send null packet to server to keep connection alive
-ServerAliveInterval 60
+ServerAliveInterval 30
 ServerAliveCountMax 60
 
 #SportsCafe AWS ip range
