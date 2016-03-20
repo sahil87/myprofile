@@ -34,6 +34,7 @@ MAGENTA='\[\e[35m\]'
 CYAN='\[\e[36m\]'
 LIGHT_GRAY='\[\e[37m\]'
 DARK_GRAY='\[\e[90m\]'
+LIGHT_YELLOW='\[\e[93m\]'
 NORMAL='\[\e[0m\]'
 GIT_PS1_SHOWDIRTYSTATE=1
 GIT_PS1_SHOWUNTRACKEDFILES=1
@@ -41,8 +42,10 @@ GIT_PS1_SHOWSTASHSTATE=1
 GIT_PS1_SHOWUPSTREAM=1
 GIT_PS1_DESCRIBE_STYLE=branch
 source $DIR/mybash_git-prompt.sh
-GIT_STRING='$(__git_ps1 "(%s)")'
-export PS1="${debian_chroot:+($debian_chroot)}${DARK_GRAY}[\A] ${GREEN}\u@${RED}\h:${YELLOW}\w${NORMAL} ${CYAN}${GIT_STRING}${LIGHT_GRAY}$ ${NORMAL}"
+GIT_STRING='$(__git_ps1 " [%s]")'
+END_CHARACTER=$'\u26A1'
+export PS1="${debian_chroot:+($debian_chroot)}${DARK_GRAY}[\A] ${GREEN}\u@${RED}\h:${YELLOW}\w${NORMAL}${CYAN}${GIT_STRING} ${LIGHT_YELLOW}${END_CHARACTER} ${NORMAL}"
+#export PS1="${debian_chroot:+($debian_chroot)}${DARK_GRAY}[\A] ${GREEN}\u@${RED}\h:${YELLOW}\w${NORMAL} ${CYAN}${GIT_STRING}${LIGHT_GRAY}$ ${NORMAL}"
 #export PS1="\[$(tput setaf 2)\]\u@\[$(tput setaf 1)\]\h:\[$(tput setaf 4)\]\W$ \[$(tput sgr0)\]"
 
 alias cd..='cd ../' # Go back 1 directory level (for fast typers)
