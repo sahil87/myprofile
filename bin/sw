@@ -1,0 +1,2 @@
+#Take screenshot of window
+gnome-screenshot -w
