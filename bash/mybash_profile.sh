@@ -14,8 +14,7 @@ export PATH
 #BASH HISTORY
 export HISTSIZE=10000
 export HISTFILESIZE=100000
-#export PROMPT_COMMAND="history -a; history -n; $PROMPT_COMMAND"
-export PROMPT_COMMAND="history -a; history -n;" #removed original $PROMPT_COMMAND to solve extra spaces in Amazon Linux
+export PROMPT_COMMAND="history -a; history -n; $PROMPT_COMMAND"
 shopt -s histappend
 # Combine multiline commands into one in history
 shopt -s cmdhist
@@ -44,8 +43,9 @@ GIT_PS1_SHOWUPSTREAM=1
 GIT_PS1_DESCRIBE_STYLE=branch
 source $DIR/mybash_git-prompt.sh
 GIT_STRING='$(__git_ps1 " [%s]")'
-END_CHARACTER=$'\u26A1'
-export PS1="${debian_chroot:+($debian_chroot)}${DARK_GRAY}[\A] ${GREEN}\u@${RED}\h:${YELLOW}\w${NORMAL}${CYAN}${GIT_STRING} ${LIGHT_YELLOW}${END_CHARACTER} ${NORMAL}"
+#END_CHARACTER=$'\u26A1' #Lightning
+END_CHARACTER='$'
+export PS1="${debian_chroot:+($debian_chroot)}${DARK_GRAY}[\A] ${GREEN}\u@${RED}\h:${YELLOW}\w${NORMAL}${CYAN}${GIT_STRING} ${LIGHT_GRAY}${END_CHARACTER} ${NORMAL}"
 #export PS1="${debian_chroot:+($debian_chroot)}${DARK_GRAY}[\A] ${GREEN}\u@${RED}\h:${YELLOW}\w${NORMAL} ${CYAN}${GIT_STRING}${LIGHT_GRAY}$ ${NORMAL}"
 #export PS1="\[$(tput setaf 2)\]\u@\[$(tput setaf 1)\]\h:\[$(tput setaf 4)\]\W$ \[$(tput sgr0)\]"
 
