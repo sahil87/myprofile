@@ -14,7 +14,8 @@ export PATH
 #BASH HISTORY
 export HISTSIZE=10000
 export HISTFILESIZE=100000
-export PROMPT_COMMAND="history -a; history -n; $PROMPT_COMMAND"
+#export PROMPT_COMMAND="history -a; history -n; $PROMPT_COMMAND"
+export PROMPT_COMMAND="history -a; history -n;" #removed original $PROMPT_COMMAND to solve extra spaces in Amazon Linux
 shopt -s histappend
 # Combine multiline commands into one in history
 shopt -s cmdhist
