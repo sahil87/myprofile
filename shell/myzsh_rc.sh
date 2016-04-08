@@ -5,6 +5,7 @@ CURRENTDIR=${0:a:h}
 PARENTDIR=${0:a:h}/..
 export PATH=$PARENTDIR/bin:$PATH
 
+plugins=(git docker z theme ssh-agent man myfunctions)
 #oh-my-zsh SETTINGS:
 ZSH_THEME="sahil2"
 ZSH_CUSTOM=$CURRENTDIR/zsh-custom
