@@ -6,7 +6,7 @@ PARENTDIR=${0:a:h}/..
 export PATH=$PARENTDIR/bin:$PATH
 
 #oh-my-zsh SETTINGS:
-ZSH_THEME="sahil"
+ZSH_THEME="sahil2"
 ZSH_CUSTOM=$CURRENTDIR/zsh-custom
 source $ZSH/oh-my-zsh.sh
 
@@ -38,7 +38,7 @@ autoload -U promptinit
 promptinit
 
 #CHANGE GIT EDITOR
-export EDITOR="emacsclient -nw"
+export EDITOR="emacs -nw"
 export GIT_EDITOR=$EDITOR
 
 #ALIASES
