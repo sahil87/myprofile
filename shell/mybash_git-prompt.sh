@@ -38,7 +38,7 @@
 # In addition, if you set GIT_PS1_SHOWDIRTYSTATE to a nonempty value,
 # unstaged (*) and staged (+) changes will be shown next to the branch
 # name.  You can configure this per-repository with the
-# bash.showDirtyState variable, which defaults to true once
+# shell.showDirtyState variable, which defaults to true once
 # GIT_PS1_SHOWDIRTYSTATE is enabled.
 #
 # You can also see if currently something is stashed, by setting
@@ -48,7 +48,7 @@
 # If you would like to see if there're untracked files, then you can set
 # GIT_PS1_SHOWUNTRACKEDFILES to a nonempty value. If there're untracked
 # files, then a '%' will be shown next to the branch name.  You can
-# configure this per-repository with the bash.showUntrackedFiles
+# configure this per-repository with the shell.showUntrackedFiles
 # variable, which defaults to true once GIT_PS1_SHOWUNTRACKEDFILES is
 # enabled.
 #
@@ -73,7 +73,7 @@
 # By default, __git_ps1 will compare HEAD to your SVN upstream if it can
 # find one, or @{upstream} otherwise.  Once you have set
 # GIT_PS1_SHOWUPSTREAM, you can override it on a per-repository basis by
-# setting the bash.showUpstream config variable.
+# setting the shell.showUpstream config variable.
 #
 # If you would like to see more information about the identity of
 # commits checked out as a detached HEAD, set GIT_PS1_DESCRIBE_STYLE
@@ -92,7 +92,7 @@
 # If you would like __git_ps1 to do nothing in the case when the current
 # directory is set up to be ignored by git, then set
 # GIT_PS1_HIDE_IF_PWD_IGNORED to a nonempty value. Override this on the
-# repository level by setting bash.hideIfPwdIgnored to "false".
+# repository level by setting shell.hideIfPwdIgnored to "false".
 
 # check whether printf supports -v
 __git_printf_supports_v=
@@ -108,7 +108,7 @@ __git_ps1_show_upstream ()
 
 	svn_remote=()
 	# get some config options from git-config
-	local output="$(git config -z --get-regexp '^(svn-remote\..*\.url|bash\.showupstream)$' 2>/dev/null | tr '\0\n' '\n ')"
+	local output="$(git config -z --get-regexp '^(svn-remote\..*\.url|shell\.showupstream)$' 2>/dev/null | tr '\0\n' '\n ')"
 	while read -r key value; do
 		case "$key" in
 		bash.showupstream)
@@ -286,7 +286,7 @@ __git_eread ()
 
 # __git_ps1 accepts 0 or 1 arguments (i.e., format string)
 # when called from PS1 using command substitution
-# in this mode it prints text to add to bash PS1 prompt (includes branch name)
+# in this mode it prints text to add to shell PS1 prompt (includes branch name)
 #
 # __git_ps1 requires 2 or 3 arguments when called from PROMPT_COMMAND (pc)
 # in that case it _sets_ PS1. The arguments are parts of a PS1 string.
@@ -324,7 +324,7 @@ __git_ps1 ()
 	# ps1_expanded:  This variable is set to 'yes' if the shell
 	# subjects the value of PS1 to parameter expansion:
 	#
-	#   * bash does unless the promptvars option is disabled
+	#   * shell does unless the promptvars option is disabled
 	#   * zsh does not unless the PROMPT_SUBST option is set
 	#   * POSIX shells always do
 	#
@@ -350,7 +350,7 @@ __git_ps1 ()
 	#
 	# Assume that the shell follows the POSIX specification and
 	# expands PS1 unless determined otherwise.  (This is more
-	# likely to be correct if the user has a non-bash, non-zsh
+	# likely to be correct if the user has a non-shell, non-zsh
 	# shell and safer than the alternative if the assumption is
 	# incorrect.)
 	#
@@ -382,7 +382,7 @@ __git_ps1 ()
 
 	if [ "true" = "$inside_worktree" ] &&
 	   [ -n "${GIT_PS1_HIDE_IF_PWD_IGNORED-}" ] &&
-	   [ "$(git config --bool bash.hideIfPwdIgnored)" != "false" ] &&
+	   [ "$(git config --bool shell.hideIfPwdIgnored)" != "false" ] &&
 	   git check-ignore -q .
 	then
 		return $exit
@@ -474,7 +474,7 @@ __git_ps1 ()
 		fi
 	elif [ "true" = "$inside_worktree" ]; then
 		if [ -n "${GIT_PS1_SHOWDIRTYSTATE-}" ] &&
-		   [ "$(git config --bool bash.showDirtyState)" != "false" ]
+		   [ "$(git config --bool shell.showDirtyState)" != "false" ]
 		then
 			git diff --no-ext-diff --quiet || w="*"
 			git diff --no-ext-diff --cached --quiet || i="+"
@@ -489,7 +489,7 @@ __git_ps1 ()
 		fi
 
 		if [ -n "${GIT_PS1_SHOWUNTRACKEDFILES-}" ] &&
-		   [ "$(git config --bool bash.showUntrackedFiles)" != "false" ] &&
+		   [ "$(git config --bool shell.showUntrackedFiles)" != "false" ] &&
 		   git ls-files --others --exclude-standard --directory --no-empty-directory --error-unmatch -- ':/*' >/dev/null 2>/dev/null
 		then
 			u="%${ZSH_VERSION+%}"

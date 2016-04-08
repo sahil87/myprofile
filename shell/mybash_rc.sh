@@ -24,7 +24,7 @@ export HISTIGNORE="&:ls:[bf]g:exit"
 
 
 # Prompt. http://misc.flogisoft.com/bash/tip_colors_and_formatting
-# Custom bash prompt via kirsle.net/wizards/ps1.html
+# Custom shell prompt via kirsle.net/wizards/ps1.html
 RED='\[\e[31m\]'
 GREEN='\[\e[32m\]'
 YELLOW='\[\e[33m\]'
