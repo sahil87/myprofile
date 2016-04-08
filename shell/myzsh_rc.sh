@@ -31,7 +31,7 @@ autoload -U compinit
 compinit
 
 #AUTOCORRECT
-setopt correctall
+#setopt correctall
 
 #ADVANCED PROMPT
 autoload -U promptinit
