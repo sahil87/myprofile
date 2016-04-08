@@ -1,4 +1,17 @@
 #!/bin/zsh
+
+#ADD PERSONAL BIN TO PATH
+CURRENTDIR=${0:a:h}
+PARENTDIR=${0:a:h}/..
+export PATH=$PARENTDIR/bin:$PATH
+
+#oh-my-zsh SETTINGS:
+ZSH_THEME="sahil"
+ZSH_CUSTOM=$CURRENTDIR/zsh-custom
+source $ZSH/oh-my-zsh.sh
+
+#OVERRIDE WITH OWN SETTINGS:
+
 #HISTORY SETTINGS
 HISTFILE=~/.histfile
 HISTSIZE=10000
@@ -21,36 +34,8 @@ compinit
 setopt correctall
 
 #ADVANCED PROMPT
-#autoload -U promptinit
-#promptinit
-
-#ADD PERSONAL BIN TO PATH
-CURRENTDIR=${0:a:h}
-PARENTDIR=${0:a:h}/..
-#typeset -U path
-export PATH=$PARENTDIR/bin:$PATH
-
-#COLORS from https://wiki.archlinux.org/index.php/zsh#Colors
-#autoload -U colors && colors
-
-#oh-my-zsh SETTINGS:
-
-#$fg[color], $fg_no_bold[color], $fg_bold[color], $reset_color, $reset_color
-#black, red, green, blue, yellow, magenta, cyan, white
-
-# PROMPT PIMPIN'
-ZSH_THEME="sahil"
-ZSH_CUSTOM=$CURRENTDIR/zsh-custom
-source $ZSH/oh-my-zsh.sh
-## Leave the initial line break or else your commands won't have space between them
-#PROMPT="
-##${fg_lgreen}%n@${at_underl}%m${at_underloff}${fg_white}[${fg_cyan}%~${fg_white}]
-##[${fg_green}%T${fg_white}]:${at_normal}"
-##RPROMPT="[%t]"
-#PROMPT="%{$fg[green]%}%n@%{$fg[red]%}%m:%{$fg_no_bold[yellow]%}%1~ %{$reset_color%}%#"
-#RPROMPT="[%{$fg_no_bold[yellow]%}%?%{$reset_color%}]"
-
-#"${debian_chroot:+($debian_chroot)}${DARK_GRAY}[\A] ${GREEN}\u@${RED}\h:${YELLOW}\w${NORMAL}${CYAN}${GIT_STRING} ${LIGHT_YELLOW}${END_CHARACTER} ${NORMAL}"
+autoload -U promptinit
+promptinit
 
 #CHANGE GIT EDITOR
 export EDITOR="emacsclient -nw"
@@ -102,7 +87,7 @@ alias get='git '
 alias g='git'
 
 alias sc='cd ~/code/sportscafe/'
-alias 87='cd $DIR/..'
+alias 87='cd $CURRENTDIR/..'
 alias aws-add-creds='source $DIR/../revealed/keys/aws_iam_keys/sportscafe/export.sh'
 
 alias p8='ping 8.8.8.8'

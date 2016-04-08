@@ -1,6 +1,10 @@
 #!/bin/zsh
-# Michele Bologna's theme
-# http://michelebologna.net
+# PROMPT PIMPIN'
+#
+# autoload -U colors && colors
+# COLORS from https://wiki.archlinux.org/index.php/zsh#Colors
+# Options: $fg[color], $fg_no_bold[color], $fg_bold[color], $reset_color, $reset_color
+# Colors: black, red, green, blue, yellow, magenta, cyan, white
 #
 # This a theme for oh-my-zsh. Features a colored prompt with:
 # * username@host: [jobs] [git] workdir %
@@ -73,4 +77,13 @@ PROMPT='$username_output$hostname_output:$current_dir_output%1(j. [$jobs_bg].)'
 GIT_PROMPT='$(out=$(git_prompt_info)$(git_prompt_status)$(git_remote_status);if [[ -n $out ]]; then printf %s " $white($green$out$white)$reset";fi)'
 PROMPT+="$GIT_PROMPT"
 PROMPT+=" $last_command_output%#$reset "
-RPROMPT=''
+RPROMPT='[%t]'
+
+## Leave the initial line break or else your commands won't have space between them
+#PROMPT="
+##${fg_lgreen}%n@${at_underl}%m${at_underloff}${fg_white}[${fg_cyan}%~${fg_white}]
+##[${fg_green}%T${fg_white}]:${at_normal}"
+##RPROMPT="[%t]"
+#PROMPT="%{$fg[green]%}%n@%{$fg[red]%}%m:%{$fg_no_bold[yellow]%}%1~ %{$reset_color%}%#"
+#RPROMPT="[%{$fg_no_bold[yellow]%}%?%{$reset_color%}]"
+#${DARK_GRAY}[\A] ${GREEN}\u@${RED}\h:${YELLOW}\w${NORMAL}${CYAN}${GIT_STRING} ${LIGHT_YELLOW}${END_CHARACTER} ${NORMAL}"
