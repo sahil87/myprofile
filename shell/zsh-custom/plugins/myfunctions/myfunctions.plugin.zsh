@@ -20,8 +20,7 @@ extract () {
   fi
 }
 
-function swap()
-{ # Swap 2 filenames around, if they exist (from Uzi's bashrc).
+function swap() { # Swap 2 filenames around, if they exist (from Uzi's bashrc).
     local TMPFILE=tmp.$$
 
     [ $# -ne 2 ] && echo "swap: 2 arguments needed" && return 1
