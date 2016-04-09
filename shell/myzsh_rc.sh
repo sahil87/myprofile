@@ -8,6 +8,7 @@ export PATH=$PARENTDIR/bin:$PATH
 plugins=(myfunctions myaliases git docker themes ssh-agent man)
 #oh-my-zsh SETTINGS:
 ZSH_THEME="sahil2"
+export ZSH=~/.oh-my-zsh
 export ZSH_CUSTOM=$CURRENTDIR/zsh-custom
 source $ZSH/oh-my-zsh.sh
 
