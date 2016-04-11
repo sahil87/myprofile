@@ -1,3 +1,4 @@
+#!/bin/zsh
 alias cd..='cd ../' # Go back 1 directory level (for fast typers)
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -19,28 +20,15 @@ alias rm="nocorrect rm -i"
 alias cp="cp -i"
 alias mv="mv -i"
 
-alias gs='git status '
-alias ga='git add '
-alias gaa='git add -A'
-alias gb='git branch '
-alias gbv='git branch -vv'
-alias gc='git commit'
+#Git aliases. Rest defined in oh-my-zsh's git plugin
+alias gs='git status'
 alias gcm='git commit -m'
-alias gd='git diff'
-alias go='git checkout '
-alias gco='git checkout '
+alias go='git checkout'
 alias gl='git log --all --graph --decorate --oneline'
 alias p='git pull'
-alias gp='git push'
-alias gm='git merge'
-alias gm='git remote'
 
 alias gk='gitk --all&'
 alias gx='gitx --all'
-
-alias got='git '
-alias get='git '
-alias g='git'
 
 alias sc='cd ~/code/sportscafe/'
 alias 87='cd $CURRENTDIR/..'

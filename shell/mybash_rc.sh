@@ -94,7 +94,7 @@ alias gl='git log --all --graph --decorate --oneline'
 alias p='git pull'
 alias gp='git push'
 alias gm='git merge'
-alias gm='git remote'
+alias gr='git remote'
 
 alias gk='gitk --all&'
 alias gx='gitx --all'
