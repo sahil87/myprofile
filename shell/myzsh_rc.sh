@@ -10,6 +10,7 @@ plugins=(myfunctions git docker themes ssh-agent man myaliases)
 ZSH_THEME="sahil2"
 export ZSH=~/.oh-my-zsh
 export ZSH_CUSTOM=$CURRENTDIR/zsh-custom
+export COMPLETION_WAITING_DOTS="true"
 source $ZSH/oh-my-zsh.sh
 
 #OVERRIDE WITH OWN SETTINGS:
