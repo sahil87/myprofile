@@ -23,6 +23,7 @@ alias mv="mv -i"
 #Git aliases. Rest defined in oh-my-zsh's git plugin
 alias gs='git status'
 alias gcm='git commit -m'
+alias gfu='git fetch upstream'
 alias go='git checkout'
 alias gl='git log --all --graph --decorate --oneline'
 alias p='git pull'
