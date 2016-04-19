@@ -14,6 +14,9 @@ export COMPLETION_WAITING_DOTS="true"
 source $ZSH/oh-my-zsh.sh
 
 #OVERRIDE WITH OWN SETTINGS:
+#remove up and down arrow bindings for history-substring-search as we want it show normal history
+#bindkey -r '^[[A'
+#bindkey -r '^[[B'
 bindkey -M emacs '^P' history-substring-search-up
 bindkey -M emacs '^N' history-substring-search-down
 
