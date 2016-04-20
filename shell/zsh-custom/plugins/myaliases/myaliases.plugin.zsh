@@ -41,3 +41,4 @@ alias remove='sudo apt-get remove'
 alias update='sudo apt-get update'
 alias upgrade='sudo apt-get update && sudo apt-get upgrade'
 alias ds='du -h --max-depth=1'
+alias d="docker"
