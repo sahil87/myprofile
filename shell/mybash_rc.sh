@@ -1,10 +1,11 @@
 #!/bin/bash
-# .bash_profile
+# .bashrc
 
-#If this script is included in bash_profile
-#if [ -f ~/.bashrc ]; then
-#   source ~/.bashrc
-#fi
+# If not running interactively, don't do anything
+case $- in
+    *i*) ;;
+      *) return;;
+esac
 
 PARENTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )"/../ && pwd )"
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
@@ -21,7 +22,9 @@ shopt -s cmdhist
 # Ignore duplicates, ls without options and builtin commands
 HISTCONTROL=ignoredups
 export HISTIGNORE="&:ls:[bf]g:exit"
-
+# check the window size after each command and, if necessary,
+# update the values of LINES and COLUMNS.
+shopt -s checkwinsize
 
 # Prompt. http://misc.flogisoft.com/bash/tip_colors_and_formatting
 # Custom shell prompt via kirsle.net/wizards/ps1.html
@@ -45,7 +48,7 @@ source $DIR/mybash_git-prompt.sh
 GIT_STRING='$(__git_ps1 " [%s]")'
 #END_CHARACTER=$'\u26A1' #Lightning
 END_CHARACTER='$'
-export PS1="${debian_chroot:+($debian_chroot)}${DARK_GRAY}[\A] ${GREEN}\u@${RED}\h:${YELLOW}\w${NORMAL}${CYAN}${GIT_STRING} ${LIGHT_YELLOW}${END_CHARACTER} ${NORMAL}"
+export PS1="${DARK_GRAY}[\A] ${GREEN}\u@${RED}\h:${YELLOW}\w${NORMAL}${CYAN}${GIT_STRING} ${LIGHT_YELLOW}${END_CHARACTER} ${NORMAL}"
 #export PS1="${debian_chroot:+($debian_chroot)}${DARK_GRAY}[\A] ${GREEN}\u@${RED}\h:${YELLOW}\w${NORMAL} ${CYAN}${GIT_STRING}${LIGHT_GRAY}$ ${NORMAL}"
 #export PS1="\[$(tput setaf 2)\]\u@\[$(tput setaf 1)\]\h:\[$(tput setaf 4)\]\W$ \[$(tput sgr0)\]"
 
