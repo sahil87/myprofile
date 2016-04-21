@@ -9,6 +9,6 @@
 
 #Min no of dots before trying directly
 #Makes sure short names go through "search" setting first
-options ndots:2
+options ndots:1
 
 search web.int.sg.aws.sportscafe.in sportscafe.in
