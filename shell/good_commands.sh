@@ -24,7 +24,7 @@ df -h # file system size info
 free -m #Mbs free -g for gbs
 free_mem #From anshu's repo
 
-top: ShiftF (gives options to sort)
+top: ShiftF #(gives options to sort)
 
 lsof #List open files
 
