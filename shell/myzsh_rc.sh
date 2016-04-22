@@ -1,5 +1,11 @@
 #!/bin/zsh
 
+# If not running interactively, don't do anything
+case $- in
+    *i*) ;;
+      *) return;;
+esac
+
 #ADD PERSONAL BIN TO PATH
 CURRENTDIR=${0:a:h}
 PARENTDIR=${0:a:h}/..

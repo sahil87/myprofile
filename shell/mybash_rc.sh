@@ -2,7 +2,10 @@
 #In .bashrc
 
 # If not running interactively, don't do anything
-[ -z "$PS1" ] && return
+case $- in
+    *i*) ;;
+      *) return;;
+esac
 
 PARENTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )"/../ && pwd )"
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
