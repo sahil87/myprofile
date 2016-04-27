@@ -6,10 +6,10 @@ case $- in
       *) return;;
 esac
 
-#ADD PERSONAL BIN TO PATH
+#ADD PERSONAL BIN AND CURRENT FOLDER TO PATH
 CURRENTDIR=${0:a:h}
 PARENTDIR=${0:a:h}/..
-export PATH=$PARENTDIR/bin:$PATH
+export PATH=.:$PARENTDIR/bin:$PATH
 
 plugins=(myfunctions git docker themes ssh-agent man history-substring-search myaliases)
 #oh-my-zsh SETTINGS:
