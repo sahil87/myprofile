@@ -1,4 +1,6 @@
 #!/bin/zsh
+ALIASDIR=${0:a:h}
+
 alias cd..='cd ../' # Go back 1 directory level (for fast typers)
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -37,8 +39,8 @@ alias scrb='cd ~/code/sportscafe/scbuild-react'
 alias scw='cd ~/code/sportscafe/scweb'
 alias scwb='cd ~/code/sportscafe/scbuild'
 alias sca='cd ~/code/sportscafe/scandroid'
-alias 87='cd $CURRENTDIR/..'
-alias aws-add-creds='source $DIR/../revealed/keys/aws_iam_keys/sportscafe/export.sh'
+alias 87='cd $ALIASDIR/..'
+alias aws-add-creds='source $ALIASDIR/../../../../revealed/keys/aws_iam_keys/sportscafe/export.sh'
 
 alias p8='ping 8.8.8.8'
 alias install='sudo apt-get install'
