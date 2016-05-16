@@ -7,7 +7,7 @@ ServerAliveCountMax 60
 Host 172.31.*.*
   ProxyCommand ssh gw.sportscafe.in nc %h %p
 
-Host *.sportscafe.in sportscafe.in !gw.sportscafe.in
+Host *.sportscafe.in sportscafe.in !gw.sportscafe.in !blr.sportscafe.in !10.0.0.*
   ProxyCommand ssh -p 2222 gw.sportscafe.in nc %h %p
 
 Host gw.sportscafe.in
