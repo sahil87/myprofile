@@ -1,5 +1,5 @@
 #!/bin/zsh
-
+#http://zsh.sourceforge.net/Guide/zshguide02.html#l7
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
@@ -8,8 +8,10 @@ esac
 
 #ADD PERSONAL BIN AND CURRENT FOLDER TO PATH
 CURRENTDIR=${0:a:h}
-PARENTDIR=${0:a:h}/..
-export PATH=.:$PARENTDIR/bin:~/Android/Sdk/platform-tools:$PATH
+PARENTDIR=`readlink -f $CURRENTDIR/..`
+#The incantation `typeset -U path', where the -U stands for unique, tells the shell that it should not add anything to $path if it's there already.
+typeset -U path
+path=(. $PARENTDIR/bin ~/Android/Sdk/platform-tools $path)
 
 plugins=(myfunctions git docker themes ssh-agent man history-substring-search myaliases)
 #oh-my-zsh SETTINGS:
@@ -30,9 +32,10 @@ bindkey -M emacs '^N' history-substring-search-down
 HISTFILE=~/.histfile
 HISTSIZE=10000
 SAVEHIST=100000
-setopt hist_ignore_all_dups
-#Don't record commands with atleast one space preceeding them
-setopt hist_ignore_space
+setopt HIST_EXPIRE_DUPS_FIRST
+setopt SHARE_HISTORY
+#Deliberately don't record commands with atleast one space preceeding them
+setopt HIST_IGNORE_SPACE
 
 #EMACS KEYBINDING
 bindkey -e
