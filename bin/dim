@@ -1,0 +1,20 @@
+#!/bin/bash
+#Use to dim secondary screen
+#Usage: dim (to dim screen), and then dim again to bring it back
+#dim 2 to targe first screen
+echo "Available screens:"
+xrandr | awk '/ connected /{print $1" "$2" "$3}'
+if [ $# -eq 0 ]
+then
+  SCREENTODIM=`xrandr | awk '/ connected [p]/{print $1}'`;
+else
+  SCREENTODIM=`xrandr | awk '/ connected [^p]/{print $1}'`;
+fi
+echo "Working with screen $SCREENTODIM"
+CURRENTBRIGHTNESS=`xrandr --verbose | grep -m 1 -A 10 $SCREENTODIM | awk '/Brightness/{print $2}'`
+if [ $CURRENTBRIGHTNESS = '1.0' ]
+then
+  xrandr --output $SCREENTODIM --brightness 0
+else
+  xrandr --output $SCREENTODIM --brightness 1
+fi
