@@ -7,6 +7,9 @@ case $- in
       *) return;;
 esac
 
+#To support emacs and byobu
+export TERM=xterm-256color
+
 PARENTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )"/../ && pwd )"
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 PATH=$PARENTDIR/bin:./:$PATH

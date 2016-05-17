@@ -1,5 +1,4 @@
 #!/bin/zsh
-
 function linkfile() {
     local SOURCE=$1
     local DEST=$2
@@ -13,8 +12,6 @@ function linkfile() {
         rm $DEST
         ln -s $DIR/$SOURCE $DEST
     fi
-
-
 }
 
 linkfile emacs/init.el          ~/.emacs                            0
