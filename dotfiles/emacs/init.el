@@ -6,3 +6,6 @@
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
 		("marmalade" . "http://marmalade-repo.org/packages/")
         ("melpa" .     "http://stable.melpa.org/packages/")))
+
+(setq backup-directory-alist `(("." . "~/.saves")))
+(setq backup-by-copying t)
