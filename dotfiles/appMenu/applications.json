@@ -1,7 +1,8 @@
 [
     { "displayName":"Internet", "iconName":"applications-internet", "menu": [
         { "displayName":"Firefox Web Browser", "command":"firefox -p sahil %u","iconName":"/usr/share/pixmaps/firefox.png" },
-        { "displayName":"Google Chrome","command":"/usr/bin/google-chrome-stable %U", "iconName":"/usr/share/icons/hicolor/64x64/apps/google-chrome.png" }
+        { "displayName":"Google Chrome","command":"/usr/bin/google-chrome-stable %U", "iconName":"/usr/share/icons/hicolor/64x64/apps/google-chrome.png" },
+        { "desktopFile":"filezilla" }
     ]},
 
     { "command":"S" },
@@ -14,6 +15,8 @@
     { "command":"S" },
     { "desktopFile":"nemo", "command":"nemo"},
     { "desktopFile":"gnome-calculator"},
+    { "desktopFile":"musique"},
+    { "desktopFile":"remmina"},
     { "displayName":"Transmission Torrents", "command":"transmission-gtk", "iconName":"/usr/share/icons/hicolor/scalable/apps/transmission.svg"},
 
     { "command":"S" },
