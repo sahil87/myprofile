@@ -3,7 +3,7 @@
 #Tar:
 tar -czfv whereToCompress.tar.gz whatToCompress/
 tar -xzfv whatToUncompress.tar.gz whereToUncompress/
-c compress, x uncompress, z gzip, j bz2
+#c compress, x uncompress, z gzip, j bz2
 
 #Quick SCP
 tar -czfv - folderName/ | ssh user@hostname 'cd whereIwantToUnzip && tar -xzfv -'
