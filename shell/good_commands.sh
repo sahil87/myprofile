@@ -39,6 +39,9 @@ netstat #No of open connections sudo netstat -planet | grep 443
 tcpdump
 sar
 
+#Use output of previous command in next command
+tar -czfv whereToCompress.tar.gz whatToCompress/
+
 #zcat -> unzip and cat
 screen
 ^a^c -> to open a new tab
