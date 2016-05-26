@@ -9,14 +9,14 @@
     { "desktopFile":"gnome-terminal"},
     { "displayName":"WebStorm","command":"/home/sahil/software/webstorm/bin/webstorm.sh", "iconName":"/home/sahil/software/webstorm/bin/webstorm.svg" },
     { "displayName":"Android Studio","command":"/home/sahil/software/android-studio/bin/studio.sh", "iconName":"/home/sahil/software/android-studio/bin/studio.png" },
-    { "desktopFile":"atom"},
+    { "desktopFile":"atom", "command": "atom"},
     { "desktopFile":"slack" },
 
     { "command":"S" },
     { "desktopFile":"nemo", "command":"nemo"},
     { "desktopFile":"gnome-calculator"},
-    { "desktopFile":"musique"},
-    { "desktopFile":"remmina"},
+    { "desktopFile":"musique", "command":"musique"},
+    { "desktopFile":"remmina", "command":"remmina"},
     { "displayName":"Transmission Torrents", "command":"transmission-gtk", "iconName":"/usr/share/icons/hicolor/scalable/apps/transmission.svg"},
 
     { "command":"S" },

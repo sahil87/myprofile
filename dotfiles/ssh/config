@@ -2,6 +2,11 @@
 #Send null packet to server to keep connection alive
 ServerAliveInterval 30
 ServerAliveCountMax 60
+Compression yes
+
+Host github
+  User git
+# IdentityFile ~/.ssh/git.pub
 
 #SportsCafe AWS ip range
 Host 172.31.*.*
@@ -12,3 +17,9 @@ Host *.sportscafe.in sportscafe.in !gw.sportscafe.in !blr.sportscafe.in !*.blr.s
 
 Host gw.sportscafe.in
   Port 2222
+
+#Host *
+#  ForwardAgent yes
+#  ServerAliveInterval 30
+#  ServerAliveCountMax 60
+#  Compression yes
