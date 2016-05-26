@@ -8,6 +8,7 @@ tar -xzfv whatToUncompress.tar.gz whereToUncompress/
 #Quick SCP
 tar -czfv - folderName/ | ssh user@hostname 'cd whereIwantToUnzip && tar -xzfv -'
 
+#http://blog.trackets.com/2014/05/17/ssh-tunnel-local-and-remote-port-forwarding-explained-with-examples.html
 #Reverse ssh tunnel to use a port remotely (4000) to forward all request to localhost:4280
 #So you can run server locally and server it via a public server
 ssh react-stage01.web.int.sg.aws.sportscafe.in -R 4000:localhost:4280
