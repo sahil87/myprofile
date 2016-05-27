@@ -1,10 +1,6 @@
 [
-    { "displayName":"Internet", "iconName":"applications-internet", "menu": [
-        { "displayName":"Firefox Web Browser", "command":"firefox -p sahil","iconName":"/usr/share/pixmaps/firefox.png" },
-        { "displayName":"Google Chrome","command":"/usr/bin/google-chrome-stable", "iconName":"/usr/share/icons/hicolor/64x64/apps/google-chrome.png" },
-        { "desktopFile":"filezilla" }
-    ]},
-
+    { "displayName":"Firefox Web Browser", "command":"firefox -p sahil","iconName":"/usr/share/pixmaps/firefox.png" },
+    { "displayName":"Google Chrome","command":"/usr/bin/google-chrome-stable", "iconName":"/usr/share/icons/hicolor/64x64/apps/google-chrome.png" },
     { "command":"S" },
     { "desktopFile":"gnome-terminal"},
     { "displayName":"WebStorm","command":"/home/sahil/software/webstorm/bin/webstorm.sh", "iconName":"/home/sahil/software/webstorm/bin/webstorm.svg" },
@@ -31,5 +27,8 @@
     { "displayName":"Games", "iconName":"applications-games", "menu": [
 	{ "displayName":"0 A.D.", "command":"/usr/game/0ad", "iconName":"/usr/share/pixmaps/0ad.png" }
     ]}
+    { "displayName":"Internet", "iconName":"applications-internet", "menu": [
+        { "desktopFile":"filezilla" }
+    ]},
 ]
 
