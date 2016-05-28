@@ -1,6 +1,7 @@
 [
     { "displayName":"Firefox Web Browser", "command":"firefox -p sahil","iconName":"/usr/share/pixmaps/firefox.png" },
     { "displayName":"Google Chrome","command":"/usr/bin/google-chrome-stable", "iconName":"/usr/share/icons/hicolor/64x64/apps/google-chrome.png" },
+
     { "command":"S" },
     { "desktopFile":"gnome-terminal"},
     { "displayName":"WebStorm","command":"/home/sahil/software/webstorm/bin/webstorm.sh", "iconName":"/home/sahil/software/webstorm/bin/webstorm.svg" },
@@ -13,22 +14,21 @@
     { "desktopFile":"gnome-calculator"},
     { "desktopFile":"musique", "command":"musique"},
     { "desktopFile":"remmina", "command":"remmina"},
-    { "displayName":"Transmission Torrents", "command":"transmission-gtk", "iconName":"/usr/share/icons/hicolor/scalable/apps/transmission.svg"},
 
     { "command":"S" },
     { "displayName":"Settings", "iconName":"/usr/share/icons/Humanity/categories/64/preferences-system.svg", "menu": [
         { "desktopFile":"cinnamon-settings" },
-	{ "desktopFile":"gnome-system-monitor" },
-	{ "displayName":"Ubuntu Software Center","command":"software-center", "iconName":"/usr/share/icons/hicolor/scalable/apps/softwarecenter.svg" },
-	{ "displayName":"Gnome Software","command":"gnome-software", "iconName":"/usr/share/icons/hicolor/256x256/apps/org.gnome.Software.png" }
+	      { "desktopFile":"gnome-system-monitor" },
+	      { "displayName":"Ubuntu Software Center","command":"software-center", "iconName":"/usr/share/icons/hicolor/scalable/apps/softwarecenter.svg" },
+	      { "displayName":"Gnome Software","command":"gnome-software", "iconName":"/usr/share/icons/hicolor/256x256/apps/org.gnome.Software.png" }
     ]},
 
     { "command":"S" },
     { "displayName":"Games", "iconName":"applications-games", "menu": [
-	{ "displayName":"0 A.D.", "command":"/usr/game/0ad", "iconName":"/usr/share/pixmaps/0ad.png" }
-    ]}
-    { "displayName":"Internet", "iconName":"applications-internet", "menu": [
-        { "desktopFile":"filezilla" }
+	      { "displayName":"0 A.D.", "command":"/usr/game/0ad", "iconName":"/usr/share/pixmaps/0ad.png" }
     ]},
+    { "displayName":"Internet", "iconName":"applications-internet", "menu": [
+	{ "displayName":"Transmission Torrents", "command":"transmission-gtk", "iconName":"/usr/share/icons/hicolor/scalable/apps/transmission.svg"},
+        { "desktopFile":"filezilla" }
+    ]}
 ]
-
