@@ -25,7 +25,8 @@
 
     { "command":"S" },
     { "displayName":"Games", "iconName":"applications-games", "menu": [
-	      { "displayName":"0 A.D.", "command":"/usr/game/0ad", "iconName":"/usr/share/pixmaps/0ad.png" }
+	{ "desktopFile":"openttd" },
+	{ "displayName":"0 A.D.", "command":"/usr/game/0ad", "iconName":"/usr/share/pixmaps/0ad.png" }
     ]},
     { "displayName":"Internet", "iconName":"applications-internet", "menu": [
 	{ "displayName":"Transmission Torrents", "command":"transmission-gtk", "iconName":"/usr/share/icons/hicolor/scalable/apps/transmission.svg"},
