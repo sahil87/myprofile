@@ -13,7 +13,17 @@
     { "desktopFile":"nemo", "command":"nemo"},
     { "desktopFile":"gnome-calculator"},
     { "desktopFile":"musique", "command":"musique"},
-    { "desktopFile":"remmina", "command":"remmina"},
+ 
+    { "command":"S" },
+    { "displayName":"Internet", "iconName":"applications-internet", "menu": [
+	{ "displayName":"Transmission Torrents", "command":"transmission-gtk", "iconName":"/usr/share/icons/hicolor/scalable/apps/transmission.svg"},
+	{ "desktopFile":"remmina", "command":"remmina"},
+        { "desktopFile":"filezilla" }
+    ]},
+    { "displayName":"Games", "iconName":"applications-games", "menu": [
+	{ "desktopFile":"openttd" },
+	{ "displayName":"0 A.D.", "command":"/usr/game/0ad", "iconName":"/usr/share/pixmaps/0ad.png" }
+    ]},
 
     { "command":"S" },
     { "displayName":"Settings", "iconName":"/usr/share/icons/Humanity/categories/64/preferences-system.svg", "menu": [
@@ -21,15 +31,5 @@
 	      { "desktopFile":"gnome-system-monitor" },
 	      { "displayName":"Ubuntu Software Center","command":"software-center", "iconName":"/usr/share/icons/hicolor/scalable/apps/softwarecenter.svg" },
 	      { "displayName":"Gnome Software","command":"gnome-software", "iconName":"/usr/share/icons/hicolor/256x256/apps/org.gnome.Software.png" }
-    ]},
-
-    { "command":"S" },
-    { "displayName":"Games", "iconName":"applications-games", "menu": [
-	{ "desktopFile":"openttd" },
-	{ "displayName":"0 A.D.", "command":"/usr/game/0ad", "iconName":"/usr/share/pixmaps/0ad.png" }
-    ]},
-    { "displayName":"Internet", "iconName":"applications-internet", "menu": [
-	{ "displayName":"Transmission Torrents", "command":"transmission-gtk", "iconName":"/usr/share/icons/hicolor/scalable/apps/transmission.svg"},
-        { "desktopFile":"filezilla" }
     ]}
 ]
