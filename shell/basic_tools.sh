@@ -1,9 +1,10 @@
 #!/bin/bash
-sudo apt-get install -y byobu emacs24-nox emacs zsh zsh-doc
-sudo apt-get install -y curl wget nmap whois
-sudo apt-get install -y git gitk
-sudo apt-get install -y encfs
-sudo apt-get install -y android-tools-adb android-tools-fastboot
+sudo apt install -y byobu emacs24-nox emacs zsh zsh-doc
+sudo apt install -y curl wget nmap whois
+sudo apt install -y git gitk
+sudo apt install -y encfs
+sudo apt install -y android-tools-adb android-tools-fastboot
+sudo apt install -y ubuntu-restricted-extras libavcodec-extra libdvd-pkg
 
 sudo add-apt-repository ppa:webupd8team/java
 sudo apt-get update
