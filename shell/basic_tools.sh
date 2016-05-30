@@ -1,5 +1,5 @@
 #!/bin/bash
-sudo apt install -y byobu emacs24-nox emacs zsh zsh-doc
+sudo apt install -y byobu emacs zsh zsh-doc #emacs24-nox
 sudo apt install -y curl wget nmap whois
 sudo apt install -y git gitk
 sudo apt install -y encfs
