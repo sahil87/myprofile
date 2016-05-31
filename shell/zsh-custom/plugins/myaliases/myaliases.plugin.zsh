@@ -35,10 +35,10 @@ alias gx='gitx --all'
 
 alias sc='cd ~/code/sportscafe/'
 alias scr='cd ~/code/sportscafe/screact'
-alias scrb='cd ~/code/sportscafe/scbuild-react'
 alias scw='cd ~/code/sportscafe/scweb'
-alias scwb='cd ~/code/sportscafe/scbuild'
-alias sca='cd ~/code/sportscafe/scandroid'
+alias scb='cd ~/code/sportscafe/scbuild'
+alias scan='cd ~/code/sportscafe/scandroid'
+alias sca='cd ~/code/sportscafe/scapi'
 alias 87='cd $MYPROFILEDIR'
 alias aws-add-creds='source $MYPROFILEDIR/revealed/keys/aws_iam_keys/sportscafe/export.sh'
 
