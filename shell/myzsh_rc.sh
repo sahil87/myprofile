@@ -11,7 +11,7 @@ CURRENTDIR=${0:a:h}
 PARENTDIR=`readlink -f $CURRENTDIR/..`
 #The incantation `typeset -U path', where the -U stands for unique, tells the shell that it should not add anything to $path if it's there already.
 typeset -U path
-path=(. $PARENTDIR/bin ~/Android/Sdk/platform-tools $path)
+path=(. $PARENTDIR/bin ~/code/sportscafe/scbuild/bin ~/Android/Sdk/platform-tools $path)
 
 plugins=(myfunctions git docker themes ssh-agent man history-substring-search myaliases)
 #oh-my-zsh SETTINGS:
