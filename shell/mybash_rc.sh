@@ -50,7 +50,7 @@ GIT_PS1_DESCRIBE_STYLE=branch
 source $DIR/mybash_git-prompt.sh
 GIT_STRING='$(__git_ps1 " [%s]")'
 #END_CHARACTER=$'\u26A1' #Lightning
-END_CHARACTER='$'
+END_CHARACTER='\$'
 test -f /.dockerinit && END_CHARACTER='&'
 PS1="${DARK_GRAY}[\A] ${GREEN}\u@${RED}\h:${YELLOW}\w${NORMAL}${CYAN}${GIT_STRING} ${LIGHT_YELLOW}${END_CHARACTER} ${NORMAL}"
 export PS1
