@@ -2,8 +2,15 @@
 OLDDIR=`pwd`
 PROFILEDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
+if [ -z $1 ]
+then
+    COMMIT_MESSAGE="Pushing latest myprofile changes"
+else
+    COMMIT_MESSAGE="${@}"
+fi
+
 cd $PROFILEDIR
 git add --all :/
-git commit -m "Pushing latest myprofile changes"
+git commit -m "${COMMIT_MESSAGE}"
 git push
 cd $OLDDIR
