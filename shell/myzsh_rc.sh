@@ -10,8 +10,10 @@ esac
 CURRENTDIR=${0:a:h}
 PARENTDIR=`readlink -f $CURRENTDIR/..`
 #The incantation `typeset -U path', where the -U stands for unique, tells the shell that it should not add anything to $path if it's there already.
+GRADLE_VERSION=`ls ~/software/android-studio/gradle/ | grep gradle | sort -r | head -n 1`
+GRADLE_PATH=~/software/android-studio/gradle/$GRADLE_VERSION/bin
 typeset -U path
-path=(. $PARENTDIR/bin ~/code/sportscafe/scbuild/bin ~/Android/Sdk/platform-tools $path)
+path=(. $PARENTDIR/bin ~/code/sportscafe/scbuild/bin ~/Android/Sdk/platform-tools $GRADLE_PATH $path)
 
 plugins=(myfunctions git docker themes ssh-agent man history-substring-search myaliases)
 #oh-my-zsh SETTINGS:
