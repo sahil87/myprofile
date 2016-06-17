@@ -14,7 +14,7 @@
     { "command":"S" },
     { "desktopFile":"nemo", "command":"nemo"},
     { "desktopFile":"gnome-calculator"},
-    { "desktopFile":"musique", "command":"musique"},
+    { "desktopFile":"clementine"},
     { "displayName":"VLC Media Player","command":"/usr/bin/vlc", "iconName":"/usr/share/icons/hicolor/256x256/apps/vlc.png" },
  
     { "command":"S" },
