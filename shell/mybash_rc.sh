@@ -16,7 +16,7 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 #RVM SETTINGS
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
-PATH=$PARENTDIR/bin:.:~/.rvm/bin:$PATH
+PATH=$PATH:~/.rvm/bin:.:$PARENTDIR/bin
 export PATH
 
 #BASH HISTORY
