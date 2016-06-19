@@ -16,3 +16,7 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 rm ~/.zshrc
 source $DIR/add_to_zshrc.sh
 chsh -s /bin/zsh
+
+#Install Ruby
+command curl -sSL https://rvm.io/mpapis.asc | gpg2 --import -
+\curl -sSL https://get.rvm.io | bash -s stable --ruby -- --ignore-dotfiles
