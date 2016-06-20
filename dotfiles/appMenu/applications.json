@@ -13,26 +13,28 @@
 
     { "command":"S" },
     { "desktopFile":"nemo", "command":"nemo"},
-    { "desktopFile":"gnome-calculator"},
     { "desktopFile":"clementine"},
     { "displayName":"VLC Media Player","command":"/usr/bin/vlc", "iconName":"/usr/share/icons/hicolor/256x256/apps/vlc.png" },
- 
+
     { "command":"S" },
     { "displayName":"Internet", "iconName":"applications-internet", "menu": [
 	{ "displayName":"Transmission Torrents", "command":"transmission-gtk", "iconName":"/usr/share/icons/hicolor/scalable/apps/transmission.svg"},
 	{ "desktopFile":"remmina", "command":"remmina"},
-        { "desktopFile":"filezilla" }
+	{ "desktopFile":"filezilla" }
+    ]},
+    { "displayName":"Office", "iconName":"applications-office", "menu": [
+        { "desktopFile":"gnome-calculator"},
+	{ "displayName":"KMyMoney", "command":"kmymoney", "iconName":"/usr/share/icons/hicolor/64x64/apps/kmymoney.png" }
     ]},
     { "displayName":"Games", "iconName":"applications-games", "menu": [
 	{ "desktopFile":"openttd" },
 	{ "displayName":"0 A.D.", "command":"/usr/game/0ad", "iconName":"/usr/share/pixmaps/0ad.png" }
     ]},
-
     { "command":"S" },
     { "displayName":"Settings", "iconName":"/usr/share/icons/Humanity/categories/64/preferences-system.svg", "menu": [
         { "desktopFile":"cinnamon-settings" },
-	      { "desktopFile":"gnome-system-monitor" },
-	      { "displayName":"Ubuntu Software Center","command":"software-center", "iconName":"/usr/share/icons/hicolor/scalable/apps/softwarecenter.svg" },
-	      { "displayName":"Gnome Software","command":"gnome-software", "iconName":"/usr/share/icons/hicolor/256x256/apps/org.gnome.Software.png" }
+	{ "desktopFile":"gnome-system-monitor" },
+	{ "displayName":"Ubuntu Software Center","command":"software-center", "iconName":"/usr/share/icons/hicolor/scalable/apps/softwarecenter.svg" },
+	{ "displayName":"Gnome Software","command":"gnome-software", "iconName":"/usr/share/icons/hicolor/256x256/apps/org.gnome.Software.png" }
     ]}
 ]

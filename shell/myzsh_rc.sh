@@ -9,14 +9,18 @@ esac
 #ADD PERSONAL BIN AND CURRENT FOLDER TO PATH
 CURRENTDIR=${0:a:h}
 PARENTDIR=`readlink -f $CURRENTDIR/..`
-#The incantation `typeset -U path', where the -U stands for unique, tells the shell that it should not add anything to $path if it's there already.
+#LOAD RVM
 GRADLE_VERSION=`ls ~/software/android-studio/gradle/ | grep gradle | sort -r | head -n 1`
 GRADLE_PATH=~/software/android-studio/gradle/$GRADLE_VERSION/bin
-typeset -U path
-path=(. $PARENTDIR/bin ~/code/sportscafe/scbuild/bin ~/Android/Sdk/platform-tools $GRADLE_PATH $path)
+#RVM SETTINGS
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
-plugins=(myfunctions git docker themes ssh-agent man history-substring-search myaliases)
+#The incantation `typeset -U path', where the -U stands for unique, tells the shell that it should not add anything to $path if it's there already.
+typeset -U path
+path=($path ~/.rvm/bin . $PARENTDIR/bin ~/code/sportscafe/scbuild/bin ~/Android/Sdk/platform-tools $GRADLE_PATH)
+
 #oh-my-zsh SETTINGS:
+plugins=(myfunctions git docker themes ssh-agent man history-substring-search myaliases)
 ZSH_THEME="sahil2"
 export ZSH=~/.oh-my-zsh
 export ZSH_CUSTOM=$CURRENTDIR/zsh-custom

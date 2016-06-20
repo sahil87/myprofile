@@ -12,7 +12,11 @@ export TERM=xterm-256color
 
 PARENTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )"/../ && pwd )"
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-PATH=$PARENTDIR/bin:./:$PATH
+
+#RVM SETTINGS
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+PATH=$PATH:~/.rvm/bin:.:$PARENTDIR/bin
 export PATH
 
 #BASH HISTORY
