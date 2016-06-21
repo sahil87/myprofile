@@ -74,3 +74,6 @@ screen
 ^aShiftK
 ^a2 -> tab number
 ^aShift -> number
+
+#Command to add user, create home directory, set default shell
+adduser [username]
