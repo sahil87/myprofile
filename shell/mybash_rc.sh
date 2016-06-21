@@ -51,7 +51,7 @@ GIT_PS1_SHOWUNTRACKEDFILES=1
 GIT_PS1_SHOWSTASHSTATE=1
 GIT_PS1_SHOWUPSTREAM=1
 GIT_PS1_DESCRIBE_STYLE=branch
-source $DIR/mybash_git-prompt.sh
+source /usr/lib/git-core/git-sh-prompt
 GIT_STRING='$(__git_ps1 " [%s]")'
 #END_CHARACTER=$'\u26A1' #Lightning
 END_CHARACTER='\$'
