@@ -10,6 +10,12 @@ sudo add-apt-repository ppa:webupd8team/java
 sudo apt-get update
 sudo apt-get install oracle-java8-installer
 
+#Install go from https://golang.org/doc/install
+mkdir ~/code/go
+
+#Install google drive for linux
+go get -u github.com/odeke-em/drive/cmd/drive
+
 #Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/sahil87/oh-my-zsh/master/tools/install.sh)"
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
@@ -22,7 +28,7 @@ command curl -sSL https://rvm.io/mpapis.asc | gpg2 --import -
 \curl -sSL https://get.rvm.io | bash -s stable --ruby -- --ignore-dotfiles
 
 #Make ruby 2.2 default
-rvm --default use 2.2
+rvm --default use 2.3
 
 #fluentd #Works on Ruby 2.2
 gem install fluentd --no-ri --no-rdoc
