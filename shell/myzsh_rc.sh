@@ -19,6 +19,8 @@ GRADLE_PATH=~/software/android-studio/gradle/$GRADLE_VERSION/bin
 typeset -U path
 path=($path ~/.rvm/bin . $PARENTDIR/bin ~/code/sportscafe/scbuild/bin /usr/local/go/bin ~/Android/Sdk/platform-tools $GRADLE_PATH)
 
+export GOPATH=~/code/go
+
 #oh-my-zsh SETTINGS:
 plugins=(myfunctions git docker themes ssh-agent man history-substring-search myaliases)
 ZSH_THEME="sahil2"
