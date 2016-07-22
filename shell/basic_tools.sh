@@ -4,13 +4,23 @@ sudo apt install -y curl wget nmap whois
 sudo apt install -y git gitk
 sudo apt install -y encfs
 sudo apt install -y android-tools-adb android-tools-fastboot
-sudo apt install -y ubuntu-restricted-extras libavcodec-extra libdvd-pkg
+#sudo apt install -y ubuntu-restricted-extras libavcodec-extra libdvd-pkg
 
 sudo add-apt-repository ppa:webupd8team/java
 sudo apt-get update
 sudo apt-get install oracle-java8-installer
 
+sudo add-apt-repository ppa:webupd8team/atom
+sudo apt-get update
+sudo apt-get install atom
+
+#Link custom apps menu
+git clone git@github.com:sahil87/custom-apps-menu.git ~/code/sahil87/custom-apps-menu
+ln -s ~/code/sahil87/custom-apps-menu ~/.local/share/cinnamon/applets/custom-apps-menu@sahil87
+
 #Install go from https://golang.org/doc/install
+wget https://storage.googleapis.com/golang/go1.6.3.linux-amd64.tar.gz
+sudo tar -C /usr/local -xzf go1.6.3.linux-amd64.tar.gz
 mkdir ~/code/go
 
 #Install google drive for linux
@@ -27,13 +37,8 @@ chsh -s /bin/zsh
 command curl -sSL https://rvm.io/mpapis.asc | gpg2 --import -
 \curl -sSL https://get.rvm.io | bash -s stable --ruby -- --ignore-dotfiles
 
-#Make ruby 2.2 default
+#Make ruby 2.3 default
 rvm --default use 2.3
-
-#fluentd #Works on Ruby 2.2
-gem install fluentd --no-ri --no-rdoc
-fluent-gem install fluent-plugin-influxdb
-gem install -V fluentd-ui
 
 docker run -p 8083:8083 -p 8086:8086 \
     -e INFLUXDB_GRAPHITE_ENABLED=true \
