@@ -35,13 +35,9 @@ chsh -s /bin/zsh
 
 #Install Ruby (rvm)
 command curl -sSL https://rvm.io/mpapis.asc | gpg2 --import -
-\curl -sSL https://get.rvm.io | bash -s stable --ruby -- --ignore-dotfiles
+\curl -sSL https://get.rvm.io | bash -s -- --ignore-dotfiles stable
 
 #Make ruby 2.3 default
+rvm list known
+rvm install 2.3
 rvm --default use 2.3
-
-docker run -p 8083:8083 -p 8086:8086 \
-    -e INFLUXDB_GRAPHITE_ENABLED=true \
-    influxdb
-
-docker run -d --name=grafana -p 3000:3000 --net="host" grafana/grafana
