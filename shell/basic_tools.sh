@@ -5,6 +5,8 @@ sudo apt install -y git gitk
 sudo apt install -y encfs
 sudo apt install -y android-tools-adb android-tools-fastboot
 #sudo apt install -y ubuntu-restricted-extras libavcodec-extra libdvd-pkg
+#For UI:
+sudo apt install -y yakuake
 
 sudo add-apt-repository ppa:webupd8team/java
 sudo apt-get update
@@ -29,7 +31,6 @@ go get -u github.com/odeke-em/drive/cmd/drive
 #Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/sahil87/oh-my-zsh/master/tools/install.sh)"
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-rm ~/.zshrc
 source $DIR/add_to_zshrc.sh
 chsh -s /bin/zsh
 
