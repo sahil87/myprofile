@@ -42,3 +42,23 @@ command curl -sSL https://rvm.io/mpapis.asc | gpg2 --import -
 rvm list known
 rvm install 2.3
 rvm --default use 2.3
+
+#Install Nodejs
+curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+sudo apt install -y nodejs build-essential
+
+#Install docker
+sudo apt-get install apt-transport-https ca-certificates
+sudo apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
+su -c 'echo "deb https://apt.dockerproject.org/repo ubuntu-xenial main" > /etc/apt/sources.list.d/docker.list'
+sudo apt-get update
+sudo apt-get install linux-image-extra-$(uname -r) docker-engine
+sudo rm -rf /var/lib/docker
+ln -s /mnt/files/storage/docker /var/lib/docker
+sudo service docker start
+#Add yourself to docker group
+sudo groupadd docker
+sudo usermod -aG docker sahil
+#Docker Compose, find latest version from https://github.com/docker/compose/releases
+su -c 'curl -L https://github.com/docker/compose/releases/download/1.8.0-rc2/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose'
+sudo chmod +x /usr/local/bin/docker-compose

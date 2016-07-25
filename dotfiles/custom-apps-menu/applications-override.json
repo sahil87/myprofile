@@ -17,7 +17,7 @@
   { "command":"S" },
   { "displayName":"Media", "iconName":"applications-multimedia", "menu": [
     { "desktopFile":"clementine"},
-    { "desktopFile":"audacious"},
+    { "desktopName":"Audacious", "command":"audacious", "iconName":"/usr/share/icons/Mint-X/apps/96/audacious.svg"},
     { "desktopFile":"radiotray"},
     { "displayName":"VLC Media Player","command":"/usr/bin/vlc", "iconName":"/usr/share/icons/hicolor/256x256/apps/vlc.png" }
   ]},
