@@ -62,3 +62,8 @@ sudo usermod -aG docker sahil
 #Docker Compose, find latest version from https://github.com/docker/compose/releases
 su -c 'curl -L https://github.com/docker/compose/releases/download/1.8.0-rc2/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose'
 sudo chmod +x /usr/local/bin/docker-compose
+
+#Python
+sudo apt install -y python3 python3-pip python3-setuptools
+pip3 install virtualenv
+pip3 install virtualenvwrapper

@@ -16,10 +16,16 @@ GRADLE_PATH=~/software/android-studio/gradle/$GRADLE_VERSION/bin
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 #GO Settings
 export GOPATH=~/code/go
+#Python Settings
+export WORKON_HOME=~/code/python/.virtualenvs
+export PROJECT_HOME=~/code/python
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+source ~/.local/bin/virtualenvwrapper.sh
 
 #The incantation `typeset -U path', where the -U stands for unique, tells the shell that it should not add anything to $path if it's there already.
 typeset -U path
-path=($path ~/.rvm/bin . $PARENTDIR/bin ~/code/sportscafe/scbuild/bin /usr/local/go/bin $GOPATH/bin ~/Android/Sdk/platform-tools $GRADLE_PATH)
+#~/.local/bin is for pythong pip installs done by user without setting virtualenv
+path=($path ~/.rvm/bin . ~/.local/bin $PARENTDIR/bin ~/code/sportscafe/scbuild/bin /usr/local/go/bin $GOPATH/bin ~/Android/Sdk/platform-tools $GRADLE_PATH)
 
 #oh-my-zsh SETTINGS:
 plugins=(myfunctions git docker themes ssh-agent man history-substring-search myaliases)
