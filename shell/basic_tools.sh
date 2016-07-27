@@ -10,7 +10,8 @@ sudo apt install -y yakuake
 
 sudo add-apt-repository ppa:webupd8team/java
 sudo apt-get update
-sudo apt-get install oracle-java8-installer
+sudo apt install -y oracle-java8-installer
+sudo apt install -y oracle-java8-set-default
 
 sudo add-apt-repository ppa:webupd8team/atom
 sudo apt-get update
@@ -67,3 +68,14 @@ sudo chmod +x /usr/local/bin/docker-compose
 sudo apt install -y python3 python3-pip python3-setuptools
 pip3 install virtualenv
 pip3 install virtualenvwrapper
+
+#Install ansible
+sudo apt-get install -y software-properties-common
+sudo apt-add-repository -y ppa:ansible/ansible
+sudo apt-get update
+sudo apt install -y ansible
+
+#For AWS ec2.py script to work
+sudo apt-get install -y python python-dev python-pip
+sudo pip install boto
+sudo pip install --upgrade --user boto
