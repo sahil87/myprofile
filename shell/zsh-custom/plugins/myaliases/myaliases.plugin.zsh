@@ -27,6 +27,7 @@ alias gs='git status'
 alias gcm='git commit -m'
 alias gfu='git fetch upstream'
 alias gru='git rebase upstream/master'
+alias gup='gfu; gru; gp;'
 alias gl='git log --all --graph --decorate --oneline'
 alias p='git pull'
 
