@@ -16,7 +16,7 @@ GRADLE_PATH=~/software/android-studio/gradle/$GRADLE_VERSION/bin
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 #GO Settings
 export GOPATH=~/code/go
-#Python Settings
+#Python Settings: Use workon to list/go into a virutal env, deactivate to exit
 export WORKON_HOME=~/code/python/.virtualenvs
 export PROJECT_HOME=~/code/python
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
