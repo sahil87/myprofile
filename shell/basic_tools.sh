@@ -80,3 +80,21 @@ sudo apt install -y ansible
 sudo apt-get install -y python python-dev python-pip
 sudo pip install boto
 sudo pip install --upgrade --user boto
+
+#For virtualbox
+su -c 'echo "deb http://download.virtualbox.org/virtualbox/debian xenial contrib"  > /etc/apt/sources.list.d/virtualbox.list'
+cd /tmp; wget https://www.virtualbox.org/download/oracle_vbox_2016.asc
+sudo apt-key add oracle_vbox_2016.asc
+sudo apt-get update
+sudo apt-get install virtualbox-5.1
+sudo usermod -a -G vboxusers sahil
+
+#Important symbolic links:
+ln -s /mnt ~/
+ln -s /mnt/files/code ~/
+
+STORAGE=/mnt/files/storage
+ln -s $STORAGE/Android ~/
+ln -s $STORAGE/Genymobile_hidden ~/.Genymobile
+ln -s $STORAGE/android_hidden ~/.android
+ln -s $STORAGE/docker /var/lib/docker
