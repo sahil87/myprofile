@@ -54,8 +54,9 @@ sudo apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58
 su -c 'echo "deb https://apt.dockerproject.org/repo ubuntu-xenial main" > /etc/apt/sources.list.d/docker.list'
 sudo apt-get update
 sudo apt-get install linux-image-extra-$(uname -r) docker-engine
-sudo rm -rf /var/lib/docker
-ln -s /mnt/files/storage/docker /var/lib/docker
+sudo service docker stop
+sudo rm -rf /var/lib/docker; sudo umount /var/lib/docker/aufs
+sudo ln -s /mnt/files/storage/docker /var/lib/docker
 sudo service docker start
 #Add yourself to docker group
 sudo groupadd docker
