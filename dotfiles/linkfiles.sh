@@ -6,10 +6,12 @@ function linkfile() {
     DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
     if (( $SUDO ))
     then
-        sudo rm $DEST
+        [ -f $DEST ] && sudo rm $DEST
+        [ -d $DEST ] && sudo rmdir $DEST
         sudo ln -s $DIR/$SOURCE $DEST
     else
-        rm $DEST
+        [ -f $DEST ] && rm $DEST
+        [ -d $DEST ] && rmdir $DEST
         ln -s $DIR/$SOURCE $DEST
     fi
 }
@@ -19,6 +21,7 @@ linkfile emacs/init.el              ~/.emacs                            0
 linkfile ssh/config                 ~/.ssh/config                       0
 linkfile ansible/.ansible.cfg       ~/.ansible.cfg                      0
 linkfile git/.gitconfig             ~/.gitconfig                        0
+linkfile ../configs/nginx/conf.d    /etc/nginx/conf.d                   1
 linkfile resolvconf/head            /etc/resolvconf/resolv.conf.d/head  1
 linkfile resolvconf/tail            /etc/resolvconf/resolv.conf.d/tail  1
 sudo resolvconf -u;
