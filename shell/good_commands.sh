@@ -77,3 +77,5 @@ screen
 
 #Command to add user, create home directory, set default shell
 adduser [username]
+#Command to add user to a group
+usermod -aG [groupname] [user]
