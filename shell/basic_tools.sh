@@ -4,6 +4,7 @@ sudo apt install -y curl wget nmap whois
 sudo apt install -y git gitk
 sudo apt install -y encfs
 sudo apt install -y android-tools-adb android-tools-fastboot
+sudo apt install -y rygel rygel-preferences
 #sudo apt install -y ubuntu-restricted-extras libavcodec-extra libdvd-pkg
 #For UI:
 sudo apt install -y yakuake
