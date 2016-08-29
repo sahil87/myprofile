@@ -11,9 +11,9 @@ alias .5='cd ../../../../../'   # Go back 5 directory levels
 alias .6='cd ../../../../../../'  # Go back 6 directory levels
 
 #Ls improvements
-alias ls='ls -F --color=auto'
-alias ll='ls -hl'
-alias lla='ls -ahl'
+alias ls='ls --color=auto'
+alias ll='ls -Fhl'
+alias lla='ls -Fahl'
 alias sl="ls"
 alias l="ls"
 
