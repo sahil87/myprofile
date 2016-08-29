@@ -19,6 +19,7 @@
     { "desktopFile":"clementine"},
     { "desktopName":"Audacious", "command":"audacious", "iconName":"/usr/share/icons/Mint-X/apps/96/audacious.svg"},
     { "desktopFile":"radiotray"},
+    { "desktopFile":"GTick"},
     { "displayName":"VLC Media Player","command":"/usr/bin/vlc", "iconName":"/usr/share/icons/hicolor/256x256/apps/vlc.png" }
   ]},
   { "displayName":"Internet", "iconName":"applications-internet", "menu": [
