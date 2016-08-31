@@ -28,6 +28,7 @@
   	{ "desktopFile":"filezilla" }
   ]},
   { "displayName":"Office", "iconName":"applications-office", "menu": [
+    { "desktopFile":"synergy"},
     { "desktopFile":"gnome-calculator"},
     { "displayName":"KMyMoney", "command":"kmymoney", "iconName":"/usr/share/icons/hicolor/64x64/apps/kmymoney.png" }
   ]},
@@ -39,7 +40,10 @@
   { "displayName":"Settings", "iconName":"preferences-desktop", "menu": [
     { "desktopFile":"cinnamon-settings" },
   	{ "desktopFile":"gnome-system-monitor" },
-    { "displayName":"Mint Software Manager","command":"gksu mintinstall", "iconName":"/usr/share/pixmaps/mintinstall.svg" },
+    { "displayName":"Mint Software Manager", "command":"gksu mintinstall", "iconName":"/usr/share/pixmaps/mintinstall.svg" },
+    { "desktopFile":"luckybackup"},
+    { "desktopFile":"gparted"},
+    { "displayName":"Disks", "command":"gnome-disks", "iconName":"/usr/share/icons/Mint-X/apps/96/gnome-disks.svg" },
   	{ "displayName":"Ubuntu Software Center","command":"software-center", "iconName":"/usr/share/icons/hicolor/scalable/apps/softwarecenter.svg" },
   	{ "displayName":"Gnome Software","command":"gnome-software", "iconName":"/usr/share/icons/hicolor/256x256/apps/org.gnome.Software.png" }
   ]}
