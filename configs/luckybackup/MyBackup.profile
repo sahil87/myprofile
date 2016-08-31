@@ -30,7 +30,7 @@ TypeDirName=1
 TypeSync=0
 Source=/mnt/hd2008/test
 Destination=/mnt/hd2010/IMP Backup/
-LastExecutionTime=20150303010046
+LastExecutionTime=20160831102054
 LastExecutionErrors=0
 Args=-h
 Args=--progress
@@ -46,21 +46,22 @@ Args=--delete-excluded
 Args=--exclude=**/lost+found*/
 Args=--exclude=**/*Trash*/
 Args=--exclude=**/*trash*/
+Args=--exclude=**/.gvfs/
 Args=--protect-args
-Args=-e ssh
+Args=-e ssh -i /home/sahil/Dropbox/keys/ssh_keys/localsystems/workstation/id_rsa
 Args=--backup
-Args=--backup-dir=test/.luckybackup-snaphots/20140623001850/
+Args=--backup-dir=test/.luckybackup-snaphots/20160831102006/
 Args=--filter=protect .luckybackup-snaphots/
-Args=--log-file=/home/sahil/.luckyBackup/snaps/changes.log
+Args=--log-file=/home/sahil/.luckyBackup/snaps/MyBackup-Test-20160831102054.changes.log
 Args=--log-file-format=[changed_data]%i[LB]%n
 Args=/mnt/hd2008/test
-Args=sahil@sahilBackup:/mnt/hd2010/IMP Backup/
+Args=sahil@sahil-workstation:/mnt/hd2010/IMP Backup/
 ConnectRestore=
 KeepSnapshots=4
-SnapshotsListItem=20140511144758
-SnapshotsListItem=20140623001850
 SnapshotsListItem=20150302011302
 SnapshotsListItem=20150303010046
+SnapshotsListItem=20160831102006
+SnapshotsListItem=20160831102054
 Exclude=1
 ExcludeFromFile=0
 ExcludeFile=
@@ -71,7 +72,7 @@ ExcludeMount=0
 ExcludeLostFound=1
 ExcludeSystem=0
 ExcludeTrash=1
-ExcludeGVFS=0
+ExcludeGVFS=1
 Include=0
 IncludeFromFile=0
 IncludeModeNormal=1
@@ -81,10 +82,10 @@ RemoteModule=0
 RemoteDestination=1
 RemoteSource=0
 RemoteSSH=1
-RemoteHost=sahilBackup
+RemoteHost=sahil-workstation
 RemoteUser=sahil
 RemotePassword=
-RemoteSSHPassword=
+RemoteSSHPassword=/home/sahil/Dropbox/keys/ssh_keys/localsystems/workstation/id_rsa
 RemoteSSHPasswordStr=
 RemoteSSHOptions=
 RemoteSSHPort=0
@@ -102,17 +103,17 @@ OptionsSuper=0
 OptionsNumericIDs=0
 OptionsRestorent=0
 OptionsVss=0
-LuckyBackupDir=
-VshadowDir=
-RsyncCommand=
-SshCommand=
-DosdevCommand=
-CygpathCommand=
-TempPath=
+LuckyBackupDir=/home/sahil/.luckyBackup/
+VshadowDir=/usr/bin
+RsyncCommand=rsync
+SshCommand=ssh
+DosdevCommand=/usr/bin/dosdev.exe
+CygpathCommand=/usr/bin/cygpath.exe
+TempPath=/tmp
 ByPassWarning=0
 CloneWarning=1
 RepeatOnFail=0
-IncludeState=1
+IncludeState=0
 [Task_end] - 0
 
 [Task] - 1
@@ -120,10 +121,10 @@ Name=Myfiles
 TypeDirContents=0
 TypeDirName=1
 TypeSync=0
-Source=/mnt/hd2008/myfiles
+Source=/mnt/hd2008/myfiles-noncloud
 Destination=/mnt/hd2010/IMP Backup/
-LastExecutionTime=20141226225228
-LastExecutionErrors=0
+LastExecutionTime=20160831103221
+LastExecutionErrors=2
 Args=-h
 Args=--progress
 Args=--stats
@@ -140,20 +141,20 @@ Args=--exclude=.svn
 Args=--exclude=.git
 Args=--exclude=node_modules
 Args=--protect-args
-Args=-e ssh
+Args=-e ssh -i /home/sahil/Dropbox/keys/ssh_keys/localsystems/workstation/id_rsa
 Args=--backup
-Args=--backup-dir=myfiles/.luckybackup-snaphots/20141128011556/
+Args=--backup-dir=myfiles-noncloud/.luckybackup-snaphots/20141128011556/
 Args=--filter=protect .luckybackup-snaphots/
-Args=--log-file=/home/sahil/.luckyBackup/snaps/changes.log
+Args=--log-file=/home/sahil/.luckyBackup/snaps/MyBackup-Test-20160831102054.changes.log
 Args=--log-file-format=[changed_data]%i[LB]%n
-Args=/mnt/hd2008/myfiles
-Args=sahil@sahilBackup:/mnt/hd2010/IMP Backup/
+Args=/mnt/hd2008/myfiles-noncloud
+Args=sahil@sahil-workstation:/mnt/hd2010/IMP Backup/
 ConnectRestore=
 KeepSnapshots=4
-SnapshotsListItem=20141116233931
 SnapshotsListItem=20141116234124
 SnapshotsListItem=20141128011556
 SnapshotsListItem=20141226225228
+SnapshotsListItem=20160831103221
 Exclude=1
 ExcludeFromFile=0
 ExcludeFile=
@@ -177,10 +178,10 @@ RemoteModule=0
 RemoteDestination=1
 RemoteSource=0
 RemoteSSH=1
-RemoteHost=sahilBackup
+RemoteHost=sahil-workstation
 RemoteUser=sahil
 RemotePassword=
-RemoteSSHPassword=
+RemoteSSHPassword=/home/sahil/Dropbox/keys/ssh_keys/localsystems/workstation/id_rsa
 RemoteSSHPasswordStr=
 RemoteSSHOptions=
 RemoteSSHPort=0
@@ -198,17 +199,17 @@ OptionsSuper=0
 OptionsNumericIDs=0
 OptionsRestorent=0
 OptionsVss=0
-LuckyBackupDir=
-VshadowDir=
-RsyncCommand=
-SshCommand=
-DosdevCommand=
-CygpathCommand=
-TempPath=
+LuckyBackupDir=/home/sahil/.luckyBackup/
+VshadowDir=/usr/bin
+RsyncCommand=rsync
+SshCommand=ssh
+DosdevCommand=/usr/bin/dosdev.exe
+CygpathCommand=/usr/bin/cygpath.exe
+TempPath=/tmp
 ByPassWarning=0
 CloneWarning=1
 RepeatOnFail=0
-IncludeState=0
+IncludeState=1
 [Task_end] - 1
 
 [Task] - 2
