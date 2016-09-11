@@ -99,3 +99,4 @@ ln -s $STORAGE/Android ~/
 ln -s $STORAGE/Genymobile_hidden ~/.Genymobile
 ln -s $STORAGE/android_hidden ~/.android
 ln -s $STORAGE/docker /var/lib/docker
+ln -s $STORAGE/Unity /opt/Unity

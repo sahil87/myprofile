@@ -25,7 +25,8 @@
   { "displayName":"Internet", "iconName":"applications-internet", "menu": [
   	{ "displayName":"Transmission Torrents", "command":"transmission-gtk", "iconName":"/usr/share/icons/hicolor/scalable/apps/transmission.svg"},
   	{ "desktopFile":"remmina", "command":"remmina"},
-  	{ "desktopFile":"filezilla" }
+  	{ "desktopFile":"filezilla" },
+	{ "desktopFile":"synergy" }
   ]},
   { "displayName":"Office", "iconName":"applications-office", "menu": [
     { "desktopFile":"synergy"},
