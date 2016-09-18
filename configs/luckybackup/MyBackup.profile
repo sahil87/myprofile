@@ -1175,8 +1175,8 @@ TypeDirName=1
 TypeSync=0
 Source=/mnt/hd2014/IMP Media Backup/serials
 Destination=/mnt/hd2013/
-LastExecutionTime=20160902000439
-LastExecutionErrors=2
+LastExecutionTime=20160918123826
+LastExecutionErrors=0
 Args=-h
 Args=--progress
 Args=--stats
@@ -1198,6 +1198,8 @@ Args=/mnt/hd2013/
 ConnectRestore=Serials
 KeepSnapshots=4
 SnapshotsListItem=20160902000439
+SnapshotsListItem=20160911221611
+SnapshotsListItem=20160918123826
 Exclude=1
 ExcludeFromFile=0
 ExcludeFile=
@@ -1249,7 +1251,7 @@ TempPath=/tmp
 ByPassWarning=0
 CloneWarning=1
 RepeatOnFail=0
-IncludeState=0
+IncludeState=1
 [Task_end] - 13
 
 [Task] - 14
@@ -1335,7 +1337,7 @@ TempPath=/tmp
 ByPassWarning=0
 CloneWarning=1
 RepeatOnFail=0
-IncludeState=1
+IncludeState=0
 [Task_end] - 14
 
 [Task] - 15
