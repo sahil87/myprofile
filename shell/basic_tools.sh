@@ -42,8 +42,10 @@ command curl -sSL https://rvm.io/mpapis.asc | gpg2 --import -
 
 #Make ruby 2.3 default
 rvm list known
+rvm install 2.3-dev
 rvm install 2.3
 rvm --default use 2.3
+sudo gem install bundler
 
 #Install Nodejs
 curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
