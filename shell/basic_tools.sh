@@ -41,9 +41,9 @@ command curl -sSL https://rvm.io/mpapis.asc | gpg2 --import -
 \curl -sSL https://get.rvm.io | bash -s -- --ignore-dotfiles stable
 
 #Make ruby 2.3 default
-rvm list known
+#rvm list known
+#rvm install 2.3
 rvm install 2.3-dev
-rvm install 2.3
 rvm --default use 2.3-dev
 gem install bundler
 
