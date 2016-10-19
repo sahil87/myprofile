@@ -2,6 +2,7 @@
   { "displayName":"Firefox Web Browser", "command":"firefox -p sahil","iconName":"/usr/share/pixmaps/firefox.png" },
   { "displayName":"Google Chrome","command":"/usr/bin/google-chrome-stable", "iconName":"/usr/share/icons/hicolor/64x64/apps/google-chrome.png" },
   { "desktopFile":"slack" },
+  { "displayName":"Keep","command":"/opt/google/chrome/google-chrome --profile-directory=Default --app-id=hmjkmjkepdijhoojdojkdfohbdgmmhki", "iconName":"/home/sahil/.local/share/icons/hicolor/128x128/apps/chrome-hmjkmjkepdijhoojdojkdfohbdgmmhki-Default.png" },
 
   { "command":"S" },
   { "desktopFile":"gnome-terminal"},
@@ -40,8 +41,8 @@
   ]},
   { "command":"S" },
   { "displayName":"Settings", "iconName":"preferences-desktop", "menu": [
-    { "desktopFile":"cinnamon-settings" },
   	{ "desktopFile":"gnome-system-monitor" },
+    { "desktopFile":"cinnamon-settings" },
     { "displayName":"Mint Software Manager", "command":"gksu mintinstall", "iconName":"/usr/share/pixmaps/mintinstall.svg" },
     { "desktopFile":"luckybackup"},
     { "desktopFile":"gparted"},
