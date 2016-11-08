@@ -14,9 +14,6 @@
   { "desktopFile":"emacs24"},
 
   { "command":"S" },
-  { "desktopFile":"nemo", "command":"nemo"},
-
-  { "command":"S" },
   { "displayName":"Media", "iconName":"applications-multimedia", "menu": [
     { "desktopFile":"clementine"},
     { "desktopName":"Audacious", "command":"audacious", "iconName":"/usr/share/icons/Mint-X/apps/96/audacious.svg"},
@@ -35,10 +32,19 @@
     { "desktopFile":"gnome-calculator"},
     { "displayName":"KMyMoney", "command":"kmymoney", "iconName":"/usr/share/icons/hicolor/64x64/apps/kmymoney.png" }
   ]},
+  { "displayName":"Graphics", "iconName":"applications-graphics", "menu": [
+    { "desktopFile":"blender"},
+    { "desktopFile":"gimp"},
+    { "displayName":"Unity", "command":"/opt/Unity/Editor/Unity", "iconName":"/usr/share/icons/hicolor/256x256/apps/unity-editor-icon.png" }
+  ]},
   { "displayName":"Games", "iconName":"applications-games", "menu": [
   	{ "desktopFile":"openttd" },
   	{ "displayName":"0 A.D.", "command":"/usr/game/0ad", "iconName":"/usr/share/pixmaps/0ad.png" }
   ]},
+
+  { "command":"S" },
+  { "desktopFile":"nemo", "command":"nemo"},
+
   { "command":"S" },
   { "displayName":"Settings", "iconName":"preferences-desktop", "menu": [
   	{ "desktopFile":"gnome-system-monitor" },
