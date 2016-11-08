@@ -102,3 +102,8 @@ ln -s $STORAGE/Genymobile_hidden ~/.Genymobile
 ln -s $STORAGE/android_hidden ~/.android
 ln -s $STORAGE/docker /var/lib/docker
 ln -s $STORAGE/Unity /opt/Unity
+
+#Unity
+#After installing Unity from deb by
+#"dpkg -i Unity----.deb" run
+#"sudo apt-get -f install" to get all dependencies
