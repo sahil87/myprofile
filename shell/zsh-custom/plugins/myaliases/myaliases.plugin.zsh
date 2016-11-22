@@ -1,6 +1,6 @@
 #!/bin/zsh
 ALIASDIR=${0:a:h}
-MYPROFILEDIR=$ALIASDIR/../../../..
+MYPROFILEDIR=$ALIASDIR/../../../../..
 alias cd..='cd ../' # Go back 1 directory level (for fast typers)
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -43,6 +43,8 @@ alias sca='cd ~/code/sportscafe/scapi'
 alias scs='cd ~/code/sportscafe/scscripts'
 alias scg='cd ~/code/sportscafe/scgame'
 alias 87='cd $MYPROFILEDIR'
+alias myprofile='cd $MYPROFILEDIR/myprofile'
+alias blog='cd $MYPROFILEDIR/blog'
 alias aws-add-creds='source $MYPROFILEDIR/revealed/keys/aws_iam_keys/sportscafe/export.sh'
 
 alias p8='ping 8.8.8.8'
