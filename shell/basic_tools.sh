@@ -36,7 +36,7 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 source $DIR/add_to_zshrc.sh
 chsh -s /bin/zsh
 
-git clone git@github.com:sahil87/z.git ~/.z
+git clone git@github.com:sahil87/z.git ~/.zclone
 
 #Install Ruby (rvm)
 command curl -sSL https://rvm.io/mpapis.asc | gpg2 --import -
