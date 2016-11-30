@@ -97,6 +97,7 @@ sudo usermod -a -G vboxusers sahil
 #Important symbolic links:
 ln -s /mnt ~/
 ln -s /mnt/files/code ~/
+ln -s ~/Dropbox/code-sync ~/code/code-sync
 
 STORAGE=/mnt/files/storage
 ln -s $STORAGE/Android ~/
