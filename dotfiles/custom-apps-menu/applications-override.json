@@ -15,6 +15,7 @@
 
   { "command":"S" },
   { "displayName":"Media", "iconName":"applications-multimedia", "menu": [
+    { "desktopName":"Musescore", "command":"musescore", "iconName":"/usr/share/icons/hicolor/64x64/apps/mscore.png"},
     { "desktopFile":"clementine"},
     { "desktopName":"Audacious", "command":"audacious", "iconName":"/usr/share/icons/Mint-X/apps/96/audacious.svg"},
     { "desktopFile":"radiotray"},
