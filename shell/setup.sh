@@ -98,7 +98,7 @@ sudo usermod -a -G vboxusers sahil
 ln -s /mnt ~/
 ln -s /mnt/files/code ~/
 ln -s ~/Dropbox/code-sync ~/code/code-sync
-ln -s ~/Dropbox/books/Music/scores ~/Documents/MuseScore2/Scores
+ln -s ~/Dropbox/books/Music/MuseScore2 ~/Documents/MuseScore2
 
 STORAGE=/mnt/files/storage
 ln -s $STORAGE/Android ~/
