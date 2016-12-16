@@ -7,7 +7,7 @@ sudo apt install -y android-tools-adb android-tools-fastboot
 sudo apt install -y rygel rygel-preferences
 #sudo apt install -y ubuntu-restricted-extras libavcodec-extra libdvd-pkg
 #For UI:
-sudo apt install -y yakuake
+sudo apt install -y yakuake xcalib
 
 sudo add-apt-repository ppa:webupd8team/java
 sudo apt-get update
