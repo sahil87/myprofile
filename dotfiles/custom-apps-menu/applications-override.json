@@ -6,15 +6,19 @@
 
   { "command":"S" },
   { "desktopFile":"gnome-terminal"},
-  { "displayName":"Android Studio","command":"/home/sahil/software/android-studio/bin/studio.sh", "iconName":"/home/sahil/software/android-studio/bin/studio.png" },
-  { "displayName":"WebStorm","command":"/home/sahil/software/webstorm/bin/webstorm.sh", "iconName":"/home/sahil/software/webstorm/bin/webstorm.svg" },
-  { "displayName":"Idea","command":"/home/sahil/software/idea/bin/idea.sh", "iconName":"/home/sahil/software/idea/bin/idea.png" },
-  { "displayName":"PyCharm","command":"/home/sahil/software/pycharm/bin/pycharm.sh", "iconName":"/home/sahil/software/pycharm/bin/pycharm.png" },
-  { "displayName":"Genymotion","command":"/home/sahil/software/genymotion/genymotion", "iconName":"/home/sahil/software/genymotion/icons/icon.png" },
-  { "desktopFile":"atom", "command": "atom"},
-  { "desktopFile":"emacs24"},
 
   { "command":"S" },
+
+  { "displayName":"Programming", "iconName":"braid", "menu": [
+	{ "displayName":"Android Studio","command":"/home/sahil/software/android-studio/bin/studio.sh", "iconName":"/home/sahil/software/android-studio/bin/studio.png" },
+	{ "displayName":"WebStorm","command":"/home/sahil/software/webstorm/bin/webstorm.sh", "iconName":"/home/sahil/software/webstorm/bin/webstorm.svg" },
+	{ "displayName":"Idea","command":"/home/sahil/software/idea/bin/idea.sh", "iconName":"/home/sahil/software/idea/bin/idea`~~.png" },
+	{ "displayName":"PyCharm","command":"/home/sahil/software/pycharm/bin/pycharm.sh", "iconName":"/home/sahil/software/pycharm/bin/pycharm.png" },
+	{ "displayName":"Genymotion","command":"/home/sahil/software/genymotion/genymotion", "iconName":"/home/sahil/software/genymotion/icons/icon.png" },
+	{ "desktopFile":"atom", "command": "atom"},
+	{ "desktopFile":"emacs24"},
+	{ "desktopFile":"VirtualBox", "command": "VirtualBox"}
+  ]},
   { "displayName":"Media", "iconName":"applications-multimedia", "menu": [
 	{ "desktopFile":"rygel-preferences"},
     { "desktopName":"Musescore", "command":"musescore", "iconName":"/usr/share/icons/hicolor/64x64/apps/mscore.png"},

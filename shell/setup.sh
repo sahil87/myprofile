@@ -76,9 +76,9 @@ pip3 install virtualenv
 pip3 install virtualenvwrapper
 
 #Install ansible
-sudo apt-get install -y software-properties-common
+sudo apt install -y software-properties-common
 sudo apt-add-repository -y ppa:ansible/ansible
-sudo apt-get update
+sudo apt update
 sudo apt install -y ansible
 
 #For AWS ec2.py script to work
@@ -90,13 +90,14 @@ sudo pip install --upgrade --user boto
 su -c 'echo "deb http://download.virtualbox.org/virtualbox/debian xenial contrib"  > /etc/apt/sources.list.d/virtualbox.list'
 cd /tmp; wget https://www.virtualbox.org/download/oracle_vbox_2016.asc
 sudo apt-key add oracle_vbox_2016.asc
-sudo apt-get update
-sudo apt-get install virtualbox-5.1
+sudo apt update
+sudo apt install virtualbox-5.1
 sudo usermod -a -G vboxusers sahil
 
 #Important symbolic links:
 ln -s /mnt ~/
 ln -s /mnt/files/code ~/
+ln -s /mnt/hd2008/VirtualBox\ VMs ~/
 ln -s ~/Dropbox/code-sync ~/code/code-sync
 ln -s ~/Dropbox/books/Music/MuseScore2 ~/Documents/MuseScore2
 
