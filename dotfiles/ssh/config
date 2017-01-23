@@ -11,10 +11,16 @@ Host *
 #  ProxyCommand ssh gw.sportscafe.in nc %h %p
 
 #For scp: scp  -o "ProxyCommand ssh -p 2222 gw.sportscafe.in nc %h %p" api-prod10.web.int.sg.aws.sportscafe.in:/home/sahil/api-log.tar.gz .
-Host *.sg.aws.sportscafe.in sportscafe.in !gw.sportscafe.in !blr.sportscafe.in !*.blr.sportscafe.in !10.0.0.*
+Host *.sg.aws.sportscafe.in sportscafe.in !gw.sportscafe.in !10.0.0.*
   ProxyCommand ssh -p 2222 gw.sportscafe.in nc %h %p
 
 Host gw.sportscafe.in
+  Port 2222
+
+Host *.aws.mum.gmetri.com !gw.gmetri.com !10.0.0.*
+  ProxyCommand ssh -p 2222 gw.sportscafe.in nc %h %p
+  
+Host gw.gmetri.com
   Port 2222
 
 Host github
