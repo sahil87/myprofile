@@ -46,7 +46,9 @@ alias vr='cd ~/code/vrgmetri/'
 alias 87='cd $MYPROFILEDIR'
 alias myprofile='cd $MYPROFILEDIR/myprofile'
 alias blog='cd $MYPROFILEDIR/blog'
+#Needed here instead of a commadn as the env vars created need to be in the running shell
 alias aws-add-sc='source $MYPROFILEDIR/revealed/keys/aws_iam_keys/sportscafe/export.sh'
+alias aws-add-gm='source $MYPROFILEDIR/revealed/keys/aws_iam_keys/gmetri/export.sh'
 
 alias p8='ping 8.8.8.8'
 alias install='sudo apt-get install'
