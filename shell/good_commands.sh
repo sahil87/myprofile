@@ -87,5 +87,5 @@ usermod -a -G sudo,admin,docker [username]
 
 #Adding github keys:
 echo "%admin ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/admin
-cd ~; mkdir .ssh; touch authorized_keys;
-curl https://github.com/sahil87.keys >> authorized_keys
+cd ~; mkdir .ssh; touch .ssh/authorized_keys;
+curl https://github.com/sahil87.keys >> .ssh/authorized_keys
