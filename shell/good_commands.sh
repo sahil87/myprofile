@@ -78,7 +78,14 @@ screen
 ^a2 -> tab number
 ^aShift -> number
 
-#Command to add user, create home directory, set default shell
-adduser [username]
-#Command to add user to a group
-usermod -aG [groupname] [user]
+#To create a new user:
+#user add -G sudo -d /new/hom/dir -s /bin/bash
+#useradd -s /bin/bash [username]
+adduser [username] #Adds with template (creates home directory, sets default shell)
+#Add user to groups
+usermod -a -G sudo,admin,docker [username]
+
+#Adding github keys:
+echo "%admin ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/admin
+cd ~; mkdir .ssh; touch authorized_keys;
+curl https://github.com/sahil87.keys >> authorized_keys

@@ -1,5 +1,5 @@
 #!/bin/bash
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-ssh-add $DIR/../revealed/keys/ssh_keys/gmetri/gmetri-1.pem
+ssh-add $DIR/../revealed/keys/ssh_keys/gmetri/gmetri-mum-gw.pem
 echo "Current keys [ssh-add -L]"
 ssh-add -L

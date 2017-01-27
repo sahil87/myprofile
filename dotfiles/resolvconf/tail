@@ -1,4 +1,4 @@
 #In /etc/resolvconf/resolv.conf.d/tail
 #Run sudo resolvconf -u after adding
 
-search web.int.sg.aws.sportscafe.in
+search int.aws.mum.gmetri.com web.int.sg.aws.sportscafe.in
