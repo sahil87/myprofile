@@ -1,5 +1,6 @@
 #!/bin/bash
 #Short ssh to type just ssh beta01
+#Better than overriding ssh itself
 #set -x
 
 if [ "$#" -gt 1 ]

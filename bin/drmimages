@@ -1,0 +1,3 @@
+#!/bin/bash
+echo "Removing all docker images"
+docker images -q | xargs docker rmi

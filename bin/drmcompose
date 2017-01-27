@@ -1,0 +1,5 @@
+#!/bin/bash
+echo "Stoping running containers"
+docker-compose stop
+echo "Removing stopped service containers"
+docker-compose rm -f -v

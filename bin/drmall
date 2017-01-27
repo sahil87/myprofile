@@ -1,0 +1,13 @@
+#!/bin/bash
+echo "Removing exitted containers"
+docker rm -v $(docker ps -a -q -f status=exited);
+echo "Removing half created containers"
+docker rm -v $(docker ps -a -q -f status=created);
+echo "Removing dangling images"
+docker rmi $(docker images -f "dangling=true" -q);
+echo "Removing dangling volumes"
+docker volume ls -qf dangling=true | xargs -r docker volume rm;
+echo "Clearing networks"
+docker network rm $(docker network ls | tail -n+2 | awk '{if($2 !~ /bridge|none|host/){ print $1 }}')
+echo "Removing images not currently running"
+for a in `docker images  | awk '{print $3}'`; do docker rmi $a; done

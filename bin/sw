@@ -1,2 +1,0 @@
-#Take screenshot of window
-gnome-screenshot -w --delay=1
