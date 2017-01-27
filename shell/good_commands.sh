@@ -66,6 +66,7 @@ iftop #Top for networking
 netstat #No of open connections sudo netstat -planet | grep 443
 tcpdump
 sar
+nc -zv host.example.com 20-30 #netcat port scanning
 
 #Use output of previous command in next command
 tar -czfv whereToCompress.tar.gz whatToCompress/
