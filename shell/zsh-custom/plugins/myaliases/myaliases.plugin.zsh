@@ -1,6 +1,7 @@
 #!/bin/zsh
 ALIASDIR=${0:a:h}
-MYPROFILEDIR=$ALIASDIR/../../../../..
+DIR87=$ALIASDIR/../../../../..
+MYPROFILEDIR=$DIR87/mypfrofile
 alias cd..='cd ../' # Go back 1 directory level (for fast typers)
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -45,12 +46,12 @@ alias scg='cd ~/code/sportscafe/scgame'
 alias gm='cd ~/code/vrgmetri/'
 alias gmb='cd ~/code/vrgmetri/gmbuild'
 alias vra='cd ~/code/vrgmetri/vrapi'
-alias 87='cd $MYPROFILEDIR'
-alias myprofile='cd $MYPROFILEDIR/myprofile'
-alias blog='cd $MYPROFILEDIR/blog'
+alias 87='cd $DIR87'
+alias myp='cd $MYPROFILEDIR'
+alias blog='cd $DIR87/blog'
 #Needed here instead of a commadn as the env vars created need to be in the running shell
-alias aws-add-sc='source $MYPROFILEDIR/myprofile/revealed/keys/aws_iam_keys/sportscafe/export.sh'
-alias aws-add-gm='source $MYPROFILEDIR/myprofile/revealed/keys/aws_iam_keys/gmetri/export.sh'
+alias aws-add-sc='source $MYPROFILEDIR/revealed/keys/aws_iam_keys/sportscafe/export.sh'
+alias aws-add-gm='source $MYPROFILEDIR/revealed/keys/aws_iam_keys/gmetri/export.sh'
 
 alias p8='ping 8.8.8.8'
 alias install='sudo apt-get install'
