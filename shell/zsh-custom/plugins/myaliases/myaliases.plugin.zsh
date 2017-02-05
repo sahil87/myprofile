@@ -1,7 +1,7 @@
 #!/bin/zsh
 ALIASDIR=${0:a:h}
 DIR87=$ALIASDIR/../../../../..
-MYPROFILEDIR=$DIR87/mypfrofile
+MYPROFILEDIR=$DIR87/myprofile
 alias cd..='cd ../' # Go back 1 directory level (for fast typers)
 alias ..='cd ..'
 alias ...='cd ../..'
