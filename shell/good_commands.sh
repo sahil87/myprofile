@@ -67,7 +67,8 @@ netstat #No of open connections sudo netstat -planet | grep 443
 tcpdump
 sar
 nc -zv host.example.com 20-30 #netcat port scanning
-
+dig
+nslookup 172.18.0.2 #Reverse lookup
 #Use output of previous command in next command
 tar -czfv whereToCompress.tar.gz whatToCompress/
 
