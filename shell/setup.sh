@@ -22,6 +22,11 @@ sudo apt-get install atom
 git clone git@github.com:sahil87/custom-apps-menu.git ~/code/sahil87/custom-apps-menu
 ln -s ~/code/sahil87/custom-apps-menu ~/.local/share/cinnamon/applets/custom-apps-menu@sahil87
 
+#Download groovy sdk from http://groovy-lang.org/download.html
+#Unzip it in /mnt/files/storage/groovy-2.4.8
+cd /mnt/files/storage
+ln -s groovy-2.4.8 groovy
+
 #Install go from https://golang.org/doc/install
 wget https://storage.googleapis.com/golang/go1.6.3.linux-amd64.tar.gz
 sudo tar -C /usr/local -xzf go1.6.3.linux-amd64.tar.gz
