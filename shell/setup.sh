@@ -60,10 +60,10 @@ sudo apt install -y nodejs build-essential
 
 #Install docker
 sudo apt-get install apt-transport-https ca-certificates
-sudo apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
-su -c 'echo "deb https://apt.dockerproject.org/repo ubuntu-xenial main" > /etc/apt/sources.list.d/docker.list'
+curl -fsSL https://apt.dockerproject.org/gpg | sudo apt-key add -
+sudo add-apt-repository "deb https://apt.dockerproject.org/repo/ ubuntu-$(lsb_release -cs) main"
 sudo apt-get update
-sudo apt-get install linux-image-extra-$(uname -r) docker-engine
+sudo apt-get -y install docker-engine
 sudo service docker stop
 sudo rm -rf /var/lib/docker; sudo umount /var/lib/docker/aufs
 sudo ln -s /mnt/files/storage/docker /var/lib/docker
@@ -72,9 +72,8 @@ sudo service docker start
 sudo groupadd docker
 sudo usermod -aG docker sahil
 #Docker Compose, find latest version from https://github.com/docker/compose/releases
-su -c 'curl -L https://github.com/docker/compose/releases/download/1.8.0-rc2/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose'
+su -c 'curl -L https://github.com/docker/compose/releases/download/1.11.1/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose'
 sudo chmod +x /usr/local/bin/docker-compose
-
 #Python
 sudo apt install -y python3 python3-pip python3-setuptools
 pip3 install virtualenv
