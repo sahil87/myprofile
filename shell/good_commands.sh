@@ -84,7 +84,9 @@ screen
 #To create a new user:
 #user add -G sudo -d /new/hom/dir -s /bin/bash
 #useradd -s /bin/bash [username]
-adduser [username] #Adds with template (creates home directory, sets default shell)
+adduser [username] --disable-password #Adds with template (creates home directory, sets default shell)
+deluser [username] #Removes user
+
 #Add user to groups
 usermod -a -G sudo,admin,docker [username]
 
