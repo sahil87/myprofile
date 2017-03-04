@@ -81,7 +81,7 @@ pip3 install virtualenv
 pip3 install virtualenvwrapper
 
 #Install ansible
-sudo apt install -y software-properties-common
+sudo apt install -y software-properties-common python-jmespath
 sudo apt-add-repository -y ppa:ansible/ansible
 sudo apt update
 sudo apt install -y ansible
