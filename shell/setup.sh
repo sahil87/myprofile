@@ -9,12 +9,13 @@ sudo apt install -y rygel rygel-preferences
 #For UI:
 sudo apt install -y yakuake xcalib
 
+#Java
 sudo echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | sudo debconf-set-selections
-sudo add-apt-repository ppa:webupd8team/java
+sudo add-apt-repository -y ppa:webupd8team/java
 sudo apt-get update
-sudo apt install -y oracle-java8-installer
-sudo apt install -y oracle-java8-set-default
+sudo apt install -y oracle-java8-installer oracle-java8-set-default
 
+#Atom
 sudo add-apt-repository ppa:webupd8team/atom
 sudo apt-get update
 sudo apt-get install atom
