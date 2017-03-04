@@ -43,7 +43,7 @@ ssh my-server.com -- hotsname
 ssh -A my-server.com #Will forward my private key in the session. Remote needs to be trustable, or private key can be compromized.
 
 #To check ports bound in local system
-netstat -tunlp
+netstat -plntu
 lsof -i :port
 
 lsb_release -a # system information
