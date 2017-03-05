@@ -20,6 +20,10 @@ sudo add-apt-repository ppa:webupd8team/atom
 sudo apt-get update
 sudo apt-get install atom
 
+#Digikam
+sudo add-apt-repository -y ppa:philip5/extra
+sudo apt update; sudo apt install -y digikam5
+
 #Link custom apps menu
 git clone git@github.com:sahil87/custom-apps-menu.git ~/code/sahil87/custom-apps-menu
 ln -s ~/code/sahil87/custom-apps-menu ~/.local/share/cinnamon/applets/custom-apps-menu@sahil87
