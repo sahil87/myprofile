@@ -17,10 +17,10 @@ sudo apt install -y oracle-java8-installer oracle-java8-set-default
 
 #Atom
 sudo add-apt-repository ppa:webupd8team/atom
-sudo apt-get update
-sudo apt-get install atom
+sudo apt-get update; sudo apt-get install atom
 
 #Digikam
+sudo apt install kipi-plugins5 plasma-theme-oxygen
 sudo add-apt-repository -y ppa:philip5/extra
 sudo apt update; sudo apt install -y digikam5
 
