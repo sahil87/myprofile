@@ -21,8 +21,8 @@ linkfile emacs/init.el              ~/.emacs                            0
 linkfile ssh/config                 ~/.ssh/config                       0
 linkfile ansible/.ansible.cfg       ~/.ansible.cfg                      0
 linkfile git/.gitconfig             ~/.gitconfig                        0
-linkfile ../configs/luckybackup/MyBackup.profile  ~/.luckyBackup/profiles/MyBackup.profile 0
-linkfile ../configs/nginx/conf.d    /etc/nginx/conf.d                   1
+#linkfile ../configs/luckybackup/MyBackup.profile  ~/.luckyBackup/profiles/MyBackup.profile 0
+#linkfile ../configs/nginx/conf.d    /etc/nginx/conf.d                   1
 linkfile resolvconf/head            /etc/resolvconf/resolv.conf.d/head  1
 linkfile resolvconf/tail            /etc/resolvconf/resolv.conf.d/tail  1
 sudo resolvconf -u;
