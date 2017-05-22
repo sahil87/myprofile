@@ -3,7 +3,7 @@
   { "displayName":"Google Chrome","command":"/usr/bin/google-chrome-stable", "iconName":"/usr/share/icons/hicolor/64x64/apps/google-chrome.png" },
   { "desktopFile":"slack" },
   { "displayName":"Keep","command":"/opt/google/chrome/google-chrome --profile-directory=Default --app-id=hmjkmjkepdijhoojdojkdfohbdgmmhki", "iconName":"/home/sahil/.local/share/icons/hicolor/128x128/apps/chrome-hmjkmjkepdijhoojdojkdfohbdgmmhki-Default.png" },
-  { "displayName":"Simplenote","command":"/usr/share/simplenote/simplenote", "iconName":"/usr/share/pixmaps/simplenote.png" },
+  { "displayName":"Simplenote","command":"/opt/google/chrome/google-chrome --profile-directory=Default --app-id=gmgnghphiockcigbjihhdnnmmcbdcjdf", "iconName":"/home/sahil/.local/share/icons/hicolor/128x128/apps/chrome-gmgnghphiockcigbjihhdnnmmcbdcjdf-Default.png" },
 
   { "command":"S" },
   { "desktopFile":"gnome-terminal"},
