@@ -17,10 +17,10 @@ GRADLE_PATH=~/software/android-studio/gradle/$GRADLE_VERSION/bin
 #GO Settings
 export GOPATH=~/code/go
 #Python Settings: Use workon to list/go into a virutal env, deactivate to exit, mkvirtualenv temp to create virtual env
-export WORKON_HOME=~/code/python/.virtualenvs
-export PROJECT_HOME=~/code/python
-export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
-source ~/.local/bin/virtualenvwrapper.sh
+#export WORKON_HOME=~/code/python/.virtualenvs
+#export PROJECT_HOME=~/code/python
+#export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+#source ~/.local/bin/virtualenvwrapper.sh
 
 #The incantation `typeset -U path', where the -U stands for unique, tells the shell that it should not add anything to $path if it's there already.
 typeset -U path
@@ -72,4 +72,4 @@ promptinit
 export EDITOR="emacs -nw"
 export GIT_EDITOR=$EDITOR
 
-. ~/.zclone/z.sh
+#. ~/.zclone/z.sh
