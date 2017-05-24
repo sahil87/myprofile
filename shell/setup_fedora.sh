@@ -25,7 +25,8 @@ ln -s $STORAGE/docker /var/lib/docker
 gsettings get org.gnome.shell favorite-apps
 gsettings set org.gnome.shell favorite-apps "[ \
 'slack.desktop', 'chrome-gmgnghphiockcigbjihhdnnmmcbdcjdf-Default.desktop', 'google-chrome.desktop', \
-'atom.desktop', 'jetbrains-webstorm.desktop', 'org.gnome.Nautilus.desktop', 'gnome-control-center.desktop', \
+'atom.desktop', 'jetbrains-webstorm.desktop', 'chrome-jijnmpkkfkjaihbhffejemnpbbglahim-Default.desktop', \
+'org.gnome.Nautilus.desktop', 'gnome-control-center.desktop', \
 'gnome-tweak-tool.desktop', 'org.gnome.Software.desktop', 'firefox.desktop', 'org.gnome.Terminal.desktop' \
 ]"
 
