@@ -16,9 +16,18 @@ ln -s ~/code/sahil87/custom-apps-menu ~/.local/share/cinnamon/applets/custom-app
 ln -s /mnt ~/
 ln -s /mnt/files/code ~/
 ln -s ~/Dropbox/code-sync ~/code/code-sync
+mv ~/.local/share/applications ~/.local/share/applications-old
+ln -s ~/Dropbox/docs/sahil/profile/chrome-desktop-apps ~/.local/share/applications
 STORAGE=/mnt/files/storage
 ln -s $STORAGE/Android ~/
 ln -s $STORAGE/docker /var/lib/docker
+
+gsettings get org.gnome.shell favorite-apps
+gsettings set org.gnome.shell favorite-apps "[ \
+'slack.desktop', 'chrome-gmgnghphiockcigbjihhdnnmmcbdcjdf-Default.desktop', 'google-chrome.desktop', \
+'atom.desktop', 'jetbrains-webstorm.desktop', 'org.gnome.Nautilus.desktop', 'gnome-control-center.desktop', \
+'gnome-tweak-tool.desktop', 'org.gnome.Software.desktop', 'firefox.desktop', 'org.gnome.Terminal.desktop' \
+]"
 
 #Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/sahil87/oh-my-zsh/master/tools/install.sh)"
