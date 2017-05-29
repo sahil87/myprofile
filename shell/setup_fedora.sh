@@ -8,6 +8,15 @@ dnf install yakuake emacs zsh
 
 #Install snap: https://snapcraft.io/docs/core/install-fedora
 
+#ALLOCATE SWAP SPACE:
+sudo su
+fallocate -l 2G /swapfile  OR  dd if=/dev/zero of=/swapfile bs=1M count=1024
+chmod 600 /swapfile
+mkswap /swapfile
+swapon /swapfile
+#Add the following entry to fstab:
+/swapfile    swap    swap    defaults    0 0
+
 #Link custom apps menu
 git clone git@github.com:sahil87/custom-apps-menu.git ~/code/sahil87/custom-apps-menu
 ln -s ~/code/sahil87/custom-apps-menu ~/.local/share/cinnamon/applets/custom-apps-menu@sahil87
