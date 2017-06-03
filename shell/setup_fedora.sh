@@ -10,12 +10,12 @@ dnf install yakuake emacs zsh
 
 #ALLOCATE SWAP SPACE:
 sudo su
-fallocate -l 2G /swapfile  OR  dd if=/dev/zero of=/swapfile bs=1M count=1024
-chmod 600 /swapfile
-mkswap /swapfile
-swapon /swapfile
+fallocate -l 4G /swapfile4G  OR  dd if=/dev/zero of=/swapfile bs=1M count=1024
+chmod 600 /swapfile4G
+mkswap /swapfile4G
+swapon /swapfile4G
 #Add the following entry to fstab:
-/swapfile    swap    swap    defaults    0 0
+/swapfile4G    swap    swap    defaults    0 0
 
 #Link custom apps menu
 git clone git@github.com:sahil87/custom-apps-menu.git ~/code/sahil87/custom-apps-menu
@@ -61,6 +61,7 @@ sudo usermod -aG docker $USER
 sudo systemctl enable docker
 curl -L https://github.com/docker/compose/releases/download/1.13.0/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
 chmod +x /usr/local/bin/docker-compose
+
 
 
 sudo apt install -y byobu emacs zsh zsh-doc #emacs24-nox
