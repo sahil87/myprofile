@@ -2,8 +2,10 @@
 dnf update
 sudo dnf install @lxqt-desktop-environment
 sudo dnf install @cinnamon-desktop-environment
+sudo dnf install @kde-desktop-environment
+
 rpm -ivh http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-25.noarch.rpm
-dnf install vlc
+dnf install vlc dolphin ffmpegthumbs
 dnf install yakuake emacs zsh
 
 #Install snap: https://snapcraft.io/docs/core/install-fedora
