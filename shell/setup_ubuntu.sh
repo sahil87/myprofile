@@ -97,9 +97,9 @@ sudo pip install boto
 sudo pip install --upgrade --user boto
 
 #For virtualbox
-su -c 'echo "deb http://download.virtualbox.org/virtualbox/debian xenial contrib"  > /etc/apt/sources.list.d/virtualbox.list'
-cd /tmp; wget https://www.virtualbox.org/download/oracle_vbox_2016.asc
-sudo apt-key add oracle_vbox_2016.asc
+sudo add-apt-repository "deb http://download.virtualbox.org/virtualbox/debian xenial contrib"
+#su -c 'echo "deb http://download.virtualbox.org/virtualbox/debian xenial contrib"  > /etc/apt/sources.list.d/virtualbox.list'
+wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
 sudo apt update
 sudo apt install virtualbox-5.1
 sudo usermod -a -G vboxusers sahil
