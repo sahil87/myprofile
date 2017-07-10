@@ -109,6 +109,7 @@ gem install bundler
 #Install Nodejs
 curl --silent --location https://rpm.nodesource.com/setup_8.x | sudo bash -
 sudo dnf -y install nodejs gcc-c++ make
+npm install -g http-server eslint react-vr-cli
 
 #Python
 sudo apt install -y python3 python3-pip python3-setuptools
