@@ -107,8 +107,8 @@ rvm --default use 2.3-dev
 gem install bundler
 
 #Install Nodejs
-curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
-sudo apt install -y nodejs build-essential
+curl --silent --location https://rpm.nodesource.com/setup_8.x | sudo bash -
+sudo dnf -y install nodejs gcc-c++ make
 
 #Python
 sudo apt install -y python3 python3-pip python3-setuptools
