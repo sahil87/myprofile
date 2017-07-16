@@ -6,7 +6,7 @@ sudo dnf install @kde-desktop-environment
 
 rpm -ivh http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-25.noarch.rpm
 dnf install vlc dolphin ffmpegthumbs
-dnf install yakuake emacs zsh
+dnf install yakuake emacs zsh encfs
 
 #Install snap: https://snapcraft.io/docs/core/install-fedora
 
@@ -117,13 +117,7 @@ pip3 install virtualenv
 pip3 install virtualenvwrapper
 
 #Install ansible
-sudo apt install -y software-properties-common python-jmespath
-sudo apt-add-repository -y ppa:ansible/ansible
-sudo apt update
-sudo apt install -y ansible
-
-#For AWS ec2.py script to work
-sudo apt-get install -y python python-dev python-pip
+sudo dnf install -y ansible
 sudo pip install boto
 sudo pip install --upgrade --user boto
 
