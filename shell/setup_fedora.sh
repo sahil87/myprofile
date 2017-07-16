@@ -77,10 +77,8 @@ sudo apt install -y rygel rygel-preferences
 sudo apt install -y yakuake xcalib
 
 #Java
-sudo echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | sudo debconf-set-selections
-sudo add-apt-repository -y ppa:webupd8team/java
-sudo apt-get update
-sudo apt install -y oracle-java8-installer oracle-java8-set-default
+wget --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u131-b11/d54c1d3a095b4ff2b6607d096fa80163/jdk-8u131-linux-x64.rpm"
+sudo rpm -ivh jdk-8u131-linux-x64.rpm
 
 #Download groovy sdk from http://groovy-lang.org/download.html
 #Unzip it in /mnt/files/storage/groovy-2.4.8
