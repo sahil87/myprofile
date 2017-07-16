@@ -6,7 +6,16 @@ sudo dnf install @kde-desktop-environment
 
 rpm -ivh http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-25.noarch.rpm
 dnf install vlc dolphin ffmpegthumbs
-dnf install yakuake emacs zsh encfs
+dnf install byobu yakuake emacs zsh encfs
+
+sudo apt install -y curl wget nmap whois gitk
+sudo apt install -y git gitk
+sudo apt install -y encfs openssh-server luckybackup gparted
+sudo apt install -y android-tools-adb android-tools-fastboot
+sudo apt install -y rygel rygel-preferences
+#sudo apt install -y ubuntu-restricted-extras libavcodec-extra libdvd-pkg
+#For UI:
+sudo apt install -y yakuake xcalib
 
 #Install snap: https://snapcraft.io/docs/core/install-fedora
 
@@ -63,18 +72,6 @@ sudo usermod -aG docker $USER
 sudo systemctl enable docker
 curl -L https://github.com/docker/compose/releases/download/1.13.0/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
 chmod +x /usr/local/bin/docker-compose
-
-
-
-sudo apt install -y byobu emacs zsh zsh-doc #emacs24-nox
-sudo apt install -y curl wget nmap whois
-sudo apt install -y git gitk
-sudo apt install -y encfs openssh-server luckybackup gparted
-sudo apt install -y android-tools-adb android-tools-fastboot
-sudo apt install -y rygel rygel-preferences
-#sudo apt install -y ubuntu-restricted-extras libavcodec-extra libdvd-pkg
-#For UI:
-sudo apt install -y yakuake xcalib
 
 #Java
 wget --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u131-b11/d54c1d3a095b4ff2b6607d096fa80163/jdk-8u131-linux-x64.rpm"
