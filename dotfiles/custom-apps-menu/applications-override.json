@@ -33,7 +33,8 @@
   	{ "displayName":"Transmission Torrents", "command":"transmission-gtk", "iconName":"/usr/share/icons/hicolor/scalable/apps/transmission.svg"},
   	{ "desktopFile":"remmina", "command":"remmina"},
   	{ "desktopFile":"filezilla" },
-	{ "desktopFile":"synergy" }
+      { "desktopFile":"synergy" },
+      { "displayName":"Smb4k", "command":"smb4k", "iconName":"/usr/share/icons/hicolor/64x64/apps/smb4k.png"}
   ]},
   { "displayName":"Office", "iconName":"applications-office", "menu": [
     { "desktopFile":"synergy"},
