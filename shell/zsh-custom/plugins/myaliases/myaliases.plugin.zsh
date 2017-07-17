@@ -61,3 +61,4 @@ alias remove='sudo apt-get remove'
 alias update='sudo apt-get update'
 alias upgrade='sudo apt-get update && sudo apt-get upgrade'
 alias d="docker"
+alias z="sudo mount -t cifs -o username=gmetri,password=gmetri //10.0.0.10/share /home/sahil/zDrive"

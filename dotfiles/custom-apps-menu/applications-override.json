@@ -31,7 +31,7 @@
   ]},
   { "displayName":"Internet", "iconName":"applications-internet", "menu": [
   	{ "displayName":"Transmission Torrents", "command":"transmission-gtk", "iconName":"/usr/share/icons/hicolor/scalable/apps/transmission.svg"},
-  	{ "desktopFile":"remmina", "command":"remmina"},
+  	{ "desktopFile":"vinagre", "command":"vinagre"},
   	{ "desktopFile":"filezilla" },
       { "desktopFile":"synergy" },
       { "displayName":"Smb4k", "command":"smb4k", "iconName":"/usr/share/icons/hicolor/64x64/apps/smb4k.png"}
