@@ -56,11 +56,12 @@
 
   { "command":"S" },
   { "displayName":"Settings", "iconName":"preferences-desktop", "menu": [
-  	{ "desktopFile":"gnome-system-monitor" },
-    { "desktopFile":"cinnamon-settings" },
-    { "displayName":"Mint Software Manager", "command":"gksu mintinstall", "iconName":"/usr/share/pixmaps/mintinstall.svg" },
-    { "desktopFile":"luckybackup"},
-    { "desktopFile":"gparted"},
-    { "displayName":"Disks", "command":"gnome-disks", "iconName":"/usr/share/icons/Mint-X/apps/96/gnome-disks.svg" }
+      { "desktopFile":"gnome-system-monitor" },
+      { "desktopFile":"cinnamon-settings" },
+      { "desktopFile":"luckybackup"},
+      { "desktopFile":"gparted"},
+      { "displayName":"Disks", "command":"gnome-disks", "iconName":"/usr/share/icons/Mint-X/apps/96/gnome-disks.svg" },
+      { "displayName":"Fedora Software Manager", "command":"gnome-software", "iconName":"/usr/share/icons/hicolor/256x256/apps/org.gnome.Software.png" },
+      { "displayName":"Mint Software Manager", "command":"gksu mintinstall", "iconName":"/usr/share/pixmaps/mintinstall.svg" }
   ]}
 ]
