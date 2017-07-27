@@ -2,11 +2,11 @@
   { "displayName":"Firefox Web Browser", "command":"firefox -p sahil","iconName":"/usr/share/icons/Mint-Y/apps/64/firefox.png" },
   { "displayName":"Google Chrome","command":"/usr/bin/google-chrome-stable", "iconName":"/usr/share/icons/hicolor/64x64/apps/google-chrome.png" },
   { "desktopFile":"slack" },
-  { "displayName":"Keep","command":"/opt/google/chrome/google-chrome --profile-directory=Default --app-id=hmjkmjkepdijhoojdojkdfohbdgmmhki", "iconName":"/home/sahil/.local/share/icons/hicolor/128x128/apps/chrome-hmjkmjkepdijhoojdojkdfohbdgmmhki-Default.png" },
-  { "displayName":"Simplenote","command":"/opt/google/chrome/google-chrome --profile-directory=Default --app-id=gmgnghphiockcigbjihhdnnmmcbdcjdf", "iconName":"/home/sahil/.local/share/icons/hicolor/128x128/apps/chrome-gmgnghphiockcigbjihhdnnmmcbdcjdf-Default.png" },
-
+    { "displayName":"Asana","command":"/opt/google/chrome/google-chrome --profile-directory=Default --app-id=hojinjhobffikdniglgaglhalhihdalb", "iconName":"/home/sahil/.local/share/icons/hicolor/128x128/apps/chrome-hojinjhobffikdniglgaglhalhihdalb-Default.png" },
+    { "displayName":"Simplenote","command":"/opt/google/chrome/google-chrome --profile-directory=Default --app-id=gmgnghphiockcigbjihhdnnmmcbdcjdf", "iconName":"/home/sahil/.local/share/icons/hicolor/128x128/apps/chrome-gmgnghphiockcigbjihhdnnmmcbdcjdf-Default.png" },
+    
   { "command":"S" },
-  { "desktopFile":"gnome-terminal"},
+    { "displayName":"Terminal","command":"gnome-terminal","iconName":"/usr/share/icons/Mint-Y/apps/64/utilities-terminal.png"},
 
   { "command":"S" },
 
@@ -39,7 +39,8 @@
   { "displayName":"Office", "iconName":"applications-office", "menu": [
     { "desktopFile":"synergy"},
     { "desktopFile":"gnome-calculator"},
-    { "displayName":"KMyMoney", "command":"kmymoney", "iconName":"/usr/share/icons/hicolor/64x64/apps/kmymoney.png" }
+      { "displayName":"KMyMoney", "command":"kmymoney", "iconName":"/usr/share/icons/hicolor/64x64/apps/kmymoney.png" },
+        { "displayName":"Keep","command":"/opt/google/chrome/google-chrome --profile-directory=Default --app-id=hmjkmjkepdijhoojdojkdfohbdgmmhki", "iconName":"/home/sahil/.local/share/icons/hicolor/128x128/apps/chrome-hmjkmjkepdijhoojdojkdfohbdgmmhki-Default.png" }
   ]},
   { "displayName":"Graphics", "iconName":"applications-graphics", "menu": [
     { "desktopFile":"blender"},
