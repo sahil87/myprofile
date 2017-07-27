@@ -21,11 +21,16 @@ linkfile emacs/init.el              ~/.emacs                            0
 linkfile ssh/config                 ~/.ssh/config                       0
 linkfile ansible/.ansible.cfg       ~/.ansible.cfg                      0
 linkfile git/.gitconfig             ~/.gitconfig                        0
-linkfile resovlconf/fedraResolv.conf /etc/resolv.conf                   1
+
+#DISABLE SELINUX!
+linkfile network-fedora/resolv.conf /etc/resolv.conf                    1
+linkfile network-fedora/dnsmasq.d   /etc/NetworkManager/dnsmasq.d       1
+linkfile network-fedora/NetworkManager/conf.d /etc/NetworkManager/conf.d 1
+
 sudo service NetworkManager restart
+
 #linkfile ../configs/luckybackup/MyBackup.profile  ~/.luckyBackup/profiles/MyBackup.profile 0
 #linkfile ../configs/nginx/conf.d    /etc/nginx/conf.d                   1
-#linkfile resolvconf/head            /etc/resolvconf/resolv.conf.d/head  1
-#linkfile resolvconf/tail            /etc/resolvconf/resolv.conf.d/tail  1
+#linkfile resolvconf-ubuntu/head            /etc/resolvconf/resolv.conf.d/head  1
+#linkfile resolvconf-ubuntu/tail            /etc/resolvconf/resolv.conf.d/tail  1
 #sudo resolvconf -u;
-#linkfile resolvconf/fedraNm.conf /etc/NetworkManager/conf.d/fedoraNm.conf  1
