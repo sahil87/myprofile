@@ -66,6 +66,7 @@ kill -s HUP PID #(sending SIGHUP) -> reloads without restarting
 iotop #Top for input/output
 iftop #Top for networking
 netstat #No of open connections sudo netstat -planet | grep 443
+netstat -plan | grep -w LISTEN
 tcpdump
 sar
 nc -zv host.example.com 20-30 #netcat port scanning
