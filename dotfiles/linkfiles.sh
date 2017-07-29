@@ -31,6 +31,9 @@ linkfile sysctl/60-jetbrains.conf /etc/sysctl.d/60-jetbrains.conf       1
 
 sudo service NetworkManager restart
 
+#To add alias 10.0.2.2 to 127.0.0.1 do https://www.unixmen.com/linux-basics-assign-multiple-ip-addresses-single-network-interface-card-centos-7/
+#Add line IPADDR=10.0.2.2 to /etc/sysconfig/network-scripts/ifcfg-lo
+
 #linkfile ../configs/luckybackup/MyBackup.profile  ~/.luckyBackup/profiles/MyBackup.profile 0
 #linkfile ../configs/nginx/conf.d    /etc/nginx/conf.d                   1
 #linkfile resolvconf-ubuntu/head            /etc/resolvconf/resolv.conf.d/head  1
