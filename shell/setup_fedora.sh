@@ -4,7 +4,7 @@ sudo dnf install @lxqt-desktop-environment
 sudo dnf install @cinnamon-desktop-environment
 sudo dnf install @kde-desktop-environment
 
-rpm -ivh http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-25.noarch.rpm
+rpm -ivh http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-26.noarch.rpm
 dnf install vlc dolphin ffmpegthumbs
 dnf install byobu yakuake emacs zsh encfs
 
@@ -28,6 +28,9 @@ swapon /swapfile4G
 #Add the following entry to fstab:
 /swapfile4G    swap    swap    defaults    0 0
 
+#DISABLE SELINUX
+Change to SELINUX=permissive in /etc/selinux/config
+
 #Link custom apps menu
 git clone git@github.com:sahil87/custom-apps-menu.git ~/code/sahil87/custom-apps-menu
 ln -s ~/code/sahil87/custom-apps-menu ~/.local/share/cinnamon/applets/custom-apps-menu@sahil87
@@ -35,8 +38,8 @@ ln -s ~/code/sahil87/custom-apps-menu ~/.local/share/cinnamon/applets/custom-app
 #Important symbolic links:
 ln -s /mnt ~/
 ln -s /mnt/files/code ~/
-ln -s ~/Dropbox/code-sync ~/code/code-sync
 mv ~/.local/share/applications ~/.local/share/applications-old
+ln -s ~/Dropbox/code-sync ~/code/code-sync
 ln -s ~/Dropbox/docs/sahil/profile/chrome-desktop-apps ~/.local/share/applications
 STORAGE=/mnt/files/storage
 ln -s $STORAGE/Android ~/
