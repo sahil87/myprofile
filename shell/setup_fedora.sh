@@ -66,7 +66,7 @@ sudo dnf -y install dnf-plugins-core
 sudo dnf config-manager \
     --add-repo \
     https://download.docker.com/linux/fedora/docker-ce.repo
-sudo dnf makecache fast
+sudo dnf makecache
 sudo dnf install -y docker-ce
 sudo systemctl start docker
 sudo docker run hello-world
