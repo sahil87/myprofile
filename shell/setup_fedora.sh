@@ -76,9 +76,16 @@ sudo systemctl enable docker
 curl -L https://github.com/docker/compose/releases/download/1.15.0/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
 chmod +x /usr/local/bin/docker-compose
 
-#Java
+#JAVA
 wget --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u131-b11/d54c1d3a095b4ff2b6607d096fa80163/jdk-8u131-linux-x64.rpm"
 sudo rpm -ivh jdk-8u131-linux-x64.rpm
+#Verify java:
+#alternatives --config java
+#alternatives --config javac
+#alternatives --config javaws
+
+#alternatives --list | grep /usr/java
+#java -version
 
 #Download groovy sdk from http://groovy-lang.org/download.html
 #Unzip it in /mnt/files/storage/groovy-2.4.8
