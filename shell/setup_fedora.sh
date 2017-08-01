@@ -6,7 +6,7 @@ sudo dnf install @kde-desktop-environment
 
 rpm -ivh http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-26.noarch.rpm
 dnf install vlc dolphin ffmpegthumbs
-dnf install byobu yakuake emacs zsh encfs
+dnf install byobu yakuake emacs zsh encfs ldns-utils
 
 sudo apt install -y curl wget nmap whois gitk
 sudo apt install -y git gitk
