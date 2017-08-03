@@ -38,9 +38,9 @@
   ]},
   { "displayName":"Office", "iconName":"applications-office", "menu": [
     { "desktopFile":"synergy"},
-    { "desktopFile":"gnome-calculator"},
-      { "displayName":"KMyMoney", "command":"kmymoney", "iconName":"/usr/share/icons/hicolor/64x64/apps/kmymoney.png" },
-        { "displayName":"Keep","command":"/opt/google/chrome/google-chrome --profile-directory=Default --app-id=hmjkmjkepdijhoojdojkdfohbdgmmhki", "iconName":"/home/sahil/.local/share/icons/hicolor/128x128/apps/chrome-hmjkmjkepdijhoojdojkdfohbdgmmhki-Default.png" }
+    { "displayName":"Calculator", "command":"gnome-calculator", "iconName":"/usr/share/icons/Mint-Y/apps/64/accessories-calculator.png"},
+    { "displayName":"KMyMoney", "command":"kmymoney", "iconName":"/usr/share/icons/hicolor/64x64/apps/kmymoney.png" },
+    { "displayName":"Keep","command":"/opt/google/chrome/google-chrome --profile-directory=Default --app-id=hmjkmjkepdijhoojdojkdfohbdgmmhki", "iconName":"/home/sahil/.local/share/icons/hicolor/128x128/apps/chrome-hmjkmjkepdijhoojdojkdfohbdgmmhki-Default.png" }
   ]},
   { "displayName":"Graphics", "iconName":"applications-graphics", "menu": [
     { "desktopFile":"blender"},
