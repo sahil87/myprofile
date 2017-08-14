@@ -62,6 +62,7 @@
       { "desktopFile":"luckybackup"},
       { "desktopFile":"gparted"},
       { "displayName":"Disks", "command":"gnome-disks", "iconName":"/usr/share/icons/Mint-X/apps/96/gnome-disks.svg" },
+      { "displayName":"DNF Dragora", "command":"dnfdragora", "iconName":"/usr/share/icons/Mint-Y/apps/64/dnfdragora.png" },
       { "displayName":"Fedora Software Manager", "command":"gnome-software", "iconName":"/usr/share/icons/hicolor/256x256/apps/org.gnome.Software.png" },
       { "displayName":"Mint Software Manager", "command":"gksu mintinstall", "iconName":"/usr/share/pixmaps/mintinstall.svg" }
   ]}
