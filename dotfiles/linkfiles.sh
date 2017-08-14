@@ -27,7 +27,7 @@ linkfile network-fedora/resolv.conf /etc/resolv.conf                    1
 linkfile network-fedora/dnsmasq.d   /etc/NetworkManager/dnsmasq.d       1
 linkfile network-fedora/NetworkManager/conf.d /etc/NetworkManager/conf.d 1
 
-linkfile sysctl/60-jetbrains.conf /etc/sysctl.d/60-jetbrains.conf       1
+linkfile sysctl/40-max-user-watches.conf /etc/sysctl.d/40-max-user-watches.conf       1
 
 sudo service NetworkManager restart
 
