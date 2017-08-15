@@ -127,12 +127,15 @@ sudo pip install boto
 sudo pip install --upgrade --user boto
 
 #For virtualbox
-su -c 'echo "deb http://download.virtualbox.org/virtualbox/debian xenial contrib"  > /etc/apt/sources.list.d/virtualbox.list'
-cd /tmp; wget https://www.virtualbox.org/download/oracle_vbox_2016.asc
-sudo apt-key add oracle_vbox_2016.asc
-sudo apt update
+sudo dnf config-manager \
+    --add-repo \
+    http://download.virtualbox.org/virtualbox/rpm/fedora/virtualbox.repo
+sudo dnf makecache
 sudo apt install virtualbox-5.1
 sudo usermod -a -G vboxusers sahil
+
+wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | rpm --import -
+sudo apt update
 
 ln -s /mnt/hd2008/VirtualBox\ VMs ~/
 ln -s ~/Dropbox/books/Music/MuseScore2 ~/Documents/MuseScore2
