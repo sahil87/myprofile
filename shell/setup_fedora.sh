@@ -131,14 +131,8 @@ sudo dnf config-manager \
     --add-repo \
     http://download.virtualbox.org/virtualbox/rpm/fedora/virtualbox.repo
 sudo dnf makecache
-sudo apt install virtualbox-5.1
+sudo dnf install virtualbox-5.1
 sudo usermod -a -G vboxusers sahil
-
-wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | rpm --import -
-sudo apt update
-
-ln -s /mnt/hd2008/VirtualBox\ VMs ~/
-ln -s ~/Dropbox/books/Music/MuseScore2 ~/Documents/MuseScore2
 
 #Unity
 #After installing Unity from deb by
