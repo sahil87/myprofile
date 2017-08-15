@@ -133,6 +133,7 @@ sudo dnf config-manager \
 sudo dnf makecache
 sudo dnf install virtualbox-5.1
 sudo usermod -a -G vboxusers sahil
+#Install VirtualBox Extension Pack from https://www.virtualbox.org/wiki/Downloads
 
 #Unity
 #After installing Unity from deb by
