@@ -1,5 +1,5 @@
 #!/bin/bash
-dnf update
+sudo dnf update
 sudo dnf install @lxqt-desktop-environment
 sudo dnf install @cinnamon-desktop-environment
 sudo dnf install @kde-desktop-environment
@@ -7,15 +7,8 @@ sudo dnf install @kde-desktop-environment
 rpm -ivh http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-26.noarch.rpm
 dnf install vlc dolphin ffmpegthumbs
 dnf install byobu yakuake emacs zsh encfs ldns-utils
-
-sudo apt install -y curl wget nmap whois gitk
-sudo apt install -y git gitk
-sudo apt install -y encfs openssh-server luckybackup gparted
-sudo apt install -y android-tools-adb android-tools-fastboot
-sudo apt install -y rygel rygel-preferences
-#sudo apt install -y ubuntu-restricted-extras libavcodec-extra libdvd-pkg
-#For UI:
-sudo apt install -y yakuake xcalib
+dnf install openssh-server
+systemctl enable sshd.service
 
 #For Intel graphics (Lenovo Laptop)
 sudo dnf install libva-intel-driver
@@ -24,12 +17,12 @@ sudo dnf install libva-intel-driver
 
 #ALLOCATE SWAP SPACE:
 sudo su
-fallocate -l 4G /swapfile4G  OR  dd if=/dev/zero of=/swapfile bs=1M count=1024
-chmod 600 /swapfile4G
-mkswap /swapfile4G
-swapon /swapfile4G
+fallocate -l 6G /swapfile6G  OR  dd if=/dev/zero of=/swapfile bs=1M count=1024
+chmod 600 /swapfile6G
+mkswap /swapfile6G
+swapon /swapfile6G
 #Add the following entry to fstab:
-/swapfile4G    swap    swap    defaults    0 0
+/swapfile6G    swap    swap    defaults    0 0
 
 #DISABLE SELINUX
 Change to SELINUX=permissive in /etc/selinux/config
@@ -41,8 +34,8 @@ ln -s ~/code/sahil87/custom-apps-menu ~/.local/share/cinnamon/applets/custom-app
 #Important symbolic links:
 ln -s /mnt ~/
 ln -s /mnt/files/code ~/
-mv ~/.local/share/applications ~/.local/share/applications-old
 ln -s ~/Dropbox/code-sync ~/code/code-sync
+mv ~/.local/share/applications ~/.local/share/applications-old
 ln -s ~/Dropbox/docs/sahil/profile/chrome-desktop-apps ~/.local/share/applications
 STORAGE=/mnt/files/storage
 ln -s $STORAGE/Android ~/
@@ -117,7 +110,7 @@ gem install bundler
 #Install Nodejs
 curl --silent --location https://rpm.nodesource.com/setup_8.x | sudo bash -
 sudo dnf -y install nodejs gcc-c++ make
-npm install -g http-server eslint react-vr-cli npm-check-updates hexo-cli
+sudo npm install -g http-server eslint react-vr-cli npm-check-updates hexo-cli
 
 #Python
 sudo apt install -y python3 python3-pip python3-setuptools
@@ -142,3 +135,12 @@ sudo usermod -a -G vboxusers sahil
 #After installing Unity from deb by
 #"dpkg -i Unity----.deb" run
 #"sudo apt-get -f install" to get all dependencies
+
+sudo apt install -y curl wget nmap whois gitk
+sudo apt install -y git gitk
+sudo apt install -y encfs openssh-server luckybackup gparted
+sudo apt install -y android-tools-adb android-tools-fastboot
+sudo apt install -y rygel rygel-preferences
+#sudo apt install -y ubuntu-restricted-extras libavcodec-extra libdvd-pkg
+#For UI:
+sudo apt install -y yakuake xcalib
