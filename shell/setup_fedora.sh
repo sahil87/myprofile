@@ -7,7 +7,7 @@ sudo dnf install @kde-desktop-environment
 rpm -ivh http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-26.noarch.rpm
 dnf install vlc dolphin ffmpegthumbs
 dnf install byobu yakuake emacs zsh encfs ldns-utils
-dnf install openssh-server
+dnf install openssh-server wine
 systemctl enable sshd.service
 
 #For Intel graphics (Lenovo Laptop)
