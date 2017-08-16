@@ -17,6 +17,9 @@ sudo apt install -y rygel rygel-preferences
 #For UI:
 sudo apt install -y yakuake xcalib
 
+#For Intel graphics (Lenovo Laptop)
+sudo dnf install libva-intel-driver
+
 #Install snap: https://snapcraft.io/docs/core/install-fedora
 
 #ALLOCATE SWAP SPACE:
