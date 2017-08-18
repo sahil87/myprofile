@@ -5,6 +5,8 @@ sudo dnf install @cinnamon-desktop-environment
 sudo dnf install @kde-desktop-environment
 
 rpm -ivh http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-26.noarch.rpm
+rpm -ivh http://download1.rpmfusion.org/free/fedora/rpmfusion-nonfree-release-26.noarch.rpm
+sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 dnf install vlc dolphin ffmpegthumbs
 dnf install byobu yakuake emacs zsh encfs ldns-utils
 dnf install openssh-server wine
@@ -12,6 +14,9 @@ systemctl enable sshd.service
 
 #For Intel graphics (Lenovo Laptop)
 sudo dnf install libva-intel-driver
+#For Nvidia (https://rpmfusion.org/Howto/NVIDIA)
+dnf install xorg-x11-drv-nvidia akmod-nvidia "kernel-devel-uname-r == $(uname -r)"
+dnf update -y
 
 #Install snap: https://snapcraft.io/docs/core/install-fedora
 
