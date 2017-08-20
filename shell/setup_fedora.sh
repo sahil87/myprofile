@@ -15,7 +15,7 @@ systemctl enable sshd.service
 #For Intel graphics (Lenovo Laptop)
 sudo dnf install libva-intel-driver
 #For Nvidia (https://rpmfusion.org/Howto/NVIDIA)
-dnf install xorg-x11-drv-nvidia akmod-nvidia "kernel-devel-uname-r == $(uname -r)"
+dnf install xorg-x11-drv-nvidia xorg-x11-drv-nvidia-cuda akmod-nvidia "kernel-devel-uname-r == $(uname -r)"
 dnf update -y
 dnf install vdpauinfo libva-vdpau-driver libva-utils
 #Install snap: https://snapcraft.io/docs/core/install-fedora
