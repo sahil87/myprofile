@@ -31,6 +31,18 @@ swapon /swapfile6G
 
 #DISABLE SELINUX
 Change to SELINUX=permissive in /etc/selinux/config
+#After a few runs run the following to remove the most common selinux erors:
+sudo ausearch -c 'abrt-action-sav' --raw | audit2allow -M my-abrtactionsav
+sudo ausearch -c 'cupsd' --raw | audit2allow -M my-cupsd
+sudo ausearch -c 'NetworkManager' --raw | audit2allow -M my-NetworkManager
+sudo ausearch -c 'dnsmasq' --raw | audit2allow -M my-dnsmasq
+sudo ausearch -c 'sssd' --raw | audit2allow -M my-sssd
+
+sudo semodule -X 300 -i my-abrtactionsav.pp
+sudo semodule -X 300 -i my-cupsd.pp
+sudo semodule -X 300 -i my-NetworkManager.pp
+sudo semodule -X 300 -i my-dnsmasq.pp
+sudo semodule -X 300 -i my-sssd.pp
 
 #Link custom apps menu
 git clone git@github.com:sahil87/custom-apps-menu.git ~/code/sahil87/custom-apps-menu
