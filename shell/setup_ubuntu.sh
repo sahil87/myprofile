@@ -34,12 +34,17 @@ cd /mnt/files/storage
 ln -s groovy-2.4.8 groovy
 
 #Install go from https://golang.org/doc/install
-wget https://storage.googleapis.com/golang/go1.6.3.linux-amd64.tar.gz
-sudo tar -C /usr/local -xzf go1.6.3.linux-amd64.tar.gz
+wget https://storage.googleapis.com/golang/go1.9.linux-amd64.tar.gz
+sudo tar -C /usr/local -xzf go1.9.linux-amd64.tar.gz
 mkdir ~/code/go
 
 #Install google drive for linux
 go get -u github.com/odeke-em/drive/cmd/drive
+
+#Install Hugo
+go get github.com/kardianos/govendor
+govendor get github.com/gohugoio/hugo
+go install github.com/gohugoio/hugo
 
 #Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/sahil87/oh-my-zsh/master/tools/install.sh)"
