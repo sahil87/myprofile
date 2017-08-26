@@ -16,7 +16,7 @@ sudo apt-get update
 sudo apt install -y oracle-java8-installer oracle-java8-set-default
 
 #Atom
-sudo add-apt-repository ppa:webupd8team/atom
+sudo add-apt-repository -y ppa:webupd8team/atom
 sudo apt-get update; sudo apt-get install atom
 
 #Digikam
@@ -66,7 +66,7 @@ rvm --default use 2.3-dev
 gem install bundler
 
 #Install Nodejs
-curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 sudo apt install -y nodejs build-essential
 
 #Install docker
@@ -83,8 +83,9 @@ sudo service docker start
 sudo groupadd docker
 sudo usermod -aG docker sahil
 #Docker Compose, find latest version from https://github.com/docker/compose/releases
-su -c 'curl -L https://github.com/docker/compose/releases/download/1.11.1/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose'
+su -c 'curl -L https://github.com/docker/compose/releases/download/1.15.0/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose'
 sudo chmod +x /usr/local/bin/docker-compose
+
 #Python
 sudo apt install -y python3 python3-pip python3-setuptools
 pip3 install virtualenv

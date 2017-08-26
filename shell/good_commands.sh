@@ -1,4 +1,16 @@
 #!/bin/bash
+#Adb over wifi
+Connect Android phone and host machine to same WiFi network
+Connect Android phone to host machine using USB cable (to start with)
+Execute adb tcpip 5555 from a command prompt
+Find the IP address of your Android phone by going to Settings->WiFi->Settings (cog wheel in top right)
+Disconnect USB cable and run adb connect <ip>:5555
+
+adb tcpip 5555 #Connected to USB                                                                                                                                                                           [sahil@sahil-Lenovo-Flex-2-14 13:00:44]
+adb connect 10.0.0.41:5555  #After disconnecting USB
+adb reverse tcp:4050 tcp:4050; adb reverse tcp:4052 tcp:4052; adb reverse tcp:4053 tcp:4053;
+#To run adb command on specific device:
+adb -s 10.0.0.41:5555 shell ip -f inet addr show wlan0
 
 #Tar:
 tar -czfv whereToCompress.tar.gz whatToCompress/
