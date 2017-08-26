@@ -42,9 +42,8 @@ mkdir ~/code/go
 go get -u github.com/odeke-em/drive/cmd/drive
 
 #Install Hugo
-go get github.com/kardianos/govendor
-govendor get github.com/gohugoio/hugo
-go install github.com/gohugoio/hugo
+wget https://github.com/gohugoio/hugo/releases/download/v0.26/hugo_0.26_Linux-64bit.deb
+sudo apt install ./hugo_0.26_Linux-64bit.deb
 
 #Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/sahil87/oh-my-zsh/master/tools/install.sh)"

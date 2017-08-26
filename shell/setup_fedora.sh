@@ -106,12 +106,17 @@ cd /mnt/files/storage
 ln -s groovy-2.4.8 groovy
 
 #Install go from https://golang.org/doc/install
-wget https://storage.googleapis.com/golang/go1.6.3.linux-amd64.tar.gz
-sudo tar -C /usr/local -xzf go1.6.3.linux-amd64.tar.gz
+wget https://storage.googleapis.com/golang/go1.9.linux-amd64.tar.gz
+sudo tar -C /usr/local -xzf go1.9.linux-amd64.tar.gz
 mkdir ~/code/go
 
 #Install google drive for linux
 go get -u github.com/odeke-em/drive/cmd/drive
+
+#Install Hugo
+wget https://github.com/gohugoio/hugo/releases/download/v0.26/hugo_0.26_Linux-64bit.tar.gz
+tar -xzf hugo_0.26_Linux-64bit.tar.gz\
+mv hugo code/go/bin/
 
 #Install Ruby (rvm)
 command curl -sSL https://rvm.io/mpapis.asc | gpg2 --import -
