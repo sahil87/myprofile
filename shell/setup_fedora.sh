@@ -44,6 +44,10 @@ dnf install byobu yakuake emacs zsh encfs ldns-utils openssh-server
 dnf install vlc dolphin ffmpegthumbs wine
 systemctl enable sshd.service
 
+#Emacs Tree: https://www.emacswiki.org/emacs/NeoTree
+#Emacs Projectile:
+M-x package-install [RET] projectile [RET]
+M-x package-install [RET] minimap [RET]
 #For Intel graphics (Lenovo Laptop)
 sudo dnf install libva-intel-driver
 #For Nvidia (https://rpmfusion.org/Howto/NVIDIA)
