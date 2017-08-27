@@ -21,21 +21,9 @@ linkfile emacs/init.el              ~/.emacs                            0
 linkfile ssh/config                 ~/.ssh/config                       0
 linkfile ansible/.ansible.cfg       ~/.ansible.cfg                      0
 linkfile git/.gitconfig             ~/.gitconfig                        0
-
-#DISABLE SELINUX!
-linkfile network-fedora/resolv.conf /etc/resolv.conf                    1
-linkfile network-fedora/dnsmasq.d   /etc/NetworkManager/dnsmasq.d       1
-linkfile network-fedora/NetworkManager/conf.d /etc/NetworkManager/conf.d 1
-
+linkfile luckybackup/MyBackup.profile  ~/.luckyBackup/profiles/MyBackup.profile 0
 linkfile sysctl/40-max-user-watches.conf /etc/sysctl.d/40-max-user-watches.conf       1
 
-sudo service NetworkManager restart
-
-#To add alias 10.0.2.2 to 127.0.0.1 do https://www.unixmen.com/linux-basics-assign-multiple-ip-addresses-single-network-interface-card-centos-7/
-#Add line IPADDR=10.0.2.2 to /etc/sysconfig/network-scripts/ifcfg-lo
-
-#linkfile ../configs/luckybackup/MyBackup.profile  ~/.luckyBackup/profiles/MyBackup.profile 0
-#linkfile ../configs/nginx/conf.d    /etc/nginx/conf.d                   1
-#linkfile resolvconf-ubuntu/head            /etc/resolvconf/resolv.conf.d/head  1
-#linkfile resolvconf-ubuntu/tail            /etc/resolvconf/resolv.conf.d/tail  1
-#sudo resolvconf -u;
+linkfile resolvconf-ubuntu/head            /etc/resolvconf/resolv.conf.d/head  1
+linkfile resolvconf-ubuntu/tail            /etc/resolvconf/resolv.conf.d/tail  1
+sudo resolvconf -u;

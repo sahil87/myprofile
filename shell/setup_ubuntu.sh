@@ -1,13 +1,44 @@
 #!/bin/bash
-sudo apt install -y byobu emacs zsh zsh-doc #emacs24-nox
+
+#Link custom apps menu
+git clone git@github.com:sahil87/custom-apps-menu.git ~/code/sahil87/custom-apps-menu
+ln -s ~/code/sahil87/custom-apps-menu ~/.local/share/cinnamon/applets/custom-apps-menu@sahil87
+
+#Install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/sahil87/oh-my-zsh/master/tools/install.sh)"
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+source $DIR/add_to_zshrc.sh
+chsh -s /bin/zsh
+#git clone git@github.com:sahil87/z.git ~/.zclone
+
+#Important symbolic links:
+ln -s /mnt ~/
+ln -s /mnt/files/code ~/
+#Dropbox:
+mv ~/.local/share/applications ~/.local/share/applications-old
+ln -s ~/Dropbox/docs/sahil/profile/chrome-desktop-apps ~/.local/share/applications
+ln -s ~/Dropbox/code-sync ~/code/code-sync
+ln -s ~/Dropbox/books/Music/MuseScore2 ~/Documents/MuseScore2
+
+STORAGE=/mnt/files/storage
+ln -s $STORAGE/docker /var/lib/docker
+ln -s $STORAGE/VirtualBox\ VMs ~/
+ln -s $STORAGE/Android ~/
+ln -s $STORAGE/Genymobile_hidden ~/.Genymobile
+ln -s $STORAGE/Unity /opt/Unity
+
+#Unity
+#After installing Unity from deb by
+#"dpkg -i Unity----.deb" run
+#"sudo apt-get -f install" to get all dependencies
+
+#Important tools:
+sudo apt install -y byobu emacs zsh zsh-doc git gitk yakuake xcalib
 sudo apt install -y curl wget nmap whois
-sudo apt install -y git gitk
-sudo apt install -y encfs openssh-server luckybackup gparted
+sudo apt install -y encfs openssh-server luckybackup gparted #emacs24-nox
 sudo apt install -y android-tools-adb android-tools-fastboot
 sudo apt install -y rygel rygel-preferences
 #sudo apt install -y ubuntu-restricted-extras libavcodec-extra libdvd-pkg
-#For UI:
-sudo apt install -y yakuake xcalib
 
 #Java
 sudo echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | sudo debconf-set-selections
@@ -18,20 +49,6 @@ sudo apt install -y oracle-java8-installer oracle-java8-set-default
 #Atom
 sudo add-apt-repository -y ppa:webupd8team/atom
 sudo apt-get update; sudo apt-get install atom
-
-#Digikam
-sudo apt install kipi-plugins5 plasma-theme-oxygen
-sudo add-apt-repository -y ppa:philip5/extra
-sudo apt update; sudo apt install -y digikam5
-
-#Link custom apps menu
-git clone git@github.com:sahil87/custom-apps-menu.git ~/code/sahil87/custom-apps-menu
-ln -s ~/code/sahil87/custom-apps-menu ~/.local/share/cinnamon/applets/custom-apps-menu@sahil87
-
-#Download groovy sdk from http://groovy-lang.org/download.html
-#Unzip it in /mnt/files/storage/groovy-2.4.8
-cd /mnt/files/storage
-ln -s groovy-2.4.8 groovy
 
 #Install go from https://golang.org/doc/install
 wget https://storage.googleapis.com/golang/go1.9.linux-amd64.tar.gz
@@ -45,24 +62,10 @@ go get -u github.com/odeke-em/drive/cmd/drive
 wget https://github.com/gohugoio/hugo/releases/download/v0.26/hugo_0.26_Linux-64bit.deb
 sudo apt install ./hugo_0.26_Linux-64bit.deb
 
-#Install oh-my-zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/sahil87/oh-my-zsh/master/tools/install.sh)"
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-source $DIR/add_to_zshrc.sh
-chsh -s /bin/zsh
-
-git clone git@github.com:sahil87/z.git ~/.zclone
-
-#Install Ruby (rvm)
-command curl -sSL https://rvm.io/mpapis.asc | gpg2 --import -
-\curl -sSL https://get.rvm.io | bash -s -- --ignore-dotfiles stable
-
-#Make ruby 2.3 default
-#rvm list known
-#rvm install 2.3
-rvm install 2.3-dev
-rvm --default use 2.3-dev
-gem install bundler
+#Download groovy sdk from http://groovy-lang.org/download.html
+#Unzip it in /mnt/files/storage/groovy-2.4.8
+cd /mnt/files/storage
+ln -s groovy-2.4.8 groovy
 
 #Install Nodejs
 curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
@@ -109,20 +112,18 @@ sudo apt update
 sudo apt install virtualbox-5.1
 sudo usermod -a -G vboxusers sahil
 
-#Important symbolic links:
-ln -s /mnt ~/
-ln -s /mnt/files/code ~/
-ln -s /mnt/hd2008/VirtualBox\ VMs ~/
-ln -s ~/Dropbox/code-sync ~/code/code-sync
-ln -s ~/Dropbox/books/Music/MuseScore2 ~/Documents/MuseScore2
+#Digikam
+sudo apt install kipi-plugins5 plasma-theme-oxygen
+sudo add-apt-repository -y ppa:philip5/extra
+sudo apt update; sudo apt install -y digikam5
 
-STORAGE=/mnt/files/storage
-ln -s $STORAGE/Android ~/
-ln -s $STORAGE/Genymobile_hidden ~/.Genymobile
-ln -s $STORAGE/docker /var/lib/docker
-ln -s $STORAGE/Unity /opt/Unity
+#Install Ruby (rvm)
+command curl -sSL https://rvm.io/mpapis.asc | gpg2 --import -
+\curl -sSL https://get.rvm.io | bash -s -- --ignore-dotfiles stable
 
-#Unity
-#After installing Unity from deb by
-#"dpkg -i Unity----.deb" run
-#"sudo apt-get -f install" to get all dependencies
+#Make ruby 2.3 default
+#rvm list known
+#rvm install 2.3
+rvm install 2.3-dev
+rvm --default use 2.3-dev
+gem install bundler
