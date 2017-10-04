@@ -127,3 +127,15 @@ command curl -sSL https://rvm.io/mpapis.asc | gpg2 --import -
 rvm install 2.3-dev
 rvm --default use 2.3-dev
 gem install bundler
+
+#For running swf files: https://ubuntuforums.org/showthread.php?t=2218732&page=2&p=13040642#post13040642
+#So the workaround for this is to edit /usr/share/mime/packages/freedesktop.org.xml and change
+#<mime-type type="application/vnd.adobe.flash.movie"> to <mime-type type="application/x-shockwave-flash">
+#and then run update-mime-database /usr/share/mime
+sudo su
+sed  -e "s/<mime-type  type=\"application\/vnd.adobe.flash.movie\">/<mime-type  type=\"application\/x-shockwave-flash\">/g"  /usr/share/mime/packages/freedesktop.org.xml >  /usr/share/mime/packages/freedesktop.org.xml.new
+mv /usr/share/mime/packages/freedesktop.org.xml /usr/share/mime/packages/freedesktop.org.xml.original
+mv /usr/share/mime/packages/freedesktop.org.xml.new /usr/share/mime/packages/freedesktop.org.xml
+echo "Update mime database...";
+update-mime-database /usr/share/mime
+echo "Mime database updated successfully! ALL DONE!";

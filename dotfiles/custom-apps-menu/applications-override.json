@@ -1,24 +1,22 @@
 [
-  { "displayName":"Firefox Web Browser", "command":"firefox -p sahil","iconName":"/usr/share/icons/Mint-Y/apps/64/firefox.png" },
-  { "displayName":"Google Chrome","command":"/usr/bin/google-chrome-stable", "iconName":"/usr/share/icons/hicolor/64x64/apps/google-chrome.png" },
-  { "desktopFile":"slack" },
+  { "displayName":"Vivaldi","command":"/usr/bin/vivaldi-stable --disable-gpu-vsync", "iconName":"/usr/share/icons/hicolor/64x64/apps/vivaldi.png" },
+
+  { "displayName":"Terminal","command":"gnome-terminal","iconName":"/usr/share/icons/Mint-Y/apps/64/utilities-terminal.png"},
+  { "command":"S" },
+
+  { "displayName":"Work", "iconName":"applications-interfacedesign", "menu": [
+    { "desktopFile":"slack" },
     { "displayName":"Asana","command":"/opt/google/chrome/google-chrome --profile-directory=Default --app-id=hojinjhobffikdniglgaglhalhihdalb", "iconName":"/home/sahil/.local/share/icons/hicolor/128x128/apps/chrome-hojinjhobffikdniglgaglhalhihdalb-Default.png" },
-    { "displayName":"Simplenote","command":"/opt/google/chrome/google-chrome --profile-directory=Default --app-id=gmgnghphiockcigbjihhdnnmmcbdcjdf", "iconName":"/home/sahil/.local/share/icons/hicolor/128x128/apps/chrome-gmgnghphiockcigbjihhdnnmmcbdcjdf-Default.png" },
-    
-  { "command":"S" },
-    { "displayName":"Terminal","command":"gnome-terminal","iconName":"/usr/share/icons/Mint-Y/apps/64/utilities-terminal.png"},
-
-  { "command":"S" },
-
-  { "displayName":"Programming", "iconName":"braid", "menu": [
+	{ "desktopFile":"VirtualBox", "command": "VirtualBox"},
+	{ "displayName":"Genymotion","command":"/home/sahil/software/genymotion/genymotion", "iconName":"/home/sahil/software/genymotion/icons/icon.png" }
+  ]},
+  { "displayName":"Programming", "iconName":"applications-python", "menu": [
+	{ "desktopFile":"emacs24"},
+	{ "desktopFile":"atom", "command": "atom"},
 	{ "displayName":"Android Studio","command":"/home/sahil/software/android-studio/bin/studio.sh", "iconName":"/home/sahil/software/android-studio/bin/studio.png" },
 	{ "displayName":"WebStorm","command":"/home/sahil/software/webstorm/bin/webstorm.sh", "iconName":"/home/sahil/software/webstorm/bin/webstorm.svg" },
 	{ "displayName":"Idea","command":"/home/sahil/software/idea/bin/idea.sh", "iconName":"/home/sahil/software/idea/bin/idea.png" },
-	{ "displayName":"PyCharm","command":"/home/sahil/software/pycharm/bin/pycharm.sh", "iconName":"/home/sahil/software/pycharm/bin/pycharm.png" },
-	{ "displayName":"Genymotion","command":"/home/sahil/software/genymotion/genymotion", "iconName":"/home/sahil/software/genymotion/icons/icon.png" },
-	{ "desktopFile":"atom", "command": "atom"},
-	{ "desktopFile":"emacs24"},
-	{ "desktopFile":"VirtualBox", "command": "VirtualBox"}
+	{ "displayName":"PyCharm","command":"/home/sahil/software/pycharm/bin/pycharm.sh", "iconName":"/home/sahil/software/pycharm/bin/pycharm.png" }
   ]},
   { "displayName":"Media", "iconName":"applications-multimedia", "menu": [
 	{ "desktopFile":"rygel-preferences"},
@@ -30,13 +28,16 @@
     { "displayName":"VLC Media Player","command":"/usr/bin/vlc", "iconName":"/usr/share/icons/hicolor/256x256/apps/vlc.png" }
   ]},
   { "displayName":"Internet", "iconName":"applications-internet", "menu": [
+    { "displayName":"Firefox Web Browser", "command":"firefox -p sahil","iconName":"/usr/share/icons/Mint-Y/apps/64/firefox.png" },
+    { "displayName":"Google Chrome","command":"/usr/bin/google-chrome-stable", "iconName":"/usr/share/icons/hicolor/64x64/apps/google-chrome.png" },
   	{ "displayName":"Transmission Torrents", "command":"transmission-gtk", "iconName":"/usr/share/icons/hicolor/scalable/apps/transmission.svg"},
   	{ "desktopFile":"vinagre", "command":"vinagre"},
   	{ "desktopFile":"filezilla" },
-      { "desktopFile":"synergy" },
-      { "displayName":"Smb4k", "command":"smb4k", "iconName":"/usr/share/icons/hicolor/64x64/apps/smb4k.png"}
+    { "desktopFile":"synergy" },
+    { "displayName":"Smb4k", "command":"smb4k", "iconName":"/usr/share/icons/hicolor/64x64/apps/smb4k.png"}
   ]},
   { "displayName":"Office", "iconName":"applications-office", "menu": [
+    { "displayName":"Simplenote","command":"/opt/google/chrome/google-chrome --profile-directory=Default --app-id=gmgnghphiockcigbjihhdnnmmcbdcjdf", "iconName":"/home/sahil/.local/share/icons/hicolor/128x128/apps/chrome-gmgnghphiockcigbjihhdnnmmcbdcjdf-Default.png" },
     { "desktopFile":"synergy"},
     { "displayName":"Calculator", "command":"gnome-calculator", "iconName":"/usr/share/icons/Mint-Y/apps/64/accessories-calculator.png"},
     { "displayName":"KMyMoney", "command":"kmymoney", "iconName":"/usr/share/icons/hicolor/64x64/apps/kmymoney.png" },
@@ -47,7 +48,7 @@
     { "desktopFile":"gimp"},
     { "displayName":"Unity", "command":"/opt/Unity/Editor/Unity", "iconName":"/usr/share/icons/hicolor/256x256/apps/unity-editor-icon.png" }
   ]},
-  { "displayName":"Games", "iconName":"applications-games", "menu": [
+  { "displayName":"Games", "iconName":"braid", "menu": [
   	{ "desktopFile":"openttd" },
   	{ "displayName":"0 A.D.", "command":"/usr/game/0ad", "iconName":"/usr/share/pixmaps/0ad.png" }
   ]},
