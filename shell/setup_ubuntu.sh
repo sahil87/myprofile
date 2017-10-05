@@ -59,8 +59,8 @@ mkdir ~/code/go
 go get -u github.com/odeke-em/drive/cmd/drive
 
 #Install Hugo
-wget https://github.com/gohugoio/hugo/releases/download/v0.26/hugo_0.26_Linux-64bit.deb
-sudo apt install ./hugo_0.26_Linux-64bit.deb
+wget https://github.com/gohugoio/hugo/releases/download/v0.29/hugo_0.29_Linux-64bit.deb
+sudo apt install ./hugo_0.29_Linux-64bit.deb
 
 #Download groovy sdk from http://groovy-lang.org/download.html
 #Unzip it in /mnt/files/storage/groovy-2.4.8
