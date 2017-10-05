@@ -51,8 +51,8 @@ sudo add-apt-repository -y ppa:webupd8team/atom
 sudo apt-get update; sudo apt-get install atom
 
 #Install go from https://golang.org/doc/install
-wget https://storage.googleapis.com/golang/go1.9.linux-amd64.tar.gz
-sudo tar -C /usr/local -xzf go1.9.linux-amd64.tar.gz
+wget https://storage.googleapis.com/golang/go1.9.1.linux-amd64.tar.gz
+sudo tar -C /usr/local -xzf go1.9.1.linux-amd64.tar.gz
 mkdir ~/code/go
 
 #Install google drive for linux
@@ -92,6 +92,12 @@ sudo chmod +x /usr/local/bin/docker-compose
 sudo apt install -y python3 python3-pip python3-setuptools
 pip3 install virtualenv
 pip3 install virtualenvwrapper
+#Uncomment the following in myzsh_rc.sh if python is installed
+#Python Settings: Use workon to list/go into a virutal env, deactivate to exit, mkvirtualenv temp to create virtual env
+#export WORKON_HOME=~/code/python/.virtualenvs
+#export PROJECT_HOME=~/code/python
+#export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+#source ~/.local/bin/virtualenvwrapper.sh
 
 #Install ansible
 sudo apt install -y software-properties-common python-jmespath
