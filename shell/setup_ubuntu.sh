@@ -85,7 +85,7 @@ sudo service docker start
 sudo groupadd docker
 sudo usermod -aG docker sahil
 #Docker Compose, find latest version from https://github.com/docker/compose/releases
-su -c 'curl -L https://github.com/docker/compose/releases/download/1.15.0/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose'
+su -c 'curl -L https://github.com/docker/compose/releases/download/1.17.1/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose'
 sudo chmod +x /usr/local/bin/docker-compose
 
 #Python
