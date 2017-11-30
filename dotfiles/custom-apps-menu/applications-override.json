@@ -28,7 +28,7 @@
     { "displayName":"VLC Media Player","command":"/usr/bin/vlc", "iconName":"/usr/share/icons/hicolor/256x256/apps/vlc.png" }
   ]},
   { "displayName":"Internet", "iconName":"applications-internet", "menu": [
-    { "displayName":"Firefox Web Browser", "command":"firefox -p sahil","iconName":"/usr/share/icons/Mint-Y/apps/64/firefox.png" },
+    { "displayName":"Firefox Web Browser", "command":"firefox -p sahil","iconName":"/usr/share/icons/Mint-X/apps/96/firefox.svg" },
     { "displayName":"Google Chrome","command":"/usr/bin/google-chrome-stable", "iconName":"/usr/share/icons/hicolor/64x64/apps/google-chrome.png" },
   	{ "displayName":"Transmission Torrents", "command":"transmission-gtk", "iconName":"/usr/share/icons/hicolor/scalable/apps/transmission.svg"},
   	{ "desktopFile":"vinagre", "command":"vinagre"},

@@ -59,8 +59,8 @@ mkdir ~/code/go
 go get -u github.com/odeke-em/drive/cmd/drive
 
 #Install Hugo
-wget https://github.com/gohugoio/hugo/releases/download/v0.30.2/hugo_0.30.2_Linux-64bit.deb
-sudo apt install ./hugo_0.30.2_Linux-64bit.deb
+wget https://github.com/gohugoio/hugo/releases/download/v0.31.1/hugo_0.31.1_Linux-64bit.deb
+sudo apt install ./hugo_0.31.1_Linux-64bit.deb
 
 #Download groovy sdk from http://groovy-lang.org/download.html
 #Unzip it in /mnt/files/storage/groovy-2.4.8
@@ -85,7 +85,7 @@ sudo service docker start
 sudo groupadd docker
 sudo usermod -aG docker sahil
 #Docker Compose, find latest version from https://github.com/docker/compose/releases
-su -c 'curl -L https://github.com/docker/compose/releases/download/1.15.0/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose'
+su -c 'curl -L https://github.com/docker/compose/releases/download/1.17.1/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose'
 sudo chmod +x /usr/local/bin/docker-compose
 
 #Python
