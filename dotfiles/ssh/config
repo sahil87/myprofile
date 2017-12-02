@@ -17,10 +17,10 @@ Host *int.sg.aws.sportscafe.in sportscafe.in !gw.sportscafe.in !10.0.0.*
 Host gw.sportscafe.in
   Port 2222
 
-Host *int.aws.mum.gmetri.com !gw.gmetri.com !10.0.0.*
-  ProxyCommand ssh -p 2222 gw.gmetri.com nc %h %p
+Host *int.aws.mum.gmetri.com !gw.gmetri.com !gw*.gmetri.com !10.0.0.*
+  ProxyCommand ssh -p 2222 gw-prod01.gmetri.com nc %h %p
 
-Host gw.gmetri.com
+Host gw.gmetri.com gw*.gmetri.com
   Port 2222
 
 Host github
