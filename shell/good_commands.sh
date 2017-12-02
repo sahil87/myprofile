@@ -1,5 +1,6 @@
 #!/bin/bash
 #Adb over wifi
+#Had to remove android-tools-adb and install only adb (apt install adb) for below to work
 Connect Android phone and host machine to same WiFi network
 Connect Android phone to host machine using USB cable (to start with)
 Execute adb tcpip 5555 from a command prompt
