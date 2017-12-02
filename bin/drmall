@@ -11,3 +11,5 @@ echo "Clearing networks"
 docker network rm $(docker network ls | tail -n+2 | awk '{if($2 !~ /bridge|none|host/){ print $1 }}')
 echo "Removing images not currently running"
 for a in `docker images  | awk '{print $3}'`; do docker rmi $a; done
+#Trick to remove subvolumes: (in /var/lib/docker/)
+# btrfs subvolume delete btrfs/subvolumes/*
