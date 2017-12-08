@@ -27,6 +27,15 @@ ln -s $STORAGE/Android ~/
 ln -s $STORAGE/Genymobile_hidden ~/.Genymobile
 ln -s $STORAGE/Unity /opt/Unity
 
+#ALLOCATE SWAP SPACE:
+sudo su
+fallocate -l 9G /swapfile9G #OR  dd if=/dev/zero of=/swapfile bs=1M count=1024
+chmod 600 /swapfile9G
+mkswap /swapfile9G
+swapon /swapfile9G
+#Add the following entry to fstab:
+/swapfile9G    swap    swap    defaults    0 0
+
 #Unity
 #After installing Unity from deb by
 #"dpkg -i Unity----.deb" run
