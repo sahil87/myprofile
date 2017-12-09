@@ -21,6 +21,7 @@ linkfile emacs/init.el              ~/.emacs                            0
 linkfile ssh/config                 ~/.ssh/config                       0
 linkfile ansible/.ansible.cfg       ~/.ansible.cfg                      0
 linkfile git/.gitconfig             ~/.gitconfig                        0
+linkfile remmina                    ~/.remmina                          0
 linkfile luckybackup/MyBackup.profile  ~/.luckyBackup/profiles/MyBackup.profile 0
 linkfile sysctl/40-max-user-watches.conf /etc/sysctl.d/40-max-user-watches.conf       1
 
