@@ -47,6 +47,7 @@ sudo apt install -y curl wget nmap whois
 sudo apt install -y encfs openssh-server luckybackup gparted #emacs24-nox
 sudo apt install -y android-tools-adb android-tools-fastboot
 sudo apt install -y rygel rygel-preferences
+sudo apt install -y remmina remmina-plugin-vnc remmina-plugin-rdp remmina-plugin-nx
 #sudo apt install -y ubuntu-restricted-extras libavcodec-extra libdvd-pkg
 
 #Java
