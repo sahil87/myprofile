@@ -1,0 +1,21 @@
+[remmina]
+ssh_auth=0
+quality=1
+disableencryption=0
+ssh_charset=
+ssh_privatekey=
+resolution=
+group=
+password=
+name=Home Family 10.0.0.20
+ssh_loopback=0
+exec=
+ssh_username=
+ssh_server=
+protocol=NX
+ssh_enabled=0
+username=
+nx_privatekey=
+showcursor=0
+server=10.0.0.20
+disableclipboard=0

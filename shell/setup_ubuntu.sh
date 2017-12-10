@@ -47,9 +47,14 @@ sudo apt install -y curl wget nmap whois
 sudo apt install -y encfs openssh-server luckybackup gparted #emacs24-nox
 sudo apt install -y android-tools-adb android-tools-fastboot
 sudo apt install -y rygel rygel-preferences
-sudo apt install -y remmina remmina-plugin-vnc remmina-plugin-rdp remmina-plugin-nx
 sudo apt install -y autoconf automake libtool cmake
 #sudo apt install -y ubuntu-restricted-extras libavcodec-extra libdvd-pkg
+
+#VNC and Remmina
+sudo apt install -y remmina remmina-plugin-vnc remmina-plugin-rdp remmina-plugin-nx
+#Download, install nomachine from https://www.nomachine.com/download/linux&id=1
+#To install:
+sudo apt install ./nomachine_6.0.66_2_amd64.deb
 
 #Java
 sudo echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | sudo debconf-set-selections
