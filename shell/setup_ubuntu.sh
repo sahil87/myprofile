@@ -123,7 +123,6 @@ sudo apt install -y ansible
 
 #For AWS ec2.py and other AWS commands to work
 sudo apt-get install -y python python-dev python-pip
-sudo pip install boto
 pip install --upgrade --user boto awscli
 
 #For virtualbox
