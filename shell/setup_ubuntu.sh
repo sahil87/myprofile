@@ -124,7 +124,7 @@ sudo apt install -y ansible
 #For AWS ec2.py and other AWS commands to work
 sudo apt-get install -y python python-dev python-pip
 sudo pip install boto
-sudo pip install --upgrade --user boto awscli
+pip install --upgrade --user boto awscli
 
 #For virtualbox
 sudo add-apt-repository "deb http://download.virtualbox.org/virtualbox/debian xenial contrib"
