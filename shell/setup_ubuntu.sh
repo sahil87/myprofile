@@ -125,6 +125,13 @@ sudo apt install -y ansible
 sudo apt-get install -y python python-dev python-pip
 pip install --upgrade --user boto awscli
 
+#Configure aws
+aws configure
+#Enter AWS Access Key ID, AWS Secret Access Key, Default region name [None]: ap-southeast-1
+#After that the following commands the docker login command. (remove -e none from the docker login output)
+aws ecr get-login
+
+
 #For virtualbox
 sudo add-apt-repository "deb http://download.virtualbox.org/virtualbox/debian xenial contrib"
 #su -c 'echo "deb http://download.virtualbox.org/virtualbox/debian xenial contrib"  > /etc/apt/sources.list.d/virtualbox.list'

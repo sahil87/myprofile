@@ -1,0 +1,33 @@
+[remmina]
+disableclipboard=0
+ssh_auth=0
+clientname=
+quality=0
+ssh_charset=
+ssh_privatekey=
+sharesmartcard=0
+resolution=
+group=
+password=IeioOss6OPA=
+name=NODE 04
+ssh_loopback=0
+shareprinter=0
+ssh_username=
+ssh_server=
+security=
+protocol=RDP
+execpath=
+sound=off
+exec=
+ssh_enabled=0
+username=NODE 04
+sharefolder=
+console=0
+domain=
+server=10.0.0.30
+colordepth=8
+window_maximize=0
+window_height=791
+window_width=1568
+viewmode=1
+scale=1
