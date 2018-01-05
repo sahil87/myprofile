@@ -130,7 +130,7 @@ aws configure
 #Enter AWS Access Key ID, AWS Secret Access Key, Default region name [None]: ap-southeast-1
 #After that the following commands the docker login command. (remove -e none from the docker login output)
 aws ecr get-login
-
+`aws ecr get-login | sed -e "s/ -e none//"`
 
 #For virtualbox
 sudo add-apt-repository "deb http://download.virtualbox.org/virtualbox/debian xenial contrib"
