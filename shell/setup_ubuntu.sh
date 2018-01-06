@@ -36,6 +36,19 @@ swapon /swapfile9G
 #Add the following entry to fstab:
 /swapfile9G    swap    swap    defaults    0 0
 
+#For AWS ec2.py and other AWS commands to work
+sudo apt-get install -y python python-dev python-pip
+sudo pip install -U setuptools
+pip install -U pip
+pip install --upgrade --user boto
+pip install --upgrade --user awscli
+
+#Configure aws
+aws configure
+#Enter AWS Access Key ID, AWS Secret Access Key, Default region name [None]: ap-south-1
+#After that the following commands the docker login command. (remove -e none from the docker login output)
+`aws ecr get-login --no-include-email --region ap-south-1`
+
 #Unity
 #After installing Unity from deb by
 #"dpkg -i Unity----.deb" run
@@ -120,19 +133,6 @@ sudo apt install -y software-properties-common python-jmespath
 sudo apt-add-repository -y ppa:ansible/ansible
 sudo apt update
 sudo apt install -y ansible
-
-#For AWS ec2.py and other AWS commands to work
-sudo apt-get install -y python python-dev python-pip
-sudo pip install -U setuptools
-pip install -U pip
-pip install --upgrade --user boto
-pip install --upgrade --user awscli
-
-#Configure aws
-aws configure
-#Enter AWS Access Key ID, AWS Secret Access Key, Default region name [None]: ap-south-1
-#After that the following commands the docker login command. (remove -e none from the docker login output)
-`aws ecr get-login --no-include-email --region ap-south-1`
 
 #For virtualbox
 sudo add-apt-repository "deb http://download.virtualbox.org/virtualbox/debian xenial contrib"
