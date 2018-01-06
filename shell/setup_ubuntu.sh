@@ -123,7 +123,7 @@ sudo apt install -y ansible
 
 #For AWS ec2.py and other AWS commands to work
 sudo apt-get install -y python python-dev python-pip
-pip install -U setuptools
+sudo pip install -U setuptools
 pip install -U pip
 pip install --upgrade --user boto
 pip install --upgrade --user awscli
