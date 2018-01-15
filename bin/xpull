@@ -1,8 +1,12 @@
 #!/bin/bash
 OLDDIR=`pwd`
-PROFILEDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+MYPROFILEDIR="$(realpath "$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )/.." )"
+LIFETRACKERDIR="$(realpath "$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )/../../lifetracker" )"
 
 cd $PROFILEDIR
+git fetch origin
+git merge origin/master
+cd $LIFETRACKERDIR
 git fetch origin
 git merge origin/master
 cd $OLDDIR
