@@ -45,7 +45,7 @@ pip install --upgrade --user awscli
 
 #Configure aws
 aws configure
-#Enter AWS Access Key ID, AWS Secret Access Key, Default region name [None]: ap-southeast-1
+#Enter AWS Access Key ID, AWS Secret Access Key, Default region name [None]: ap-south-1
 #After that the following commands the docker login command. (remove -e none from the docker login output)
 `aws ecr get-login --no-include-email --region ap-south-1`
 
