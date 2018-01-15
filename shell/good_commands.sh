@@ -57,6 +57,14 @@ ssh my-server.com -- hotsname
 #Agent forwardings
 ssh -A my-server.com #Will forward my private key in the session. Remote needs to be trustable, or private key can be compromized.
 
+#Using NX via SOCKS (ssh) proxy
+#Run following on command line. (Runs in background mode)
+ssh -D 8123 -f -C -q -N vpnuser@vpnhost.com
+#ssh to vpnhost.com and list all machines using arp -a
+#Open NX and create new connection with HOST, passing of final machine ip with following proxy configuration:
+#Manual proxy configuration. Host: localhost, Port: 8123
+
+#Open
 #To check ports bound in local system
 netstat -plntu
 lsof -i :port

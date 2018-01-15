@@ -1,6 +1,7 @@
 #!/bin/bash
 OLDDIR=`pwd`
-PROFILEDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+MYPROFILEDIR="$(realpath "$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )/.." )"
+LIFETRACKERDIR="$(realpath "$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )/../lifetracker" )"
 
 if [ -z $1 ]
 then
@@ -9,8 +10,14 @@ else
     COMMIT_MESSAGE="${@}"
 fi
 
-cd $PROFILEDIR
-git add --all :/
-git commit -m "${COMMIT_MESSAGE}"
-git push
+commit_dir () {
+  git add --all :/
+  git commit -m "$1"
+  git push
+}
+
+cd $MYPROFILEDIR
+commit_dir ${COMMIT_MESSAGE}
+cd $LIFETRACKERDIR
+commit_dir ${COMMIT_MESSAGE}
 cd $OLDDIR
