@@ -1,5 +1,8 @@
 #!/bin/bash
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-SOURCE=$DIR/../.encfs
-DEST=$DIR/../revealed
+MYPROFILEDIR="$(realpath "$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )/.." )"
+LIFETRACKERDIR="$(realpath "$MYPROFILEDIR/../lifetracker" )"
+
+SOURCE=$LIFETRACKERDIR/.encfs
+DEST=$LIFETRACKERDIR/revealed
+
 fusermount -u $DEST

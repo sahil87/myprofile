@@ -1,11 +1,13 @@
 #!/bin/bash
+MYPROFILEDIR="$(realpath "$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )/.." )"
+LIFETRACKERDIR="$(realpath "$MYPROFILEDIR/../lifetracker" )"
 
-PARENTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )"/../ && pwd )"
-DIR="$( readlink -e $PARENTDIR )"
-SOURCE=$DIR/.encfs
-DEST=$DIR/revealed
+SOURCE=$LIFETRACKERDIR/.encfs
+DEST=$LIFETRACKERDIR/revealed
+
 echo $DEST
 df -h | grep $DEST
+
 if [ "$?" = "0" ]; then
 	echo "$DEST already mounted"
 	exit 1

@@ -1,7 +1,7 @@
 #!/bin/bash
 OLDDIR=`pwd`
 MYPROFILEDIR="$(realpath "$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )/.." )"
-LIFETRACKERDIR="$(realpath "$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )/../../lifetracker" )"
+LIFETRACKERDIR="$(realpath "$MYPROFILEDIR/../lifetracker" )"
 
 cd $MYPROFILEDIR
 git fetch origin

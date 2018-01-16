@@ -1,7 +1,8 @@
 #!/bin/zsh
 ALIASDIR=${0:a:h}
-DIR87=$ALIASDIR/../../../../..
-MYPROFILEDIR=$DIR87/myprofile
+DIR87="$(realpath $ALIASDIR/../../../../..)"
+MYPROFILEDIR="$(realpath $DIR87/myprofile)"
+LIFETRACKERDIR="$(realpath $DIR87/lifetracker)"
 alias cd..='cd ../' # Go back 1 directory level (for fast typers)
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -53,6 +54,7 @@ alias gms='cd ~/code/vrgmetri/gmscripts'
 alias sa='cd ~/code/vrgmetri/sahil'
 alias 87='cd $DIR87'
 alias myprofile='cd $MYPROFILEDIR'
+alias lifetracker='cd $LIFETRACKERDIR'
 alias blog='cd $DIR87/bloghugo'
 #Needed here instead of a commadn as the env vars created need to be in the running shell
 alias aws-add-sc='source $MYPROFILEDIR/revealed/keys/aws_iam_keys/sportscafe/export.sh'
