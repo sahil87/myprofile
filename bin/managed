@@ -2,8 +2,13 @@
 SOURCE=$LIFETRACKERDIR/.encfs
 DEST=$LIFETRACKERDIR/revealed
 
-fusermount -u $DEST
+df -h | grep $DEST
+if [ "$?" = "1" ]; then
+  echo "Nothing to Manage"
+  exit 1
+fi
 
+fusermount -u $DEST
 if [ "$?" = "0" ]; then
 	echo "Mischief Managed"
 	exit 0
