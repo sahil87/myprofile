@@ -1,7 +1,4 @@
 #!/bin/bash
-MYPROFILEDIR="$(realpath "$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )/.." )"
-LIFETRACKERDIR="$(realpath "$MYPROFILEDIR/../lifetracker" )"
-
 SOURCE=$LIFETRACKERDIR/.encfs
 DEST=$LIFETRACKERDIR/revealed
 

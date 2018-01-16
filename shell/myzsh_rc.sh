@@ -8,7 +8,9 @@ esac
 
 #ADD PERSONAL BIN AND CURRENT FOLDER TO PATH
 CURRENTDIR=${0:a:h}
-PARENTDIR=`readlink -f $CURRENTDIR/..`
+export MYPROFILEDIR=`realpath $CURRENTDIR/..`
+export LIFETRACKERDIR=`realpath $MYPROFILEDIR/../lifetracker`
+
 #LOAD RVM
 GRADLE_VERSION=`ls ~/software/android-studio/gradle/ | grep gradle | sort -r | head -n 1`
 GRADLE_PATH=~/software/android-studio/gradle/$GRADLE_VERSION/bin
@@ -25,7 +27,7 @@ export GOPATH=~/code/go
 #The incantation `typeset -U path', where the -U stands for unique, tells the shell that it should not add anything to $path if it's there already.
 typeset -U path
 #~/.local/bin is for pythong pip installs done by user without setting virtualenv
-path=($path ~/.rvm/bin . ~/.local/bin $PARENTDIR/bin /usr/local/go/bin $GOPATH/bin ~/Android/Sdk/platform-tools ~/Android/Sdk/tools /mnt/files/storage/groovy/bin $GRADLE_PATH)
+path=($path ~/.rvm/bin . ~/.local/bin $MYPROFILEDIR/bin /usr/local/go/bin $GOPATH/bin ~/Android/Sdk/platform-tools ~/Android/Sdk/tools /mnt/files/storage/groovy/bin $GRADLE_PATH)
 
 #oh-my-zsh SETTINGS:
 plugins=(myfunctions git docker themes ssh-agent man history-substring-search myaliases)

@@ -1,8 +1,13 @@
 #!/bin/bash
-MYPROFILEDIR="$(realpath "$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )/.." )"
-LIFETRACKERDIR="$(realpath "$MYPROFILEDIR/../lifetracker" )"
-
 SOURCE=$LIFETRACKERDIR/.encfs
 DEST=$LIFETRACKERDIR/revealed
 
 fusermount -u $DEST
+
+if [ "$?" = "0" ]; then
+	echo "Mischief Managed"
+	exit 0
+else
+  echo "Mischief Unmanaged"
+	exit 1
+fi
