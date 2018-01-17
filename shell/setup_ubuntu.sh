@@ -12,7 +12,7 @@ aws configure
 #Enter AWS Access Key ID, AWS Secret Access Key, Default region name [None]: ap-south-1
 #After that the following commands the docker login command. (remove -e none from the docker login output)
 `aws ecr get-login --no-include-email --region ap-south-1`
-`aws logs create-log-group --log-group-name awslogs-jenkins --region ap-south-1`
+aws logs create-log-group --log-group-name awslogs-jenkins --region ap-south-1
 #To configure: https://console.aws.amazon.com/cloudwatch/
 
 #Link custom apps menu
