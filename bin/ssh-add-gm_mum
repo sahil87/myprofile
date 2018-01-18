@@ -1,4 +1,5 @@
 #!/bin/bash
 ssh-add $LIFETRACKERDIR/revealed/keys/ssh_keys/gmetri/gmetri-mum-common.pem
+ssh-add $LIFETRACKERDIR/revealed/keys/ssh_keys/gmetri/gmetri-mum-ecs.pem
 echo "Current keys [ssh-add -L]"
 ssh-add -L
