@@ -7,8 +7,8 @@
 #host <half hostname> to test. Should contact host.<search entry>
 #dig <full hostname> for DNS resolution details
 
-nameserver 8.8.8.8
-nameserver 8.8.4.4
+#nameserver 8.8.8.8
+#nameserver 8.8.4.4
 
 #Min no of dots before trying directly
 #Makes sure short names go through "search" setting first
