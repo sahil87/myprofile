@@ -19,7 +19,7 @@ aws logs create-log-group --log-group-name awslogs-jenkins --region ap-south-1
 git clone git@github.com:sahil87/custom-apps-menu.git ~/code/sahil87/custom-apps-menu
 ln -s ~/code/sahil87/custom-apps-menu ~/.local/share/cinnamon/applets/custom-apps-menu@sahil87
 
-#Install oh-my-zsh
+#Install oh-my-zsh (Run from shell folder)
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/sahil87/oh-my-zsh/master/tools/install.sh)"
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 source $DIR/add_to_zshrc.sh
@@ -57,12 +57,11 @@ swapon /swapfile9G
 #"sudo apt-get -f install" to get all dependencies
 
 #Important tools:
-sudo apt install -y byobu emacs zsh zsh-doc git gitk yakuake xcalib
-sudo apt install -y curl wget nmap whois
-sudo apt install -y encfs openssh-server luckybackup gparted #emacs24-nox
-sudo apt install -y android-tools-adb android-tools-fastboot
-sudo apt install -y rygel rygel-preferences
+#Install chrome, vscode, vivaldi
+sudo apt install -y byobu emacs zsh zsh-doc git gitk yakuake xcalib hplip-gui  #emacs24-nox
+sudo apt install -y curl wget nmap whois encfs openssh-server luckybackup gparted
 sudo apt install -y autoconf automake libtool cmake
+sudo apt install -y android-tools-adb android-tools-fastboot rygel rygel-preferences
 #sudo apt install -y ubuntu-restricted-extras libavcodec-extra libdvd-pkg
 
 #VNC and Remmina
