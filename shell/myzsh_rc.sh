@@ -9,7 +9,10 @@ esac
 #ADD PERSONAL BIN AND CURRENT FOLDER TO PATH
 CURRENTDIR=${0:a:h}
 export MYPROFILEDIR=`realpath $CURRENTDIR/..`
-export LIFETRACKERDIR=`realpath $MYPROFILEDIR/../lifetracker`
+export DIR87=`realpath $MYPROFILEDIR/..`
+export LIFETRACKERDIR=`realpath $DIR87/lifetracker`
+
+source $LIFETRACKERDIR/shell/envvars.sh
 
 #LOAD RVM
 GRADLE_VERSION=`ls ~/software/android-studio/gradle/ | grep gradle | sort -r | head -n 1`

@@ -1,8 +1,4 @@
 #!/bin/zsh
-ALIASDIR=${0:a:h}
-DIR87="$(realpath $ALIASDIR/../../../../..)"
-MYPROFILEDIR="$(realpath $DIR87/myprofile)"
-LIFETRACKERDIR="$(realpath $DIR87/lifetracker)"
 alias cd..='cd ../' # Go back 1 directory level (for fast typers)
 alias ..='cd ..'
 alias ...='cd ../..'
