@@ -17,11 +17,14 @@ function linkfile() {
 }
 
 linkfile custom-apps-menu/applications-override.json  ~/.local/share/cinnamon/applets/custom-apps-menu@sahil87/applications-override.json                        0
-linkfile emacs/init.el              ~/.emacs                            0
-linkfile ssh/config                 ~/.ssh/config                       0
-linkfile ansible/.ansible.cfg       ~/.ansible.cfg                      0
-linkfile git/.gitconfig             ~/.gitconfig                        0
-linkfile remmina                    ~/.remmina                          0
+linkfile emacs/init.el              ~/.emacs                                0
+linkfile ssh/config                 ~/.ssh/config                           0
+linkfile ansible/.ansible.cfg       ~/.ansible.cfg                          0
+linkfile git/.gitconfig             ~/.gitconfig                            0
+linkfile vscode/snippets            ~/.config/Code/User/snippets            0
+linkfile vscode/keybindings.json    ~/.config/Code/User/keybindings.json    0
+linkfile vscode/settings.json       ~/.config/Code/User/settings.json       0
+linkfile remmina                    ~/.remmina                              0
 linkfile luckybackup/MyBackup.profile  ~/.luckyBackup/profiles/MyBackup.profile 0
 linkfile sysctl/40-max-user-watches.conf /etc/sysctl.d/40-max-user-watches.conf       1
 
