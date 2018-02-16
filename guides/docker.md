@@ -1,6 +1,8 @@
 # Installing Docker
 
-Steps from [here](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
+## Install docker-ce
+
+Steps updated from [here](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
 
 ```sh
 sudo apt-get -y install apt-transport-https ca-certificates curl software-properties-common
@@ -24,14 +26,14 @@ sudo ln -s /mnt/files/storage/docker /var/lib/docker
 sudo service docker start
 ```
 
-## Add yourself to docker group
+## Add yourself to the docker group
 
 ```sh
 sudo groupadd docker
 sudo usermod -aG docker $USER
 ```
 
-## Docker Compose
+## Install Docker Compose
 
 Find latest version from https://github.com/docker/compose/releases
 

@@ -102,7 +102,7 @@ curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 sudo apt install -y nodejs build-essential
 
 #Install docker
-
+Use steps from [here](https://github.com/sahil87/myprofile/blob/master/guides/docker.md)
 
 #Python
 sudo apt install -y python3 python3-pip python3-setuptools
