@@ -1,5 +1,6 @@
 {
     "editor.mouseWheelZoom": true,
     "files.autoSave": "afterDelay",
-    "git.enableSmartCommit": true
+    "git.enableSmartCommit": true,
+    "diffEditor.ignoreTrimWhitespace": true
 }

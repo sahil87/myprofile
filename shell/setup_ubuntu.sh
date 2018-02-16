@@ -102,21 +102,7 @@ curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 sudo apt install -y nodejs build-essential
 
 #Install docker
-sudo apt-get -y install apt-transport-https ca-certificates curl software-properties-common
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(grep UBUNTU_CODENAME /etc/os-release | awk -F '=' '{ print $2 }') stable edge"
-sudo apt-get update
-sudo apt-get -y install docker-ce
-sudo service docker stop
-sudo rm -rf /var/lib/docker; sudo umount /var/lib/docker/aufs
-sudo ln -s /mnt/files/storage/docker /var/lib/docker
-sudo service docker start
-#Add yourself to docker group
-sudo groupadd docker
-sudo usermod -aG docker sahil
-#Docker Compose, find latest version from https://github.com/docker/compose/releases
-su -c 'curl -L https://github.com/docker/compose/releases/download/1.19.0-rc3/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose'
-sudo chmod +x /usr/local/bin/docker-compose
+
 
 #Python
 sudo apt install -y python3 python3-pip python3-setuptools
