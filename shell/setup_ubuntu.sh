@@ -1,19 +1,8 @@
 #!/bin/bash
 
-#For AWS ec2.py and other AWS commands to work
-sudo apt-get install -y python python-dev python-pip
-sudo pip install -U setuptools
-pip install -U pip
-pip install --upgrade --user boto
-pip install --upgrade --user awscli
+## AWS CLI:
 
-#Configure aws
-aws configure
-#Enter AWS Access Key ID, AWS Secret Access Key, Default region name [None]: ap-south-1
-#After that the following commands the docker login command. (remove -e none from the docker login output)
-`aws ecr get-login --no-include-email --region ap-south-1`
-aws logs create-log-group --log-group-name awslogs-jenkins --region ap-south-1
-#To configure: https://console.aws.amazon.com/cloudwatch/
+Use steps from [here](https://github.com/sahil87/myprofile/blob/master/guides/awscli.md)
 
 #Link custom apps menu
 git clone git@github.com:sahil87/custom-apps-menu.git ~/code/sahil87/custom-apps-menu
