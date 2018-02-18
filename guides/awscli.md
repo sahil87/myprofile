@@ -16,11 +16,12 @@ pip install --upgrade --user awscli
 
 Enter your AWS Access Key ID, AWS Secret Access Key and a default region name. ( For Mumbai the region name is `ap-south-1` )
 
+## Other useful notes
+
 To login to ECR docker service:
 
 ``` `aws ecr get-login --no-include-email --region ap-south-1` ```
 (Include the backticks)
-## Other useful notes
 
 `aws logs create-log-group --log-group-name awslogs-jenkins --region ap-south-1`
 
