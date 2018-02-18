@@ -59,11 +59,8 @@ sudo apt install -y remmina remmina-plugin-vnc remmina-plugin-rdp remmina-plugin
 #To install:
 sudo apt install ./nomachine_6.0.66_2_amd64.deb
 
-#Java
-sudo echo oracle-java9-installer shared/accepted-oracle-license-v1-1 select true | sudo debconf-set-selections
-sudo add-apt-repository -y ppa:webupd8team/java
-sudo apt-get update
-sudo apt install -y oracle-java9-installer oracle-java9-set-default
+#Install Java
+Use steps from [here](https://github.com/sahil87/myprofile/blob/master/guides/java.md)
 
 #Atom
 sudo add-apt-repository -y ppa:webupd8team/atom
@@ -92,6 +89,9 @@ Use steps from [here](https://github.com/sahil87/myprofile/blob/master/guides/no
 #Install docker
 Use steps from [here](https://github.com/sahil87/myprofile/blob/master/guides/docker.md)
 
+#Install virtualbox
+Use steps from [here](https://github.com/sahil87/myprofile/blob/master/guides/virtualbox.md)
+
 #Python
 sudo apt install -y python3 python3-pip python3-setuptools
 pip3 install virtualenv
@@ -108,14 +108,6 @@ sudo apt install -y software-properties-common python-jmespath
 sudo apt-add-repository -y ppa:ansible/ansible
 sudo apt update
 sudo apt install -y ansible
-
-#For virtualbox
-sudo add-apt-repository "deb http://download.virtualbox.org/virtualbox/debian xenial contrib"
-#su -c 'echo "deb http://download.virtualbox.org/virtualbox/debian xenial contrib"  > /etc/apt/sources.list.d/virtualbox.list'
-wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
-sudo apt update
-sudo apt install virtualbox-5.1
-sudo usermod -a -G vboxusers sahil
 
 #Digikam
 sudo apt install kipi-plugins5 plasma-theme-oxygen
