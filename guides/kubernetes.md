@@ -24,8 +24,10 @@ In the following steps:
 
 ```sh
 minikube stop
-sudo rm -rf ~/.minikube
-sudo ln -s /mnt/files/storage/minikube ~/.minikube
+rm -rf ~/.minikube
+#To move an already existing installation:
+#mv ~/.minikube /mnt/files/storage/minikube
+ln -s /mnt/files/storage/minikube ~/.minikube
 ```
 
 ## Other Useful commands for reference
