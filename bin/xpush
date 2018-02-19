@@ -1,7 +1,5 @@
 #!/bin/bash
 OLDDIR=`pwd`
-MYPROFILEDIR="$(realpath "$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )/.." )"
-LIFETRACKERDIR="$(realpath "$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )/../../lifetracker" )"
 
 if [ -z $1 ]
 then
