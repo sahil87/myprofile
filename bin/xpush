@@ -16,9 +16,10 @@ commit_dir () {
   git push
 }
 
+set -x
 cd $MYPROFILEDIR
 commit_dir ${COMMIT_MESSAGE}
-cd $LIFETRACKERDIR
+$LIFETRACKERDIR
 commit_dir ${COMMIT_MESSAGE}
 cd $BLOGDIR
 commit_dir ${COMMIT_MESSAGE}
