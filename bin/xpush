@@ -20,4 +20,6 @@ cd $MYPROFILEDIR
 commit_dir ${COMMIT_MESSAGE}
 cd $LIFETRACKERDIR
 commit_dir ${COMMIT_MESSAGE}
+cd $BLOGDIR
+commit_dir ${COMMIT_MESSAGE}
 cd $OLDDIR

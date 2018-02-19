@@ -15,6 +15,19 @@ sudo mv ./kubectl /usr/local/bin/kubectl
 
 `curl -Lo minikube https://storage.googleapis.com/minikube/releases/v0.25.0/minikube-linux-amd64 && chmod +x minikube && sudo mv minikube /usr/local/bin/`
 
+### Make sure the partition holding ~/.minikube has enough free space
+
+In the following steps:
+
+1. Replace `/mnt/file` with the mount point of the partition the contains enough free space
+1. Replace `/storage/minikube` with the folder in that partition where you want to store docker related files
+
+```sh
+minikube stop
+sudo rm -rf ~/.minikube
+sudo ln -s /mnt/files/storage/minikube ~/.minikube
+```
+
 ## Other Useful commands for reference
 
 * Running Minikube: `minikube start` (Needs virtualbox installed)
