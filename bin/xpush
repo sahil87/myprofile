@@ -1,5 +1,7 @@
 #!/bin/bash
 OLDDIR=`pwd`
+MYPROFILEDIR="$(realpath "$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )/.." )"
+LIFETRACKERDIR="$(realpath "$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )/../../lifetracker" )"
 
 if [ -z $1 ]
 then
@@ -17,7 +19,7 @@ commit_dir () {
 set -x
 cd $MYPROFILEDIR
 commit_dir ${COMMIT_MESSAGE}
-$LIFETRACKERDIR
+cd $LIFETRACKERDIR
 commit_dir ${COMMIT_MESSAGE}
 cd $BLOGDIR
 commit_dir ${COMMIT_MESSAGE}
