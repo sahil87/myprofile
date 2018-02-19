@@ -3,7 +3,7 @@ OLDDIR=`pwd`
 
 if [ -z $1 ]
 then
-    COMMIT_MESSAGE="Pushing latest myprofile changes"
+    COMMIT_MESSAGE="Pushing latest profile/blog changes"
 else
     COMMIT_MESSAGE="${@}"
 fi
