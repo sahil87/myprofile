@@ -9,16 +9,22 @@ else
 fi
 
 commit_dir () {
-  git add --all :/
-  git commit -m "$1"
-  git push
+  cd $1
+  #0 if no changes, 1 if changes to commit
+  git diff --exit-code --quiet
+  DIFF_EXISTS=$?
+  if [ "$DIFF_EXISTS" -eq 1 ];
+  then
+    git add --all :/
+    git commit -m "$2"
+    git push
+  else
+    echo "No changes to commit in $1"
+  fi
 }
 
 set -x
-cd $MYPROFILEDIR
-commit_dir ${COMMIT_MESSAGE}
-cd $LIFETRACKERDIR
-commit_dir ${COMMIT_MESSAGE}
-cd $BLOGDIR
-commit_dir ${COMMIT_MESSAGE}
+commit_dir $MYPROFILEDIR ${COMMIT_MESSAGE}
+commit_dir $LIFETRACKERDIR ${COMMIT_MESSAGE}
+commit_dir $BLOGDIR ${COMMIT_MESSAGE}
 cd $OLDDIR
