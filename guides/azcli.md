@@ -19,4 +19,8 @@ sudo apt-get update && sudo apt-get install azure-cli
 
 ## Configure Azure CLI
 
+```sh
+az login
+```
+
 ## Other useful notes
