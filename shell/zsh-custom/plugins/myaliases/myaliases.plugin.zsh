@@ -66,4 +66,4 @@ alias z="sudo mount -t cifs -o username=gmetri,password=gmetri,uid=$UID,gid=$GID
 alias zu="sudo umount /home/sahil/zDrive"
 
 #Command shortcuts
-alias kubectl='kc'
+alias kc='kubectl'
