@@ -10,12 +10,12 @@ fi
 
 commit_dir () {
   cd $1
-  git diff --exit-code --quiet
+  git add --all :/
+  git commit --dry-run > /dev/null
   #0 if no changes, 1 if changes to commit
   DIFF_EXISTS=$?
-  if [ "$DIFF_EXISTS" -eq 1 ];
+  if [ "$DIFF_EXISTS" -eq 0 ];
   then
-    git add --all :/
     git commit -m "$2"
     git push
   else
