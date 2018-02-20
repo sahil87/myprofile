@@ -23,7 +23,6 @@ commit_dir () {
   fi
 }
 
-set -x
 commit_dir $MYPROFILEDIR ${COMMIT_MESSAGE}
 commit_dir $LIFETRACKERDIR ${COMMIT_MESSAGE}
 commit_dir $BLOGDIR ${COMMIT_MESSAGE}
