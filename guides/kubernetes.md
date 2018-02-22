@@ -51,6 +51,7 @@ for i in {1..150}; do # timeout for 5 minutes
 done
 
 # kubectl commands are now able to interact with Minikube cluster
+minikube stop
 ```
 
 ## Other Useful commands for reference
