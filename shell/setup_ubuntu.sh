@@ -1,10 +1,24 @@
 #!/bin/bash
 
 ## AWS CLI:
-
 Use steps from [here](https://github.com/sahil87/myprofile/blob/master/guides/awscli.md)
 
-#Link custom apps menu
+## Install Java
+Use steps from [here](https://github.com/sahil87/myprofile/blob/master/guides/java.md)
+
+## Install Go and Hugo
+Use steps from [here](https://github.com/sahil87/myprofile/blob/master/guides/go.md)
+
+## Install Nodejs
+Use steps from [here](https://github.com/sahil87/myprofile/blob/master/guides/node.md)
+
+## Install docker
+Use steps from [here](https://github.com/sahil87/myprofile/blob/master/guides/docker.md)
+
+## Install virtualbox
+Use steps from [here](https://github.com/sahil87/myprofile/blob/master/guides/virtualbox.md)
+
+## Link custom apps menu
 git clone git@github.com:sahil87/custom-apps-menu.git ~/code/sahil87/custom-apps-menu
 ln -s ~/code/sahil87/custom-apps-menu ~/.local/share/cinnamon/applets/custom-apps-menu@sahil87
 
@@ -59,38 +73,17 @@ sudo apt install -y remmina remmina-plugin-vnc remmina-plugin-rdp remmina-plugin
 #To install:
 sudo apt install ./nomachine_6.0.66_2_amd64.deb
 
-#Install Java
-Use steps from [here](https://github.com/sahil87/myprofile/blob/master/guides/java.md)
-
 #Atom
 sudo add-apt-repository -y ppa:webupd8team/atom
 sudo apt-get update; sudo apt-get install atom
 
-#Install go from https://golang.org/doc/install
-wget https://storage.googleapis.com/golang/go1.9.1.linux-amd64.tar.gz
-sudo tar -C /usr/local -xzf go1.9.1.linux-amd64.tar.gz
-mkdir ~/code/go
-
 #Install google drive for linux
 go get -u github.com/odeke-em/drive/cmd/drive
-
-#Install Hugo
-wget https://github.com/gohugoio/hugo/releases/download/v0.36/hugo_0.36_Linux-64bit.deb
-sudo apt install ./hugo_0.36_Linux-64bit.deb
 
 #Download groovy sdk from http://groovy-lang.org/download.html
 #Unzip it in /mnt/files/storage/groovy-2.4.8
 cd /mnt/files/storage
 ln -s groovy-2.4.8 groovy
-
-#Install Nodejs
-Use steps from [here](https://github.com/sahil87/myprofile/blob/master/guides/node.md)
-
-#Install docker
-Use steps from [here](https://github.com/sahil87/myprofile/blob/master/guides/docker.md)
-
-#Install virtualbox
-Use steps from [here](https://github.com/sahil87/myprofile/blob/master/guides/virtualbox.md)
 
 #Python
 sudo apt install -y python3 python3-pip python3-setuptools

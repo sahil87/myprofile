@@ -2,7 +2,7 @@
 
 ## Install kubectl
 
-Reference: https://kubernetes.io/docs/tasks/tools/install-kubectl/
+> Reference: https://kubernetes.io/docs/tasks/tools/install-kubectl/
 
 ```bash
 curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)
