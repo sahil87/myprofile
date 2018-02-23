@@ -78,4 +78,7 @@ promptinit
 export EDITOR="emacs -nw"
 export GIT_EDITOR=$EDITOR
 
+#kubectl multi config file
+export KUBECONFIG=~/.kube/config:~/code/vrgmetri/gmbuild/kubernetes/clusters.yml
+
 #. ~/.zclone/z.sh
