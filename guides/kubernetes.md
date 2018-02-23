@@ -11,6 +11,10 @@ chmod +x ./kubectl
 sudo mv ./kubectl /usr/local/bin/kubectl
 ```
 
+### Setup up kc alias
+
+`echo "alias kc=kubectl" >> ~/.bashrc`
+
 ## Install Minikube
 
 `curl -Lo minikube https://storage.googleapis.com/minikube/releases/v0.25.0/minikube-linux-amd64 && chmod +x minikube && sudo mv minikube /usr/local/bin/`
