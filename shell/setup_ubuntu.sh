@@ -35,7 +35,7 @@ ln -s /mnt/files/code ~/
 #Dropbox:
 mv ~/.local/share/applications ~/.local/share/applications-old
 ln -s ~/Dropbox/docs/sahil/profile/chrome-desktop-apps ~/.local/share/applications
-ln -s ~/Dropbox/code-sync ~/code/code-sync
+ln -s ~/Dropbox/docs/sahil/code-sync ~/code/code-sync
 ln -s ~/Dropbox/books/Music/MuseScore2 ~/Documents/MuseScore2
 
 STORAGE=/mnt/files/storage
