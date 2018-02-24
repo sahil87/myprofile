@@ -78,8 +78,4 @@ promptinit
 export EDITOR="emacs -nw"
 export GIT_EDITOR=$EDITOR
 
-#kubectl multi config file
-export KUBECONFIG=~/.kube/config:~/code/vrgmetri/gmbuild/kubernetes/config/clusters.yml
-export AWS_SHARED_CREDENTIALS_FILE=~/code/vrgmetri/gmbuild/kubernetes/config/aws_shared_config.ini
-
 #. ~/.zclone/z.sh
