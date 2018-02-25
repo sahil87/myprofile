@@ -17,7 +17,7 @@ function linkfile() {
 }
 
 linkfile custom-apps-menu/applications-override.json  ~/.local/share/cinnamon/applets/custom-apps-menu@sahil87/applications-override.json                        0
-linkfile emacs/init.el              ~/.emacs                                0
+#linkfile emacs/init.el              ~/.emacs                                0
 linkfile ssh/config                 ~/.ssh/config                           0
 linkfile ansible/.ansible.cfg       ~/.ansible.cfg                          0
 linkfile git/.gitconfig             ~/.gitconfig                            0
