@@ -8,8 +8,8 @@ Steps updated from [here](https://docs.docker.com/install/linux/docker-ce/ubuntu
 sudo apt-get -y install apt-transport-https ca-certificates curl software-properties-common
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(grep UBUNTU_CODENAME /etc/os-release | awk -F '=' '{ print $2 }') stable edge"
-sudo apt-get update
-sudo apt-get -y install docker-ce
+sudo apt update -y
+sudo apt install -y docker-ce
 ```
 
 ## Make sure the partition holding /var/lib/docker has enough free space
