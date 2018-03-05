@@ -23,8 +23,8 @@ tar -czfv - folderName/ | ssh user@hostname 'cd whereIwantToUnzip && tar -xzfv -
 
 #SCP through proxy
 scp  -o "ProxyCommand ssh -p 2222 gw.sportscafe.in nc %h %p" api-prod10.web.int.sg.aws.sportscafe.in:/home/sahil/api-log.tar.gz .
-scp  -o "ProxyCommand ssh -p 2222 gw.gmetri.com nc %h %p" tools-prod03.int.aws.mum.gmetri.com:/home/sahil/html.tar.gz .
-scp  -o "ProxyCommand ssh -p 2222 gw.gmetri.com nc %h %p" ./html.tar.gz tools-prod04.int.aws.mum.gmetri.com:/home/sahil/
+scp  -o "ProxyCommand ssh -p 2222 gw-prod01.gmetri.com nc %h %p" tools-prod03.int.aws.mum.gmetri.com:/home/sahil/html.tar.gz .
+scp  -o "ProxyCommand ssh -p 2222 gw-prod01.gmetri.com nc %h %p" ./html.tar.gz tools-prod04.int.aws.mum.gmetri.com:/home/sahil/
 
 #http://blog.trackets.com/2014/05/17/ssh-tunnel-local-and-remote-port-forwarding-explained-with-examples.html
 #Reverse ssh tunnel to use a port remotely (4000) to forward all request to localhost:4280
