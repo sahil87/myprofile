@@ -68,33 +68,3 @@
 (setq backup-by-copying t)
 
 (setq minimap-window-location 'right)
-
-(projectile-mode)
-
-(add-to-list 'load-path "~/code/code-sync/neotree")
-(require 'neotree)
-(setq neo-smart-open t)
-
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages (quote (minimap projectile))))
-
-(setq projectile-switch-project-action 'neotree-projectile-action)
-
-(defun neotree-project-dir ()
-    "Open NeoTree using the git root."
-    (interactive)
-    (let ((project-dir (projectile-project-root))
-          (file-name (buffer-file-name)))
-      (neotree-toggle)
-      (if project-dir
-          (if (neo-global--window-exists-p)
-              (progn
-                (neotree-dir project-dir)
-                (neotree-find file-name)))
-        (message "Could not find git project root."))))
-
-(global-set-key [f8] 'neotree-project-dir)
