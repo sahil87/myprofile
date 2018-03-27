@@ -79,3 +79,4 @@ export EDITOR="emacs -nw"
 export GIT_EDITOR=$EDITOR
 
 #. ~/.zclone/z.sh
+source <(helm completion zsh)
