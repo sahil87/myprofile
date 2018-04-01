@@ -31,7 +31,7 @@ export GOPATH=~/code/go
 #The incantation `typeset -U path', where the -U stands for unique, tells the shell that it should not add anything to $path if it's there already.
 typeset -U path
 #~/.local/bin is for pythong pip installs done by user without setting virtualenv
-path=($path ~/.rvm/bin . ~/.local/bin $MYPROFILEDIR/bin /usr/local/go/bin ~/code/bin $GOPATH/bin ~/Android/Sdk/platform-tools ~/Android/Sdk/tools /mnt/files/storage/groovy/bin $GRADLE_PATH)
+path=($path ~/.rvm/bin . ~/.local/bin $MYPROFILEDIR/bin ~/.yarn/bin /usr/local/go/bin ~/code/bin $GOPATH/bin ~/Android/Sdk/platform-tools ~/Android/Sdk/tools /mnt/files/storage/groovy/bin $GRADLE_PATH)
 
 #oh-my-zsh SETTINGS:
 plugins=(myfunctions git docker kubectl themes ssh-agent man history-substring-search myaliases)
