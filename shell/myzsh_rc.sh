@@ -34,7 +34,7 @@ typeset -U path
 path=($path ~/.rvm/bin . ~/.local/bin $MYPROFILEDIR/bin ~/.yarn/bin /usr/local/go/bin ~/code/bin $GOPATH/bin ~/Android/Sdk/platform-tools ~/Android/Sdk/tools /mnt/files/storage/groovy/bin $GRADLE_PATH)
 
 #oh-my-zsh SETTINGS:
-plugins=(myfunctions git docker kubectl themes ssh-agent man history-substring-search myaliases)
+plugins=(myfunctions git docker kubectl themes ssh-agent man history-substring-search myaliases kubectl helm)
 ZSH_THEME="sahil2"
 export ZSH=~/.oh-my-zsh
 export ZSH_CUSTOM=$CURRENTDIR/zsh-custom
@@ -79,4 +79,3 @@ export EDITOR="emacs -nw"
 export GIT_EDITOR=$EDITOR
 
 #. ~/.zclone/z.sh
-source <(helm completion zsh)
