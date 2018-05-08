@@ -32,5 +32,7 @@
     "sync.askGistName": false,
     "sync.removeExtensions": true,
     "sync.syncExtensions": true,
-    "editor.fontSize": 14
+    "editor.fontSize": 14,
+    "workbench.colorTheme": "Default Light+",
+    "workbench.iconTheme": "vscode-icons"
 }
