@@ -5,10 +5,14 @@
 > Reference: https://kubernetes.io/docs/tasks/tools/install-kubectl/
 
 ```bash
-curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)
-/bin/linux/amd64/kubectl
-chmod +x ./kubectl
-sudo mv ./kubectl /usr/local/bin/kubectl
+sudo apt update && sudo apt install -y apt-transport-https
+curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+sudo su
+cat <<EOF >/etc/apt/sources.list.d/kubernetes.list
+deb http://apt.kubernetes.io/ kubernetes-xenial main
+EOF
+sudo apt update
+sudo apt install -y kubectl
 ```
 
 ### Setup up kc alias

@@ -4,8 +4,7 @@
 
 ```sh
 sudo apt-get install -y python python-dev python-pip
-sudo pip install -U setuptools
-pip install -U pip
+curl https://bootstrap.pypa.io/get-pip.py | python3
 pip install --upgrade --user boto
 pip install --upgrade --user awscli
 ```

@@ -1,8 +1,17 @@
 # Helm Local Setup
 
+> Reference: https://github.com/kubernetes/helm
+
 ## Install helm
 
-* Install Helm: [link](https://github.com/kubernetes/helm)
+```bash
+curl https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get | bash
+```
+
 * Install Helm S3 plugin:
 
-  `helm plugin install https://github.com/hypnoglow/helm-s3.git`
+```bash
+mkdir -p ~/.helm/plugins
+helm plugin install https://github.com/hypnoglow/helm-s3.git
+ ```
+ 
