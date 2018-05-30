@@ -1,5 +1,5 @@
 [
-  { "displayName":"Vivaldi","command":"/usr/bin/vivaldi-stable --disable-gpu-vsync", "iconName":"/usr/share/icons/hicolor/64x64/apps/vivaldi.png" },
+  { "displayName":"Calculator", "command":"gnome-calculator", "iconName":"/usr/share/icons/Mint-Y/apps/64/accessories-calculator.png"},
   { "displayName":"Google Chrome","command":"/usr/bin/google-chrome-stable", "iconName":"/usr/share/icons/hicolor/64x64/apps/google-chrome.png" },
   { "displayName":"Firefox Web Browser", "command":"firefox -p sahil","iconName":"/usr/share/icons/Mint-X/apps/96/firefox.svg" },
   { "displayName":"Terminal","command":"gnome-terminal","iconName":"/usr/share/icons/Mint-Y/apps/64/utilities-terminal.png"},
@@ -33,12 +33,12 @@
   	{ "desktopFile":"remmina", "command":"remmina"},
   	{ "desktopFile":"filezilla" },
     { "desktopFile":"synergy" },
-    { "displayName":"Smb4k", "command":"smb4k", "iconName":"/usr/share/icons/hicolor/64x64/apps/smb4k.png"}
+    { "displayName":"Smb4k", "command":"smb4k", "iconName":"/usr/share/icons/hicolor/64x64/apps/smb4k.png"},
+    { "displayName":"Vivaldi","command":"/usr/bin/vivaldi-stable --disable-gpu-vsync", "iconName":"/usr/share/icons/hicolor/64x64/apps/vivaldi.png" }
   ]},
   { "displayName":"Office", "iconName":"applications-office", "menu": [
     { "displayName":"Simplenote","command":"/opt/google/chrome/google-chrome --profile-directory=Default --app-id=gmgnghphiockcigbjihhdnnmmcbdcjdf", "iconName":"/home/sahil/.local/share/icons/hicolor/128x128/apps/chrome-gmgnghphiockcigbjihhdnnmmcbdcjdf-Default.png" },
     { "desktopFile":"synergy"},
-    { "displayName":"Calculator", "command":"gnome-calculator", "iconName":"/usr/share/icons/Mint-Y/apps/64/accessories-calculator.png"},
     { "displayName":"KMyMoney", "command":"kmymoney", "iconName":"/usr/share/icons/hicolor/64x64/apps/kmymoney.png" },
     { "displayName":"Keep","command":"/opt/google/chrome/google-chrome --profile-directory=Default --app-id=hmjkmjkepdijhoojdojkdfohbdgmmhki", "iconName":"/home/sahil/.local/share/icons/hicolor/128x128/apps/chrome-hmjkmjkepdijhoojdojkdfohbdgmmhki-Default.png" }
   ]},
