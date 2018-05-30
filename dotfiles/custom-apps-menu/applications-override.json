@@ -29,6 +29,7 @@
     { "displayName":"VLC Media Player","command":"/usr/bin/vlc", "iconName":"/usr/share/icons/hicolor/256x256/apps/vlc.png" }
   ]},
   { "displayName":"Internet", "iconName":"applications-internet", "menu": [
+    { "displayName":"Vivaldi","command":"/usr/bin/vivaldi-stable --disable-gpu-vsync", "iconName":"/usr/share/icons/hicolor/64x64/apps/vivaldi.png" },
     { "displayName":"Transmission Torrents", "command":"transmission-gtk", "iconName":"/usr/share/icons/hicolor/scalable/apps/transmission.svg"},
   	{ "desktopFile":"remmina", "command":"remmina"},
   	{ "desktopFile":"filezilla" },
