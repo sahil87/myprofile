@@ -34,7 +34,8 @@
   	{ "desktopFile":"remmina", "command":"remmina"},
   	{ "desktopFile":"filezilla" },
     { "desktopFile":"synergy" },
-    { "displayName":"Smb4k", "command":"smb4k", "iconName":"/usr/share/icons/hicolor/64x64/apps/smb4k.png"}
+    { "displayName":"Smb4k", "command":"smb4k", "iconName":"/usr/share/icons/hicolor/64x64/apps/smb4k.png"},
+    { "displayName":"Vivaldi","command":"/usr/bin/vivaldi-stable --disable-gpu-vsync", "iconName":"/usr/share/icons/hicolor/64x64/apps/vivaldi.png" }
   ]},
   { "displayName":"Office", "iconName":"applications-office", "menu": [
     { "displayName":"Simplenote","command":"/opt/google/chrome/google-chrome --profile-directory=Default --app-id=gmgnghphiockcigbjihhdnnmmcbdcjdf", "iconName":"/home/sahil/.local/share/icons/hicolor/128x128/apps/chrome-gmgnghphiockcigbjihhdnnmmcbdcjdf-Default.png" },
