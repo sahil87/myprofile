@@ -11,6 +11,11 @@ pip install --upgrade --user boto
 pip install --upgrade --user awscli
 ```
 
+## For any errors installing AWS cli 
+```sh
+pip install awscli --force-reinstall --upgrade
+```
+
 ## Configure AWS
 
 `aws configure`
