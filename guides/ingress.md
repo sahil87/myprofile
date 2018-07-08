@@ -1,4 +1,4 @@
-# Ingress installation through helm
+# Nginx ingress installation through helm
 
 * Install NGINX Ingress controller using helm: [link](https://github.com/kubernetes/ingress-nginx/blob/master/docs/deploy/index.md#using-helm)
   * `helm install stable/nginx-ingress -n my-ingress --namespace kube-system -f k/nginx-ingress-values.yml`
