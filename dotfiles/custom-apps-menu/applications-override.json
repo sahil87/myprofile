@@ -14,6 +14,7 @@
   { "displayName":"Programming", "iconName":"applications-python", "menu": [
 	{ "desktopFile":"emacs24"},
 	{ "displayName":"Visual Studio Code", "command": "/usr/share/code/code", "iconName":"/usr/share/pixmaps/code.png" },
+	{ "displayName":"Postman", "command": "/home/sahil/software/Postman/Postman", "iconName":"/home/sahil/software/Postman/app/resources/app/assets/icon.png" },
 	{ "displayName":"Android Studio","command":"/home/sahil/software/android-studio/bin/studio.sh", "iconName":"/home/sahil/software/android-studio/bin/studio.png" },
 	{ "displayName":"WebStorm","command":"/home/sahil/software/webstorm/bin/webstorm.sh", "iconName":"/home/sahil/software/webstorm/bin/webstorm.svg" },
 	{ "displayName":"Idea","command":"/home/sahil/software/idea/bin/idea.sh", "iconName":"/home/sahil/software/idea/bin/idea.png" },
