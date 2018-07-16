@@ -1,6 +1,6 @@
 #!/bin/bash
 declare -A PORTS_MAP
-PORTS_MAP=( ["test"]="8001" ["dev"]="8002" ["stage"]="8003" ["prod"]="8004")
+PORTS_MAP=( ["prod"]="8001" ["stage"]="8002" ["dev"]="8003" ["test"]="8004")
 start_kubedash () {
     export POD_NAME=$(kubectl get pods -n kube-system --context $1 -l "app=kubernetes-dashboard,release=my-dashboard" -o jsonpath="{.items[0].metadata.name}")
     echo "https://127.0.0.1:$2/"
@@ -9,7 +9,7 @@ start_kubedash () {
 
 if [ -z $1 ]
 then
-    CONTEXT="test"
+    CONTEXT="dev"
 else
     CONTEXT="$1"
 fi
