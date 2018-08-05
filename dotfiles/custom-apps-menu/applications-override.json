@@ -8,6 +8,7 @@
   { "displayName":"Work", "iconName":"applications-interfacedesign", "menu": [
     { "desktopFile":"slack" },
     { "displayName":"Asana","command":"/opt/google/chrome/google-chrome --profile-directory=Default --app-id=hojinjhobffikdniglgaglhalhihdalb", "iconName":"/home/sahil/.local/share/icons/hicolor/128x128/apps/chrome-hojinjhobffikdniglgaglhalhihdalb-Default.png" },
+    { "displayName":"Chat","command":"/opt/google/chrome/google-chrome --profile-directory=Default --app-id=pdfahjmcccffnhnkndolhncplplkemop", "iconName":"/home/sahil/.local/share/icons/hicolor/128x128/apps/chrome-pdfahjmcccffnhnkndolhncplplkemop-Default.png" },
 	{ "desktopFile":"VirtualBox", "command": "VirtualBox"},
 	{ "displayName":"Genymotion","command":"/home/sahil/software/genymotion/genymotion", "iconName":"/home/sahil/software/genymotion/icons/icon.png" }
   ]},
