@@ -33,9 +33,9 @@ chsh -s /bin/zsh
 
 #1. Install xfce by installing "mint-meta-xfce" from package manager
 #2. Run the following:
-echo 'export CHROME_REMOTE_DESKTOP_DEFAULT_DESKTOP_SIZES="1366x768"' >> ~/.profile
 echo 'exec /usr/bin/xfce4-session "xfce4-session --session=xfce4"' >> ~/.chrome-remote-desktop-session
 ##echo 'exec /etc/mdm/Xsession "cinnamon-session-cinnamon2d"' >> ~/.chrome-remote-desktop-session
+sudo su; echo 'export CHROME_REMOTE_DESKTOP_DEFAULT_DESKTOP_SIZES="1920x1080"' >> /etc/environment
 # Install Chrome Remote Desktop app from chrome app store
 # Download chrome remote desktop host component from the following links
 # Restart Mint
