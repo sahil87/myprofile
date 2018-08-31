@@ -4,8 +4,8 @@
 
 ```sh
 sudo apt-get install -y python python-dev python-pip python3 python3-dev python3-setuptools python3-pip python3-wheel
-pip install --upgrade --user boto
-pip install --upgrade --user awscli
+pip3 install --upgrade --user boto
+pip3 install --upgrade --user awscli
 ```
 
 ## Configure AWS
