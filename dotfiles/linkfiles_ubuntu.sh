@@ -29,7 +29,6 @@ linkfile sysctl/40-max-user-watches.conf /etc/sysctl.d/40-max-user-watches.conf 
 
 
 #linkfile emacs/init.el              ~/.emacs                                0
-#linkfile remmina                    ~/.remmina                              0
 #linkfile luckybackup/MyBackup.profile  ~/.luckyBackup/profiles/MyBackup.profile 0
 
 #linkfile resolvconf-ubuntu/head            /etc/resolvconf/resolv.conf.d/head  1
