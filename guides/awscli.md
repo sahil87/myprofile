@@ -3,10 +3,7 @@
 ## For AWS ec2.py and other AWS commands to work
 
 ```sh
-sudo apt-get install -y python python-dev python-pip
-sudo su
-curl https://bootstrap.pypa.io/get-pip.py | python3
-exit
+sudo apt-get install -y python python-dev python-pip python3 python3-dev python3-setuptools python3-pip
 pip install --upgrade --user boto
 pip install --upgrade --user awscli
 ```
