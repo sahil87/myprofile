@@ -121,15 +121,15 @@ sudo add-apt-repository -y ppa:philip5/extra
 sudo apt update; sudo apt install -y digikam5
 
 #Install Ruby (rvm)
-command curl -sSL https://rvm.io/mpapis.asc | gpg2 --import -
+command curl -sSL https://rvm.io/mpapis.asc | gpg --import -
 \curl -sSL https://get.rvm.io | bash -s -- --ignore-dotfiles stable
 
-#Make ruby 2.3 default
+#Make ruby 2.5 default
 #rvm list known
-#rvm install 2.3
-rvm install 2.3-dev
-rvm --default use 2.3-dev
-gem install bundler
+#rvm install 2.5
+rvm install 2.5-dev
+rvm --default use 2.5-dev
+sudo gem install bundler
 
 #For running swf files: https://ubuntuforums.org/showthread.php?t=2218732&page=2&p=13040642#post13040642
 #So the workaround for this is to edit /usr/share/mime/packages/freedesktop.org.xml and change
