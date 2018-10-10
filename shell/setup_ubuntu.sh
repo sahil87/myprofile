@@ -18,6 +18,9 @@ Use steps from [here](https://github.com/sahil87/myprofile/blob/master/guides/do
 ## Install virtualbox
 Use steps from [here](https://github.com/sahil87/myprofile/blob/master/guides/virtualbox.md)
 
+#Install Ruby (rvm)
+Use steps from [here](https://github.com/sahil87/myprofile/blob/master/guides/ruby.md)
+
 ## Link custom apps menu
 git clone git@github.com:sahil87/custom-apps-menu.git ~/code/sahil87/custom-apps-menu
 ln -s ~/code/sahil87/custom-apps-menu ~/.local/share/cinnamon/applets/custom-apps-menu@sahil87
@@ -119,17 +122,6 @@ sudo apt install -y ansible
 sudo apt install kipi-plugins5 plasma-theme-oxygen
 sudo add-apt-repository -y ppa:philip5/extra
 sudo apt update; sudo apt install -y digikam5
-
-#Install Ruby (rvm)
-command curl -sSL https://rvm.io/mpapis.asc | gpg --import -
-\curl -sSL https://get.rvm.io | bash -s -- --ignore-dotfiles stable
-
-#Make ruby 2.5 default
-#rvm list known
-#rvm install 2.5
-rvm install 2.5-dev
-rvm --default use 2.5-dev
-sudo gem install bundler
 
 #For running swf files: https://ubuntuforums.org/showthread.php?t=2218732&page=2&p=13040642#post13040642
 #So the workaround for this is to edit /usr/share/mime/packages/freedesktop.org.xml and change
