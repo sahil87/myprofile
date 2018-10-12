@@ -1,5 +1,5 @@
 [
-  { "displayName":"Vivaldi","command":"/usr/bin/vivaldi-stable --disable-gpu-vsync", "iconName":"/usr/share/icons/hicolor/64x64/apps/vivaldi.png" },
+  { "displayName":"Calculator", "command":"gnome-calculator", "iconName":"/usr/share/icons/Mint-Y/apps/64/accessories-calculator.png"},
   { "displayName":"Google Chrome","command":"/usr/bin/google-chrome-stable", "iconName":"/usr/share/icons/hicolor/64x64/apps/google-chrome.png" },
   { "displayName":"Firefox Web Browser", "command":"firefox -p sahil","iconName":"/usr/share/icons/Mint-X/apps/96/firefox.svg" },
   { "displayName":"Terminal","command":"gnome-terminal","iconName":"/usr/share/icons/Mint-Y/apps/64/utilities-terminal.png"},
@@ -8,12 +8,14 @@
   { "displayName":"Work", "iconName":"applications-interfacedesign", "menu": [
     { "desktopFile":"slack" },
     { "displayName":"Asana","command":"/opt/google/chrome/google-chrome --profile-directory=Default --app-id=hojinjhobffikdniglgaglhalhihdalb", "iconName":"/home/sahil/.local/share/icons/hicolor/128x128/apps/chrome-hojinjhobffikdniglgaglhalhihdalb-Default.png" },
+    { "displayName":"Chat","command":"/opt/google/chrome/google-chrome --profile-directory=Default --app-id=pdfahjmcccffnhnkndolhncplplkemop", "iconName":"/home/sahil/.local/share/icons/hicolor/128x128/apps/chrome-pdfahjmcccffnhnkndolhncplplkemop-Default.png" },
 	{ "desktopFile":"VirtualBox", "command": "VirtualBox"},
 	{ "displayName":"Genymotion","command":"/home/sahil/software/genymotion/genymotion", "iconName":"/home/sahil/software/genymotion/icons/icon.png" }
   ]},
   { "displayName":"Programming", "iconName":"applications-python", "menu": [
 	{ "desktopFile":"emacs24"},
 	{ "displayName":"Visual Studio Code", "command": "/usr/share/code/code", "iconName":"/usr/share/pixmaps/code.png" },
+	{ "displayName":"Postman", "command": "/home/sahil/software/Postman/Postman", "iconName":"/home/sahil/software/Postman/app/resources/app/assets/icon.png" },
 	{ "displayName":"Android Studio","command":"/home/sahil/software/android-studio/bin/studio.sh", "iconName":"/home/sahil/software/android-studio/bin/studio.png" },
 	{ "displayName":"WebStorm","command":"/home/sahil/software/webstorm/bin/webstorm.sh", "iconName":"/home/sahil/software/webstorm/bin/webstorm.svg" },
 	{ "displayName":"Idea","command":"/home/sahil/software/idea/bin/idea.sh", "iconName":"/home/sahil/software/idea/bin/idea.png" },
@@ -29,16 +31,17 @@
     { "displayName":"VLC Media Player","command":"/usr/bin/vlc", "iconName":"/usr/share/icons/hicolor/256x256/apps/vlc.png" }
   ]},
   { "displayName":"Internet", "iconName":"applications-internet", "menu": [
+    { "displayName":"Vivaldi","command":"/usr/bin/vivaldi-stable --disable-gpu-vsync", "iconName":"/usr/share/icons/hicolor/64x64/apps/vivaldi.png" },
     { "displayName":"Transmission Torrents", "command":"transmission-gtk", "iconName":"/usr/share/icons/hicolor/scalable/apps/transmission.svg"},
   	{ "desktopFile":"remmina", "command":"remmina"},
   	{ "desktopFile":"filezilla" },
     { "desktopFile":"synergy" },
-    { "displayName":"Smb4k", "command":"smb4k", "iconName":"/usr/share/icons/hicolor/64x64/apps/smb4k.png"}
+    { "displayName":"Smb4k", "command":"smb4k", "iconName":"/usr/share/icons/hicolor/64x64/apps/smb4k.png"},
+    { "displayName":"Vivaldi","command":"/usr/bin/vivaldi-stable --disable-gpu-vsync", "iconName":"/usr/share/icons/hicolor/64x64/apps/vivaldi.png" }
   ]},
   { "displayName":"Office", "iconName":"applications-office", "menu": [
     { "displayName":"Simplenote","command":"/opt/google/chrome/google-chrome --profile-directory=Default --app-id=gmgnghphiockcigbjihhdnnmmcbdcjdf", "iconName":"/home/sahil/.local/share/icons/hicolor/128x128/apps/chrome-gmgnghphiockcigbjihhdnnmmcbdcjdf-Default.png" },
     { "desktopFile":"synergy"},
-    { "displayName":"Calculator", "command":"gnome-calculator", "iconName":"/usr/share/icons/Mint-Y/apps/64/accessories-calculator.png"},
     { "displayName":"KMyMoney", "command":"kmymoney", "iconName":"/usr/share/icons/hicolor/64x64/apps/kmymoney.png" },
     { "displayName":"Keep","command":"/opt/google/chrome/google-chrome --profile-directory=Default --app-id=hmjkmjkepdijhoojdojkdfohbdgmmhki", "iconName":"/home/sahil/.local/share/icons/hicolor/128x128/apps/chrome-hmjkmjkepdijhoojdojkdfohbdgmmhki-Default.png" }
   ]},

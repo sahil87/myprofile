@@ -79,3 +79,9 @@ export EDITOR="emacs -nw"
 export GIT_EDITOR=$EDITOR
 
 #. ~/.zclone/z.sh
+
+DISABLE_AUTO_TITLE="true"
+function precmd () {
+  window_title="\033]0;${PWD##*/}\007"
+  echo -ne "$window_title"
+}

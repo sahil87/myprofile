@@ -18,6 +18,9 @@ Use steps from [here](https://github.com/sahil87/myprofile/blob/master/guides/do
 ## Install virtualbox
 Use steps from [here](https://github.com/sahil87/myprofile/blob/master/guides/virtualbox.md)
 
+#Install Ruby (rvm)
+Use steps from [here](https://github.com/sahil87/myprofile/blob/master/guides/ruby.md)
+
 ## Link custom apps menu
 git clone git@github.com:sahil87/custom-apps-menu.git ~/code/sahil87/custom-apps-menu
 ln -s ~/code/sahil87/custom-apps-menu ~/.local/share/cinnamon/applets/custom-apps-menu@sahil87
@@ -28,6 +31,19 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 source $DIR/add_to_zshrc.sh
 chsh -s /bin/zsh
 #git clone git@github.com:sahil87/z.git ~/.zclone
+
+#Making chrome-remote-desktop work
+
+#1. Install xfce by installing "mint-meta-xfce" from package manager
+#2. Run the following:
+sudo apt install mint-meta-xfce
+echo 'exec /usr/bin/xfce4-session "xfce4-session --session=xfce4"' >> ~/.chrome-remote-desktop-session
+sudo su; echo 'export CHROME_REMOTE_DESKTOP_DEFAULT_DESKTOP_SIZES="1920x1200"' >> /etc/environment
+##echo 'exec /etc/mdm/Xsession "cinnamon-session-cinnamon2d"' >> ~/.chrome-remote-desktop-session
+# Install Chrome Remote Desktop app from chrome app store
+# Download chrome remote desktop host component from the following links
+# Restart Mint
+# Enable desktop sharing from Chrome Remote Desktop app. It asks to set a pin to access the computer
 
 #Important symbolic links:
 ln -s /mnt ~/
@@ -61,10 +77,10 @@ swapon /swapfile9G
 
 #Important tools:
 #Install chrome, vscode, vivaldi
-sudo apt install -y byobu emacs zsh zsh-doc git gitk yakuake xcalib hplip-gui  #emacs24-nox
-sudo apt install -y curl wget nmap whois encfs openssh-server luckybackup gparted
+sudo apt install -y byobu emacs zsh zsh-doc git gitk yakuake hplip-gui  #emacs24-nox xcalib
+sudo apt install -y curl wget nmap whois encfs openssh-server gparted #luckybackup
 sudo apt install -y autoconf automake libtool cmake
-sudo apt install -y android-tools-adb android-tools-fastboot rygel rygel-preferences
+sudo apt install -y android-tools-adb android-tools-fastboot #rygel rygel-preferences
 #sudo apt install -y ubuntu-restricted-extras libavcodec-extra libdvd-pkg
 
 #VNC and Remmina
@@ -106,17 +122,6 @@ sudo apt install -y ansible
 sudo apt install kipi-plugins5 plasma-theme-oxygen
 sudo add-apt-repository -y ppa:philip5/extra
 sudo apt update; sudo apt install -y digikam5
-
-#Install Ruby (rvm)
-command curl -sSL https://rvm.io/mpapis.asc | gpg2 --import -
-\curl -sSL https://get.rvm.io | bash -s -- --ignore-dotfiles stable
-
-#Make ruby 2.3 default
-#rvm list known
-#rvm install 2.3
-rvm install 2.3-dev
-rvm --default use 2.3-dev
-gem install bundler
 
 #For running swf files: https://ubuntuforums.org/showthread.php?t=2218732&page=2&p=13040642#post13040642
 #So the workaround for this is to edit /usr/share/mime/packages/freedesktop.org.xml and change

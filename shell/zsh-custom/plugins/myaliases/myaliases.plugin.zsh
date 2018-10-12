@@ -68,3 +68,4 @@ alias zu="sudo umount /home/sahil/zDrive"
 
 #Command shortcuts
 alias kc='kubectl'
+alias dl='~/code/gmetrivr/dos/sh/docker_login.sh'

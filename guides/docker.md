@@ -7,7 +7,7 @@ Steps updated from [here](https://docs.docker.com/install/linux/docker-ce/ubuntu
 ```sh
 sudo apt-get -y install apt-transport-https ca-certificates curl software-properties-common
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(grep UBUNTU_CODENAME /etc/os-release | awk -F '=' '{ print $2 }') stable edge"
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(grep UBUNTU_CODENAME /etc/os-release | awk -F '=' '{ print $2 }') stable"
 sudo apt update -y
 sudo apt install -y docker-ce
 ```
@@ -38,6 +38,6 @@ sudo usermod -aG docker $USER
 Find latest version from https://github.com/docker/compose/releases
 
 ```sh
-sudo su -c 'curl -L https://github.com/docker/compose/releases/download/1.20.1/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose'
+sudo su -c 'curl -L https://github.com/docker/compose/releases/download/1.22.0/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose'
 sudo chmod +x /usr/local/bin/docker-compose
 ```
