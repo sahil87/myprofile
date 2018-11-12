@@ -85,5 +85,6 @@ GIT_PROMPT+='if [[ -n $out ]]; then printf %s "$white" " (" "$green$out$white)$r
 
 PROMPT='$current_dir_output%1(j. [$jobs_bg].)'
 PROMPT+="$GIT_PROMPT $last_command_output%(!.#.$) $reset"
-RPROMPT="$bracket_color$bracket_start$username_output$hostname_output $cyan$TIME_PROMPT$bracket_color$bracket_end$reset"
+#RPROMPT="$bracket_color$bracket_start$username_output$hostname_output $cyan$TIME_PROMPT$bracket_color$bracket_end$reset"
+RPROMPT="$bracket_color$bracket_start$cyan$TIME_PROMPT$bracket_color$bracket_end$reset"
 #export PROMPT_COMMAND='echo -ne "basename $(pwd)"'
