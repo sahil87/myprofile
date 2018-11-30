@@ -18,7 +18,7 @@ Use steps from [here](https://github.com/sahil87/myprofile/blob/master/guides/do
 ## Install virtualbox
 Use steps from [here](https://github.com/sahil87/myprofile/blob/master/guides/virtualbox.md)
 
-#Install Ruby (rvm)
+#Install Ruby(rvm) and Tmuxinator
 Use steps from [here](https://github.com/sahil87/myprofile/blob/master/guides/ruby.md)
 
 ## Link custom apps menu
@@ -77,7 +77,7 @@ swapon /swapfile9G
 
 #Important tools:
 #Install chrome, vscode, vivaldi
-sudo apt install -y byobu emacs zsh zsh-doc git gitk yakuake hplip-gui  #emacs24-nox xcalib
+sudo apt install -y emacs zsh zsh-doc git gitk yakuake hplip-gui  #emacs24-nox xcalib byobu
 sudo apt install -y curl wget nmap whois encfs openssh-server gparted #luckybackup
 sudo apt install -y autoconf automake libtool cmake
 sudo apt install -y android-tools-adb android-tools-fastboot #rygel rygel-preferences
@@ -90,11 +90,11 @@ sudo apt install -y remmina remmina-plugin-vnc remmina-plugin-rdp remmina-plugin
 sudo apt install ./nomachine_6.0.66_2_amd64.deb
 
 #Atom
-sudo add-apt-repository -y ppa:webupd8team/atom
-sudo apt-get update; sudo apt-get install atom
+#sudo add-apt-repository -y ppa:webupd8team/atom
+#sudo apt-get update; sudo apt-get install atom
 
 #Install google drive for linux
-go get -u github.com/odeke-em/drive/cmd/drive
+#go get -u github.com/odeke-em/drive/cmd/drive
 
 #Download groovy sdk from http://groovy-lang.org/download.html
 #Unzip it in /mnt/files/storage/groovy-2.4.8
