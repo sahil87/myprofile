@@ -20,8 +20,8 @@ sudo gem install bundler
 ## Install tmuxinator
 
 ```sh
-apt install tmux
-gem install tmuxinator
+sudo apt install tmux
+sudo gem install tmuxinator
 ```
 
 ### Tmuxniator settings
