@@ -38,7 +38,7 @@ mv tmux.conf ~/.tmux.conf
 #### Bash settings (only if you use bash)
 
 ```sh
-https://raw.githubusercontent.com/tmuxinator/tmuxinator/master/completion/tmuxinator.bash
+wget https://raw.githubusercontent.com/tmuxinator/tmuxinator/master/completion/tmuxinator.bash
 mv tmuxinator.bash > ~/.bin/tmuxinator.bash
 echo "source ~/.bin/tmuxinator.bash" >> ~/.bashrc
 ```
@@ -46,8 +46,7 @@ echo "source ~/.bin/tmuxinator.bash" >> ~/.bashrc
 #### Zsh settings (only if you use zsh)
 
 ```sh
-https://raw.githubusercontent.com/tmuxinator/tmuxinator/master/completion/tmuxinator.zsh
+wget https://raw.githubusercontent.com/tmuxinator/tmuxinator/master/completion/tmuxinator.zsh
 mv tmuxinator.zsh > ~/.bin/tmuxinator.zsh
 echo "source ~/.bin/tmuxinator.zsh" >> ~/.zshrc
 ```
-
