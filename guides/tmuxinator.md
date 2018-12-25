@@ -1,4 +1,4 @@
-# Installing and Configuring Tmuxinator
+# Installing and configuring Tmuxinator
 
 First install Ruby: https://github.com/sahil87/myprofile/blob/master/guides/ruby.md
 
