@@ -77,7 +77,7 @@ swapon /swapfile9G
 
 #Important tools:
 #Install chrome, vscode, vivaldi
-sudo apt install -y emacs zsh zsh-doc git gitk yakuake hplip-gui  #emacs24-nox xcalib byobu
+sudo apt install -y emacs zsh zsh-doc git gitk tig yakuake hplip-gui  #emacs24-nox xcalib byobu
 sudo apt install -y curl wget nmap whois encfs openssh-server gparted #luckybackup
 sudo apt install -y autoconf automake libtool cmake
 sudo apt install -y android-tools-adb android-tools-fastboot #rygel rygel-preferences
