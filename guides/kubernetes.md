@@ -15,6 +15,10 @@ sudo apt update
 sudo apt install -y kubectl
 ```
 
+#### OR install from gcloud components
+
+```gcloud components install kubectl```
+
 ### Setup up kc alias
 
 `echo "alias kc=kubectl" >> ~/.bashrc`
