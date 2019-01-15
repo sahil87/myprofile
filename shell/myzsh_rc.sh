@@ -11,7 +11,7 @@ CURRENTDIR=${0:a:h}
 export MYPROFILEDIR=`realpath $CURRENTDIR/..`
 export DIR87=`realpath $MYPROFILEDIR/..`
 export LIFETRACKERDIR=`realpath $DIR87/lifetracker`
-export BLOGDIR=`realpath $DIR87/bloghugo`
+export BLOGDIR=`realpath $DIR87/bloghexo`
 
 source $LIFETRACKERDIR/shell/envvars.sh
 
