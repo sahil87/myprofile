@@ -1,13 +1,19 @@
 #!/bin/bash
 OLDDIR=`pwd`
 
+echo $MYPROFILEDIR
 cd $MYPROFILEDIR
 git fetch origin
 git merge origin/master
+
+echo $LIFETRACKERDIR
 cd $LIFETRACKERDIR
 git fetch origin
 git merge origin/master
+
+echo $BLOGDIR
 cd $BLOGDIR
 git fetch origin
 git merge origin/master
+
 cd $OLDDIR
