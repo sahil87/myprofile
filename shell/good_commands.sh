@@ -118,3 +118,6 @@ usermod -a -G sudo,admin,docker [username]
 echo "%admin ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/admin
 cd ~; mkdir .ssh; touch .ssh/authorized_keys;
 curl https://github.com/sahil87.keys >> .ssh/authorized_keys
+
+#Piping command to a remote system
+cat .ssh/id_rsa.pub | ssh sheena@192.168.0.11 'cat >> .ssh/authorized_keys'
