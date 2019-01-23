@@ -1,0 +1,5 @@
+set -x
+/usr/lib/chromium-browser/chromium-browser \
+--proxy-server=\"socks5://localhost:$SSH_PORT\"
+
+# --host-resolver-rules=\"MAP \* ~NOTFOUND , EXCLUDE localhost\"

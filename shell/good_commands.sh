@@ -52,7 +52,7 @@ curl --socks5-hostname localhost:5555 -I rubygems #This runs the command on the 
 ssh -XCYP hostname
 
 #Run a remote command
-ssh my-server.com -- hotsname
+ssh my-server.com -- hostname
 
 #Agent forwardings
 ssh -A my-server.com #Will forward my private key in the session. Remote needs to be trustable, or private key can be compromized.
@@ -60,9 +60,19 @@ ssh -A my-server.com #Will forward my private key in the session. Remote needs t
 #Using NX via SOCKS (ssh) proxy
 #Run following on command line. (Runs in background mode)
 ssh -D 8123 -f -C -q -N vpnuser@vpnhost.com
+# -C compression
+# -f background mode
+# -q quite mode
+# -N do not execute remote commands, just forward ports
+# -D bind specified port
 #ssh to vpnhost.com and list all machines using arp -a
 #Open NX and create new connection with HOST, passing of final machine ip with following proxy configuration:
 #Manual proxy configuration. Host: localhost, Port: 8123
+
+#https://www.chromium.org/developers/design-documents/network-stack/socks-proxy
+chromium \
+--proxy-server="socks5://localhost:8123" \
+--host-resolver-rules="MAP * ~NOTFOUND , EXCLUDE localhost"
 
 #Open
 #To check ports bound in local system
