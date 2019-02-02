@@ -58,6 +58,7 @@ STORAGE=/mnt/files/storage
 ln -s $STORAGE/docker /var/lib/docker
 ln -s $STORAGE/VirtualBox\ VMs ~/
 ln -s $STORAGE/Android ~/
+ln -s $STORAGE/.andoird ~/
 ln -s $STORAGE/Genymobile_hidden ~/.Genymobile
 ln -s $STORAGE/Unity /opt/Unity
 
