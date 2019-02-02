@@ -16,10 +16,9 @@ export BLOGDIR=`realpath $DIR87/bloghexo`
 source $LIFETRACKERDIR/shell/envvars.sh
 
 #LOAD RVM
-GRADLE_VERSION=`ls ~/software/android-studio/gradle/ | grep gradle | sort -r | head -n 1`
-GRADLE_PATH=~/software/android-studio/gradle/$GRADLE_VERSION/bin
+GRADLE_USER_HOME=/mnt/files/gradle
 ANDROID_HOME=/mnt/files/android/Android
-ANDROID_EMULATOR_HOME	=/mnt/files/android/.android
+ANDROID_EMULATOR_HOME=/mnt/files/android/.android
 
 #RVM SETTINGS
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
@@ -34,7 +33,7 @@ export GOPATH=~/code/go
 #The incantation `typeset -U path', where the -U stands for unique, tells the shell that it should not add anything to $path if it's there already.
 typeset -U path
 #~/.local/bin is for pythong pip installs done by user without setting virtualenv
-path=($path . ~/.bin ~/.rvm/bin ~/.local/bin $MYPROFILEDIR/bin ~/.yarn/bin /usr/local/go/bin ~/code/bin $GOPATH/bin ~/Android/Sdk/platform-tools ~/Android/Sdk/tools /mnt/files/storage/groovy/bin $GRADLE_PATH)
+path=($path . ~/.bin ~/.rvm/bin ~/.local/bin $MYPROFILEDIR/bin ~/.yarn/bin /usr/local/go/bin ~/code/bin $GOPATH/bin ~/Android/Sdk/platform-tools ~/Android/Sdk/tools /mnt/files/storage/groovy/bin $GRADLE_USER_HOME/bin)
 
 #oh-my-zsh SETTINGS:
 plugins=(myfunctions git docker kubectl themes ssh-agent man history-substring-search myaliases kubectl helm tmuxinator)
