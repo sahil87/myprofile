@@ -71,3 +71,4 @@ alias zu="sudo umount /home/sahil/zDrive"
 alias kc='kubectl'
 alias dl='~/code/gmetrivr/dos/sh/docker_login.sh'
 alias mux='tmuxinator'
+alias ctop='docker run --rm -ti -v /var/run/docker.sock:/var/run/docker.sock quay.io/vektorlab/ctop:latest'

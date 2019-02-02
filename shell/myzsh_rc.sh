@@ -18,6 +18,9 @@ source $LIFETRACKERDIR/shell/envvars.sh
 #LOAD RVM
 GRADLE_VERSION=`ls ~/software/android-studio/gradle/ | grep gradle | sort -r | head -n 1`
 GRADLE_PATH=~/software/android-studio/gradle/$GRADLE_VERSION/bin
+ANDROID_HOME=/mnt/files/android/Android
+ANDROID_EMULATOR_HOME	=/mnt/files/android/.android
+
 #RVM SETTINGS
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 #GO Settings

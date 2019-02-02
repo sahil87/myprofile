@@ -48,19 +48,19 @@ sudo su; echo 'export CHROME_REMOTE_DESKTOP_DEFAULT_DESKTOP_SIZES="1920x1200"' >
 #Important symbolic links:
 ln -s /mnt ~/
 ln -s /mnt/files/code ~/
+
+MNTFILES=/mnt/files
+ln -s $MNTFILES/android/Android ~/
+ln -s $MNTFILES/android/.android ~/
+ln -s $MNTFILES/docker /var/lib/docker
+ln -s $MNTFILES/VirtualBox\ VMs ~/
+ln -s $MNTFILES/Unity /opt/Unity
+
 #Dropbox:
 mv ~/.local/share/applications ~/.local/share/applications-old
 ln -s ~/Dropbox/docs/sahil/profile/chrome-desktop-apps ~/.local/share/applications
 ln -s ~/Dropbox/docs/sahil/code-sync ~/code/code-sync
 ln -s ~/Dropbox/books/Music/MuseScore2 ~/Documents/MuseScore2
-
-STORAGE=/mnt/files/storage
-ln -s $STORAGE/docker /var/lib/docker
-ln -s $STORAGE/VirtualBox\ VMs ~/
-ln -s $STORAGE/Android ~/
-ln -s $STORAGE/.andoird ~/
-ln -s $STORAGE/Genymobile_hidden ~/.Genymobile
-ln -s $STORAGE/Unity /opt/Unity
 
 #ALLOCATE SWAP SPACE:
 sudo su
