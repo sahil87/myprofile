@@ -1,0 +1,2 @@
+set -x
+ssh -q -p $SSH_PORT $SSH_SERVER

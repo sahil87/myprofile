@@ -37,7 +37,7 @@ path=($path . ~/.bin ~/.rvm/bin ~/.local/bin $MYPROFILEDIR/bin ~/.yarn/bin /usr/
 
 #oh-my-zsh SETTINGS:
 plugins=(myfunctions git docker kubectl themes ssh-agent man history-substring-search myaliases kubectl helm tmuxinator)
-ZSH_THEME="sahil2"
+ZSH_THEME="sahil3"
 export ZSH=~/.oh-my-zsh
 export ZSH_CUSTOM=$CURRENTDIR/zsh-custom
 export COMPLETION_WAITING_DOTS="true"
