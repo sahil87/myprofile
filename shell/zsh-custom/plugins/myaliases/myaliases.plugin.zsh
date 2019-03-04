@@ -53,7 +53,7 @@ alias sa='cd ~/code/gmetrivr/sahil'
 alias 87='cd $DIR87'
 alias myprofile='cd $MYPROFILEDIR'
 alias lifetracker='cd $LIFETRACKERDIR'
-alias blog='cd $DIR87/bloghugo'
+alias blog='cd $DIR87/bloghexo'
 #Needed here instead of a commadn as the env vars created need to be in the running shell
 alias aws-add-sc='source $MYPROFILEDIR/revealed/keys/aws_iam_keys/sportscafe/export.sh'
 alias aws-add-gm='source $MYPROFILEDIR/revealed/keys/aws_iam_keys/gmetri/export.sh'
