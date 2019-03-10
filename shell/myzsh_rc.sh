@@ -10,6 +10,7 @@ esac
 CURRENTDIR=${0:a:h}
 export MYPROFILEDIR=`realpath $CURRENTDIR/..`
 export DIR87=`realpath $MYPROFILEDIR/..`
+export CODEDIR=`realpath $MYPROFILEDIR/../..`
 export LIFETRACKERDIR=`realpath $DIR87/lifetracker`
 export BLOGDIR=`realpath $DIR87/bloghexo`
 
@@ -33,7 +34,8 @@ export GOPATH=~/code/go
 #The incantation `typeset -U path', where the -U stands for unique, tells the shell that it should not add anything to $path if it's there already.
 typeset -U path
 #~/.local/bin is for pythong pip installs done by user without setting virtualenv
-path=($path . ~/.bin ~/.rvm/bin ~/.local/bin $MYPROFILEDIR/bin ~/.yarn/bin /usr/local/go/bin ~/code/bin $GOPATH/bin ~/Android/Sdk/platform-tools ~/Android/Sdk/tools /mnt/files/storage/groovy/bin $GRADLE_USER_HOME/bin)
+#First match wins. So the path that comes earlier has higher precedence
+path=($path . ~/.bin ~/.rvm/bin ~/.local/bin $CODEDIR/gmetrivr/dec/bin $MYPROFILEDIR/bin  ~/.yarn/bin /usr/local/go/bin ~/code/bin $GOPATH/bin ~/Android/Sdk/platform-tools ~/Android/Sdk/tools /mnt/files/storage/groovy/bin $GRADLE_USER_HOME/bin)
 
 #oh-my-zsh SETTINGS:
 plugins=(myfunctions git docker kubectl themes ssh-agent man history-substring-search myaliases kubectl helm tmuxinator)

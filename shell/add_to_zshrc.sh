@@ -1,10 +1,10 @@
 #!/bin/bash
-file1=~/.zshrc
+RC_FILE=~/.zshrc
 CURRENTDIR=`pwd`
-if [ -f $file1 ] && grep "myzsh_rc.sh #v1.1" $file1
+if [ -f $RC_FILE ] && grep "myzsh_rc.sh #v1.1" $RC_FILE
   then echo "zrc all good."
   else
-        set -x
-        sed -i '/^source \$ZSH\/oh-my-zsh.sh/s/^/# /' $file1
-        echo "source $CURRENTDIR/myzsh_rc.sh #v1.1" >> $file1
+    set -x
+    sed -i '/^source \$ZSH\/oh-my-zsh.sh/s/^/# /' $RC_FILE
+    echo "source $CURRENTDIR/myzsh_rc.sh #v1.1" >> $RC_FILE
 fi
