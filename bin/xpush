@@ -1,4 +1,5 @@
 #!/bin/bash
+# Push files helper
 OLDDIR=`pwd`
 
 if [ -z $1 ]

@@ -1,0 +1,31 @@
+#!/bin/bash
+# Create a new branch to start working on
+
+# Exit immediately if a command exits with a non-zero status
+set -e
+
+if [ $# -eq 0 ]
+then
+  NEW_BRANCH=dev_`git config user.username`;
+else
+  NEW_BRANCH=$1;
+fi
+
+echo "Creating new branch $NEW_BRANCH"
+
+set -x
+
+# Revert current directory to committed state, remove all local uncommitted changes
+git checkout -f .
+
+# Remove untracked files
+git clean -fd
+
+# Move to the correct ancestor branch for new branches - release
+git fetch origin
+git reset origin/release
+
+# Create the new branch
+# If -B is given, <new_branch> is created if it doesn’t exist; otherwise, it is reset
+git checkout -B $NEW_BRANCH
+
