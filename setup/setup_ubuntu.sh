@@ -1,5 +1,53 @@
 #!/bin/bash
 
+#Link files
+cd dotfiles; ./linkfiles_ubuntu.sh; cd ..;
+
+#Important tools:
+#Install chrome, vscode, vivaldi
+sudo apt install -y emacs zsh zsh-doc git gitk tig yakuake hplip-gui  #emacs24-nox xcalib byobu
+sudo apt install -y curl wget nmap whois encfs openssh-server gparted #luckybackup
+sudo apt install -y autoconf automake libtool cmake
+#sudo apt install -y android-tools-adb android-tools-fastboot #rygel rygel-preferences
+
+#Install oh-my-zsh (Run from shell folder)
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/sahil87/oh-my-zsh/master/tools/install.sh)"
+source ./setup/add_to_zshrc.sh
+chsh -s /bin/zsh
+
+#Making chrome-remote-desktop work
+#1. Install xfce by installing "mint-meta-xfce" from package manager
+#2. Run the following:
+sudo apt install mint-meta-xfce
+echo 'exec /usr/bin/xfce4-session "xfce4-session --session=xfce4"' >> ~/.chrome-remote-desktop-session
+sudo su; echo 'export CHROME_REMOTE_DESKTOP_DEFAULT_DESKTOP_SIZES="1920x1200"' >> /etc/environment
+##echo 'exec /etc/mdm/Xsession "cinnamon-session-cinnamon2d"' >> ~/.chrome-remote-desktop-session
+# Install Chrome Remote Desktop app from chrome app store
+# Download chrome remote desktop host component from the following links
+# Restart Mint
+# Enable desktop sharing from Chrome Remote Desktop app. It asks to set a pin to access the computer
+
+#Important symbolic links:
+ln -s /mnt ~/
+ln -s /mnt/files/code ~/
+ln -s ~/Dropbox/docs/sahil/code-sync ~/code/code-sync
+
+MNTFILES=/mnt/files
+ln -s $MNTFILES/docker /var/lib/docker
+ln -s $MNTFILES/VirtualBox\ VMs ~/
+ln -s $MNTFILES/android/Android ~/
+ln -s $MNTFILES/android/.android ~/
+ln -s $MNTFILES/Unity /opt/Unity
+
+#ALLOCATE SWAP SPACE:
+sudo su
+fallocate -l 9G /swapfile9G #OR  dd if=/dev/zero of=/swapfile bs=1M count=1024
+chmod 600 /swapfile9G
+mkswap /swapfile9G
+swapon /swapfile9G
+#Add the following entry to fstab:
+/swapfile9G    swap    swap    defaults    0 0
+
 ## AWS CLI:
 Use steps from [here](https://github.com/sahil87/myprofile/blob/master/guides/awscli.md)
 
@@ -21,78 +69,16 @@ Use steps from [here](https://github.com/sahil87/myprofile/blob/master/guides/vi
 #Install Ruby(rvm) and Tmuxinator
 Use steps from [here](https://github.com/sahil87/myprofile/blob/master/guides/ruby.md)
 
-## Link custom apps menu
-git clone git@github.com:sahil87/custom-apps-menu.git ~/code/sahil87/custom-apps-menu
-ln -s ~/code/sahil87/custom-apps-menu ~/.local/share/cinnamon/applets/custom-apps-menu@sahil87
-
-#Install oh-my-zsh (Run from shell folder)
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/sahil87/oh-my-zsh/master/tools/install.sh)"
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-source $DIR/add_to_zshrc.sh
-chsh -s /bin/zsh
-#git clone git@github.com:sahil87/z.git ~/.zclone
-
-#Making chrome-remote-desktop work
-
-#1. Install xfce by installing "mint-meta-xfce" from package manager
-#2. Run the following:
-sudo apt install mint-meta-xfce
-echo 'exec /usr/bin/xfce4-session "xfce4-session --session=xfce4"' >> ~/.chrome-remote-desktop-session
-sudo su; echo 'export CHROME_REMOTE_DESKTOP_DEFAULT_DESKTOP_SIZES="1920x1200"' >> /etc/environment
-##echo 'exec /etc/mdm/Xsession "cinnamon-session-cinnamon2d"' >> ~/.chrome-remote-desktop-session
-# Install Chrome Remote Desktop app from chrome app store
-# Download chrome remote desktop host component from the following links
-# Restart Mint
-# Enable desktop sharing from Chrome Remote Desktop app. It asks to set a pin to access the computer
-
-#Important symbolic links:
-ln -s /mnt ~/
-ln -s /mnt/files/code ~/
-
-MNTFILES=/mnt/files
-ln -s $MNTFILES/android/Android ~/
-ln -s $MNTFILES/android/.android ~/
-ln -s $MNTFILES/docker /var/lib/docker
-ln -s $MNTFILES/VirtualBox\ VMs ~/
-ln -s $MNTFILES/Unity /opt/Unity
-
-#Dropbox:
-mv ~/.local/share/applications ~/.local/share/applications-old
-ln -s ~/Dropbox/docs/sahil/profile/chrome-desktop-apps ~/.local/share/applications
-ln -s ~/Dropbox/docs/sahil/code-sync ~/code/code-sync
-ln -s ~/Dropbox/books/Music/MuseScore2 ~/Documents/MuseScore2
-
-#ALLOCATE SWAP SPACE:
-sudo su
-fallocate -l 9G /swapfile9G #OR  dd if=/dev/zero of=/swapfile bs=1M count=1024
-chmod 600 /swapfile9G
-mkswap /swapfile9G
-swapon /swapfile9G
-#Add the following entry to fstab:
-/swapfile9G    swap    swap    defaults    0 0
-
 #Unity
 #After installing Unity from deb by
 #"dpkg -i Unity----.deb" run
 #"sudo apt-get -f install" to get all dependencies
 
-#Important tools:
-#Install chrome, vscode, vivaldi
-sudo apt install -y emacs zsh zsh-doc git gitk tig yakuake hplip-gui  #emacs24-nox xcalib byobu
-sudo apt install -y curl wget nmap whois encfs openssh-server gparted #luckybackup
-sudo apt install -y autoconf automake libtool cmake
-sudo apt install -y android-tools-adb android-tools-fastboot #rygel rygel-preferences
-#sudo apt install -y ubuntu-restricted-extras libavcodec-extra libdvd-pkg
-
 #VNC and Remmina
-sudo apt install -y remmina remmina-plugin-vnc remmina-plugin-rdp remmina-plugin-nx
+#sudo apt install -y remmina remmina-plugin-vnc remmina-plugin-rdp remmina-plugin-nx
 #Download, install nomachine from https://www.nomachine.com/download/linux&id=1
 #To install:
-sudo apt install ./nomachine_6.0.66_2_amd64.deb
-
-#Atom
-#sudo add-apt-repository -y ppa:webupd8team/atom
-#sudo apt-get update; sudo apt-get install atom
+#sudo apt install ./nomachine_6.0.66_2_amd64.deb
 
 #Install google drive for linux
 #go get -u github.com/odeke-em/drive/cmd/drive
@@ -135,3 +121,8 @@ mv /usr/share/mime/packages/freedesktop.org.xml.new /usr/share/mime/packages/fre
 echo "Update mime database...";
 update-mime-database /usr/share/mime
 echo "Mime database updated successfully! ALL DONE!";
+
+## Link custom apps menu
+# Not needed as icing task manager is now default in linuxmint
+#git clone git@github.com:sahil87/custom-apps-menu.git ~/code/sahil87/custom-apps-menu
+#ln -s ~/code/sahil87/custom-apps-menu ~/.local/share/cinnamon/applets/custom-apps-menu@sahil87
