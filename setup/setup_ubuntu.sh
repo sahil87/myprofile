@@ -30,7 +30,7 @@ sudo su; echo 'export CHROME_REMOTE_DESKTOP_DEFAULT_DESKTOP_SIZES="1920x1200"' >
 #Important symbolic links:
 ln -s /mnt ~/
 ln -s /mnt/files/code ~/
-ln -s ~/Dropbox/docs/sahil/code-sync ~/code/code-sync
+ln -s ~/Dropbox/docs-sahil/code-sync ~/code/code-sync
 
 MNTFILES=/mnt/files
 ln -s $MNTFILES/docker /var/lib/docker
