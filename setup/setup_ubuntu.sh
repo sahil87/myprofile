@@ -39,6 +39,9 @@ ln -s $MNTFILES/android/Android ~/
 ln -s $MNTFILES/android/.android ~/
 ln -s $MNTFILES/Unity /opt/Unity
 
+#Installing wine
+https://computingforgeeks.com/how-to-install-wine-4-on-ubuntu-18-04-linux-mint-19/
+
 #ALLOCATE SWAP SPACE:
 sudo su
 fallocate -l 9G /swapfile9G #OR  dd if=/dev/zero of=/swapfile bs=1M count=1024
