@@ -82,6 +82,10 @@ promptinit
 export EDITOR="emacs -nw"
 export GIT_EDITOR=$EDITOR
 
+#To make gpg2 work
+#https://unix.stackexchange.com/a/188951
+compdef gpg2=gpg
+
 #. ~/.zclone/z.sh
 
 DISABLE_AUTO_TITLE="true"
