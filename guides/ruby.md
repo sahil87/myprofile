@@ -3,7 +3,7 @@
 ## Commands to install Ruby
 
 ```sh
-curl -sSL https://rvm.io/mpapis.asc | sudo gpg2 --import -
+curl -sSL https://rvm.io/mpapis.asc | sudo gpg --import -
 curl -sSL https://get.rvm.io | sudo bash -s stable
 ```
 
