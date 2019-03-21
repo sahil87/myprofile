@@ -22,7 +22,16 @@ ANDROID_HOME=/mnt/files/android/Android
 ANDROID_EMULATOR_HOME=/mnt/files/android/.android
 
 #RVM SETTINGS
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+if
+  [[ -s "$HOME/.rvm/scripts/rvm" ]] 
+then
+  source "$HOME/.rvm/scripts/rvm"
+elif
+  [[ -s "/usr/local/rvm/scripts/rvm" ]]
+then
+  source "/usr/local/rvm/scripts/rvm"
+fi
+
 #GO Settings
 export GOPATH=~/code/go
 #Python Settings: Use workon to list/go into a virutal env, deactivate to exit, mkvirtualenv temp to create virtual env
