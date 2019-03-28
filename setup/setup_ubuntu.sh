@@ -2,7 +2,7 @@
 
 #Important tools:
 #Install chrome, vscode, vivaldi
-sudo apt install -y emacs zsh zsh-doc git gitk tig yakuake hplip-gui  #emacs24-nox xcalib byobu
+sudo apt install -y emacs zsh zsh-doc git gitk tig guake hplip-gui  #emacs24-nox xcalib byobu
 sudo apt install -y curl wget nmap whois encfs openssh-server gparted #luckybackup
 sudo apt install -y autoconf automake libtool cmake
 #sudo apt install -y android-tools-adb android-tools-fastboot #rygel rygel-preferences
@@ -38,6 +38,9 @@ ln -s $MNTFILES/VirtualBox\ VMs ~/
 ln -s $MNTFILES/android/Android ~/
 ln -s $MNTFILES/android/.android ~/
 ln -s $MNTFILES/Unity /opt/Unity
+
+#Installing wine
+https://computingforgeeks.com/how-to-install-wine-4-on-ubuntu-18-04-linux-mint-19/
 
 #ALLOCATE SWAP SPACE:
 sudo su
