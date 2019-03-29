@@ -103,6 +103,11 @@ sar
 nc -zv host.example.com 20-30 #netcat port scanning
 dig
 nslookup 172.18.0.2 #Reverse lookup
+
+#https://www.cyberciti.biz/tips/linux-investigate-sockets-network-connections.html
+ss -t -a #Display all TCP Sockets
+ss -x -a #Display all UNIX Sockets
+
 #Use output of previous command in next command
 tar -czfv whereToCompress.tar.gz whatToCompress/
 
