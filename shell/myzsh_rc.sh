@@ -16,7 +16,7 @@ export BLOGDIR=`realpath $DIR87/bloghexo`
 
 source $LIFETRACKERDIR/shell/envvars.sh
 
-#LOAD RVM
+#ANDROID SETTINGS
 GRADLE_USER_HOME=/mnt/files/gradle
 ANDROID_HOME=/mnt/files/android/Android
 ANDROID_EMULATOR_HOME=/mnt/files/android/.android
