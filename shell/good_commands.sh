@@ -108,6 +108,10 @@ nslookup 172.18.0.2 #Reverse lookup
 ss -t -a #Display all TCP Sockets
 ss -x -a #Display all UNIX Sockets
 
+#Check network speed
+iperf -s #to start service on one server
+iperf -c <ip addr/ hostname> #to ping and test speed from the client to the server
+
 #Use output of previous command in next command
 tar -czfv whereToCompress.tar.gz whatToCompress/
 
