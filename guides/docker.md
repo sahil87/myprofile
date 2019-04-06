@@ -40,6 +40,6 @@ sudo usermod -aG docker $USER
 Find latest version from https://github.com/docker/compose/releases
 
 ```sh
-sudo su -c 'curl -L https://github.com/docker/compose/releases/download/1.23.2/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose'
+sudo su -c 'curl -L https://github.com/docker/compose/releases/download/1.24.0/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose'
 sudo chmod +x /usr/local/bin/docker-compose
 ```
