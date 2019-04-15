@@ -130,11 +130,12 @@ screen
 adduser [username] --disable-password #Adds with template (creates home directory, sets default shell)
 deluser [username] #Removes user
 
-#Add user to groups
-usermod -a -G sudo,admin,docker [username]
+#Add user to sudoers groups
+sudo groupadd -f admin 
+sudo usermod -a -G sudo,admin,docker [username]
+echo "%admin ALL=(ALL) NOPASSWD:ALL" | sudo tee -a /etc/sudoers.d/admin > /dev/null
 
 #Adding github keys:
-echo "%admin ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/admin
 cd ~; mkdir .ssh; touch .ssh/authorized_keys;
 curl https://github.com/sahil87.keys >> .ssh/authorized_keys
 
