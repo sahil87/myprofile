@@ -55,14 +55,14 @@ sudo ln -s /mnt/files/docker /var/lib/docker
 * Setup dropbox by Menu > Internet > Dropbox
 * Setup up selective sync and remove unneeded folders
 
+## SSH
+
+* Copy the correct keys to .ssh
+
 ## Chrome Remote Desktop
 
 * Go to https://remotedesktop.google.com/access
-* Click setup remote access
-
-### Making chrome-remote-desktop work
-
-Run the following:
+* Run the following:
 
 ```bash
 sudo apt install mint-meta-xfce
