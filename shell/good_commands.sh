@@ -44,6 +44,9 @@ ssh -R ${remote}:${local} sshtalk.in
 #Use remote service through local ports
 ssh -L ${local}:${remote} sshtalk.in
 
+#Tunnelling local 3128 port to the tinyproxy on sahilahuja.net at port 8888:
+ssh -p 443 -L 3128:localhost:8888 -N sahilahuja.net
+
 #Dynamic port forwarding (Easy VPN)
 ssh -fNn -D 5555 bastion
 curl --socks5-hostname localhost:5555 -I rubygems #This runs the command on the server bastion
