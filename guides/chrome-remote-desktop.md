@@ -13,7 +13,15 @@ echo 'export CHROME_REMOTE_DESKTOP_DEFAULT_DESKTOP_SIZES="1920x1200"' | sudo tee
 #echo 'exec /etc/mdm/Xsession "cinnamon-session-cinnamon2d"' >> ~/.chrome-remote-desktop-session
 ```
 
+## Setup chrome-remote-desktop agent
+
 * Install Chrome Remote Desktop app from chrome app store
-* Download chrome remote desktop host component from the following links
-* Restart Mint
+* Download chrome remote desktop host component from the given links, restart Mint
 * Enable desktop sharing from Chrome Remote Desktop app. It asks to set a pin to access the computer
+
+## Fix XFCE icons
+
+* Use https://remotedesktop.google.com/access to access the remote desktop
+* Apply the default panels setup
+* Go to "Applications" > "Settings" > "Appearance"
+" Select Style "Mint-Y" and Icons "Mint-Y"
