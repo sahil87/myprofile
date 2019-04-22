@@ -15,7 +15,7 @@ sudo apt update
 sudo apt install -y kubectl
 ```
 
-#### OR install from gcloud components
+### OR install from gcloud components
 
 ```gcloud components install kubectl```
 
