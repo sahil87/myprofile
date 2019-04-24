@@ -2,7 +2,7 @@
 
 ## Install docker-ce
 
-* Might have to run `pip uninstall urllib3; pip install urllib3==1.24.1` to get a compatible version of urllib3 first.
+* Might have to run `pip uninstall urllib3; pip install urllib3==1.24.2` to get a compatible version of urllib3 first.
 
 Steps updated from [here](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
 
@@ -18,13 +18,12 @@ sudo apt install -y docker-ce
 
 In the following steps:
 
-1. Replace `/mnt/file` with the mount point of the partition the contains enough free space
-1. Replace `/storage/docker` with the folder in that partition where you want to store docker related files
+1. Replace `/mnt/file/docker` with the mount point of the partition the contains enough free space
 
 ```sh
 sudo service docker stop
 sudo rm -rf /var/lib/docker; sudo umount /var/lib/docker/aufs
-sudo ln -s /mnt/files/storage/docker /var/lib/docker
+sudo ln -s /mnt/files/docker /var/lib/docker
 sudo service docker start
 ```
 
