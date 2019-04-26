@@ -11,16 +11,10 @@
 
 #}}}
 # user {{{
-# [user]
-#     name = Sahil Ahuja
-#     email = sahilahuja@gmail.com
-#     username = sahil87
-
 [user]
-    name = Amit Rajput
-    email = amitrajput123.ar@gmail.com
-    username = amitrajput1992
-
+    name = Sahil Ahuja
+    email = sahilahuja@gmail.com
+    username = sahil87
 
 #}}}
 # color {{{
