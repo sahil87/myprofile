@@ -6,7 +6,7 @@ First install Ruby: https://github.com/sahil87/myprofile/blob/master/guides/ruby
 
 ```sh
 sudo apt install tmux
-sudo gem install tmuxinator
+gem install tmuxinator
 ```
 
 ### Tmuxniator configuration (important)
