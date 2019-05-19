@@ -32,6 +32,8 @@ sudo service docker start
 ```sh
 sudo groupadd docker
 sudo usermod -aG docker $USER
+#Log out of the server, and log back in or:
+su - ${USER}
 ```
 
 ## Install Docker Compose

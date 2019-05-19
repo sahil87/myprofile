@@ -4,12 +4,18 @@
 
 ```sh
 curl -sSL https://rvm.io/mpapis.asc | sudo gpg --import -
+curl -sSL https://rvm.io/pkuczynski.asc | sudo gpg --import -
+
 curl -sSL https://get.rvm.io | sudo bash -s stable
 ```
 
 Setup rvm environment:
 
 ```sh
+sudo usermod -aG rvm $USER
+#Log out of the server, and log back in or:
+su - ${USER}
+
 source /etc/profile.d/rvm.sh
 rvm requirements
 ```
@@ -21,5 +27,5 @@ rvm requirements
 #rvm install 2.5
 rvm install 2.5-dev
 rvm --default use 2.5-dev
-sudo gem install bundler
+gem install bundler
 ```
