@@ -81,6 +81,7 @@ chromium \
 #To check ports bound in local system
 netstat -plntu
 lsof -i :port
+lsof -P -i -n #List of apps using internet
 
 lsb_release -a # system information
 
@@ -154,3 +155,7 @@ sshfs name@server:/path/to/folder /path/to/mount/point #Remote folder mount thro
 mount -t tmpfs tmpfs /mnt -o size=1024m #Mount a superfast tempoary partition on RAM
 ssh -t reachable_host ssh unreachable_host #SSH Connection through a host in the middle
 ssh user@host cat /path/to/remotefile | diff /path/to/localfile - #Diff a remote file
+echo "You can simulate on-screen typing just like in the movies" | pv -qL 10
+ssh-copy-id username@hostname #Copy your SSH public key on a remote machine for passwordless login - the easy way
+fuser -k filename #Kills a process that is locking a file.
+cat /etc/issue #Display which distro is installed
