@@ -146,10 +146,11 @@ curl https://github.com/sahil87.keys >> .ssh/authorized_keys
 cat .ssh/id_rsa.pub | ssh sheena@192.168.0.11 'cat >> .ssh/authorized_keys'
 
 #A cool command list: https://www.commandlinefu.com/commands/browse/sort-by-votes
-
 sudo !! #Run last command as root
 mount | column -t #Awesome formatting for the mount command
 curl ifconfig.me #Your external ip address
 echo "ls -l" | at midnight #At is a cron shortcut
 sshfs name@server:/path/to/folder /path/to/mount/point #Remote folder mount through sshfs
 mount -t tmpfs tmpfs /mnt -o size=1024m #Mount a superfast tempoary partition on RAM
+ssh -t reachable_host ssh unreachable_host #SSH Connection through a host in the middle
+ssh user@host cat /path/to/remotefile | diff /path/to/localfile - #Diff a remote file
