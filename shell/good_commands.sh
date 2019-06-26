@@ -152,3 +152,4 @@ mount | column -t #Awesome formatting for the mount command
 curl ifconfig.me #Your external ip address
 echo "ls -l" | at midnight #At is a cron shortcut
 sshfs name@server:/path/to/folder /path/to/mount/point #Remote folder mount through sshfs
+mount -t tmpfs tmpfs /mnt -o size=1024m #Mount a superfast tempoary partition on RAM
