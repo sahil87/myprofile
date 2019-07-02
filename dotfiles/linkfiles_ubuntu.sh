@@ -22,7 +22,8 @@ linkfile dotfiles/ansible/.ansible.cfg       ~/.ansible.cfg                     
 linkfile dotfiles/git/.gitconfig             ~/.gitconfig                            0
 linkfile dotfiles/sysctl/40-max-user-watches.conf /etc/sysctl.d/40-max-user-watches.conf       1
 linkfile dotfiles/tmux.conf                  ~/.tmux.conf                            0
-linkfile dotfiles/imwheelrc                  ~/.imwheelrc                            0
+linkfile dotfiles/imwheel/imwheelrc          ~/.imwheelrc                            0
+linkfile dotfiles/imwheel/Imwheels.dekstop   ~/.config/autostart/Imsheels.desktop    0
 #Not linking vscode - syncing through the sync plugin
 # linkfile vscode/snippets            ~/.config/Code/User/snippets            0
 # linkfile vscode/keybindings.json    ~/.config/Code/User/keybindings.json    0
