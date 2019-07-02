@@ -1,4 +1,4 @@
-".*"
+".*chrome.*"
 None,      Up,   Button4, 5
 None,      Down, Button5, 5
 Control_L, Up,   Control_L|Button4
@@ -8,3 +8,4 @@ Shift_L,   Down, Shift_L|Button5
 #The last 4 lines are to prevent multiplication when pressing Ctrl or Shift
 #to debug: imwheel -d --debug --kill 
 #Add to startup apps: imwheel -d --kill
+#To discover program string: xprop WM_CLASS | grep -o '"[^"]*"' | head -n 1
