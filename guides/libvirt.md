@@ -29,18 +29,18 @@ virsh pool-info sp1
 ```bash
 QS=qemu:///system
 virt-install --connect $QS \
---name "node-local-win10-1" \
---metadata title="Local Win10 1",description="Local Win10 1" \
+--name "node-local-win10-2" \
+--metadata title="Local Win10 2",description="Local Win10 2" \
 --ram=8096 --vcpus=2 \
 --os-type=windows --os-variant=win10 \
---disk path=/mnt/e/sp/sp1/win10-1.qcow2,bus=virtio,cache=none,size=100 \
---disk /mnt/e/sp/install-images/Win10_1809Oct_v2_English_x64.iso,device=cdrom,bus=ide \
+--disk path=/mnt/e/sp/sp1/win10-2.qcow2,bus=virtio,cache=none,size=100 \
+--disk /mnt/e/sp/install-images/Win10_1903_V1_English_x64.iso,device=cdrom,bus=ide \
 --graphics spice \
 --network bridge=virbr0,model=virtio \
---cdrom /mnt/e/sp/install-images/virtio-win-0.1.141.iso
+--cdrom /mnt/e/sp/install-images/virtio-win-0.1.171.iso
 
 #To destroy VM:
-# virsh -c $QS destroy node-local-win10-1; virsh -c $QS undefine node-local-win10-1; virsh -c $QS pool-refresh sp1; virsh -c $QS vol-delete --pool sp1 win10-1.qcow2
+# virsh -c $QS destroy node-local-win10-2; virsh -c $QS undefine node-local-win10-2; virsh -c $QS pool-refresh sp1; virsh -c $QS vol-delete --pool sp1 win10-2.qcow2
 ```
 
 During installation on the Hard Disk selection screen, select "Load Driver"
