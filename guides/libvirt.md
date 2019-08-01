@@ -44,6 +44,8 @@ virt-install --connect $QS \
 ```
 
 ```bash
+QS=qemu:///system
+
 virt-install --connect $QS \
 --name "node-local-win10-1" \
 --metadata title="local-win10-1 Windows",description="local-win10-1 Windows" \
@@ -60,5 +62,7 @@ virt-install --connect $QS \
 ```
 
 During installation on the Hard Disk selection screen, select "Load Driver"
-And browse to the virtio-win cd > viostor > w10 > amd64. Also install NetKVM, qxldod subsequently
+And browse to the virtio-win cd > viostor > w10 > amd64. Also install vioserial, NetKVM, qxldod, Baloon subsequently
 After windows installation, install guest-agent (msi installer)
+
+> Drivers description: https://access.redhat.com/articles/2470791#installing-the-kvm-windows-virtio-drivers-5
