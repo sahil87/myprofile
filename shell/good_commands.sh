@@ -159,3 +159,9 @@ echo "You can simulate on-screen typing just like in the movies" | pv -qL 10
 ssh-copy-id username@hostname #Copy your SSH public key on a remote machine for passwordless login - the easy way
 fuser -k filename #Kills a process that is locking a file.
 cat /etc/issue #Display which distro is installed
+
+#Simple network listener
+#Server: to listen to the connection
+netcat -l -p [port]
+#Client:
+netcat [server-ip-address] [port]
