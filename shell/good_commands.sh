@@ -165,3 +165,6 @@ cat /etc/issue #Display which distro is installed
 netcat -l -p [port]
 #Client:
 netcat [server-ip-address] [port]
+
+#Understand the route to an ip address:
+traceroute 8.8.8.8
