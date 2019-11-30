@@ -19,7 +19,7 @@ tar -xzfv whatToUncompress.tar.gz whereToUncompress/
 #c compress, x uncompress, z gzip, j bz2
 
 #Quick SCP
-tar -czv -f- folderName/ | ssh user@hostname 'cd whereIwantToUnzip && tar -xzfv -'
+tar -czv -f- folderName/ | ssh user@hostname 'cd whereIwantToUnzip && tar -xzv -f-'
 
 #SCP through proxy
 scp  -o "ProxyCommand ssh -p 2222 gw.sportscafe.in nc %h %p" api-prod10.web.int.sg.aws.sportscafe.in:/home/sahil/api-log.tar.gz .
