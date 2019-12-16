@@ -52,7 +52,7 @@ alias remove='sudo apt-get remove'
 alias update='sudo apt-get update'
 alias upgrade='sudo apt-get update && sudo apt-get upgrade'
 alias d="docker"
-alias z="sudo mount -t cifs -o username=gmetri,password=gmetri,uid=$UID,gid=$GID //10.0.0.10/share /home/sahil/zDrive"
+alias z="sudo mount -t cifs -o username=gmetri,password=gmetri,uid=$UID,gid=$GID //dropbox.lan/share /home/sahil/zDrive"
 alias zu="sudo umount /home/sahil/zDrive"
 
 #Command shortcuts
