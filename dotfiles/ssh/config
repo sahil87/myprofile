@@ -9,8 +9,10 @@ Host *
 Host github
   User git
 
-Host 10.0.*.*
-  ProxyCommand ssh -p 2030 sahil-office.gmetri.io nc %h %p
+Host sahil-office
+  HostName sahil-office.gmetri.io
+  ForwardAgent yes
+  ProxyCommand ssh -p 2222 -l gmetri bastion.gmetri.io nc %h %p
 
 # IdentityFile ~/.ssh/git.key
 
