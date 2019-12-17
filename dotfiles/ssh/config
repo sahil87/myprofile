@@ -19,16 +19,6 @@ Host dev-sahil
   User gmetri
   ForwardAgent yes
   ProxyCommand ssh -p 2222 -l gmetri bastion.gmetri.io nc %h %p
-  LocalForward 127.0.0.1:3600 127.0.0.1:3600
-  LocalForward 127.0.0.1:3610 127.0.0.1:3610
-  LocalForward 127.0.0.1:3620 127.0.0.1:3620
-  LocalForward 127.0.0.1:3630 127.0.0.1:3630
-  LocalForward 127.0.0.1:3631 127.0.0.1:3631
-  LocalForward 127.0.0.1:3640 127.0.0.1:3640
-  LocalForward 127.0.0.1:3645 127.0.0.1:3645
-  LocalForward 127.0.0.1:3650 127.0.0.1:3650
-  LocalForward 127.0.0.1:3651 127.0.0.1:3651
-  LocalForward 127.0.0.1:3652 127.0.0.1:3652
 
 # IdentityFile ~/.ssh/git.key
 
