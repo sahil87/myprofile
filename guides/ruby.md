@@ -26,6 +26,6 @@ rvm requirements
 #rvm list known
 #rvm install 2.6
 rvm install 2.6
-rvm --default use 2.6-dev
+rvm --default use 2.6
 #gem install bundler #Running this upgrades bundler which sometimes causes problems
 ```

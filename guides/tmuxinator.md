@@ -15,7 +15,7 @@ gem install tmuxinator
 
 ##### Tmux Configs (used as a base for tmuxinator)
 
-```sh 
+```sh
 wget https://raw.githubusercontent.com/sahil87/myprofile/master/dotfiles/tmux.conf
 mv tmux.conf ~/.tmux.conf
 ```
