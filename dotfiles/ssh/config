@@ -16,6 +16,7 @@ Host sahil-office
 
 Host dev-sahil
   HostName dev-sahil.lan
+  User gmetri
   ForwardAgent yes
   ProxyCommand ssh -p 2222 -l gmetri bastion.gmetri.io nc %h %p
 
