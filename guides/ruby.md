@@ -20,12 +20,12 @@ source /etc/profile.d/rvm.sh
 rvm requirements
 ```
 
-## Make ruby 2.5 default
+## Make ruby 2.6 default
 
 ```sh
 #rvm list known
 #rvm install 2.6
-rvm install 2.6-dev
+rvm install 2.6
 rvm --default use 2.6-dev
-gem install bundler
+#gem install bundler #Running this upgrades bundler which sometimes causes problems
 ```

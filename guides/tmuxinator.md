@@ -24,7 +24,7 @@ mv tmux.conf ~/.tmux.conf
 
 ```sh
 wget https://raw.githubusercontent.com/tmuxinator/tmuxinator/master/completion/tmuxinator.bash
-mv tmuxinator.bash > ~/.bin/tmuxinator.bash
+mv tmuxinator.bash ~/.bin/tmuxinator.bash
 echo "source ~/.bin/tmuxinator.bash" >> ~/.bashrc
 ```
 
