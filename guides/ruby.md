@@ -24,8 +24,8 @@ rvm requirements
 
 ```sh
 #rvm list known
-#rvm install 2.5
-rvm install 2.5-dev
-rvm --default use 2.5-dev
+#rvm install 2.6
+rvm install 2.6-dev
+rvm --default use 2.6-dev
 gem install bundler
 ```
