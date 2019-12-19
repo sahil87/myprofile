@@ -10,3 +10,11 @@ export BLOGDIR=`realpath $DIR87/bloghexo`
 export PATH=$PATH:$MYPROFILEDIR/bin
 alias vr='cd ~/code/gmetrivr/'
 alias 87='cd ~/code/sahil87/'
+
+#Lines in ~/.bashrc:
+#source /home/gmetri/code/gmetrivr/dec/shell/mybash_rc.sh #v1.1
+#source /home/gmetri/code/gmetrivr/dec/shell/mybash_theme.sh #v1.1
+#source /home/gmetri/code/gmetrivr/dec/shell/mybash_vars.sh #v1.1
+#source ~/.bin/tmuxinator.bash
+#source /home/gmetri/code/sahil87/myprofile/shell/mybash_rc_addon.sh
+#
