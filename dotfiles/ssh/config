@@ -9,6 +9,12 @@ Host *
 Host github
   User git
 
+#https://puppet.com/blog/speed-up-ssh-by-reusing-connections/
+Host *.gmetri.io
+  ControlMaster auto
+  ControlPath ~/.ssh/%r@%h-%p
+  ControlPersist 600
+
 Host sahil-office
   HostName sahil-office.gmetri.io
   ForwardAgent yes
