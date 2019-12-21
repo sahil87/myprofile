@@ -18,8 +18,13 @@ tar -czfv whereToCompress.tar.gz whatToCompress/
 tar -xzfv whatToUncompress.tar.gz whereToUncompress/
 #c compress, x uncompress, z gzip, j bz2
 
-#Quick SCP
-tar -czv -f- folderName/ | ssh user@hostname 'cd whereIwantToUnzip && tar -xzv -f-'
+#Superhuman SCP
+# Running command from source host
+cd ~/source/folder/to/copy/from/
+sudo tar -cvpz -f- FolderToCopy | ssh gmetri@de.st.ip.addr 'cd ~/dest/folder/to/copy/into/ && sudo tar --same-owner -xzv -f-'
+#OR Running command from destination host
+cd ~/destination/folder/to/copy/into/
+ssh gmetri@sou.rce.ip.addr 'cd /source/folder/to/copy/from && sudo tar -cvpz -f- FolderToCopy' | sudo tar --same-owner -xzv -f-
 
 #SCP through proxy
 scp  -o "ProxyCommand ssh -p 2222 gw.sportscafe.in nc %h %p" api-prod10.web.int.sg.aws.sportscafe.in:/home/sahil/api-log.tar.gz .
