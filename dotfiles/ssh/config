@@ -4,9 +4,12 @@ Host *
   ServerAliveInterval 30
   ServerAliveCountMax 60
   Compression yes
-#  ForwardAgent yes
+  ForwardAgent yes
 
 Host github
+  User git
+
+Host git.gmetri.io
   User git
 
 #https://puppet.com/blog/speed-up-ssh-by-reusing-connections/
