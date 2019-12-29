@@ -17,5 +17,4 @@ source ~/code/gmetrivr/vmc/kubeconfig/env.sh
 #source /home/gmetri/code/gmetrivr/dec/shell/mybash_rc.sh #v1.1
 #source /home/gmetri/code/gmetrivr/dec/shell/mybash_theme.sh #v1.1
 #source /home/gmetri/code/gmetrivr/dec/shell/mybash_vars.sh #v1.1
-#source ~/.bin/tmuxinator.bash
 #source /home/gmetri/code/sahil87/myprofile/shell/mybash_rc_addon.sh
