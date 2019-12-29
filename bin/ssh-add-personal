@@ -1,0 +1,3 @@
+#Load personal ssh key into ssh-agent
+set -x
+ssd-add -i ~/.ssh/personal/id_ed25519_personal

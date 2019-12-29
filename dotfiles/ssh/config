@@ -18,12 +18,13 @@ Host *.gmetri.io *.lan 10.0.*.*
   ControlMaster auto
   ControlPath ~/.ssh/%r@%h-%p
   ControlPersist 600
-  #Don't forward agent, use the local key installed instead of forwarding ssh-agent
-  #However in the below cases, ForwardAgent is required to pass through bastion
-
+#Don't forward agent here, use the local key installed instead of forwarding ssh-agent
+  
+#ForwardAgent is required to pass through bastion
 Host bastion.gmetri.io
+  IdentityFile ~/.ssh/personal/id_ed25519_personal.pub
   ForwardAgent yes
-
+  
 Host sahil-office
   IdentityFile ~/.ssh/personal/id_ed25519_personal.pub
   HostName sahil-office.gmetri.io
