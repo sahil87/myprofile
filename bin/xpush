@@ -11,11 +11,12 @@ fi
 
 commit_dir () {
   cd $1
-  git status --porcelain > /dev/null
+  git status --porcelain
   #0 if no changes, 1 if changes to commit
   CHANGES_EXIST=$?
   if [ "$CHANGES_EXIST" -eq 0 ];
   then
+
     git add --all :/
     git commit -m "$2"
     git push
