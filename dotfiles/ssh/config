@@ -21,24 +21,24 @@ Host *.gmetri.io *.lan 10.0.*.*
   #Don't forward agent, use the local key installed instead of forwarding ssh-agent
   #However in the below cases, ForwardAgent is required to pass through bastion
 
+Host bastion.gmetri.io
+  ForwardAgent yes
+
 Host sahil-office
   IdentityFile ~/.ssh/personal/id_ed25519_personal.pub
   HostName sahil-office.gmetri.io
-  ForwardAgent yes
   ProxyCommand ssh -p 2222 -l gmetri bastion.gmetri.io nc %h %p
   
 Host dev-sahil
   IdentityFile ~/.ssh/personal/id_ed25519_personal.pub
   HostName dev-sahil.lan
   User gmetri
-  ForwardAgent yes
   ProxyCommand ssh -p 2222 -l gmetri bastion.gmetri.io nc %h %p
 
 Host dev-sahil-fwd
   IdentityFile ~/.ssh/personal/id_ed25519_personal.pub
   HostName dev-sahil.lan
   User gmetri
-  ForwardAgent yes
   ProxyCommand ssh -p 2222 -l gmetri bastion.gmetri.io nc %h %p
   LocalForward 127.0.0.1:3600 127.0.0.1:3600
   LocalForward 127.0.0.1:3610 127.0.0.1:3610
