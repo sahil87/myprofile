@@ -4,7 +4,6 @@ Host *
   ServerAliveInterval 30
   ServerAliveCountMax 60
   Compression yes
-  ForwardAgent yes
 
 Host github
   User git
@@ -22,14 +21,14 @@ Host *.gmetri.io
 
 Host sahil-office
   HostName sahil-office.gmetri.io
-  ForwardAgent yes
   ProxyCommand ssh -p 2222 -l gmetri bastion.gmetri.io nc %h %p
+  ForwardAgent yes
 
 Host dev-sahil
   HostName dev-sahil.lan
   User gmetri
-  ForwardAgent yes
   ProxyCommand ssh -p 2222 -l gmetri bastion.gmetri.io nc %h %p
+  ForwardAgent yes
 
 Host dev-sahil-fwd
   HostName dev-sahil.lan
