@@ -1,22 +1,30 @@
-#!/bin/bash
-#Adb over wifi
-#Had to remove android-tools-adb and install only adb (apt install adb) for below to work
-Connect Android phone and host machine to same WiFi network
-Connect Android phone to host machine using USB cable (to start with)
-Execute adb tcpip 5555 from a command prompt
-Find the IP address of your Android phone by going to Settings->WiFi->Settings (cog wheel in top right)
-Disconnect USB cable and run adb connect <ip>:5555
+# Collection of good shell commands
 
-adb tcpip 5555 #Connected to USB                                                                                                                                                                           [sahil@sahil-Lenovo-Flex-2-14 13:00:44]
+## Adb over wifi
+
+> Had to remove android-tools-adb and install only adb (apt install adb) for below to work
+
+* Connect Android phone and host machine to same WiFi network
+* Connect Android phone to host machine using USB cable (to start with)
+* Execute `adb tcpip 5555` from a command prompt
+* Find the IP address of your Android phone by going to Settings->WiFi->Settings (cog wheel in top right)
+* Disconnect USB cable and run adb connect <ip>:5555
+
+```bash
+adb tcpip 5555 #Connected to USB
 adb connect 10.0.0.41:5555  #After disconnecting USB
 adb reverse tcp:4050 tcp:4050; adb reverse tcp:4052 tcp:4052; adb reverse tcp:4053 tcp:4053;
 #To run adb command on specific device:
 adb -s 10.0.0.41:5555 shell ip -f inet addr show wlan0
+```
 
-#Tar:
+## Tar
+
+> c: compress, x: uncompress, z: gzip, j: bz2
+
+```bash
 tar -czfv whereToCompress.tar.gz whatToCompress/
 tar -xzfv whatToUncompress.tar.gz whereToUncompress/
-#c compress, x uncompress, z gzip, j bz2
 
 #Superhuman SCP
 # Running command from source host
@@ -25,6 +33,13 @@ sudo tar -cvpz -f- FolderToCopy | ssh gmetri@de.st.ip.addr 'cd ~/dest/folder/to/
 #OR Running command from destination host
 cd ~/destination/folder/to/copy/into/
 ssh gmetri@sou.rce.ip.addr 'cd /source/folder/to/copy/from && sudo tar -cvpz -f- FolderToCopy' | sudo tar --same-owner -xzv -f-
+```
+
+## SSH/SCP
+
+```bash
+#Piping command to a remote system
+cat .ssh/id_rsa.pub | ssh sheena@192.168.0.11 'cat >> .ssh/authorized_keys'
 
 #SCP through proxy
 scp  -o "ProxyCommand ssh -p 2222 gw.sportscafe.in nc %h %p" api-prod10.web.int.sg.aws.sportscafe.in:/home/sahil/api-log.tar.gz .
@@ -81,8 +96,11 @@ ssh -D 8123 -f -C -q -N vpnuser@vpnhost.com
 chromium \
 --proxy-server="socks5://localhost:8123" \
 --host-resolver-rules="MAP * ~NOTFOUND , EXCLUDE localhost"
+```
 
-#Open
+## Instrumentation
+
+```bash
 #To check ports bound in local system
 netstat -plntu
 lsof -i :port
@@ -121,10 +139,21 @@ ss -x -a #Display all UNIX Sockets
 iperf -s #to start service on one server
 iperf -c <ip addr/ hostname> #to ping and test speed from the client to the server
 
-#Use output of previous command in next command
-tar -czfv whereToCompress.tar.gz whatToCompress/
-
 sudo fuser -k 80/tcp #  just kill whatever pid is using port 80 tcp
+
+#Simple network listener
+#Server: to listen to the connection
+netcat -l -p [port]
+#Client:
+netcat [server-ip-address] [port]
+
+#Understand the route to an ip address:
+traceroute 8.8.8.8
+```
+
+## Screen
+
+```bash
 #zcat -> unzip and cat
 screen
 ^a^c -> to open a new tab
@@ -132,7 +161,11 @@ screen
 ^aShiftK
 ^a2 -> tab number
 ^aShift -> number
+```
 
+## Users
+
+```bash
 #To create a new user:
 #user add -G sudo -d /new/hom/dir -s /bin/bash
 #useradd -s /bin/bash [username]
@@ -147,10 +180,11 @@ echo "%admin ALL=(ALL) NOPASSWD:ALL" | sudo tee -a /etc/sudoers.d/admin > /dev/n
 #Adding github keys:
 cd ~; mkdir .ssh; touch .ssh/authorized_keys;
 curl https://github.com/sahil87.keys >> .ssh/authorized_keys
+```
 
-#Piping command to a remote system
-cat .ssh/id_rsa.pub | ssh sheena@192.168.0.11 'cat >> .ssh/authorized_keys'
+## Bash
 
+```bash
 #A cool command list: https://www.commandlinefu.com/commands/browse/sort-by-votes
 sudo !! #Run last command as root
 mount | column -t #Awesome formatting for the mount command
@@ -164,12 +198,4 @@ echo "You can simulate on-screen typing just like in the movies" | pv -qL 10
 ssh-copy-id username@hostname #Copy your SSH public key on a remote machine for passwordless login - the easy way
 fuser -k filename #Kills a process that is locking a file.
 cat /etc/issue #Display which distro is installed
-
-#Simple network listener
-#Server: to listen to the connection
-netcat -l -p [port]
-#Client:
-netcat [server-ip-address] [port]
-
-#Understand the route to an ip address:
-traceroute 8.8.8.8
+```

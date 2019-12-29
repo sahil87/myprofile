@@ -1,4 +1,4 @@
-#For starting a chromium session socks5 proxied to port $SSH_PORT
+#For starting a chromium session socks5 proxied to port 3128
 set -x
-/usr/lib/chromium-browser/chromium-browser --proxy-server="socks5://localhost:$SSH_PORT"
+/usr/lib/chromium-browser/chromium-browser --proxy-server="socks5://localhost:3128"
 # --host-resolver-rules=\"MAP \* ~NOTFOUND , EXCLUDE localhost\"

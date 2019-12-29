@@ -19,6 +19,8 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 PATH=$PATH:~/.rvm/bin:.:$PARENTDIR/bin
 export PATH
 
+#Automatically dir into folder names
+shopt -s autocd
 #BASH HISTORY
 export HISTSIZE=10000
 export HISTFILESIZE=100000

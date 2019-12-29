@@ -6,4 +6,4 @@
 # -N without executing any remote command (useful for just forwarding ports)
 # to a remote server $SSH_SERVER at port $SSH_PORT
 set -x
-ssh -D $SSH_PORT -f -C -q -N $SSH_SERVER -p $SSH_PORT
+ssh -D 3128 -f -C -q -N dev-sahil
