@@ -16,7 +16,7 @@ commit_dir () {
   CHANGES_EXIST=$?
   if [ "$CHANGES_EXIST" -eq 0 ];
   then
-
+    echo "Adding and committing files in $1"
     git add --all :/
     git commit -m "$2"
     git push
