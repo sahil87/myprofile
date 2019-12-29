@@ -3,9 +3,12 @@
 ## Create keys
 
 ```bash
-ssh-keygen -t ed25519 -f id_ed25519_work-vm         -C sahil@work-vm
-ssh-keygen -t ed25519 -f id_ed25519_home-laptop     -C sahil@home-laptop
-ssh-keygen -t ed25519 -f id_ed25519_home-dekstop    -C sahil@home-desktop
+#For ed25519
+ssh-keygen -t ed25519 -f id_ed25519_work            -C "$(whoami)@work-$(date -I)"
+ssh-keygen -t ed25519 -f id_ed25519_personal        -C "$(whoami)@personal-$(date -I)"
+
+#For rsa
+ssh-keygen -t rsa -b 4096 -f id_rsa                 -C "$(whoami)@work-$(date -I)"
 ```
 
 ## Copy public ssh
