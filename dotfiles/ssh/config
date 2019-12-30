@@ -5,12 +5,6 @@ Host *
   ServerAliveCountMax 60
   Compression yes
 
-Host github
-  User git
-
-Host git.gmetri.io
-  User git
-
 #https://puppet.com/blog/speed-up-ssh-by-reusing-connections/
 #This allows opening a ssh session on a terminal, and then every subsequent ssh connection reuses the same over
 #Using this to overcome the low ConnectTimout setting when VSCode attemps to connect a server
