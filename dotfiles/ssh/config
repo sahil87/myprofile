@@ -8,10 +8,10 @@ Host *
 #https://puppet.com/blog/speed-up-ssh-by-reusing-connections/
 #This allows opening a ssh session on a terminal, and then every subsequent ssh connection reuses the same over
 #Using this to overcome the low ConnectTimout setting when VSCode attemps to connect a server
-#Host *.gmetri.io *.lan 10.0.*.*
-#  ControlMaster auto
-#  ControlPath ~/.ssh/%r@%h-%p
-#  ControlPersist 600
+Host *.gmetri.io *.lan 10.0.*.*
+  ControlMaster auto
+  ControlPath ~/.ssh/%r@%h-%p
+  ControlPersist 600
 #Don't forward agent here, use the local key installed instead of forwarding ssh-agent
   
 #ForwardAgent isn't require to pass through bastion
@@ -20,7 +20,18 @@ Host bastion
   Port 2222
   User gmetri
   IdentityFile ~/.ssh/personal/id_ed25519_personal.pub
-  
+
+#https://www.digitalocean.com/community/tutorials/how-to-configure-custom-connection-options-for-your-ssh-client
+#https://starkandwayne.com/blog/setting-up-an-ssh-tunnel-with-ssh-config/
+Host socks-proxy
+  HostName bastion.gmetri.io
+  Port 2222
+  User gmetri
+  IdentityFile ~/.ssh/personal/id_ed25519_personal.pub
+  #Control Path required for custom proxy bin commands
+  ControlMaster auto
+  ControlPath ~/.ssh/socks-tunnel
+
 Host dev-sahil
   HostName dev-sahil.lan
   User gmetri

@@ -1,0 +1,4 @@
+#!/bin/bash
+## For Socks Proxy Tunnel
+set -x
+ssh -O exit socks-proxy
