@@ -23,13 +23,13 @@ Host dev-sahil
   IdentityFile ~/.ssh/personal/id_ed25519_personal.pub
   HostName dev-sahil.lan
   User gmetri
-  ProxyCommand ssh -p 2222 -l gmetri bastion.gmetri.io nc %h %p
+  ProxyCommand ssh -p 2222 -l gmetri bastion.gmetri.io -W %h:%p
 
 Host dev-sahil-fwd
   IdentityFile ~/.ssh/personal/id_ed25519_personal.pub
   HostName dev-sahil.lan
   User gmetri
-  ProxyCommand ssh -p 2222 -l gmetri bastion.gmetri.io nc %h %p
+  ProxyCommand ssh -p 2222 -l gmetri bastion.gmetri.io -W %h:%p
   LocalForward 127.0.0.1:3600 127.0.0.1:3600
   LocalForward 127.0.0.1:3610 127.0.0.1:3610
   LocalForward 127.0.0.1:3620 127.0.0.1:3620
