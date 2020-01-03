@@ -40,6 +40,7 @@ ssh gmetri@sou.rce.ip.addr 'cd /source/folder/to/copy/from && sudo tar -cvpz -f-
 ```bash
 #https://www.digitalocean.com/community/tutorials/how-to-configure-custom-connection-options-for-your-ssh-client
 #https://starkandwayne.com/blog/setting-up-an-ssh-tunnel-with-ssh-config/
+#https://www.redhat.com/sysadmin/ssh-proxy-bastion-proxyjump
 #Piping command to a remote system
 cat .ssh/id_rsa.pub | ssh sheena@192.168.0.11 'cat >> .ssh/authorized_keys'
 
