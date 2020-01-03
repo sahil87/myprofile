@@ -38,6 +38,7 @@ ssh gmetri@sou.rce.ip.addr 'cd /source/folder/to/copy/from && sudo tar -cvpz -f-
 ## SSH/SCP
 
 ```bash
+#https://www.digitalocean.com/community/tutorials/how-to-configure-custom-connection-options-for-your-ssh-client
 #Piping command to a remote system
 cat .ssh/id_rsa.pub | ssh sheena@192.168.0.11 'cat >> .ssh/authorized_keys'
 
