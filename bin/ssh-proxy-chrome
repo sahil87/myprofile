@@ -1,4 +1,5 @@
 #For starting a chromium session socks5 proxied to port 3128
 set -x
-/usr/lib/chromium-browser/chromium-browser --proxy-server="socks5://localhost:3128"
+/usr/lib/chromium-browser/chromium-browser --proxy-server="socks5://localhost:3128" --proxy-bypass-list="<-loopback>"
 # --host-resolver-rules=\"MAP \* ~NOTFOUND , EXCLUDE localhost\"
+# https://superuser.com/questions/1418848/how-to-avoid-google-chrome-proxy-bypass-for-localhost
