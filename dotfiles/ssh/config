@@ -26,11 +26,6 @@ Host dev-sahil dev-sahil-* socks-proxy
   IdentityFile ~/.ssh/personal/id_ed25519_personal.pub
   ProxyJump bastion
 
-#Setup dynamic forwards - Control Path required for custom proxy bin commands
-Host socks-proxy
-  ControlMaster auto
-  ControlPath ~/.ssh/socks-tunnel
-
 #Setup for local forwards
 Host dev-sahil-fwd
   LocalForward 127.0.0.1:3600 127.0.0.1:3600
@@ -46,3 +41,8 @@ Host dev-sahil-fwd
   LocalForward 127.0.0.1:3652 127.0.0.1:3652
   LocalForward 127.0.0.1:2812 127.0.0.1:2812
   LocalForward 127.0.0.1:9001 127.0.0.1:9001
+
+#Setup dynamic forwards - Control Path required for custom proxy bin commands
+Host socks-proxy
+  ControlMaster auto
+  ControlPath ~/.ssh/socks-tunnel
