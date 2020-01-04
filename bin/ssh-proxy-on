@@ -9,4 +9,4 @@
 
 ## For Socks Proxy Tunnel
 set -x
-ssh -fN -C -D 3128 socks-proxy
+ssh -fNC -D 3128 socks-proxy

@@ -3,46 +3,36 @@
 Host *
   ServerAliveInterval 30
   ServerAliveCountMax 60
-  Compression yes
+  #Compression yes #Commented to avoid double compression when forwarding tar archives through pipes
 
 #https://puppet.com/blog/speed-up-ssh-by-reusing-connections/
 #This allows opening a ssh session on a terminal, and then every subsequent ssh connection reuses the same over
 #Using this to overcome the low ConnectTimout setting when VSCode attemps to connect a server
-Host *.gmetri.io *.lan 10.0.*.*
+Host *.gmetri.io *.lan
   ControlMaster auto
   ControlPath ~/.ssh/%r@%h-%p
   ControlPersist 600
-#Don't forward agent here, use the local key installed instead of forwarding ssh-agent
-  
-#ForwardAgent isn't require to pass through bastion
+
+#Don't forward agent here, use the local key installed on the host instead of forwarding ssh-agent. Also ProxyJump does not need ForwardAgent.
 Host bastion
   HostName bastion.gmetri.io
   Port 2222
   User gmetri
   IdentityFile ~/.ssh/personal/id_ed25519_personal.pub
 
-Host socks-proxy
+Host dev-sahil dev-sahil-* socks-proxy
   HostName dev-sahil.lan
   User gmetri
   IdentityFile ~/.ssh/personal/id_ed25519_personal.pub
   ProxyJump bastion
-  #Control Path required for custom proxy bin commands
+
+#Setup dynamic forwards - Control Path required for custom proxy bin commands
+Host socks-proxy
   ControlMaster auto
   ControlPath ~/.ssh/socks-tunnel
 
-Host dev-sahil*
-  HostName dev-sahil.lan
-  User gmetri
-  IdentityFile ~/.ssh/personal/id_ed25519_personal.pub
-  ProxyJump bastion
-
-
-
+#Setup for local forwards
 Host dev-sahil-fwd
-  HostName dev-sahil.lan
-  User gmetri
-  IdentityFile ~/.ssh/personal/id_ed25519_personal.pub
-  ProxyJump bastion
   LocalForward 127.0.0.1:3600 127.0.0.1:3600
   LocalForward 127.0.0.1:3610 127.0.0.1:3610
   LocalForward 127.0.0.1:3620 127.0.0.1:3620
