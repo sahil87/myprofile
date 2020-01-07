@@ -1,4 +1,10 @@
 #Load personal ssh key into ssh-agent
-set -x
+#set -x
+
+if [ ! -S ~/.ssh/ssh_auth_sock ]; then
+  eval `ssh-agent`
+  ln -sf "$SSH_AUTH_SOCK" ~/.ssh/ssh_auth_sock
+fi
+export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock
 ssh-add ~/.ssh/personal/id_ed25519_personal
 echo "Current keys:"; ssh-add -l;
