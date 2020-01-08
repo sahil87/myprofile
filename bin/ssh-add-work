@@ -1,7 +1,0 @@
-#Load personal ssh key into ssh-agent
-#set -x
-
-ssh-agent-run
-
-ssh-add ~/.ssh/work/id_ed25519_work
-echo "Current keys:"; ssh-add -l;

@@ -12,6 +12,8 @@ alias 87='cd ~/code/sahil87/'
 export AWS_CONFIG_FILE=~/.aws/config
 export AWS_SHARED_CREDENTIALS_FILE=~/code/gmetrivr/gmbuild/kubernetes/config/aws_shared_config.ini
 source ~/code/gmetrivr/vmc/kubeconfig/env.sh
+alias ssh-add-personal="source $MYPROFILEDIR/bin/ssh-add-personal-script"
+alias ssh-add-work="source $MYPROFILEDIR/bin/ssh-add-work-script"
 
 #Lines in ~/.bashrc:
 #source /home/gmetri/code/gmetrivr/dec/shell/mybash_rc.sh #v1.1
