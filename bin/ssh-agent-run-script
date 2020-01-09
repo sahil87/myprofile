@@ -1,5 +1,6 @@
 #Should be run as "source thisscript" to be able set env vars
 #Need to add alias ssh-agent-run="source PATH_TO_THIS_SCRIPT" in bash/zsh profile
+
 # Ensure agent is running
 echo "Trying to use SSH_AGENT_PID from current env"
 ssh-add -l
