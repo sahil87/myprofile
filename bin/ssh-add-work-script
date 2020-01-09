@@ -1,7 +1,7 @@
 #Load personal ssh key into ssh-agent
 #set -x
 
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]:-$0}" )" && pwd )"
 . $DIR/ssh-agent-run-script
 
 ssh-add ~/.ssh/work/id_ed25519_work
