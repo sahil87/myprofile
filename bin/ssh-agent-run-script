@@ -4,7 +4,7 @@
 # Ensure agent is running
 echo "Trying to use SSH_AGENT_PID from current env"
 ssh-add -l
-if [ "$?" == 2 ]; then
+if [[ "$?" == 2 ]]; then
   # Could not open a connection to your authentication agent.
   echo "Unable to find SSH_AGENT_PID in env, trying to load stored info"
 
@@ -14,7 +14,7 @@ if [ "$?" == 2 ]; then
     #eval "$(<~/.ssh-agent)"
 
   ssh-add -l
-  if [ "$?" == 2 ]; then
+  if [[ "$?" == 2 ]]; then
     echo "Unable to load stored info or use stored SSH_AGENT_PID info, starting new agent"
     # Start agent and store agent connection info.
     (umask 066; ssh-agent > ~/.ssh-agent)
