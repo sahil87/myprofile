@@ -27,20 +27,20 @@ Host dev-sahil dev-sahil-* socks-proxy
   ProxyJump bastion
 
 #Setup for local forwards
-Host dev-sahil-fwd
-  LocalForward 127.0.0.1:3600 127.0.0.1:3600
-  LocalForward 127.0.0.1:3610 127.0.0.1:3610
-  LocalForward 127.0.0.1:3620 127.0.0.1:3620
-  LocalForward 127.0.0.1:3630 127.0.0.1:3630
-  LocalForward 127.0.0.1:3631 127.0.0.1:3631
-  LocalForward 127.0.0.1:3632 127.0.0.1:3632
-  LocalForward 127.0.0.1:3640 127.0.0.1:3640
-  LocalForward 127.0.0.1:3645 127.0.0.1:3645
-  LocalForward 127.0.0.1:3650 127.0.0.1:3650
-  LocalForward 127.0.0.1:3651 127.0.0.1:3651
-  LocalForward 127.0.0.1:3652 127.0.0.1:3652
-  LocalForward 127.0.0.1:2812 127.0.0.1:2812
-  LocalForward 127.0.0.1:9001 127.0.0.1:9001
+#Host dev-sahil-fwd
+#  LocalForward 127.0.0.1:3600 127.0.0.1:3600
+#  LocalForward 127.0.0.1:3610 127.0.0.1:3610
+#  LocalForward 127.0.0.1:3620 127.0.0.1:3620
+#  LocalForward 127.0.0.1:3630 127.0.0.1:3630
+#  LocalForward 127.0.0.1:3631 127.0.0.1:3631
+#  LocalForward 127.0.0.1:3632 127.0.0.1:3632
+#  LocalForward 127.0.0.1:3640 127.0.0.1:3640
+#  LocalForward 127.0.0.1:3645 127.0.0.1:3645
+#  LocalForward 127.0.0.1:3650 127.0.0.1:3650
+#  LocalForward 127.0.0.1:3651 127.0.0.1:3651
+#  LocalForward 127.0.0.1:3652 127.0.0.1:3652
+#  LocalForward 127.0.0.1:2812 127.0.0.1:2812
+#  LocalForward 127.0.0.1:9001 127.0.0.1:9001
 
 #Setup dynamic forwards - Control Path required for custom proxy bin commands
 Host socks-proxy
