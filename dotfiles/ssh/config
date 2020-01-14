@@ -1,14 +1,17 @@
 #In ~/.ssh/config
 #Send null packet to server to keep connection alive
+
 IdentityFile ~/.ssh/personal/id_ed25519_personal
 
 Host *
   ServerAliveInterval 30
   ServerAliveCountMax 60
   #Compression yes #Commented to avoid double compression when forwarding tar archives through pipes
+
 #https://puppet.com/blog/speed-up-ssh-by-reusing-connections/
 #This allows opening a ssh session on a terminal, and then every subsequent ssh connection reuses the same over
 #Using this to overcome the low ConnectTimout setting when VSCode attemps to connect a server
+Host *.gmetri.io *.lan dev-sahil
   ControlMaster auto
   ControlPath ~/.ssh/%r@%h-%p
   ControlPersist 600
