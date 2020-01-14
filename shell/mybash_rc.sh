@@ -117,7 +117,6 @@ alias d='docker'
 
 alias sc='cd ~/code/sportscafe/'
 alias 87='cd $DIR/..'
-alias aws-add-creds='source $DIR/../revealed/keys/aws_iam_keys/sportscafe/export.sh'
 
 # Autocomplete for 'g' as well
 complete -o default -o nospace -F _git g
