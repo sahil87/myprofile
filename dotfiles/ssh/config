@@ -6,11 +6,9 @@ Host *
   ServerAliveInterval 30
   ServerAliveCountMax 60
   #Compression yes #Commented to avoid double compression when forwarding tar archives through pipes
-
 #https://puppet.com/blog/speed-up-ssh-by-reusing-connections/
 #This allows opening a ssh session on a terminal, and then every subsequent ssh connection reuses the same over
 #Using this to overcome the low ConnectTimout setting when VSCode attemps to connect a server
-Host *.gmetri.io *.lan
   ControlMaster auto
   ControlPath ~/.ssh/%r@%h-%p
   ControlPersist 600
@@ -23,17 +21,13 @@ Host bastion
 
 #Setup dynamic forwards - Control Path required for custom proxy bin commands
 Host socks-proxy
-  HostName dev-sahil.lan
-  User gmetri
-  ProxyJump bastion
   ControlMaster auto
   ControlPath ~/.ssh/socks-tunnel
 
-Host dev-sahil
+Host dev-sahil socks-proxy
   HostName dev-sahil.lan
   User gmetri
   ProxyJump bastion
-  ForwardX11 yes
 
 #Setup for local forwards
 #Host dev-sahil-fwd
