@@ -1,5 +1,7 @@
 #In ~/.ssh/config
 #Send null packet to server to keep connection alive
+IdentityFile ~/.ssh/personal/id_ed25519_personal
+
 Host *
   ServerAliveInterval 30
   ServerAliveCountMax 60
@@ -18,16 +20,26 @@ Host bastion
   HostName bastion.gmetri.io
   Port 2222
   User gmetri
-  IdentityFile ~/.ssh/personal/id_ed25519_personal
 
-Host dev-sahil dev-sahil-* socks-proxy
+#Setup dynamic forwards - Control Path required for custom proxy bin commands
+Host socks-proxy
   HostName dev-sahil.lan
   User gmetri
-  IdentityFile ~/.ssh/personal/id_ed25519_personal
   ProxyJump bastion
+  ControlMaster auto
+  ControlPath ~/.ssh/socks-tunnel
+
+Host dev-sahil
+  HostName dev-sahil.lan
+  User gmetri
+  ProxyJump bastion
+  ForwardX11 yes
 
 #Setup for local forwards
 #Host dev-sahil-fwd
+#  HostName dev-sahil.lan
+#  User gmetri
+#  ProxyJump bastion
 #  LocalForward 127.0.0.1:3600 127.0.0.1:3600
 #  LocalForward 127.0.0.1:3610 127.0.0.1:3610
 #  LocalForward 127.0.0.1:3620 127.0.0.1:3620
@@ -42,7 +54,3 @@ Host dev-sahil dev-sahil-* socks-proxy
 #  LocalForward 127.0.0.1:2812 127.0.0.1:2812
 #  LocalForward 127.0.0.1:9001 127.0.0.1:9001
 
-#Setup dynamic forwards - Control Path required for custom proxy bin commands
-Host socks-proxy
-  ControlMaster auto
-  ControlPath ~/.ssh/socks-tunnel
