@@ -13,8 +13,10 @@ export DIR87=`realpath $MYPROFILEDIR/..`
 export CODEDIR=`realpath $MYPROFILEDIR/../..`
 export LIFETRACKERDIR=`realpath $DIR87/lifetracker`
 export BLOGDIR=`realpath $DIR87/bloghexo`
-
 source $LIFETRACKERDIR/shell/envvars.sh
+source ~/code/gmetrivr/vmc/kubeconfig/env.sh
+source ~/code/gmetrivr/dec/shell/mybash_vars.sh #v1.1
+
 
 #ANDROID SETTINGS
 GRADLE_USER_HOME=/mnt/files/gradle

@@ -1,5 +1,8 @@
 #In ~/.ssh/config
 #Send null packet to server to keep connection alive
+
+IdentityFile ~/.ssh/personal/id_ed25519_personal
+
 Host *
   ServerAliveInterval 30
   ServerAliveCountMax 60
@@ -8,7 +11,7 @@ Host *
 #https://puppet.com/blog/speed-up-ssh-by-reusing-connections/
 #This allows opening a ssh session on a terminal, and then every subsequent ssh connection reuses the same over
 #Using this to overcome the low ConnectTimout setting when VSCode attemps to connect a server
-Host *.gmetri.io *.lan
+Host *.gmetri.io *.lan dev-sahil
   ControlMaster auto
   ControlPath ~/.ssh/%r@%h-%p
   ControlPersist 600
@@ -18,31 +21,33 @@ Host bastion
   HostName bastion.gmetri.io
   Port 2222
   User gmetri
-  IdentityFile ~/.ssh/personal/id_ed25519_personal
-
-Host dev-sahil dev-sahil-* socks-proxy
-  HostName dev-sahil.lan
-  User gmetri
-  IdentityFile ~/.ssh/personal/id_ed25519_personal
-  ProxyJump bastion
-
-#Setup for local forwards
-Host dev-sahil-fwd
-  LocalForward 127.0.0.1:3600 127.0.0.1:3600
-  LocalForward 127.0.0.1:3610 127.0.0.1:3610
-  LocalForward 127.0.0.1:3620 127.0.0.1:3620
-  LocalForward 127.0.0.1:3630 127.0.0.1:3630
-  LocalForward 127.0.0.1:3631 127.0.0.1:3631
-  LocalForward 127.0.0.1:3632 127.0.0.1:3632
-  LocalForward 127.0.0.1:3640 127.0.0.1:3640
-  LocalForward 127.0.0.1:3645 127.0.0.1:3645
-  LocalForward 127.0.0.1:3650 127.0.0.1:3650
-  LocalForward 127.0.0.1:3651 127.0.0.1:3651
-  LocalForward 127.0.0.1:3652 127.0.0.1:3652
-  LocalForward 127.0.0.1:2812 127.0.0.1:2812
-  LocalForward 127.0.0.1:9001 127.0.0.1:9001
 
 #Setup dynamic forwards - Control Path required for custom proxy bin commands
 Host socks-proxy
   ControlMaster auto
   ControlPath ~/.ssh/socks-tunnel
+
+Host dev-sahil socks-proxy
+  HostName dev-sahil.lan
+  User gmetri
+  ProxyJump bastion
+
+#Setup for local forwards
+#Host dev-sahil-fwd
+#  HostName dev-sahil.lan
+#  User gmetri
+#  ProxyJump bastion
+#  LocalForward 127.0.0.1:3600 127.0.0.1:3600
+#  LocalForward 127.0.0.1:3610 127.0.0.1:3610
+#  LocalForward 127.0.0.1:3620 127.0.0.1:3620
+#  LocalForward 127.0.0.1:3630 127.0.0.1:3630
+#  LocalForward 127.0.0.1:3631 127.0.0.1:3631
+#  LocalForward 127.0.0.1:3632 127.0.0.1:3632
+#  LocalForward 127.0.0.1:3640 127.0.0.1:3640
+#  LocalForward 127.0.0.1:3645 127.0.0.1:3645
+#  LocalForward 127.0.0.1:3650 127.0.0.1:3650
+#  LocalForward 127.0.0.1:3651 127.0.0.1:3651
+#  LocalForward 127.0.0.1:3652 127.0.0.1:3652
+#  LocalForward 127.0.0.1:2812 127.0.0.1:2812
+#  LocalForward 127.0.0.1:9001 127.0.0.1:9001
+
