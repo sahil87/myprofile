@@ -1,5 +1,0 @@
-#Clean all existing ssh-agent keys
-echo "Current keys:"
-ssh-add -L
-echo "Deleting all keys"
-ssh-add -D
