@@ -6,7 +6,7 @@
 
 CURRENT_SCRIPT=${BASH_SOURCE[0]:-$0}
 CURRENT_DIR="$( cd $( dirname ${CURRENT_SCRIPT} ) && pwd )"
-. $CURRENT_DIR/ssh-agent-run-script
+. $CURRENT_DIR/ssh-agent-run-script.sh
 
 KEY_PATH=~/.ssh/work/id_ed25519_work
 
