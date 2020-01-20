@@ -11,43 +11,27 @@ Host *
 #https://puppet.com/blog/speed-up-ssh-by-reusing-connections/
 #This allows opening a ssh session on a terminal, and then every subsequent ssh connection reuses the same over
 #Using this to overcome the low ConnectTimout setting when VSCode attemps to connect a server
-Host *.gmetri.io *.lan dev-sahil
+
+Host *.gmetri.io *.lan dev-sahil dev-sahil-bastion
   ControlMaster auto
-  ControlPath ~/.ssh/%r@%h-%p
+  ControlPath ~/.ssh/%r@%h-%p_%n
   ControlPersist 600
 
-#Don't forward agent here, use the local key installed on the host instead of forwarding ssh-agent. Also ProxyJump does not need ForwardAgent.
 Host bastion
   HostName bastion.gmetri.io
   Port 2222
   User gmetri
 
-#Setup dynamic forwards - Control Path required for custom proxy bin commands
-Host socks-proxy
+Host socks-proxy socks-proxy-bastion
   ControlMaster auto
   ControlPath ~/.ssh/socks-tunnel
 
-Host dev-sahil socks-proxy
+#Don't forward agent here, use the local key installed on the host instead of forwarding ssh-agent. Also ProxyJump does not need ForwardAgent.
+#Setup dynamic forwards - fixed control path required for custom proxy bin commands
+
+Host dev-sahil socks-proxy dev-sahil-bastion socks-proxy-bastion
   HostName dev-sahil.lan
   User gmetri
+
+Host dev-sahil-bastion socks-proxy-bastion
   ProxyJump bastion
-
-#Setup for local forwards
-#Host dev-sahil-fwd
-#  HostName dev-sahil.lan
-#  User gmetri
-#  ProxyJump bastion
-#  LocalForward 127.0.0.1:3600 127.0.0.1:3600
-#  LocalForward 127.0.0.1:3610 127.0.0.1:3610
-#  LocalForward 127.0.0.1:3620 127.0.0.1:3620
-#  LocalForward 127.0.0.1:3630 127.0.0.1:3630
-#  LocalForward 127.0.0.1:3631 127.0.0.1:3631
-#  LocalForward 127.0.0.1:3632 127.0.0.1:3632
-#  LocalForward 127.0.0.1:3640 127.0.0.1:3640
-#  LocalForward 127.0.0.1:3645 127.0.0.1:3645
-#  LocalForward 127.0.0.1:3650 127.0.0.1:3650
-#  LocalForward 127.0.0.1:3651 127.0.0.1:3651
-#  LocalForward 127.0.0.1:3652 127.0.0.1:3652
-#  LocalForward 127.0.0.1:2812 127.0.0.1:2812
-#  LocalForward 127.0.0.1:9001 127.0.0.1:9001
-
