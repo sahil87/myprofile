@@ -16,7 +16,7 @@ export BLOGDIR=`realpath $DIR87/bloghexo`
 source $LIFETRACKERDIR/shell/envvars.sh
 source ~/code/gmetrivr/vmc/kubeconfig/env.sh
 source ~/code/gmetrivr/dec/shell/mybash_vars.sh #v1.1
-
+source $MYPROFILEDIR/bin/ssh-agent-run-script.sh
 
 #ANDROID SETTINGS
 GRADLE_USER_HOME=/mnt/files/gradle
@@ -92,8 +92,6 @@ promptinit
 #CHANGE GIT EDITOR
 export EDITOR="emacs -nw"
 export GIT_EDITOR=$EDITOR
-
-#. ~/.zclone/z.sh
 
 DISABLE_AUTO_TITLE="true"
 function precmd () {
