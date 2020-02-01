@@ -1,7 +1,7 @@
 #In ~/.ssh/config
 #Send null packet to server to keep connection alive
 
-IdentityFile ~/.ssh/personal/id_ed25519_personal
+IdentityFile ~/.ssh/id_ed25519
 
 Host *
   ServerAliveInterval 30
@@ -35,3 +35,4 @@ Host dev-sahil socks-proxy dev-sahil-bastion socks-proxy-bastion
 
 Host dev-sahil-bastion socks-proxy-bastion
   ProxyJump bastion
+
