@@ -41,8 +41,10 @@ ssh gmetri@sou.rce.ip.addr 'cd /source/folder/to/copy/from && sudo tar -cvpz -f-
 #https://www.digitalocean.com/community/tutorials/how-to-configure-custom-connection-options-for-your-ssh-client
 #https://starkandwayne.com/blog/setting-up-an-ssh-tunnel-with-ssh-config/
 #https://www.redhat.com/sysadmin/ssh-proxy-bastion-proxyjump
+#https://www.tecmint.com/access-linux-server-using-a-jump-host/
 #Piping command to a remote system
 cat .ssh/id_rsa.pub | ssh sheena@192.168.0.11 'cat >> .ssh/authorized_keys'
+ssh -J username@host1:port username@host2:port
 
 #SCP through proxy
 scp  -o "ProxyCommand ssh -p 2222 gw.sportscafe.in nc %h %p" api-prod10.web.int.sg.aws.sportscafe.in:/home/sahil/api-log.tar.gz .
