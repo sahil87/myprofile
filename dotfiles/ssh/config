@@ -12,7 +12,7 @@ Host *
 #This allows opening a ssh session on a terminal, and then every subsequent ssh connection reuses the same over
 #Using this to overcome the low ConnectTimout setting when VSCode attemps to connect a server
 
-Host *.gmetri.io *.lan dev-sahil dev-sahil-bastion
+Host *.gmetri.io *.lan dev-sahil dev-sahil-bastion dev-sahi-r2 dev-sahil-r2-bastion
   ControlMaster auto
   ControlPath ~/.ssh/%r@%h-%p_%n
   ControlPersist 600
@@ -29,10 +29,13 @@ Host socks-proxy socks-proxy-bastion
 #Don't forward agent here, use the local key installed on the host instead of forwarding ssh-agent. Also ProxyJump does not need ForwardAgent.
 #Setup dynamic forwards - fixed control path required for custom proxy bin commands
 
-Host dev-sahil socks-proxy dev-sahil-bastion socks-proxy-bastion
+Host dev-sahil dev-sahil-bastion
   HostName dev-sahil.lan
   User gmetri
 
-Host dev-sahil-bastion socks-proxy-bastion
-  ProxyJump bastion
+Host socks-proxy socks-proxy-bastion dev-sahil-r2 dev-sahil-r2-bastion
+  HostName dev-sahil-r2.lan
+  User gmetri
 
+Host socks-proxy-bastion dev-sahil-bastion dev-sahil-r2-bastion
+  ProxyJump bastion
