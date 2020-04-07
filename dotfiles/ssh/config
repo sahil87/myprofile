@@ -34,5 +34,6 @@ Host socks-proxy socks-proxy-bastion dev-sahil-r2 dev-sahil-r2-bastion
   User gmetri
   Port 2250
 
-Host socks-proxy-bastion dev-sahil-bastion dev-sahil-r2-bastion
+Host socks-proxy-bastion dev-sahil-r2-bastion
   ProxyJump bastion
+
