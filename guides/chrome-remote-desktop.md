@@ -1,4 +1,4 @@
-# Enabling Chrom Remote Desktop fro linux-mint
+# Enabling Chrome Remote Desktop for linux-mint
 
 The following steps work on Linux Mint 19
 
