@@ -7,11 +7,11 @@
 Steps updated from [here](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
 
 ```sh
-sudo apt-get -y install apt-transport-https ca-certificates curl software-properties-common
+sudo apt-get -y install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(grep UBUNTU_CODENAME /etc/os-release | awk -F '=' '{ print $2 }') stable"
 sudo apt update -y
-sudo apt install -y docker-ce
+sudo apt install -y docker-ce docker-ce-cli containerd.io
 ```
 
 ## Make sure the partition holding /var/lib/docker has enough free space
@@ -41,6 +41,6 @@ su - ${USER}
 Find latest version from https://github.com/docker/compose/releases
 
 ```sh
-sudo su -c 'curl -L https://github.com/docker/compose/releases/download/1.24.0/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose'
+sudo su -c 'curl -L https://github.com/docker/compose/releases/download/1.25.5/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose'
 sudo chmod +x /usr/local/bin/docker-compose
 ```
