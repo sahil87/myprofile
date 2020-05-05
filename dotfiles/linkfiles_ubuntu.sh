@@ -3,20 +3,19 @@ function linkfile() {
     local SOURCE=$1
     local DEST=$2
     local SUDO=$3
-    DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
     if (( $SUDO ))
     then
         [ -f $DEST -o -L $DEST ] && sudo rm $DEST
         [ -d $DEST ] && sudo rmdir $DEST
-        sudo ln -s $DIR/$SOURCE $DEST
+        sudo ln -s $SOURCE $DEST
     else
         [ -f $DEST -o -L $DEST ] && rm $DEST
         [ -d $DEST ] && rmdir $DEST
-        ln -s $DIR/$SOURCE $DEST
+        ln -s $SOURCE $DEST
     fi
 }
 
-CURRENT_DIR=.
+CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"/dotfiles
 linkfile $CURRENT_DIR/ssh/config                 ~/.ssh/config                           0
 linkfile $CURRENT_DIR/git/.gitconfig             ~/.gitconfig                            0
 linkfile $CURRENT_DIR/sysctl/40-max-user-watches.conf /etc/sysctl.d/40-max-user-watches.conf       1
