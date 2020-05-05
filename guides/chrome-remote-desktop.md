@@ -3,14 +3,26 @@
 The following steps work on Linux Mint 19
 
 * Go to https://remotedesktop.google.com/access
-* Run the following:
+
+### To use desktop AND remote desktop
+
+* You need to use a desktop manager that is different from your main desktop manager. For example, use xfce4 in remote desktop in case your main desktop manager is Cinnamon.
 
 ```bash
-#sudo apt install mint-meta-xfce xfce4-terminal xfce4-pulseaudio-plugin
-#echo 'exec /usr/bin/xfce4-session "xfce4-session --session=xfce4"' > ~/.chrome-remote-desktop-session
-echo 'exec /usr/sbin/lightdm-session "cinnamon-session-cinnamon2d"' > ~/.chrome-remote-desktop-session
+sudo apt install mint-meta-xfce xfce4-terminal xfce4-pulseaudio-plugin
+echo 'exec /usr/bin/xfce4-session "xfce4-session --session=xfce4"' > ~/.chrome-remote-desktop-session
 #Replace 1920x1200 with your max monitor resolution
-echo 'export CHROME_REMOTE_DESKTOP_DEFAULT_DESKTOP_SIZES="1920x1200"' | sudo tee -a /etc/environment > /dev/null
+echo 'export CHROME_REMOTE_DESKTOP_DEFAULT_DESKTOP_SIZES="1366x768"' | sudo tee -a /etc/environment > /dev/null
+```
+
+### To use ONLY remote desktop
+
+* If you aren't going to use the desktop directly, you can any desktop manager
+
+```bash
+echo 'exec /usr/sbin/lightdm-session "cinnamon-session-cinnamon2d"' > ~/.chrome-remote-desktop-session
+#Replace 1366x768 with your max monitor resolution
+echo 'export CHROME_REMOTE_DESKTOP_DEFAULT_DESKTOP_SIZES="1366x768"' | sudo tee -a /etc/environment > /dev/null
 ```
 
 ## Setup chrome-remote-desktop agent
