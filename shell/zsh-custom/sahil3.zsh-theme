@@ -60,7 +60,7 @@ local current_folder='%c'
 
 local username_output="%(!..$username_normal_color$username_command@$reset)"
 local hostname_output="$hostname_color$hostname_command$reset"
-local current_dir_output="$current_dir_color$current_dir$reset"
+#local current_dir_output="$current_dir_color$current_dir$reset"
 local current_folder_output="$current_dir_color$current_folder$reset"
 local jobs_bg="${red}fg: %j$reset"
 local last_command_output="%(?.%(!.$red_bold.$green_bold).$yellow_bold)"
@@ -87,6 +87,7 @@ GIT_PROMPT+='if [[ -n $out ]]; then printf %s "$white" " (" "$green$out$white)$r
 
 PROMPT='$current_folder_output%1(j. [$jobs_bg].)'
 PROMPT+="$GIT_PROMPT $last_command_output%(!.#.$) $reset"
-RPROMPT="$bracket_color$bracket_start$current_dir_output $username_output$hostname_output $cyan$TIME_PROMPT$bracket_color$bracket_end$reset"
+RPROMPT="$bracket_color$bracket_start$username_output$hostname_output $cyan$TIME_PROMPT$bracket_color$bracket_end$reset"
+#RPROMPT="$bracket_color$bracket_start$current_dir_output $username_output$hostname_output $cyan$TIME_PROMPT$bracket_color$bracket_end$reset"
 #RPROMPT="$bracket_color$bracket_start$cyan$TIME_PROMPT$bracket_color$bracket_end$reset"
 #export PROMPT_COMMAND='echo -ne "basename $(pwd)"'
