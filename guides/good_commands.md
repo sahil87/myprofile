@@ -151,6 +151,7 @@ sudo fuser -k 80/tcp #  just kill whatever pid is using port 80 tcp
 netcat -l -p [port]
 #Client:
 netcat [server-ip-address] [port]
+#Typing something here should display it on the server
 
 #Understand the route to an ip address:
 traceroute 8.8.8.8
