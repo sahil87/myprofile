@@ -15,7 +15,7 @@ export LIFETRACKERDIR=`realpath $DIR87/lifetracker`
 export BLOGDIR=`realpath $DIR87/bloghexo`
 source $LIFETRACKERDIR/shell/envvars.sh
 source ~/code/vmc/kubeconfig/env.sh
-source ~/code/gmetrivr/dec/shell/mybash_vars.sh #v1.1
+source ~/code/dec/shell/mybash_vars.sh #v1.1
 source $MYPROFILEDIR/bin/ssh-agent-run-script.sh
 
 #ANDROID SETTINGS
