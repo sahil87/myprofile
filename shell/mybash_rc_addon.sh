@@ -7,9 +7,10 @@ export MYPROFILEDIR=`realpath $DIR87/myprofile`
 export LIFETRACKERDIR=`realpath $DIR87/lifetracker`
 export BLOGDIR=`realpath $DIR87/bloghexo`
 export PATH=$PATH:$MYPROFILEDIR/bin
-alias c='cd ~/code/'
-alias vr='cd ~/code/gmetrivr/'
-alias 87='cd ~/code/sahil87/'
+# alias c='cd ~/code/'
+# alias vr='cd ~/code/gmetrivr/'
+# alias 87='cd ~/code/sahil87/'
+source $MYPROFILEDIR/shell/zsh-custom/plugins/myaliases/myaliases.plugin.zsh
 export AWS_CONFIG_FILE=~/.aws/config
 export AWS_SHARED_CREDENTIALS_FILE=~/code/gmetrivr/gmbuild/kubernetes/config/aws_shared_config.ini
 source ~/code/vmc/kubeconfig/env.sh
