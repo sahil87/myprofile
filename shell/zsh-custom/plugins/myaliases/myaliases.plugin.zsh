@@ -34,11 +34,15 @@ alias gk='gitk --all&'
 alias gx='gitx --all'
 
 alias c='cd ~/code/'
-alias vr='cd ~/code/gmetrivr/'
 alias 87='cd $DIR87'
-alias myprofile='cd $MYPROFILEDIR'
-alias lifetracker='cd $LIFETRACKERDIR'
+# alias myprofile='cd $MYPROFILEDIR'
+# alias lifetracker='cd $LIFETRACKERDIR'
 alias blog='cd $DIR87/bloghexo'
+alias vr='cd ~/code/gmetrivr/'
+alias xr='cd ~/code/gmetrixr/'
+alias teaxr='cd ~/code/teaxr/'
+alias brx='cd ~/code/brx/'
+alias sms='cd ~/code/sms/'
 
 #Needed here instead of a commadn as the env vars created need to be in the running shell
 #alias aws-add-sc='source $MYPROFILEDIR/revealed/keys/aws_iam_keys/sportscafe/export.sh'
@@ -51,6 +55,7 @@ alias install='sudo apt-get install'
 alias remove='sudo apt-get remove'
 alias update='sudo apt-get update'
 alias upgrade='sudo apt-get update && sudo apt-get upgrade'
+alias b="byobu"
 alias d="docker"
 alias z="sudo mount -t cifs -o username=gmetri,password=gmetri,uid=$UID,gid=$GID //dropbox.lan/share /home/sahil/zDrive"
 alias zu="sudo umount /home/sahil/zDrive"
