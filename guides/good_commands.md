@@ -53,7 +53,7 @@ scp  -o "ProxyCommand ssh -p 2222 gw-prod01.gmetri.com nc %h %p" ./html.tar.gz t
 
 #http://blog.trackets.com/2014/05/17/ssh-tunnel-local-and-remote-port-forwarding-explained-with-examples.html
 #Reverse ssh tunnel to use a port remotely (4000) to forward all request to localhost:4280
-#So you can run server locally and server it via a public server
+#So you can run server locally and serve it via a public server
 ssh -R 4000:localhost:4280 react-stage01.web.int.sg.aws.sportscafe.in
 ssh -nNT react-stage01.web.int.sg.aws.sportscafe.in -R 4000:localhost:4280 #To create only tunnel not an interactive shell
 #In order to bind port to 0.0.0.0 and not 127.0.0.1 need to add "GatewayPorts yes" to /etc/ssh/sshd_config

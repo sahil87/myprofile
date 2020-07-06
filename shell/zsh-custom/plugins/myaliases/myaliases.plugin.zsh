@@ -16,7 +16,8 @@ alias sl="ls"
 alias l="ls"
 
 # Make these commands ask before clobbering a file. Use -f to override.
-alias rm="nocorrect rm -i"
+#alias rm="nocorrect rm -i" #nocorrect doesn't work in bash
+alias rm="rm -i"
 alias cp="cp -i"
 alias mv="mv -i"
 
