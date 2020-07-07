@@ -10,7 +10,7 @@ export PATH=$PATH:$MYPROFILEDIR/bin
 # alias c='cd ~/code/'
 # alias vr='cd ~/code/gmetrivr/'
 # alias 87='cd ~/code/sahil87/'
-source $MYPROFILEDIR/shell/zsh-custom/plugins/myaliases/myaliases.plugin.zsh
+source $MYPROFILEDIR/shell/custom-bash/myaliases.sh
 export AWS_CONFIG_FILE=~/.aws/config
 export AWS_SHARED_CREDENTIALS_FILE=~/code/gmetrivr/gmbuild/kubernetes/config/aws_shared_config.ini
 source ~/code/vmc/kubeconfig/env.sh

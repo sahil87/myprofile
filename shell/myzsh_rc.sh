@@ -52,7 +52,7 @@ path=($path . ~/.bin ~/.rvm/bin ~/.local/bin /snap/bin $CODEDIR/gmetrivr/dec/bin
 plugins=(myfunctions git docker kubectl themes ssh-agent man history-substring-search myaliases kubectl helm tmuxinator)
 ZSH_THEME="sahil3"
 export ZSH=~/.oh-my-zsh
-export ZSH_CUSTOM=$CURRENTDIR/zsh-custom
+export ZSH_CUSTOM=$CURRENTDIR/custom-zsh
 export COMPLETION_WAITING_DOTS="true"
 source $ZSH/oh-my-zsh.sh
 
