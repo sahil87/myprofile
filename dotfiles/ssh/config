@@ -25,6 +25,6 @@ Host socks-proxy
 #Setup dynamic forwards - fixed control path required for custom proxy bin commands
 
 Host socks-proxy dev-sahil
-  HostName dev-sahil.gmetri.io
+  HostName spectra.gmetri.io
   User gmetri
   Port 2311
