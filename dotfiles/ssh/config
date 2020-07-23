@@ -24,7 +24,17 @@ Host socks-proxy
 #Don't forward agent here, use the local key installed on the host instead of forwarding ssh-agent. Also ProxyJump does not need ForwardAgent.
 #Setup dynamic forwards - fixed control path required for custom proxy bin commands
 
+#To use Tata
 Host socks-proxy dev-sahil
-  HostName spectra.gmetri.io
+  HostName tata.gmetri.io
   User gmetri
   Port 2311
+
+#To use Spectra
+#Host socks-proxy dev-sahil
+#  HostName 10.0.3.11
+#  ProxyJump bastion
+#Host bastion
+#  HostName spectra.gmetri.io
+#  User gmetri
+#  Port 2311
