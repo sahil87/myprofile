@@ -16,7 +16,7 @@ function linkfile() {
 }
 
 CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"/dotfiles
-linkfile $CURRENT_DIR/ssh/config                 ~/.ssh/config                           0
+linkfile $CURRENT_DIR/ssh/ssh.config             ~/.ssh/config                           0
 linkfile $CURRENT_DIR/git/.gitconfig             ~/.gitconfig                            0
 linkfile $CURRENT_DIR/sysctl/40-max-user-watches.conf /etc/sysctl.d/40-max-user-watches.conf       1
 linkfile $CURRENT_DIR/imwheel/imwheelrc          ~/.imwheelrc                            0
