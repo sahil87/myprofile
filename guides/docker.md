@@ -14,11 +14,9 @@ sudo apt update -y
 sudo apt install -y docker-ce docker-ce-cli containerd.io
 ```
 
-## Make sure the partition holding /var/lib/docker has enough free space
+## Make sure the partition holding /var/lib/docker has enough free space and has suid permissions
 
-In the following steps:
-
-1. Replace `/mnt/file/docker` with the mount point of the partition the contains enough free space
+1. In the following steps replace `/mnt/file/docker` with the mount point of the partition the contains enough free space
 
 ```sh
 sudo service docker stop
@@ -26,6 +24,8 @@ sudo rm -rf /var/lib/docker; sudo umount /var/lib/docker/aufs
 sudo ln -s /mnt/files/docker /var/lib/docker
 sudo service docker start
 ```
+
+2. Ensure that the fileysytem on which /var/lib/docker resides has the [suid option enabled](https://askubuntu.com/questions/625540/suddenly-cant-run-sudo) - via fstab. 
 
 ## Add yourself to the docker group
 
