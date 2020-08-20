@@ -49,7 +49,7 @@ typeset -U path
 path=($path . ~/.bin ~/.rvm/bin ~/.local/bin /snap/bin $CODEDIR/gmetrivr/dec/bin $MYPROFILEDIR/bin ~/.yarn/bin /usr/local/go/bin ~/code/bin ~/code/go/bin ~/code/bin/concourse/bin ~/Android/Sdk/platform-tools ~/Android/Sdk/tools /mnt/files/storage/groovy/bin $GRADLE_USER_HOME/bin)
 
 #oh-my-zsh SETTINGS:
-plugins=(myfunctions git docker kubectl themes ssh-agent man history-substring-search myaliases kubectl helm tmuxinator)
+plugins=(myfunctions git docker kubectl themes ssh-agent man history-substring-search myaliases kubectl helm tmuxinator terraform)
 ZSH_THEME="sahil3"
 export ZSH=~/.oh-my-zsh
 export ZSH_CUSTOM=$CURRENTDIR/custom-zsh
