@@ -12,7 +12,6 @@ export PATH=$PATH:$MYPROFILEDIR/bin
 # alias 87='cd ~/code/sahil87/'
 source $MYPROFILEDIR/shell/custom-bash/myaliases.sh
 export AWS_CONFIG_FILE=~/.aws/config
-export AWS_SHARED_CREDENTIALS_FILE=~/code/gmetrivr/gmbuild/kubernetes/config/aws_shared_config.ini
 source ~/code/vmc/kubeconfig/env.sh
 alias ssh-add-personal="source $MYPROFILEDIR/bin/ssh-add-personal-script"
 alias ssh-add-work="source $MYPROFILEDIR/bin/ssh-add-work-script"
