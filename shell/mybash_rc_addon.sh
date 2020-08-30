@@ -10,8 +10,8 @@ export PATH=$PATH:$MYPROFILEDIR/bin
 # alias c='cd ~/code/'
 # alias vr='cd ~/code/gmetrivr/'
 # alias 87='cd ~/code/sahil87/'
+#export AWS_CONFIG_FILE=~/.aws/config #this is the default
 source $MYPROFILEDIR/shell/custom-bash/myaliases.sh
-export AWS_CONFIG_FILE=~/.aws/config
 source ~/code/vmc/kubeconfig/env.sh
 alias ssh-add-personal="source $MYPROFILEDIR/bin/ssh-add-personal-script"
 alias ssh-add-work="source $MYPROFILEDIR/bin/ssh-add-work-script"
