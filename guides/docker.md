@@ -4,7 +4,7 @@
 
 * Might have to run `pip uninstall urllib3; pip install urllib3==1.24.2` to get a compatible version of urllib3 first.
 
-Steps updated from [here](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
+Steps updated from [here](`https://docs.docker.com/install/linux/docker-ce/ubuntu/`)
 
 ```sh
 sudo apt-get -y install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
@@ -41,6 +41,6 @@ su - ${USER}
 Find latest version from https://github.com/docker/compose/releases
 
 ```sh
-sudo su -c 'curl -L https://github.com/docker/compose/releases/download/1.26.2/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose'
+sudo su -c 'curl -L https://github.com/docker/compose/releases/download/1.27.4/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose'
 sudo chmod +x /usr/local/bin/docker-compose
 ```
