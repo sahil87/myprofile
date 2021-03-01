@@ -1,0 +1,12 @@
+#!/bin/bash
+# -D binding local port $SSH_PORT 
+# -f in background mode
+# -C compressing all requests
+# -q in quite mode
+# -N without executing any remote command (useful for just forwarding ports)
+# -S to not use ssh multiplexing
+# to a remote server $SSH_SERVER at port $SSH_PORT
+
+## For Socks Proxy Tunnel
+set -x
+ssh -fNC -D 3129 t-socks-proxy
