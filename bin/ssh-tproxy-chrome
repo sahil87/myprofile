@@ -5,4 +5,9 @@ set -x
 # --host-resolver-rules=\"MAP \* ~NOTFOUND , EXCLUDE localhost\"
 # https://superuser.com/questions/1418848/how-to-avoid-google-chrome-proxy-bypass-for-localhost
 
-google-chrome --user-data-dir=$HOME/.config/google-chrome-tproxy --proxy-server="socks5://localhost:3129" --proxy-bypass-list="<-loopback>"
+google-chrome \
+    --user-data-dir=$HOME/.config/google-chrome-tproxy \
+    --proxy-server="socks5://localhost:3129" \
+    --proxy-bypass-list="<-loopback>" \
+    --remote-debugging-port=9222
+
