@@ -10,4 +10,3 @@ google-chrome \
     --proxy-server="socks5://localhost:3129" \
     --proxy-bypass-list="<-loopback>" \
     --remote-debugging-port=9222
-
