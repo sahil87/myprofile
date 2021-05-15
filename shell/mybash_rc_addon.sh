@@ -12,7 +12,7 @@ export PATH=$PATH:$MYPROFILEDIR/bin
 # alias 87='cd ~/code/sahil87/'
 #export AWS_CONFIG_FILE=~/.aws/config #this is the default
 source $MYPROFILEDIR/shell/custom-bash/myaliases.sh
-source ~/code/dec/kubeconfig/env.sh
+source ~/code/kube/cc/kubeconfig/env.sh
 alias ssh-add-personal="source $MYPROFILEDIR/bin/ssh-add-personal-script"
 alias ssh-add-work="source $MYPROFILEDIR/bin/ssh-add-work-script"
 
