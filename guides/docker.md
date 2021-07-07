@@ -26,6 +26,7 @@ sudo service docker start
 ```
 
 2. Ensure that the fileysytem on which /var/lib/docker resides has the [suid option enabled](https://askubuntu.com/questions/625540/suddenly-cant-run-sudo) - via fstab. 
+Eg: `/dev/disk/by-uuid/620ae5bf-4e08-46b6-960a-a82755c41089 /mnt/files auto suid,nodev,nofail 0 0`
 
 ## Add yourself to the docker group
 
