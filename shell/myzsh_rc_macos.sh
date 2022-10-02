@@ -1,3 +1,3 @@
 #!/bin/zsh
 
-path=($path ß$CODEDIR/gmetrivr/dec/bin-macos)
+path=($path ß$CODEDIR/gmetrivr/dec/macos-bin)
