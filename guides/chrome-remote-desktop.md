@@ -37,3 +37,32 @@ echo 'export CHROME_REMOTE_DESKTOP_DEFAULT_DESKTOP_SIZES="1366x768"' | sudo tee 
 * Apply the default panels setup
 * "Applications" > "Settings" > "Appearance", select Style "Mint-Y" and Icons "Mint-Y"
 * "Applications" > "Settings" > "Preferred Applications", select tab Utilities, Terminal Emulator "Xfce Terminal"
+
+# New setup on Ubuntu Server (2022)
+
+> https://ubuntu.com/blog/launch-ubuntu-22-04-desktop-on-google-cloud 
+
+```bash
+get https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb
+sudo apt-get install --assume-yes ./chrome-remote-desktop_current_amd64.deb
+sudo apt install slim #or lightdm
+sudo apt-get install xfce4-session xfce4-goodies xfce4-panel synaptic
+sudo reboot
+# After this authorize using the next step in Chrome Remote Desktop app locally (copy paste the command remotely to set the PIN)
+
+# # sudo dpkg -i ./chrome-remote-desktop_current_amd64.deb
+# # #install dependies:
+# # sudo apt -f install
+# # sudo dpkg -i ./chrome-remote-desktop_current_amd64.deb
+# #install login manager & desktop selector //https://phoenixnap.com/kb/how-to-install-a-gui-on-ubuntu
+# sudo apt install slim #or lightdm
+# #install desktop
+# sudo apt-get install xfce4-session xfce4-goodies xfce4-panel
+# #OR sudo apt install ubuntu-mate-desktop
+# #OR sudo apt install lxde
+
+# # echo "startxfce4" >> ~/.chrome-remote-desktop-session
+# # echo "export CHROME_REMOTE_DESKTOP_DEFAULT_DESKTOP_SIZES=1024×768" >> ~/.profile
+
+# # sudo /etc/init.d/chrome-remote-desktop start #stop
+```
