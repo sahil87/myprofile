@@ -27,7 +27,7 @@ alias l="ls"
 alias rm="rm -i"
 alias cp="cp -i"
 alias mv="mv -i"
-alias pcp="rsync --progress -ah"`
+alias pcp="rsync --progress -ah"
 
 alias gs='git status '
 alias ga='git add '
