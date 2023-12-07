@@ -2,3 +2,5 @@
     name = Sahil Ahuja
     email = sahilahuja@gmail.com
     username = sahil87
+[pull]
+	rebase = false
