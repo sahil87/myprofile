@@ -11,7 +11,7 @@ export PATH=$PATH:$MYPROFILEDIR/bin
 # alias vr='cd ~/code/gmetrivr/'
 # alias 87='cd ~/code/sahil87/'
 #export AWS_CONFIG_FILE=~/.aws/config #this is the default
-source $MYPROFILEDIR/shell/custom-bash/myaliases.sh
+#source $MYPROFILEDIR/shell/custom-bash/myaliases.sh
 
 source ~/code/kube/cc/kubeconfig/env.sh
 source $LIFETRACKERDIR/shell/envvars.sh
