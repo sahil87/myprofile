@@ -3,7 +3,8 @@
     email = sahilahuja@gmail.com
     username = sahil87
 [pull]
-    default = current
+    # default = current - commenting this because we want git to ask about the tracking branch upstream
+    rebase = true
 [diff]
     mnemonicprefix = true
 [branch]
