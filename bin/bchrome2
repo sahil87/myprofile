@@ -1,0 +1,4 @@
+#!/bin/bash
+set -x
+google-chrome \
+    --user-data-dir=/mnt/homeLM/sahil/.config/google-chrome-b
