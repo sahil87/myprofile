@@ -20,7 +20,7 @@ PROJECT_FOLDER=`git rev-parse --show-toplevel`/dotfiles
 
 #linkfile $PROJECT_FOLDER/ssh/ssh.config             ~/.ssh/config                           0
 #linkfile $PROJECT_FOLDER/git/.gitconfig             ~/.gitconfig                            0
-linkfile $PROJECT_FOLDER/sysctl/40-max-user-watches.conf /etc/sysctl.d/40-max-user-watches.conf       1
+#linkfile $PROJECT_FOLDER/sysctl/40-max-user-watches.conf /etc/sysctl.d/40-max-user-watches.conf       1
 #linkfile $PROJECT_FOLDER/imwheel/imwheelrc          ~/.imwheelrc                            0
 #linkfile $PROJECT_FOLDER/imwheel/Imwheels.desktop   ~/.config/autostart/Imsheels.desktop    0
 #linkfile custom-apps-menu/applications-override.json  ~/.local/share/cinnamon/applets/custom-apps-menu@sahil87/applications-override.json                        0
