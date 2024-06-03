@@ -135,6 +135,7 @@ sar
 nc -zv host.example.com 20-30 #netcat port scanning
 dig
 nslookup 172.18.0.2 #Reverse lookup
+w #List open user sessions. Can also be used to check ssh connections
 
 #https://www.cyberciti.biz/tips/linux-investigate-sockets-network-connections.html
 ss -t -a #Display all TCP Sockets
