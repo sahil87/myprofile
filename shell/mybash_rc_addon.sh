@@ -1,6 +1,6 @@
 #!/bin/bash
 #Used only as an addon to the dec mybashrc (in case mybash_rc.sh isn't used)
-export EDITOR=emacs
+export EDITOR=nano
 CURRENTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 export DIR87=`realpath $CURRENTDIR/../..`
 export MYPROFILEDIR=`realpath $DIR87/myprofile`
