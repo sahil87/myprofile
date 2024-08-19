@@ -22,5 +22,6 @@ source $LIFETRACKERDIR/shell/envvars.sh
 #source /home/gmetri/code/dec/shell/mybash_vars.sh #v1.1
 #source /home/gmetri/code/sahil87/myprofile/shell/mybash_rc_addon.sh
 
-#https://github.com/microsoft/vscode/issues/207033#issuecomment-2267453974
+#https://github.com/microsoft/vscode/issues/207033#issuecomment-2267453974\
+#Makes font in vscode in wayland sharper
 export ELECTRON_OZONE_PLATFORM_HINT=auto
