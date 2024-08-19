@@ -1,7 +1,7 @@
 #!/bin/bash
 set -x
-# google-chrome \
-#     --user-data-dir=$HOME/.config/google-chrome-b
+google-chrome \
+    --user-data-dir=$HOME/.config/google-chrome-b
 
 # gio launch /var/lib/flatpak/app/com.google.Chrome/current/active/export/share/applications/com.google.Chrome.desktop \
 #     --user-data-dir=$HOME/.config/google-chrome-b
@@ -14,5 +14,5 @@ set -x
 
 #Flatpak isolation: https://ivanalejandro0.com/blog/flatpak-custom-data-folder/
 
-/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=/app/bin/chrome com.google.Chrome \
-    --user-data-dir=/home/sahil/.b-flatpack-home/.var/app/com.google.Chrome/config/google-chrome/
+# /usr/bin/flatpak run --branch=stable --arch=x86_64 --command=/app/bin/chrome com.google.Chrome \
+#     --user-data-dir=/home/sahil/.b-flatpack-home/.var/app/com.google.Chrome/config/google-chrome/
