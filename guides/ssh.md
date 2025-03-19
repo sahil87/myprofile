@@ -15,4 +15,5 @@ ssh-keygen -t rsa -b 4096 -f id_rsa                 -C "$(whoami)@work-$(date -I
 
 ```bash
 ssh-copy-id  [-i ~/.ssh/id_ed25519_work-vm.pub] user@remote-server
+ssh-copy-id -i ./id_ed25519_work.pub user@remote-server
 ```
