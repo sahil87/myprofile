@@ -12,7 +12,7 @@ export BLOGDIR=`realpath $DIR87/blog2020`
 source $LIFETRACKERDIR/shell/envvars.sh
 
 #First match wins. So the path that comes earlier has higher precedence
-path=($path $MYPROFILEDIR/bin-macos $MYPROFILEDIR/bin)
+path=($path $MYPROFILEDIR/bin-macos $MYPROFILEDIR/bin $CODEDIR/bin .)
 
 export ZSH_CUSTOM=$CURRENTDIR/custom-zsh
 plugins=(myfunctions git docker kubectl themes ssh-agent man history-substring-search myaliases)
