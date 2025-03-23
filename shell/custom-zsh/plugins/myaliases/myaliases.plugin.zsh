@@ -58,6 +58,7 @@ alias update='sudo apt-get update'
 alias upgrade='sudo apt-get update && sudo apt-get upgrade'
 alias b="byobu"
 alias d="docker"
+alias dk='docker rm -f `docker ps -aq`'
 alias z="sudo mount -t cifs -o username=gmetri,password=gmetri,uid=$UID,gid=$GID //dropbox.lan/share /home/sahil/zDrive"
 alias zu="sudo umount /home/sahil/zDrive"
 
