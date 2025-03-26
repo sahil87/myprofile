@@ -55,3 +55,4 @@ alias d='docker'
 
 alias sc='cd ~/code/sportscafe/'
 alias 87='cd $DIR/..'
+alias ws='~/code/bin/Windsurf/bin/windsurf'
