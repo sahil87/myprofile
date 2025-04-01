@@ -1,0 +1,3 @@
+/Applications/Vivaldi.app/Contents/MacOS/Vivaldi  \
+    --user-data-dir=/Users/sahil/.config/vivaldi-proxy \
+    --proxy-server=socks5://localhost:3129 '--proxy-bypass-list=<-loopback>'
