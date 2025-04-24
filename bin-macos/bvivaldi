@@ -1,0 +1,3 @@
+#!/bin/bash
+/Applications/Vivaldi.app/Contents/MacOS/Vivaldi \
+    --user-data-dir=/Users/sahil/.config/vivaldi-b
