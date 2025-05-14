@@ -19,3 +19,8 @@ plugins=(myfunctions git docker kubectl themes ssh-agent man history-substring-s
 
 ZSH_THEME="sahil3"
 source $ZSH/oh-my-zsh.sh
+
+## For nvm
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
