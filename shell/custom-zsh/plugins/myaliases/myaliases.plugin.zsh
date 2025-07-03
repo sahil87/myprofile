@@ -22,11 +22,8 @@ alias cp="cp -i"
 alias mv="mv -i"
 
 #Git aliases. Rest defined in oh-my-zsh's git plugin
-alias gs='git status'
-alias gcm='git commit -m'
-alias gfu='git fetch upstream'
-alias gru='git rebase upstream/master'
-alias gup='p; gfu; gru; gp;'
+# alias gs='git status' # Use gst
+# alias gcm='git commit -m' # Use gsam
 alias gl='gloga'
 alias gll='glola'
 alias p='git pull'
