@@ -3,6 +3,17 @@ set -e
 
 WORK_DIR=$(pwd)
 
+# Get GIT_ID from first argument or prompt user
+if [ -z "$1" ]; then
+  read -p "Enter your GitHub username (GIT_ID): " GIT_ID
+  if [ -z "$GIT_ID" ]; then
+    echo "Error: GIT_ID is required"
+    exit 1
+  fi
+else
+  GIT_ID="$1"
+fi
+
 # Array of repositories to clone and configure
 REPOS=(
   "wd-db"
@@ -29,7 +40,7 @@ for repo in "${REPOS[@]}"; do
   # Only rename origin to upstream if upstream doesn't already exist
   if ! git remote | grep -q "^upstream$"; then
     git remote rename origin upstream
-    git remote add origin "git@github.com:sahil87/$repo"
+    git remote add origin "git@github.com:$GIT_ID/$repo"
     git fetch origin
     git branch --set-upstream-to=origin/main main
   else
