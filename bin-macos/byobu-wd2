@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+set -e
+set -x
+SESSION=wd2
+BASE_DIR=~/code/weaver/wd2
+
+cd "$BASE_DIR" || exit 1
+
+# Create session detached if it doesn't exist
+byobu-tmux has-session -t "$SESSION" 2>/dev/null || {
+  byobu-tmux new-session -d -s "$SESSION" -n db
+  byobu-tmux send-keys  -t "$SESSION":0 "cd $BASE_DIR/wd-db && sd 'bash --init-file .bashinit'" C-m
+
+  byobu-tmux new-window -t "$SESSION":1 -n api
+  byobu-tmux send-keys  -t "$SESSION":1 "cd $BASE_DIR/wd-api && sd 'bash --init-file .bashinit'" C-m
+
+  byobu-tmux new-window -t "$SESSION":2 -n auth
+  byobu-tmux send-keys  -t "$SESSION":2 "cd $BASE_DIR/wd-api-auth && sd 'bash --init-file .bashinit'" C-m
+
+  byobu-tmux new-window -t "$SESSION":3 -n ai
+  byobu-tmux send-keys  -t "$SESSION":3 "cd $BASE_DIR/wd-api-ai && sd 'bash --init-file .bashinit'" C-m
+
+  byobu-tmux new-window -t "$SESSION":4 -n portal2
+  byobu-tmux send-keys  -t "$SESSION":4 "cd $BASE_DIR/wd-portal2 && sd 'bash --init-file .bashinit'" C-m
+
+  byobu-tmux new-window -t "$SESSION":5 -n web
+  byobu-tmux send-keys  -t "$SESSION":5 "cd $BASE_DIR/wd-web && sd 'bash --init-file .bashinit'" C-m
+
+#   byobu-tmux new-window -t "$SESSION":3 -n logs
+#   byobu-tmux split-window -v -t "$SESSION":3
+#   byobu-tmux send-keys  -t "$SESSION":3.1 'cd ~/code/project && tail -f logs/app.log' C-m
+#   byobu-tmux send-keys  -t "$SESSION":3.2 'htop' C-m
+
+    byobu-tmux set-option -g mouse on
+    byobu-tmux set-option -g mouse on
+}
+
+# Attach via Byobu
+exec byobu-tmux attach -t "$SESSION"

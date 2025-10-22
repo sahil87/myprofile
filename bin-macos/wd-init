@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -e
+
+git clone git@github.com:wvrdz/wd-db
+git clone git@github.com:wvrdz/wd-api
+git clone git@github.com:wvrdz/wd-api-auth
+git clone git@github.com:wvrdz/wd-api-ai
+git clone git@github.com:wvrdz/wd-portal2
+git clone git@github.com:wvrdz/wd-web
