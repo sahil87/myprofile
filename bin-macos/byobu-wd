@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
 set -e
 set -x
-SESSION=wd2
-BASE_DIR=~/code/weaver/wd2
+
+# Eg: byoby-wd ~/code/weaver/wd2
+BASE_DIR="${1:-$(pwd)}"
+SESSION=$(basename "$BASE_DIR")
 
 cd "$BASE_DIR" || exit 1
 

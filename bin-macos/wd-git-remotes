@@ -33,3 +33,18 @@ for repo in "${REPOS[@]}"; do
   fi
 done
 
+# Configure git remotes for each repository
+for repo in "${REPOS[@]}"; do
+  cd "$WORK_DIR/$repo"
+
+  # Only rename origin to upstream if upstream doesn't already exist
+  if ! git remote | grep -q "^upstream$"; then
+    git remote rename origin upstream
+    git remote add origin "git@github.com:$GIT_ID/$repo"
+    git fetch origin
+    git branch --set-upstream-to=origin/main main
+  else
+    echo "Skipping git remote configuration for $repo (upstream already exists)"
+  fi
+done
+
