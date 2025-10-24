@@ -16,7 +16,7 @@ source $LIFETRACKERDIR/shell/envvars.sh
 path=($path $MYPROFILEDIR/bin-macos $MYPROFILEDIR/bin $CODEDIR/bin $WD_BIN/bin .)
 
 export ZSH_CUSTOM=$CURRENTDIR/custom-zsh
-plugins=(myfunctions git docker kubectl themes ssh-agent man history-substring-search myaliases)
+plugins=(myfunctions git docker kubectl themes ssh-agent man fzf history-substring-search myaliases)
 
 ZSH_THEME="sahil3"
 source $ZSH/oh-my-zsh.sh

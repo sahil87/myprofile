@@ -64,6 +64,4 @@ alias kc='kubectl'
 alias mux='tmuxinator'
 alias ctop='docker run --rm -ti -v /var/run/docker.sock:/var/run/docker.sock quay.io/vektorlab/ctop:latest'
 alias gpg2='gpg'
-alias windsurf='/Applications/Windsurf.app/Contents/MacOS/Electron'
-alias ws='/Applications/Windsurf.app/Contents/MacOS/Electron'
-
+alias wd="cd ~/code/weaver"
