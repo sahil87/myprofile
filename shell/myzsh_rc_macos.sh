@@ -15,9 +15,11 @@ source $LIFETRACKERDIR/shell/envvars.sh
 
 export WEAVERDIR=`realpath $CODEDIR/weaver`
 export WEAVERDIR_WD=`realpath $WEAVERDIR/wd`
+export DEVSHELL=`realpath $CODEDIR/weaver/dev-shell`
 
 alias weaver="cd $WEAVERDIR"
 alias wd="cd $WEAVERDIR_WD"
+alias ds="cd $DEVSHELL"
 
 #First match wins. So the path that comes earlier has higher precedence
 path=($path $MYPROFILEDIR/bin-macos $MYPROFILEDIR/bin $CODEDIR/bin $WD_BIN/src/bin .)

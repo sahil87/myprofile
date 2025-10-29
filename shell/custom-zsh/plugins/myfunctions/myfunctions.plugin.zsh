@@ -39,11 +39,3 @@ mkcd() {
         mkdir -p $1 && cd $1
     fi
 }
-
-ds() {
-    local depth=1;
-    if [ $# = 1 ]; then
-        depth=$1;
-    fi
-    du -hx --max-depth=$depth | sort -rh
-}
