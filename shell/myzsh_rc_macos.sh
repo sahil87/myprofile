@@ -10,7 +10,14 @@ export CODEDIR=`realpath $MYPROFILEDIR/../..`
 export LIFETRACKERDIR=`realpath $DIR87/lifetracker`
 export BLOGDIR=`realpath $DIR87/blog2020`
 export WD_BIN=`realpath $CODEDIR/weaver/dev-shell/src`
+
 source $LIFETRACKERDIR/shell/envvars.sh
+
+export WEAVERDIR=`realpath $CODEDIR/weaver`
+export WEAVERDIR_WD=`realpath $WEAVERDIR/wd`
+
+alias weaver="cd $WEAVERDIR"
+alias wd="cd $WEAVERDIR_WD"
 
 #First match wins. So the path that comes earlier has higher precedence
 path=($path $MYPROFILEDIR/bin-macos $MYPROFILEDIR/bin $CODEDIR/bin $WD_BIN/bin .)
