@@ -9,7 +9,7 @@ export DIR87=`realpath $MYPROFILEDIR/..`
 export CODEDIR=`realpath $MYPROFILEDIR/../..`
 export LIFETRACKERDIR=`realpath $DIR87/lifetracker`
 export BLOGDIR=`realpath $DIR87/blog2020`
-export WD_BIN=`realpath $CODEDIR/weaver/dev-shell/src`
+export WD_BIN=`realpath $CODEDIR/weaver/dev-shell`
 
 source $LIFETRACKERDIR/shell/envvars.sh
 
@@ -20,7 +20,7 @@ alias weaver="cd $WEAVERDIR"
 alias wd="cd $WEAVERDIR_WD"
 
 #First match wins. So the path that comes earlier has higher precedence
-path=($path $MYPROFILEDIR/bin-macos $MYPROFILEDIR/bin $CODEDIR/bin $WD_BIN/bin .)
+path=($path $MYPROFILEDIR/bin-macos $MYPROFILEDIR/bin $CODEDIR/bin $WD_BIN/src/bin .)
 
 export ZSH_CUSTOM=$CURRENTDIR/custom-zsh
 plugins=(myfunctions git docker kubectl themes ssh-agent man fzf history-substring-search myaliases)
