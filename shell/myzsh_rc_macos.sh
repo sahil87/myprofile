@@ -22,7 +22,7 @@ alias wd="cd $WEAVERDIR_WD"
 alias ds="cd $DEVSHELL"
 
 #First match wins. So the path that comes earlier has higher precedence
-path=($path $MYPROFILEDIR/bin-macos $MYPROFILEDIR/bin $CODEDIR/bin $WD_BIN/src/bin .)
+path=($path $MYPROFILEDIR/bin-macos $MYPROFILEDIR/bin $CODEDIR/bin $WD_BIN/src/bin $HOME/.cargo/bin .)
 
 export ZSH_CUSTOM=$CURRENTDIR/custom-zsh
 plugins=(myfunctions git docker kubectl themes ssh-agent man fzf history-substring-search myaliases)
