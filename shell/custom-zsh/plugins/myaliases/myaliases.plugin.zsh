@@ -24,6 +24,8 @@ alias mv="mv -i"
 #Git aliases. Rest defined in oh-my-zsh's git plugin
 # alias gs='git status' # Use gst
 # alias gcm='git commit -m' # Use gsam
+alias gloga='git log --oneline --decorate --graph --all'
+alias glola='git log --graph --pretty="%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset" --all'
 alias gl='gloga'
 alias gll='glola'
 alias p='git pull'
