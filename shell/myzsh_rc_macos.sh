@@ -7,24 +7,20 @@
 
 CURRENTDIR=${0:a:h}
 export MYPROFILEDIR=`realpath $CURRENTDIR/..`
-export DIR87=`realpath $MYPROFILEDIR/..`
+export SAHIL87DIR=`realpath $MYPROFILEDIR/..`
 export CODEDIR=`realpath $MYPROFILEDIR/../..`
-export LIFETRACKERDIR=`realpath $DIR87/lifetracker`
-export BLOGDIR=`realpath $DIR87/blog2020`
-export WD_BIN=`realpath $CODEDIR/weaver/dev-shell`
-
-source $LIFETRACKERDIR/shell/envvars.sh
-
+export LIFETRACKERDIR=`realpath $SAHIL87DIR/lifetracker`
+export BLOGDIR=`realpath $SAHIL87DIR/blog2020`
+export DEV_SHELLDIR=`realpath $CODEDIR/weaver/dev-shell`
 export WEAVERDIR=`realpath $CODEDIR/weaver`
 export WEAVERDIR_WD=`realpath $WEAVERDIR/wd`
-export DEVSHELL=`realpath $CODEDIR/weaver/dev-shell`
 
 alias weaver="cd $WEAVERDIR"
 alias wd="cd $WEAVERDIR_WD"
-alias ds="cd $DEVSHELL"
+alias ds="cd $DEV_SHELLDIR"
 
 #First match wins. So the path that comes earlier has higher precedence
-path=($path $MYPROFILEDIR/bin-macos $MYPROFILEDIR/bin $CODEDIR/bin $WD_BIN/src/bin $HOME/.cargo/bin .)
+path=($path $MYPROFILEDIR/bin-macos $MYPROFILEDIR/bin $CODEDIR/bin $DEV_SHELLDIR/src/bin $HOME/.cargo/bin .)
 
 # Initialize zsh completion system (replaces oh-my-zsh's completion setup)
 # autoload -Uz compinit && compinit
