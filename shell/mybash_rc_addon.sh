@@ -14,13 +14,6 @@ export PATH=$PATH:$MYPROFILEDIR/bin:~/code/dec/tmux
 
 source $MYPROFILEDIR/shell/custom-bash/myaliases.sh
 source ~/code/kube/cc/kubeconfig/env.sh
-source $LIFETRACKERDIR/shell/envvars.sh
-
-#Lines in ~/.bashrc:
-#source /home/gmetri/code/dec/shell/mybash_rc.sh #v1.1
-#source /home/gmetri/code/dec/shell/mybash_theme.sh #v1.1
-#source /home/gmetri/code/dec/shell/mybash_vars.sh #v1.1
-#source /home/gmetri/code/sahil87/myprofile/shell/mybash_rc_addon.sh
 
 #https://github.com/microsoft/vscode/issues/207033#issuecomment-2267453974\
 #Makes font in vscode in wayland sharper
