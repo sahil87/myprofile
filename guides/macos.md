@@ -38,6 +38,8 @@ EOF
 ```bash
 mkdir -p ~/code/sahil87
 git clone git@github.com:sahil87/lifetracker.git ~/code/sahil87/lifetracker
+git clone git@github.com:sahil87/myprofile.git ~/code/sahil87/myprofile
+git clone git@github.com:sahil87/blog2020.git ~/code/sahil87/blog2020
 ```
 
 ## 6. Run the automated setup
