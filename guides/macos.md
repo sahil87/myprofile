@@ -18,7 +18,9 @@ ln -sf ~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock ~/.1pas
 
 # Save public keys
 SSH_AUTH_SOCK=~/.1password/agent.sock ssh-add -L | grep "sahil87" > ~/.ssh/id_ed25519_sahil87.pub
+chmod 600 ~/.ssh/id_ed25519_sahil87.pub
 SSH_AUTH_SOCK=~/.1password/agent.sock ssh-add -L | grep "sahil-weaver" > ~/.ssh/id_ed25519_sahil-weaver.pub
+chmod 600 ~/.ssh/id_ed25519_sahil-weaver.pub
 ```
 
 ## 4. Configure SSH to use 1Password
