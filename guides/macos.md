@@ -46,11 +46,6 @@ git clone git@github.com:sahil87/myprofile.git ~/code/sahil87/myprofile
 git clone git@github.com:sahil87/blog2020.git ~/code/sahil87/blog2020
 ```
 
-## 6. Run the automated setup
+## 6. The next guide
 
-```bash
-cd ~/code/sahil87/lifetracker
-./scripts/setup-macos.sh
-```
-
-This will install Homebrew, packages, and configure your environment.
+Read the macos-setup.md guide in lifetracker
