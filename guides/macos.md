@@ -38,6 +38,8 @@ EOF
 ## 5. Clone the private dotfiles repo
 
 ```bash
+xcode-select --install # to install git
+
 mkdir -p ~/code/sahil87
 git clone git@github.com:sahil87/lifetracker.git ~/code/sahil87/lifetracker
 git clone git@github.com:sahil87/myprofile.git ~/code/sahil87/myprofile
