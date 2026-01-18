@@ -12,7 +12,7 @@ DIRS=(
 
 pull_dir() {
   echo "Pulling $1"
-  cd "$1" && git fetch origin && git merge origin/master
+  cd "$1" && git pull
 }
 
 for dir in "${DIRS[@]}"; do
