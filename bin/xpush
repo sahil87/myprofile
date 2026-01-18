@@ -1,19 +1,20 @@
 #!/bin/bash
 # Push files helper
-OLDDIR=`pwd`
 
-if [ -z $1 ]
-then
-    COMMIT_MESSAGE="Pushing latest profile/blog changes"
-else
-    COMMIT_MESSAGE="${@}"
-fi
+# Add directories here:
+DIRS=(
+  $MYPROFILEDIR
+  $LIFETRACKERDIR
+  $BLOGDIR
+  $DEVSHELLDIR
+  $PROMPTPANTRYDIR
+)
 
-commit_dir () {
-  cd $1
-  CHANGES=$(git status --porcelain)
-  if [ -n "$CHANGES" ];
-  then
+COMMIT_MESSAGE="${*:-Pushing latest profile/blog changes}"
+
+commit_dir() {
+  cd "$1" || return
+  if [ -n "$(git status --porcelain)" ]; then
     echo "Adding and committing files in $1"
     git add --all :/
     git commit -m "$2"
@@ -23,7 +24,6 @@ commit_dir () {
   fi
 }
 
-commit_dir $MYPROFILEDIR "$COMMIT_MESSAGE"
-commit_dir $LIFETRACKERDIR "$COMMIT_MESSAGE"
-commit_dir $BLOGDIR "$COMMIT_MESSAGE"
-cd $OLDDIR
+for dir in "${DIRS[@]}"; do
+  commit_dir "$dir" "$COMMIT_MESSAGE"
+done

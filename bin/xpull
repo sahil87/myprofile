@@ -1,20 +1,20 @@
 #!/bin/bash
 # Pull files helper
-OLDDIR=`pwd`
 
-echo $MYPROFILEDIR
-cd $MYPROFILEDIR
-git fetch origin
-git merge origin/master
+# Add directories here:
+DIRS=(
+  $MYPROFILEDIR
+  $LIFETRACKERDIR
+  $BLOGDIR
+  $DEVSHELLDIR
+  $PROMPTPANTRYDIR
+)
 
-echo $LIFETRACKERDIR
-cd $LIFETRACKERDIR
-git fetch origin
-git merge origin/master
+pull_dir() {
+  echo "Pulling $1"
+  cd "$1" && git fetch origin && git merge origin/master
+}
 
-echo $BLOGDIR
-cd $BLOGDIR
-git fetch origin
-git merge origin/master
-
-cd $OLDDIR
+for dir in "${DIRS[@]}"; do
+  pull_dir "$dir"
+done
