@@ -40,10 +40,14 @@ EOF
 ```bash
 xcode-select --install # to install git
 
-mkdir -p ~/code/sahil87
-git clone git@github.com:sahil87/lifetracker.git ~/code/sahil87/lifetracker
-git clone git@github.com:sahil87/myprofile.git ~/code/sahil87/myprofile
-git clone git@github.com:sahil87/blog2020.git ~/code/sahil87/blog2020
+mkdir -p ~/code/bootstrap
+git clone git@github.com:sahil87/lifetracker.git ~/code/bootstrap/lifetracker
+git clone git@github.com:sahil87/myprofile.git ~/code/bootstrap/myprofile
+git clone git@github.com:sahil87/blog2020.git ~/code/bootstrap/blog2020
+git clone git@github.com:sahil-weaver/prompt-pantry.git ~/code/bootstrap/prompt-pantry
+git clone git@github.com:wvrdz/dev-shell.git ~/code/bootstrap/dev-shell
+
+ln -s ~/code/bootstrap/lifetracker/workspaces ~/code/workspaces 
 ```
 
 ## 6. The next guide
