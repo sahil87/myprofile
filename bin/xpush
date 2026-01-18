@@ -18,7 +18,7 @@ commit_dir() {
     echo "Adding and committing files in $1"
     git add --all :/
     git commit -m "$2"
-    git push
+    git pull --rebase && git push
   else
     echo "No changes to commit in $1"
   fi
