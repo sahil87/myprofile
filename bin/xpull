@@ -7,7 +7,7 @@ DIRS=(
   $LIFETRACKERDIR
   $BLOGDIR
   $DEVSHELL
-  $PROMPTPANTRYDIR
+  $PPDIR
 )
 
 pull_dir() {
