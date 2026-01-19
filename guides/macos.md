@@ -29,8 +29,9 @@ chmod 600 ~/.ssh/id_ed25519_sahil-weaver.pub
 cat > ~/.ssh/config << EOF
 # Temporary: using a public key file instead of SSH Agent
 Host *
+  IdentitiesOnly yes
+  IdentityAgent ~/.1password/agent.sock
   IdentityFile "~/.ssh/id_ed25519_sahil87.pub"
-#  IdentityAgent "~/.1password/agent.sock"
 EOF
 ```
 
