@@ -26,7 +26,7 @@ chmod 600 ~/.ssh/id_ed25519_sahil-weaver.pub
 ## 4. Configure SSH to use 1Password
 
 ```bash
-cat >> ~/.ssh/config << EOF
+cat > ~/.ssh/config << EOF
 # Temporary: using a public key file instead of SSH Agent
 Host *
   IdentityFile "~/.ssh/id_ed25519_sahil87.pub"
