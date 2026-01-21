@@ -8,15 +8,15 @@ esac
 
 #ADD PERSONAL BIN AND CURRENT FOLDER TO PATH
 CURRENTDIR=${0:a:h}
-export MYPROFILEDIR=`realpath $CURRENTDIR/..`
-export DIR87=`realpath $MYPROFILEDIR/..`
-export CODEDIR=`realpath $MYPROFILEDIR/../..`
-export LIFETRACKERDIR=`realpath $DIR87/lifetracker`
-export BLOGDIR=`realpath $DIR87/blog2020`
-source $LIFETRACKERDIR/shell/envvars.sh
+export MYPROFILE_DIR=`realpath $CURRENTDIR/..`
+export DIR87=`realpath $MYPROFILE_DIR/..`
+export CODEDIR=`realpath $MYPROFILE_DIR/../..`
+export LIFETRACKER_DIR=`realpath $DIR87/lifetracker`
+export BLOG_DIR=`realpath $DIR87/blog2020`
+source $LIFETRACKER_DIR/shell/envvars.sh
 source ~/code/kube/cc/kubeconfig/env.sh
 source ~/code/dec/shell/mybash_vars.sh #v1.1
-source $MYPROFILEDIR/bin/ssh-agent-run-script.sh
+source $MYPROFILE_DIR/bin/ssh-agent-run-script.sh
 
 #ANDROID SETTINGS
 GRADLE_USER_HOME=/mnt/files/gradle
@@ -46,7 +46,7 @@ export GOPATH=~/code/go
 typeset -U path
 #~/.local/bin is for pythong pip installs done by user without setting virtualenv
 #First match wins. So the path that comes earlier has higher precedence
-path=($path . ~/.bin ~/.rvm/bin ~/.local/bin /snap/bin $MYPROFILEDIR/bin $CODEDIR/dec/shell/bin ~/.yarn/bin /usr/local/go/bin ~/code/bin ~/code/go/bin ~/Android/Sdk/platform-tools ~/Android/Sdk/tools) 
+path=($path . ~/.bin ~/.rvm/bin ~/.local/bin /snap/bin $MYPROFILE_DIR/bin $CODEDIR/dec/shell/bin ~/.yarn/bin /usr/local/go/bin ~/code/bin ~/code/go/bin ~/Android/Sdk/platform-tools ~/Android/Sdk/tools) 
 #/mnt/files/storage/groovy/bin $GRADLE_USER_HOME/bin)
 
 #oh-my-zsh SETTINGS:

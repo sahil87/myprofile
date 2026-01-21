@@ -35,8 +35,8 @@ alias gx='gitx --all'
 
 alias c='cd ~/code/'
 alias 87='cd $DIR87'
-# alias myprofile='cd $MYPROFILEDIR'
-# alias lifetracker='cd $LIFETRACKERDIR'
+# alias myprofile='cd $MYPROFILE_DIR'
+# alias lifetracker='cd $LIFETRACKER_DIR'
 alias blog='cd $DIR87/bloghexo'
 alias vr='cd ~/code/gmetrivr/'
 alias xr='cd ~/code/gmetrixr/'
@@ -45,10 +45,10 @@ alias brx='cd ~/code/brx/'
 alias sms='cd ~/code/sms/'
 
 #Needed here instead of a commadn as the env vars created need to be in the running shell
-#alias aws-add-sc='source $MYPROFILEDIR/revealed/keys/aws_iam_keys/sportscafe/export.sh'
-#alias aws-add-gm='source $MYPROFILEDIR/revealed/keys/aws_iam_keys/gmetri/export.sh'
-alias ssh-add-personal="source $MYPROFILEDIR/bin/ssh-add-personal-script.sh"
-alias ssh-add-work="source $MYPROFILEDIR/bin/ssh-add-work-script.sh"
+#alias aws-add-sc='source $MYPROFILE_DIR/revealed/keys/aws_iam_keys/sportscafe/export.sh'
+#alias aws-add-gm='source $MYPROFILE_DIR/revealed/keys/aws_iam_keys/gmetri/export.sh'
+alias ssh-add-personal="source $MYPROFILE_DIR/bin/ssh-add-personal-script.sh"
+alias ssh-add-work="source $MYPROFILE_DIR/bin/ssh-add-work-script.sh"
 
 alias p8='ping 8.8.8.8'
 alias install='sudo apt-get install'

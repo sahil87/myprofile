@@ -3,16 +3,16 @@
 export EDITOR=nano
 CURRENTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 export DIR87=`realpath $CURRENTDIR/../..`
-export MYPROFILEDIR=`realpath $DIR87/myprofile`
-export LIFETRACKERDIR=`realpath $DIR87/lifetracker`
-export BLOGDIR=`realpath $DIR87/blog2020`
-export PATH=$PATH:$MYPROFILEDIR/bin:~/code/dec/tmux
+export MYPROFILE_DIR=`realpath $DIR87/myprofile`
+export LIFETRACKER_DIR=`realpath $DIR87/lifetracker`
+export BLOG_DIR=`realpath $DIR87/blog2020`
+export PATH=$PATH:$MYPROFILE_DIR/bin:~/code/dec/tmux
 # alias c='cd ~/code/'
 # alias vr='cd ~/code/gmetrivr/'
 # alias 87='cd ~/code/sahil87/'
 #export AWS_CONFIG_FILE=~/.aws/config #this is the default
 
-source $MYPROFILEDIR/shell/custom-bash/myaliases.sh
+source $MYPROFILE_DIR/shell/custom-bash/myaliases.sh
 source ~/code/kube/cc/kubeconfig/env.sh
 
 #https://github.com/microsoft/vscode/issues/207033#issuecomment-2267453974\

@@ -6,11 +6,11 @@
 #    source /Users/sahil/code/sahil87/myprofile/shell/myzsh_rc_macos.sh
 
 CURRENTDIR=${0:a:h}
-export MYPROFILEDIR=`realpath $CURRENTDIR/..`
-export SAHIL87DIR=`realpath $MYPROFILEDIR/..`
-export CODEDIR=`realpath $MYPROFILEDIR/../..`
-export LIFETRACKERDIR=`realpath $SAHIL87DIR/lifetracker`
-export BLOGDIR=`realpath $SAHIL87DIR/blog2020`
+export MYPROFILE_DIR=`realpath $CURRENTDIR/..`
+export SAHIL87DIR=`realpath $MYPROFILE_DIR/..`
+export CODEDIR=`realpath $MYPROFILE_DIR/../..`
+export LIFETRACKER_DIR=`realpath $SAHIL87DIR/lifetracker`
+export BLOG_DIR=`realpath $SAHIL87DIR/blog2020`
 export DEV_SHELLDIR=`realpath $CODEDIR/weaver/dev-shell`
 export WEAVERDIR=`realpath $CODEDIR/weaver`
 export WEAVERDIR_WD=`realpath $WEAVERDIR/wd`
@@ -20,7 +20,7 @@ alias wd="cd $WEAVERDIR_WD"
 alias ds="cd $DEV_SHELLDIR"
 
 #First match wins. So the path that comes earlier has higher precedence
-path=($path $MYPROFILEDIR/bin-macos $MYPROFILEDIR/bin $CODEDIR/bin $DEV_SHELLDIR/src/bin $HOME/.cargo/bin .)
+path=($path $MYPROFILE_DIR/bin-macos $MYPROFILE_DIR/bin $CODEDIR/bin $DEV_SHELLDIR/src/bin $HOME/.cargo/bin .)
 
 # Initialize zsh completion system (replaces oh-my-zsh's completion setup)
 # autoload -Uz compinit && compinit

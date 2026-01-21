@@ -1,6 +1,6 @@
 #!/bin/bash
-SOURCE=$LIFETRACKERDIR/.encfs
-DEST=$LIFETRACKERDIR/revealed
+SOURCE=$LIFETRACKER_DIR/.encfs
+DEST=$LIFETRACKER_DIR/revealed
 
 echo $DEST
 df -h | grep $DEST

@@ -1,5 +1,5 @@
 #!/bin/bash
-ssh-add $LIFETRACKERDIR/revealed/keys/ssh_keys/sportscafe/tmp_provisioning_anshu.pem
-ssh-add $LIFETRACKERDIR/revealed/keys/ssh_keys/sportscafe/tmp_provisioning_key_mumbai_anshu.pem
+ssh-add $LIFETRACKER_DIR/revealed/keys/ssh_keys/sportscafe/tmp_provisioning_anshu.pem
+ssh-add $LIFETRACKER_DIR/revealed/keys/ssh_keys/sportscafe/tmp_provisioning_key_mumbai_anshu.pem
 echo "Current keys [ssh-add -L]"
 ssh-add -L

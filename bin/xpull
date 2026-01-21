@@ -3,11 +3,11 @@
 
 # Add directories here:
 DIRS=(
-  $MYPROFILEDIR
-  $LIFETRACKERDIR
-  $BLOGDIR
-  $DEVSHELL
-  $PPDIR
+  $MYPROFILE_DIR
+  $LIFETRACKER_DIR
+  $BLOG_DIR
+  $DEVSHELL_DIR
+  $PP_DIR
 )
 
 pull_dir() {
