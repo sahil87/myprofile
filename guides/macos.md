@@ -38,7 +38,7 @@ EOF
 ## 5. Clone the private dotfiles repo
 
 ```bash
-xcode-select --install # to install git
+xcode-select --install # Install's apple's git. But Homebrew's git would come earlier in path
 
 mkdir -p ~/code/bootstrap
 git clone git@github.com:sahil87/lifetracker.git ~/code/bootstrap/lifetracker
